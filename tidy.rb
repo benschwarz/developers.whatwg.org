@@ -16,14 +16,28 @@ doc.css("script").remove
 # Write output to public/css
 Dir.chdir("sass") do
   css = Sass.compile_file("master.scss", :style => :compressed)
-  File.open("../public/css/master.css", "w+"){|buffer| buffer << css }
+  File.open("../public/css/master.css", "w"){|buffer| buffer << css }
 end
 
-# Include my scripts and styles
+# Compress * javascripts
+Dir.chdir("javascript") do
+  Dir["**/*.js"].each do |javascript_filepath|
+    compressed = js_compressor.compress(File.open(javascript_filepath, "r"))
+    File.open("../public/javascript/#{File.basename(javascript_filepath)}", "w"){|buffer| buffer << compressed }
+  end
+end
+
 Dir.chdir("public") do
+  # Include styles
   Dir["**/*.css"].each do |stylesheet_filepath|
     doc.css("head")[0].add_child('<link rel="stylesheet" href="/' + stylesheet_filepath + '">')
     puts "Included stylesheet #{stylesheet_filepath}"
+  end
+
+  # Include scripts
+  Dir["**/*.js"].each do |javascript_filepath|
+    doc.css("head")[0].add_child('<script src="/' + javascript_filepath + '" async>')
+    puts "Included javascript #{javascript_filepath}"
   end
 end
 
