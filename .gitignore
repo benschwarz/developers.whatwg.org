@@ -6,3 +6,4 @@ html5-full.html
 index.html
 public/*.html
 public/css/master.css
+public/javascripts/*
