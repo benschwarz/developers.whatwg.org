@@ -1,0 +1,204 @@
+@import "reset";
+@import "prettify-js";
+
+/* the @class=full-spec links are "external" links to the full
+ * HTML5 spec (not internal ones to others parts in the author
+ * view); so we want some kind of visual warning indication to
+ * users that if they follow them, they will be leaving the author
+ * view and finding themselves in the full spec instead */
+a.full-spec-link:link:hover,
+a.full-spec-:visited:hover
+{
+  background: #ffa;
+  color: green;
+  outline-offset: 4px;
+  outline: solid green;
+}
+/* this is for the first paragraph that we add to the Abstract;
+ * that paragraph is specific to the author view (it's not in the
+ * full spec); its purpose is to alert readers to the fact that
+ * this is a subset of the full spec */
+.strong-note {
+	color: #fff;
+  background-color: #033;
+	padding: 1em;
+	line-height: 1.5em;
+}
+.strong-note a { 
+	text-decoration: none;
+	padding-bottom: 0.1em;
+	border-bottom: 1px solid white;
+	color: white;
+}
+
+.toc + h3:after {
+  content: "";
+}
+.dfn-ref {
+  font-weight: bold;
+}
+.index-norefs,
+.index-id {
+  color: #666;
+}
+.index-nav {
+  text-align: center;
+  font-size: 120%;
+}
+.index-of-terms dl {
+  line-height: 1.3em;
+}
+.index-of-terms dt {
+  margin-top: 14px;
+  margin-bottom: 0px;
+  height: 1.3em;
+}
+.index-term {
+  font-size: 18px;
+  /* border-bottom: 2px solid #005A9C; */
+  margin-bottom: 4px;
+  margin-top: 18px;
+  margin-right: 50%;
+}
+.index-entry li {
+  list-style-type: none;
+}
+.index-entry ul {
+  margin-bottom: 0px;
+}
+
+dfn {
+  cursor: pointer;
+}
+dfn[title=""] {
+  cursor: inherit;
+}
+
+.dfnPanel p {
+  margin-bottom: 3px;
+}
+.dfnPanel .norefs {
+  font-weight: bold;
+}
+.dfnPanel dd {
+  /* style this just like an li */
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 0;
+}
+pre .dfnPanel {
+  white-space: normal;
+}
+.dfn-excerpt {
+  font-style: italic;
+  margin-left: 0;
+  font-size: 95%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  display:block;
+}
+.dfnPanel .dfn-excerpt {
+  white-space: normal;
+}
+
+/* 
+	Start W3C spec styles 
+	ported from: 
+	http://www.germanforblack.com/articles/moving-towards-readable-w3c-specs
+*/
+
+@font-face {
+	font-family: 'ChunkFiveRegular';
+	src: url('/fonts/Chunkfive.eot');
+	src: local('☺'), url('/fonts/Chunkfive.woff') format('woff'), url('/fonts/Chunkfive.ttf') format('truetype'), url('/fonts/Chunkfive.svg#ChunkFive') format('svg');
+}
+
+
+/* Resets */
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, dt, dd, table, caption, th, td { font-weight: normal !important; margin: 0; padding: 0; color: inherit; font-family: Georgia, Times, "Times New Roman", sans-serif; }
+ul li, ol li { list-style-type: none; }
+
+a:link, a:visited { color: #366; text-decoration: none; }
+a:visited { color: #099; }
+
+html { background-color: transparent; } /* Override whatwg.css */
+
+body { margin: 2em auto; width: 33em; font-size: 1.05em; line-height: 1.45; background-image: none; background-color: #fff; }
+
+div.head { position: relative; }
+div.head:before { content: 'W3C'; background-color: #9cc; color: #fff; border-radius: 0.25em; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; position: absolute; top: 2em; left: -5em; font-weight: bold; font-size: 0.6em; padding: 2em 0.7em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em; }
+div.head hr, div.head > a, img[src*="http://www.w3.org/Icons/"], div.head dl { display: none; } /* Hide hr, the logo, logo alternate and the dl list in the head section */
+div.head h1 { font-family: "ChunkFiveRegular", Helvetica; line-height: 1.4em; margin: -0.2em 0 0.5em 0; -webkit-font-smoothing: antialiased; font-size: 3em; }
+div.head h1 span.edition { display: block; font-size: 0.5em; line-height: 0.25em; }
+div.head h1 span.rcsrevision { display: none; }
+div.head h2 { margin: 0 0 0.5em 0; }
+div.head h2.maturity { color: #666; font-size: 1em; border: 0px; }
+div.head p.copyright { color: #999; font-size: 0.8em; font-style: italic; width: 80%; line-height: 1.4em; }
+div.head p.copyright a { color: inherit; }
+
+h2, h2.maturity, h2.principal { display: inline-block; font-size: 1.6em; margin: 2em 0 0.5em 0; border-bottom: 2px solid #ccc; padding: 0em 0em 0.1em; }
+h3 { font-size: 1.2em; margin-bottom: 0.3em; }
+h3.guideline { border: none; margin: 1em 0; }
+h4, h5 { font-size: 1.0em; margin-bottom: 0.3em; color: #066; padding: 0.4em 0em 0em; }
+p { margin-bottom: 1em; }
+
+div.example { margin-bottom: 1em; }
+ul { margin: 0em 0em 1em; }
+ul li { list-style: none; position: relative; margin: 0em 0em 0.25em; }
+ul li:before { content: '\22c5'; font-size: 2em; color: #9cc; position: absolute; top: -0.35em; left: -0.65em; font-family: lucida; font-weight: bold; }
+ul li ul { margin: 0em; }
+li li { margin: 0em 0em 0em 1.2em; }
+code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; color: #066; font-size: 0.9em; display: inline-block; }
+pre { margin: 0em 0em 1em -0.6em; background: #eff; display: inline-block; padding: 0.25em 0.6em; }
+dt { color: #6cc; }
+dd { margin: 0em 0em 0.5em; }
+
+table { border: 0px; }
+table th, table td { border: 0px; border-bottom: 1px solid #acc; padding: 4px; vertical-align: top; }
+table th li, table td li { margin: 0px 0px 0px 1.5em; }
+table caption, table th { text-align: left; color: #6cc; }
+table th { color: #099; }
+table td { vertical-align: top; padding: 0.25em 1.25em 0.25em 0em; }
+table tr, table tbody { border: 0px; }
+hr { border: 0px; height: 2px; background: #acc; margin: 2em 0em; }
+strong { text-shadow: 1px 1px 1px #fff; }
+
+ol li { color: #9cc; }
+
+ol.toc, ul.toc { list-style: none; }
+ol.toc, ul.toc li:before { content: ''; }
+div.subtoc { background: transparent; border: 0em; }
+body .toc, body .subtoc { background: transparent; border: 0em; margin-top: 1em; }
+
+h2, h3, h4, h5, h6 { position: relative; }
+div.section span.tocnum, .secno  { background-color: #9cc; color: #fff; border-radius: 0.25em; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; position: absolute; top: 0.7em; left: -6em; font-weight: bold; font-size: 0.6em; padding: 0.25em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em; }
+a .secno { background-color: transparent; color: #9cc; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; position: static; font-weight: normal; font-size: 1em; padding: 0; font-family: inherit; text-align: left; letter-spacing: 0; }
+
+h3 { margin: 2em 0em 0em; }
+h3 span.tocnum { top: 0.2em; }
+
+strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercase; }
+
+/* Specific Overrides */
+
+a.internalDFN { color: #366; border: 0px; }
+
+/* Small (iPhone) */
+@media only screen and (max-device-width: 480px) {
+  body { margin: 0 3em; }
+	div.head h1 { font-family: Helvetica; font-weight: bold; } /* No @font-face */
+}
+	 	
+/* Medium (iPad) */
+@media only screen and (max-device-width: 1024px) {
+	body { margin: 0 0.7em; }
+	div.head h1 { font-family: Helvetica; font-weight: bold; } /* No @font-face */
+}
+
+/* Large (iPhone 4) */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
