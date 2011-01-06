@@ -5,10 +5,12 @@ This repository contains scripts that will generate a pristine copy of [develope
 To build your own copy, checkout this repostory, you'll need:
 
 * Ruby (any version)
+  * rvm
   * bundler
+  * nokogiri
 * Python (2.4+)
-  * lxml
-  * html5lib
+  * lxml (`easy_install lxml`)
+  * html5lib (`easy_install html5lib`)
 * Mercurial
 * SVN
 * LibXML2
