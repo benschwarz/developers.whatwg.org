@@ -4,24 +4,27 @@ CURL=curl
 PYTHON=python
 PATCH=patch
 SPLITTER=html5-tools/spec-splitter/spec-splitter.py
-SPLITTERFLAGS=--w3c --html5lib-serialiser
+SPLITTERFLAGS=--html5lib-serialiser
 
-LOG: spec.html
-	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< > LOG
+LOG: index.html $(SPLITTER)
+	mkdir output
+	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./output
+	touch LOG
 
-spec.html: complete.html
+index.html: html5-full.html anolis/anolis
 	$(PYTHON) anolis/anolis \
 	  --parser=lxml.html \
 	  --filter=.impl \
 	  --output-encoding="ascii" \
 	  $< $@
 
-complete.html:
-	$(CURL) http://www.whatwg.org/specs/web-apps/current-work/complete.html > $@
+html5-full.html:
+	$(CURL) http://www.whatwg.org/specs/web-apps/current-work/ > $@
 
 clean:
+	$(RM) output
 	$(RM) LOG
-	$(RM) spec.html
+	$(RM) html5-full.html
 
 anolis/anolis:
 	$(HG) clone http://hg.hoppipolla.co.uk/anolis/
