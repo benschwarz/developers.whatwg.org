@@ -2,16 +2,17 @@ HG=hg
 SVN=svn
 CURL=curl
 PYTHON=python
+RUBY=ruby
 PATCH=patch
 SPLITTER=html5-tools/spec-splitter/spec-splitter.py
 SPLITTERFLAGS=--html5lib-serialiser
 
 LOG: index.html $(SPLITTER)
 	mkdir output
-	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./output
-	touch LOG
+	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./output > LOG
 
 index.html: html5-full.html anolis/anolis
+	$(RUBY) tidy.rb $<
 	$(PYTHON) anolis/anolis \
 	  --parser=lxml.html \
 	  --filter=.impl \
@@ -22,7 +23,7 @@ html5-full.html:
 	$(CURL) http://www.whatwg.org/specs/web-apps/current-work/ > $@
 
 clean:
-	$(RM) output
+	$(RM) -r output
 	$(RM) LOG
 	$(RM) html5-full.html
 
