@@ -8,8 +8,7 @@ SPLITTER=html5-tools/spec-splitter/spec-splitter.py
 SPLITTERFLAGS=--html5lib-serialiser
 
 LOG: index.html $(SPLITTER)
-	mkdir output
-	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./output > LOG
+	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./public > LOG
 
 index.html: html5-full.html anolis/anolis
 	$(RUBY) tidy.rb $<
@@ -23,7 +22,7 @@ html5-full.html:
 	$(CURL) http://www.whatwg.org/specs/web-apps/current-work/ > $@
 
 clean:
-	$(RM) -r output
+	$(RM) -r public/**/*.html
 	$(RM) LOG
 	$(RM) html5-full.html
 
