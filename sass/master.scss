@@ -115,28 +115,28 @@ pre .dfnPanel {
 	src: local('☺'), url('/fonts/Chunkfive.woff') format('woff'), url('/fonts/Chunkfive.ttf') format('truetype'), url('/fonts/Chunkfive.svg#ChunkFive') format('svg');
 }
 
-
-/* Resets */
-h1, h2, h3, h4, h5, h6, p, a, ul, ol, dt, dd, table, caption, th, td { font-weight: normal !important; margin: 0; padding: 0; color: inherit; font-family: Georgia, Times, "Times New Roman", sans-serif; }
-ul li, ol li { list-style-type: none; }
-
 a:link, a:visited { color: #366; text-decoration: none; }
 a:visited { color: #099; }
 
-html { background-color: transparent; } /* Override whatwg.css */
+body { margin: 2em auto; width: 33em; font-size: 1.05em; line-height: 1.45; }
 
-body { margin: 2em auto; width: 33em; font-size: 1.05em; line-height: 1.45; background-image: none; background-color: #fff; }
-
-div.head { position: relative; }
-div.head:before { content: 'W3C'; background-color: #9cc; color: #fff; border-radius: 0.25em; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; position: absolute; top: 2em; left: -5em; font-weight: bold; font-size: 0.6em; padding: 2em 0.7em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em; }
-div.head hr, div.head > a, img[src*="http://www.w3.org/Icons/"], div.head dl { display: none; } /* Hide hr, the logo, logo alternate and the dl list in the head section */
-div.head h1 { font-family: "ChunkFiveRegular", Helvetica; line-height: 1.4em; margin: -0.2em 0 0.5em 0; -webkit-font-smoothing: antialiased; font-size: 3em; }
-div.head h1 span.edition { display: block; font-size: 0.5em; line-height: 0.25em; }
-div.head h1 span.rcsrevision { display: none; }
-div.head h2 { margin: 0 0 0.5em 0; }
-div.head h2.maturity { color: #666; font-size: 1em; border: 0px; }
-div.head p.copyright { color: #999; font-size: 0.8em; font-style: italic; width: 80%; line-height: 1.4em; }
-div.head p.copyright a { color: inherit; }
+body > header {
+	position: relative;
+	
+	&:before {
+		content: 'WHATWG'; background-color: #9cc; color: #fff; border-radius: 0.25em; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; position: absolute; top: 2em; left: -7em; font-weight: bold; font-size: 0.6em; padding: 2em 0.7em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em;
+	}
+	
+	.logo { display: none; }
+	
+	h1 { font-family: "ChunkFiveRegular", Helvetica; line-height: 1.4em; margin: -0.2em 0 0.5em 0; -webkit-font-smoothing: antialiased; font-size: 3em; }
+	h1 span.edition { display: block; font-size: 0.5em; line-height: 0.25em; }
+	h1 span.rcsrevision { display: none; }
+	h2 { margin: 0 0 0.5em 0; }
+	h2.maturity { color: #666; font-size: 1em; border: 0px; }
+	p.copyright { color: #999; font-size: 0.8em; font-style: italic; width: 80%; line-height: 1.4em; }
+	p.copyright a { color: inherit; }
+}
 
 h2, h2.maturity, h2.principal { display: inline-block; font-size: 1.6em; margin: 2em 0 0.5em 0; border-bottom: 2px solid #ccc; padding: 0em 0em 0.1em; }
 h3 { font-size: 1.2em; margin-bottom: 0.3em; }
@@ -150,8 +150,11 @@ ul li { list-style: none; position: relative; margin: 0em 0em 0.25em; }
 ul li:before { content: '\22c5'; font-size: 2em; color: #9cc; position: absolute; top: -0.35em; left: -0.65em; font-family: lucida; font-weight: bold; }
 ul li ul { margin: 0em; }
 li li { margin: 0em 0em 0em 1.2em; }
-code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; color: #066; font-size: 0.9em; display: inline-block; }
+
+code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; font-size: 0.9em; display: inline-block; }
+
 pre { margin: 0em 0em 1em -0.6em; background: #eff; display: inline-block; padding: 0.25em 0.6em; }
+
 dt { color: #6cc; }
 dd { margin: 0em 0em 0.5em; }
 
@@ -168,7 +171,6 @@ strong { text-shadow: 1px 1px 1px #fff; }
 ol li { color: #9cc; }
 
 ol.toc, ul.toc { list-style: none; }
-ol.toc, ul.toc li:before { content: ''; }
 div.subtoc { background: transparent; border: 0em; }
 body .toc, body .subtoc { background: transparent; border: 0em; margin-top: 1em; }
 
