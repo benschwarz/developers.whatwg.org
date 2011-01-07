@@ -124,21 +124,21 @@ body > header {
 	position: relative;
 	
 	&:before {
-		content: 'WHATWG'; background-color: #9cc; color: #fff; border-radius: 0.25em; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; position: absolute; top: 2em; left: -7em; font-weight: bold; font-size: 0.6em; padding: 2em 0.7em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em;
+		content: 'WHATWG'; background-color: #9cc; color: #fff; border-radius: 0.25em; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; position: absolute; top: -0.5em; left: -8em; font-weight: bold; font-size: 0.6em; padding: 2em 0.7em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em;
 	}
 	
 	.logo { display: none; }
 	
-	h1 { font-family: "ChunkFiveRegular", Helvetica; line-height: 1.4em; margin: -0.2em 0 0.5em 0; -webkit-font-smoothing: antialiased; font-size: 3em; }
-	h1 span { display: block; font-size: 0.5em; line-height: 1.2em; }
+	h1, h2 { -webkit-font-smoothing: antialiased; font-family: "ChunkFiveRegular", Helvetica; }
+	h1 { line-height: 0.6em; font-size: 3em; }
+	h2 { font-size: 1.5em; margin-bottom: 0.5em; }
 
-	h2 { margin: 0 0 0.5em 0; }
-	h2.maturity { color: #666; font-size: 1em; border: 0px; }
 	p.copyright { color: #999; font-size: 0.8em; font-style: italic; width: 80%; line-height: 1.4em; }
 	p.copyright a { color: inherit; }
 }
 
-h2, h2.maturity, h2.principal { display: inline-block; font-size: 1.6em; margin: 2em 0 0.5em 0; border-bottom: 2px solid #ccc; padding: 0em 0em 0.1em; }
+body > h2 { display: inline-block; font-size: 1.6em; margin: 2em 0 0.5em 0; border-bottom: 2px solid #ccc; padding-bottom: 0.1em; }
+
 h3 { font-size: 1.2em; margin-bottom: 0.3em; }
 h3.guideline { border: none; margin: 1em 0; }
 h4, h5 { font-size: 1.0em; margin-bottom: 0.3em; color: #066; padding: 0.4em 0em 0em; }
