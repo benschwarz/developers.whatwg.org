@@ -170,9 +170,9 @@ strong { text-shadow: 1px 1px 1px #fff; }
 
 ol li { color: #9cc; }
 
+/* Navigation on the index page is only shown using major headings, once you drill down to that major heading, the full extent of its contents are shown */
 ol.toc, ul.toc { list-style: none; }
-div.subtoc { background: transparent; border: 0em; }
-body .toc, body .subtoc { background: transparent; border: 0em; margin-top: 1em; }
+body > ol.toc li ol { display: none; } /* Only found on the index page */
 
 h2, h3, h4, h5, h6 { position: relative; }
 div.section span.tocnum, .secno  { background-color: #9cc; color: #fff; border-radius: 0.25em; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; position: absolute; top: 0.7em; left: -6em; font-weight: bold; font-size: 0.6em; padding: 0.25em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em; }
