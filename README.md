@@ -21,3 +21,7 @@ Run `make clean` then `make` to produce the required contents (final output is w
 The contents of `public` are exactly what I have deployed to developers.whatwg.org.
 
 If you're hoping to contribute to spec content, you'll need to talk to [Hixie](twitter.com/Hixie), as for styling and display of this content, I'm your man… and this is the repo.
+
+## Want to get involved? 
+
+Fork this project on Github, use detailed commit messages and ensure that you provide enough detail in your pull request that I can understand what you're doing and why. 
