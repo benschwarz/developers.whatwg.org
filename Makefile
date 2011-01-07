@@ -19,7 +19,7 @@ index.html: html5-full.html anolis/anolis
 	  $< $@
 
 html5-full.html:
-	$(CURL) http://www.whatwg.org/specs/web-apps/current-work/ > $@
+	$(CURL) http://www.whatwg.org/specs/web-apps/current-work/dev-index > $@
 
 clean:
 	$(RM) -r public/**/*.html
