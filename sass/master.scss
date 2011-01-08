@@ -137,9 +137,8 @@ body > header {
 }
 
 body > h2 { display: inline-block; font-size: 1.6em; margin: 2em 0 0.5em 0; border-bottom: 2px solid #ccc; padding-bottom: 0.1em; }
-
 h3 { font-size: 1.2em; margin-bottom: 0.3em; }
-h3.guideline { border: none; margin: 1em 0; }
+
 h4, h5 { font-size: 1.0em; margin-bottom: 0.3em; color: #066; padding: 0.4em 0em 0em; }
 p { margin-bottom: 1em; }
 
@@ -152,7 +151,8 @@ li li { margin: 0em 0em 0em 1.2em; }
 
 code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; font-size: 0.9em; display: inline-block; }
 
-pre { margin: 0em 0em 1em -0.6em; background: #eff; display: inline-block; padding: 0.25em 0.6em; }
+pre { overflow: hidden; width: 100%; margin: 0em 0em 1em -0.6em; background: #eff; display: inline-block; padding: 0.25em 0.6em; }
+pre:hover { width: auto; }
 
 dt { color: #6cc; }
 dd { margin: 0em 0em 0.5em; }
