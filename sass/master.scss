@@ -152,7 +152,8 @@ li li { margin: 0em 0em 0em 1.2em; }
 
 code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; font-size: 0.9em; display: inline-block; }
 
-pre { margin: 0em 0em 1em -0.6em; background: #eff; display: inline-block; padding: 0.25em 0.6em; }
+pre { overflow: hidden: width: 100%; margin: 0em 0em 1em -0.6em; background: #eff; display: inline-block; padding: 0.25em 0.6em; }
+pre:hover { width: auto; }
 
 dt { color: #6cc; }
 dd { margin: 0em 0em 0.5em; }
