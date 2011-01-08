@@ -190,13 +190,13 @@ a.internalDFN { color: #366; border: 0px; }
 /* Small (iPhone) */
 @media only screen and (max-device-width: 480px) {
   body { margin: 0 3em; }
-	div.head h1 { font-family: Helvetica; font-weight: bold; } /* No @font-face */
+	body > header h1 { font-family: Helvetica; font-weight: bold; } /* No @font-face */
 }
 	 	
 /* Medium (iPad) */
 @media only screen and (max-device-width: 1024px) {
 	body { margin: 0 0.7em; }
-	div.head h1 { font-family: Helvetica; font-weight: bold; } /* No @font-face */
+	body > header h1 { font-family: Helvetica; font-weight: bold; } /* No @font-face */
 }
 
 /* Large (iPhone 4) */
