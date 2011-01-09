@@ -36,7 +36,7 @@ Dir.chdir("public") do
 
   # Include scripts
   Dir["**/*.js"].each do |javascript_filepath|
-    doc.root.add_child('<script src="/' + javascript_filepath + '" async>')
+    doc.css("head")[0].add_child('<script src="/' + javascript_filepath + '" defer>')
     puts "Included javascript #{javascript_filepath}"
   end
 end
