@@ -83,10 +83,11 @@ h2, h3, h4, h5, h6 { position: relative; }
 h3 .secno { display: none; }
 span.secno  { @include border-radius(0.25em); background-color: lighten($color_base, 10%); color: #fff; position: absolute; top: 0.7em; left: -6em; font-weight: bold; font-size: 12px; padding: 0.25em 0.5em; font-family: Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em; }
 
-h3 .secno, h4 .secno { display: none; }
-
+h3 .secno, h4 .secno { display: none; } /* Only top level section numbering */
 
 p { margin-bottom: 1em; }
+
+a[href^="#refs"] { display: none; } /* Hide reference style links */
 
 div.example { margin-bottom: 1em; }
 ul { margin-bottom: 1em; }
