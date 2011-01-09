@@ -87,7 +87,7 @@ h3 .secno, h4 .secno { display: none; } /* Only top level section numbering */
 
 p { margin-bottom: 1em; }
 
-a[href^="#refs"] { display: none; } /* Hide reference style links */
+a[href*="#refs"] { display: none; } /* Hide reference style links */
 
 div.example { margin-bottom: 1em; }
 ul { margin-bottom: 1em; }
