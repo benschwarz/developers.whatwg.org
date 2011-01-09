@@ -2,68 +2,7 @@
 @import "prettify-js";
 @import "css3";
 
-/* the @class=full-spec links are "external" links to the full
- * HTML5 spec (not internal ones to others parts in the author
- * view); so we want some kind of visual warning indication to
- * users that if they follow them, they will be leaving the author
- * view and finding themselves in the full spec instead */
-a.full-spec-link:link:hover,
-a.full-spec-:visited:hover
-{
-  background: #ffa;
-  color: green;
-  outline-offset: 4px;
-  outline: solid green;
-}
-/* this is for the first paragraph that we add to the Abstract;
- * that paragraph is specific to the author view (it's not in the
- * full spec); its purpose is to alert readers to the fact that
- * this is a subset of the full spec */
-.strong-note {
-	color: #fff;
-  background-color: #033;
-	padding: 1em;
-	line-height: 1.5em;
-}
-.strong-note a { 
-	text-decoration: none;
-	padding-bottom: 0.1em;
-	border-bottom: 1px solid white;
-	color: white;
-}
-
-.dfn-ref {
-  font-weight: bold;
-}
-.index-norefs,
-.index-id {
-  color: #666;
-}
-.index-nav {
-  text-align: center;
-  font-size: 120%;
-}
-.index-of-terms dl {
-  line-height: 1.3em;
-}
-.index-of-terms dt {
-  margin-top: 14px;
-  margin-bottom: 0px;
-  height: 1.3em;
-}
-.index-term {
-  font-size: 18px;
-  /* border-bottom: 2px solid #005A9C; */
-  margin-bottom: 4px;
-  margin-top: 18px;
-  margin-right: 50%;
-}
-.index-entry li {
-  list-style-type: none;
-}
-.index-entry ul {
-  margin-bottom: 0px;
-}
+$color_base: #CC211B;
 
 dfn {
   cursor: pointer;
@@ -113,17 +52,16 @@ pre .dfnPanel {
 	src: local('☺'), url('/fonts/Chunkfive.woff') format('woff'), url('/fonts/Chunkfive.ttf') format('truetype'), url('/fonts/Chunkfive.svg#ChunkFive') format('svg');
 }
 
-a:link, a:visited { color: #366; text-decoration: none; }
-a:visited { color: #099; }
+a:link, a:visited { color: lighten($color_base, 10%); text-decoration: none; }
 
-body { margin: 4em auto; padding: 0 2em; width: 33em; font-size: 1.05em; line-height: 1.45; }
+body { margin: 4em auto; padding: 0 5em; width: 33em; font-size: 1.05em; line-height: 1.45; }
 
 body > header {
 	position: relative;
 	
 	&:before {
 		@include border-radius(0.25em);
-		content: 'WHATWG'; background-color: #CC211B; color: #fff; position: absolute; top: -0.5em; left: -8em; font-weight: bold; font-size: 0.6em; padding: 2em 0.7em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em;
+		content: 'WHATWG'; background-color: $color_base; color: #fff; position: absolute; top: -0.5em; left: -8em; font-weight: bold; font-size: 0.6em; padding: 2em 0.7em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em;
 	}
 	
 	.logo { display: none; }
@@ -136,24 +74,38 @@ body > header {
 }
 
 body > h2 { display: inline-block; font-size: 1.6em; margin: 2em 0 0.5em 0; border-bottom: 2px solid #ccc; padding-bottom: 0.1em; }
-h3 { font-size: 1.2em; margin-bottom: 0.3em; }
+h3 { font-size: 1.2em; margin: 3em 0 2em -3.5em; text-transform: uppercase; letter-spacing: 0.1em; }
 
-h4, h5 { font-size: 1.0em; margin-bottom: 0.3em; color: #066; padding-top: 0.4em; }
+h4, h5, h6 { font-size: 1.2em; margin-bottom: 0.3em; color: $color_base; padding-top: 0.4em; }
+
+/* Section numbering */
+h2, h3, h4, h5, h6 { position: relative; }
+h3 .secno { display: none; }
+span.secno  { @include border-radius(0.25em); background-color: lighten($color_base, 10%); color: #fff; position: absolute; top: 0.7em; left: -6em; font-weight: bold; font-size: 12px; padding: 0.25em 0.5em; font-family: Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em; }
+
+h3 .secno, h4 .secno { display: none; }
+
+
 p { margin-bottom: 1em; }
 
 div.example { margin-bottom: 1em; }
 ul { margin-bottom: 1em; }
 ul li { list-style: none; position: relative; margin-bottom: 0.25em; }
-ul li:before { content: '\22c5'; font-size: 2em; color: #9cc; position: absolute; top: -0.35em; left: -0.65em; font-family: lucida; font-weight: bold; }
+ul li:before { content: '\22c5'; font-size: 2em; color: #CCC; position: absolute; top: -0.35em; left: -0.65em; font-family: Arial; font-weight: bold; }
 ul li ul { margin: 0em; }
 li li { margin-left: 1.2em; }
 
+/* DOM Tree */
+ul.domTree {
+	li { margin: 0; }
+}
+
 code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; font-size: 0.9em; display: inline-block; }
 
-pre { overflow: hidden; width: 100%; margin: 0em 0em 1em -0.6em; background: #eff; display: inline-block; padding: 0.25em 0.6em; }
-pre:hover { width: auto; }
+pre { margin: 0em 0em 1em -0.6em; display: block; padding: 0.25em 0.6em; }
 
-dt { color: #6cc; }
+body > dl { margin: 2em 0; }
+dt { font-weight: bold; }
 dd { margin-bottom: 0.5em; }
 
 table { border: 0; }
@@ -163,18 +115,15 @@ table caption, table th { text-align: left; color: #6cc; }
 table th { color: #099; }
 table td { vertical-align: top; padding: 0.25em 1.25em 0.25em 0em; }
 table tr, table tbody { border: 0px; }
-hr { border: 0; height: 2px; background: #acc; margin: 2em 0em; }
+hr { border: 0; height: 2px; background: $color_base; margin: 2em 0em; }
 
 /* Navigation on the index page is only shown using major headings, once you drill down to that major heading, the full extent of its contents are shown */
-ol.toc, ul.toc { list-style: none; }
+ol.toc, ul.toc { 
+	list-style: none;
+	a { color: black; } 
+	a:visited { color: #666; }
+}
 body > ol.toc li ol { display: none; } /* Only found on the index page */
-
-h2, h3, h4, h5, h6 { position: relative; }
-span.secno  { @include border-radius(0.25em); background-color: #9cc; color: #fff; position: absolute; top: 0.7em; left: -6em; font-weight: bold; font-size: 12px; padding: 0.25em 0.5em; font-family: Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em; }
-/*a .secno { @include border-radius(0.25em); background-color: transparent; color: #9cc; position: static; font-weight: normal; font-size: 1em; padding: 0; font-family: inherit; text-align: left; letter-spacing: 0; }*/
-
-h3 { margin: 2em 0em 0em; }
-h3 span.tocnum { top: 0.2em; }
 
 strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercase; }
 
@@ -182,10 +131,10 @@ strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercas
 	Typographic conventions
 	(http://developers.whatwg.org/introduction.html#typographic-conventions)
 */
-.note { position: relative; margin-left: -2em; padding: 0.2em; background-color: #EFF; }
-.example {}
+.note { position: relative; margin-left: -2em; padding: 0.5em; width: 120%; background-color: #eee; }
+.example { color: #999; font-style: italic; }
 .XXX {} /* An open issue */
-.warning {}
+.warning { background-color: lighten($color_base, 50%); padding: 0.5em; }
 .css { 
 	&:before { content: "CSS:"; color: #999; font-size: 1em; display: block; background: transparent; }
 }
