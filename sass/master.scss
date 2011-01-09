@@ -1,5 +1,6 @@
 @import "reset";
 @import "prettify-js";
+@import "css3";
 
 /* the @class=full-spec links are "external" links to the full
  * HTML5 spec (not internal ones to others parts in the author
@@ -124,7 +125,8 @@ body > header {
 	position: relative;
 	
 	&:before {
-		content: 'WHATWG'; background-color: #9cc; color: #fff; border-radius: 0.25em; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; position: absolute; top: -0.5em; left: -8em; font-weight: bold; font-size: 0.6em; padding: 2em 0.7em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em;
+		@include border-radius(0.25em);
+		content: 'WHATWG'; background-color: #9cc; color: #fff; position: absolute; top: -0.5em; left: -8em; font-weight: bold; font-size: 0.6em; padding: 2em 0.7em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em;
 	}
 	
 	.logo { display: none; }
