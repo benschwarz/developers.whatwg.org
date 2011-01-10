@@ -102,7 +102,16 @@ ul.domTree {
 
 code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; font-size: 0.9em; display: inline-block; }
 
-pre { margin: 0em 0em 1em -0.6em; display: block; padding: 0.25em 0.6em; }
+pre { 
+	margin: 0em 0em 1em -0.6em; display: block; padding: 0.25em 0.6em;
+	
+	/* Pinched from boilerplate */
+	/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
 pre.idl { display: none; } /* Browser implementors, only, I reckon */
 
 body > dl { margin: 2em 0; }
