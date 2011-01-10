@@ -16,9 +16,10 @@ Dir.chdir("public") do
       aside_content = reference_doc.css("dt#" + reference_string + " + dd").inner_html
       
       # Create aside element above the parent of the link
-      reference_link.parent.add_child('<aside id="'+ reference_string +'" class="reference">'+ aside_content +'</aside>')
-      
-      puts "Added reference for #{reference_string} to #{html}"
+      unless doc.css("aside#" + reference_string).any?
+        reference_link.parent.add_child('<aside id="'+ reference_string +'" class="reference">'+ aside_content +'</aside>')
+        puts "Added reference for #{reference_string} to #{html}"
+      end
     end
     
     # Write the changes to the document
