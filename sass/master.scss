@@ -85,10 +85,10 @@ span.secno  { @include border-radius(0.25em); background-color: lighten($color_b
 
 h3 .secno, h4 .secno { display: none; }
 
-
 p { margin-bottom: 1em; }
 
-div.example { margin-bottom: 1em; }
+aside.reference { border: 1px solid red; } /* TODO: Style new reference asides */
+
 ul { margin-bottom: 1em; }
 ul li { list-style: none; position: relative; margin-bottom: 0.25em; }
 ul li:before { content: '\22c5'; font-size: 2em; color: #CCC; position: absolute; top: -0.35em; left: -0.65em; font-family: Arial; font-weight: bold; }
