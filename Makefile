@@ -17,6 +17,7 @@ index.html: html5-full.html anolis/anolis
 	  --filter=.impl \
 	  --output-encoding="ascii" \
 	  $< $@
+	$(RUBY) post.rb
 
 html5-full.html:
 	$(CURL) http://www.whatwg.org/specs/web-apps/current-work/dev-index > $@
