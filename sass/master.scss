@@ -53,6 +53,7 @@ pre .dfnPanel {
 }
 
 a:link, a:visited { color: lighten($color_base, 10%); text-decoration: none; }
+a:hover { color: darken($color_base, 20%); }
 
 body { margin: 4em auto; padding: 0 5em; width: 33em; font-size: 1.05em; line-height: 1.45; }
 
@@ -136,6 +137,7 @@ ol.toc, ul.toc {
 	list-style: none;
 	a { color: black; } 
 	a:visited { color: #666; }
+	a:hover { color: $color_base; }
 }
 body > ol.toc li ol { display: none; } /* Only found on the index page */
 
