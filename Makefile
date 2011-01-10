@@ -7,6 +7,9 @@ PATCH=patch
 SPLITTER=html5-tools/spec-splitter/spec-splitter.py
 SPLITTERFLAGS=--html5lib-serialiser
 
+postprocess: LOG
+	$(RUBY) post.rb
+
 LOG: index.html $(SPLITTER)
 	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./public > LOG
 
@@ -17,7 +20,6 @@ index.html: html5-full.html anolis/anolis
 	  --filter=.impl \
 	  --output-encoding="ascii" \
 	  $< $@
-	$(RUBY) post.rb
 
 html5-full.html:
 	$(CURL) http://www.whatwg.org/specs/web-apps/current-work/dev-index > $@
