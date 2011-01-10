@@ -20,7 +20,7 @@ I didn't say it was pretty! – But it does indeed work.
 Run `make clean` then `make` to produce the required contents (final output is written to the `public` directory)
 The contents of `public` are exactly what I have deployed to developers.whatwg.org.
 
-If you're hoping to contribute to spec content, you'll need to talk to [Hixie](twitter.com/Hixie), as for styling and display of this content, I'm your man… and this is the repo.
+If you're hoping to contribute to spec content, you'll need to talk to [Hixie](http://twitter.com/Hixie), as for styling and display of this content, I'm your man… and this is the repo.
 
 ## Want to get involved? 
 
