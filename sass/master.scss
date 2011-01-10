@@ -85,7 +85,7 @@ span.secno  { @include border-radius(0.25em); background-color: lighten($color_b
 
 p { margin-bottom: 1em; }
 
-aside.reference { border: 1px solid red; } /* TODO: Style new reference asides */
+aside.reference { float: right; width: 10em; font-size: 0.7em; font-style: italic; margin-left: 1em; }
 
 h3 .secno, h4 .secno, h5 .secno, h6 .secno { display: none; } /* Only top level section numbering */
 
