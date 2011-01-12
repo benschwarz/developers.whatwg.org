@@ -109,14 +109,14 @@ ul.domTree {
 code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; font-size: 0.9em; display: inline-block; font-style: normal; }
 
 pre { 
-	margin: 0em 0em 1em -0.6em; display: block; padding: 0.25em 0.6em; overflow: scroll; border: 1px solid #eee;
+	margin: 0em 0em 1em -0.6em; display: block; padding: 0.25em 0.6em; border: 1px solid #eee;
 	
 	/* Pinched from boilerplate */
 	/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
-	/*white-space: pre;*/ /* CSS2 */
-	/*white-space: pre-wrap;*/ /* CSS 2.1 */
-	/*white-space: pre-line;*/ /* CSS 3 (and 2.1 as well, actually) */
-	/*word-wrap: break-word;*/ /* IE */
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
 }
 
 pre::-webkit-scrollbar{ height: 1.2ex; }
@@ -136,7 +136,7 @@ table caption, table th { text-align: left; color: #6cc; }
 table th { color: #099; }
 table td { vertical-align: top; padding: 0.25em 1.25em 0.25em 0em; }
 table tr, table tbody { border: 0px; }
-hr { border: 0; height: 2px; background: $color_base; margin: 2em 0em; }
+hr { border: 0; height: 2px; background: #eee; margin: 2em 0em; }
 
 /* Navigation on the index page is only shown using major headings, once you drill down to that major heading, the full extent of its contents are shown */
 ol.toc, ul.toc { 
