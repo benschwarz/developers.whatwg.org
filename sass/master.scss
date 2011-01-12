@@ -81,17 +81,17 @@ h3 { font-size: 1.2em; margin: 3em 0 2em -3.5em; text-transform: uppercase; lett
 h4, h5, h6 { font-size: 1.2em; margin-bottom: 0.3em; color: $color_base; padding-top: 0.4em; }
 
 /* Section numbering */
-h2, h3, h4, h5, h6 { position: relative; }
-h3 .secno { display: none; }
-span.secno  { @include border-radius(0.25em); background-color: lighten($color_base, 10%); color: #fff; position: absolute; top: 0.7em; left: -6em; font-weight: bold; font-size: 12px; padding: 0.25em 0.5em; font-family: Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em; }
+h2, h3, h4, h5, h6 { 
+	position: relative;
+	
+	span.secno  { @include border-radius(0.25em); background-color: lighten($color_base, 10%); color: #fff; position: absolute; top: 0.7em; left: -6em; font-weight: bold; font-size: 12px; padding: 0.25em 0.5em; font-family: Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em; }
+}
+
+a.secno, h3 .secno, h4 .secno, h5 .secno, h6 .secno { display: none; } /* Only top level section numbering */
 
 p { margin-bottom: 1em; }
 
 aside.reference { float: right; width: 10em; font-size: 0.7em; font-style: italic; margin-left: 1em; }
-
-h3 .secno, h4 .secno, h5 .secno, h6 .secno { display: none; } /* Only top level section numbering */
-
-p { margin-bottom: 1em; }
 
 a[href*="#refs"] { display: none; } /* Hide reference style links */
 
@@ -106,18 +106,23 @@ ul.domTree {
 	li { margin: 0; }
 }
 
-code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; font-size: 0.9em; display: inline-block; }
+code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; font-size: 0.9em; display: inline-block; font-style: normal; }
 
 pre { 
-	margin: 0em 0em 1em -0.6em; display: block; padding: 0.25em 0.6em; font-style: normal;
+	margin: 0em 0em 1em -0.6em; display: block; padding: 0.25em 0.6em; overflow: scroll; border: 1px solid #eee;
 	
 	/* Pinched from boilerplate */
 	/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
-	white-space: pre; /* CSS2 */
-	white-space: pre-wrap; /* CSS 2.1 */
-	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-	word-wrap: break-word; /* IE */
+	/*white-space: pre;*/ /* CSS2 */
+	/*white-space: pre-wrap;*/ /* CSS 2.1 */
+	/*white-space: pre-line;*/ /* CSS 3 (and 2.1 as well, actually) */
+	/*word-wrap: break-word;*/ /* IE */
 }
+
+pre::-webkit-scrollbar{ height: 1.2ex; }
+pre::-webkit-scrollbar-thumb:horizontal { background: rgba(0, 0, 0, 0.15); -webkit-border-radius:1ex; }
+pre::-webkit-scrollbar-thumb:horizontal:hover{ background: rgba(0, 0, 0, 0.2); cursor:pointer; }
+pre::-webkit-scrollbar-thumb:horizontal:active{ background: lighten($color_base, 20%); }
 pre.idl { display: none; } /* Browser implementors, only, I reckon */
 
 body > dl { margin: 2em 0; }
@@ -156,11 +161,12 @@ strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercas
 	&:before { content: "CSS:"; color: #999; font-size: 1em; display: block; background: transparent; }
 }
 
-/* Credits (index page) */
-section#credits {
-	footer p { color: #666; font-size: 0.7em; margin: 0; }
+/* Footer (all pages) */
+body > footer {
+	margin: 4em 0 2em 0; padding: 1em 0 0 0; border-top: 1px solid #ccc;
+	
+	p { color: #666; font-size: 0.7em; margin: 0; }
 }
-
 
 /* Small (iPhone) */
 @media only screen and (max-device-width: 480px) {
