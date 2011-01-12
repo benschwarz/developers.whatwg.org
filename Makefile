@@ -10,6 +10,7 @@ SPLITTERFLAGS=--html5lib-serialiser
 postprocess: LOG
 	rake postprocess:credits
 	rake postprocess:references
+	rake postprocess:footer
 
 LOG: index.html $(SPLITTER)
 	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./public > LOG
