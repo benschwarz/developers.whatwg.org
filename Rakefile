@@ -36,6 +36,15 @@ namespace :postprocess do
     end
   end
   
+  desc "Add analytics"
+  task :analytics do
+    analytics = File.open("html/analytics.html", "r").read
+    
+    each_page do |doc, filename|
+      doc.css("body")[0].add_child(analytics)
+    end
+  end
+  
   desc "Pull references inline"
   task :references do
     reference_doc = Nokogiri::HTML(File.open("public/references.html", "r"))

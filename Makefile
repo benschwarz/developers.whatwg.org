@@ -11,6 +11,7 @@ postprocess: LOG
 	rake postprocess:credits
 	rake postprocess:references
 	rake postprocess:footer
+	rake postprocess:analytics
 
 LOG: index.html $(SPLITTER)
 	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./public > LOG
