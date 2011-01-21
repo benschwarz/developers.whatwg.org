@@ -106,7 +106,9 @@ ul.domTree {
 	li { margin: 0; }
 }
 
-code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; font-size: 0.7em; display: inline-block; font-style: normal; }
+code { font-size: 0.8em; }
+pre { font-size: 0.7em; }
+code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; display: inline-block; font-style: normal; }
 
 pre { 
 	margin: 0em 0em 1em -0.6em; display: block; padding: 0.25em 0.6em; border: 1px solid #eee; width: 110%;
@@ -119,7 +121,7 @@ pre {
 	word-wrap: break-word; /* IE */
 }
 
-pre::-webkit-scrollbar{ height: 1.2ex; }
+pre::-webkit-scrollbar { height: 1.2ex; }
 pre::-webkit-scrollbar-thumb:horizontal { background: rgba(0, 0, 0, 0.15); -webkit-border-radius:1ex; }
 pre::-webkit-scrollbar-thumb:horizontal:hover{ background: rgba(0, 0, 0, 0.2); cursor:pointer; }
 pre::-webkit-scrollbar-thumb:horizontal:active{ background: lighten($color_base, 20%); }
