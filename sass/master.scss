@@ -67,7 +67,7 @@ body > header {
 	
 	.logo { display: none; }
 	
-	h1, h2 { -webkit-font-smoothing: antialiased; font-family: "ChunkFiveRegular", Helvetica; }
+	h1, h2 { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: "ChunkFiveRegular", Helvetica; }
 	h1 { line-height: 0.6em; font-size: 3em; }
 	h2 { font-size: 1.5em; margin-bottom: 0.5em; }
 
