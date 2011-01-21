@@ -1,4 +1,4 @@
-FileETag All
+FileETag MTime Size
 
 # Compress all static assets
 <IfModule mod_deflate.c>
