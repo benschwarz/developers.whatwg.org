@@ -4,6 +4,7 @@ require "bundler/setup"
 require "nokogiri"
 require "sass"
 require "yui/compressor"
+require "fileutils"
 
 doc = Nokogiri::HTML(File.open(ARGV[0], "r"))
 js_compressor = YUI::JavaScriptCompressor.new
@@ -19,11 +20,15 @@ Dir.chdir("sass") do
   File.open("../public/css/master.css", "w"){|buffer| buffer << css }
 end
 
-# Compress * javascripts
+# Compress * javascripts to application.js
 Dir.chdir("javascript") do
+  application = "../public/javascript/application.js"
+  
+  FileUtils.rm(application)
+  
   Dir["**/*.js"].each do |javascript_filepath|
-    compressed = js_compressor.compress(File.open(javascript_filepath, "r"))
-    File.open("../public/javascript/#{File.basename(javascript_filepath)}", "w"){|buffer| buffer << compressed }
+    compressed = js_compressor.compress(File.open(javascript_filepath, "r")) + "\n"
+    File.open(application, "a"){|buffer| buffer << compressed }
   end
 end
 
