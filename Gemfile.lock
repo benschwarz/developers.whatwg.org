@@ -2,6 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     nokogiri (1.4.4)
+    peach (0.4)
     sass (3.1.0.alpha.214)
     yui-compressor (0.9.1)
 
@@ -10,5 +11,6 @@ PLATFORMS
 
 DEPENDENCIES
   nokogiri
+  peach
   sass
   yui-compressor

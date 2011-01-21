@@ -2,7 +2,7 @@ require "rubygems"
 require "bundler/setup"
 
 require "nokogiri"
-
+require "peach"
 
 namespace :postprocess do
   desc "Add credits information"
@@ -19,7 +19,7 @@ namespace :postprocess do
   def each_page(&block)
     Dir.chdir("public") do
       
-      Dir["*.html"].each do |html|
+      Dir["*.html"].peach do |html|
         doc = Nokogiri::HTML(File.open(html, "r"))
         yield doc, html
         File.open(html, "w") {|file| file << doc.to_html }
