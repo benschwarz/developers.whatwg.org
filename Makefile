@@ -12,6 +12,7 @@ postprocess: LOG
 	rake postprocess:references
 	rake postprocess:footer
 	rake postprocess:analytics
+	rake postprocess:search_index
 
 LOG: index.html $(SPLITTER)
 	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./public > LOG

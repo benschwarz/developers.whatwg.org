@@ -3,6 +3,7 @@ require "bundler/setup"
 
 require "nokogiri"
 require "peach"
+require "json"
 
 namespace :postprocess do
   desc "Add credits information"
@@ -61,5 +62,22 @@ namespace :postprocess do
         end
       end
     end
+  end
+
+  desc "Add a search index json file"
+  task :search_index do
+    toc = Nokogiri::HTML(File.open("public/index.html", "r"))
+    index = toc.css("ol.toc li a").inject([]) do |index, link| 
+      section = link.css("span")
+      section_text = section.text.strip
+      section.remove
+      index << {
+        :uri => link.attributes["href"],
+        :text => link.text.strip,
+        :section => section_text
+      }
+    end
+
+    File.open("public/search_index.json", "w") {|buffer| buffer << JSON.generate(index)}
   end
 end

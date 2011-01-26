@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    json (1.4.6)
     nokogiri (1.4.4)
     peach (0.4)
     sass (3.1.0.alpha.214)
@@ -10,6 +11,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json
   nokogiri
   peach
   sass
