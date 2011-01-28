@@ -1,0 +1,57 @@
+#data
+<h1>Heading 1</h1>
+#outline
+Heading 1
+
+#data
+<p>foo
+<h1>Heading 1</h1>
+<p>bar
+#outline
+Heading 1
+
+#data
+<h1>Heading 1</h1>
+<h2>Heading 1-1</h2>
+#outline
+Heading 1
+--Heading 1-1
+
+#data
+<h1>Heading 1</h1>
+<h2>Heading 1-1</h2>
+<h1>Heading 2</h>
+#outline
+Heading 1
+--Heading 1-1
+Heading 2
+
+#data
+<h1>Heading 1</h1>
+<section>
+<h2>Heading 1-1</h2>
+</section>
+<h1>Heading 2</h1>
+#outline
+Heading 1
+--Heading 1-1
+Heading 2
+
+#data
+<h1>Heading 1</h1>
+<p></p>
+<h2>Heading 1-1</h2>
+<p></p>
+<h3>Heading 1-1-1</h3>
+#outline
+Heading 1
+--Heading 1-1
+----Heading 1-1-1
+
+#data
+<p>foo</p>
+<section>
+<h1>Heading 1</h1>
+</section>
+#outline
+--Heading 1

@@ -1,0 +1,73 @@
+DOCUMENTATION
+
+insertion-modes.csv represents the relative aggregate distribution of
+invocations of the "in head", "in body", and "in table" insertion
+modes, as seen when parsing a nominal ten billion documents. The data
+was collected by Google in July 2007, using a parser based on r967 of
+the HTML5 specification.
+
+The file is a comma-delimited file with three columns. The first
+column is the insertion mode block being counted. The second column is
+the actual insertion mode as it was when the block was invoked. The
+last column is the relative frequency.
+
+So, for example:
+
+   in head,in caption,456020
+
+...means that over ten billion documents, on average, the user agent
+will be required to "process the token as if the insertion mode was
+"in head"" while the insertion mode was really "in caption" a total of
+about 456020 times. This could happen, for example, in the following
+document:
+
+   <table><caption><title>
+
+...as the <title> start tag will be treated according to the "Anything
+else" entry of the "in caption" section, which defers to the "in body"
+section, which then defers to the "in head" section.
+
+The numbers are approximations. When the parser specification requires
+that a token be "reprocessed", it was usually counted as a second
+invocation, but not always, due to some optimisations in the
+parser. Similarly, fake start and end tags generated for parts of the
+specification that require a user agent to "act as if" a token had
+been seen count as separate invocations, except in certain cases where
+the parser had those operations optimised away.
+
+
+METHODOLOGY
+
+The sample data consisted of several billion documents from Google's
+index. An attempt was made to eliminate duplicates from the
+sample. Documents that did not appear, a priori, to be HTML documents
+(e.g. PDF documents, Flash animations, Word documents) were not
+included in the sample. Documents which, when parsed, resulted in DOMs
+with more than 65535 elements were only parsed up to the creation of
+the 65535th element.
+
+The parser was run with scripting enabled but no scripts supported, so
+<noscript> elements were treated as CDATA blocks but no script blocks
+were executed.
+
+It is hoped that this data will help implementors of HTML5 parsers to
+optimise their branches to better serve actual Web content.
+
+For more information, please contact Ian Hickson <ian@hixie.ch>.
+
+
+LICENSE
+
+Copyright 2007 Google, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you
+may not use this file except in compliance with the License. You may
+obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied. See the License for the specific language governing
+permissions and limitations under the License.

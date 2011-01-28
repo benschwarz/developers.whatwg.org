@@ -1,0 +1,2704 @@
+phase,insertion mode,token,name,count
+initial phase,,DOCTYPE,,5878995631
+initial phase,,characters,,4447740640
+initial phase,,start tag,html,3646859105
+initial phase,,comment,,1741798417
+initial phase,,start tag,script,169480981
+initial phase,,start tag,head,57437844
+initial phase,,start tag,style,36688933
+initial phase,,start tag,meta,35404712
+initial phase,,start tag,link,32967581
+initial phase,,start tag,title,22650517
+initial phase,,start tag,other,11721068
+initial phase,,start tag,div,10419067
+initial phase,,start tag,body,9763207
+initial phase,,start tag,br,9264835
+initial phase,,start tag,table,7401789
+initial phase,,start tag,base,5453719
+initial phase,,start tag,center,3938431
+initial phase,,start tag,a,3836698
+initial phase,,start tag,iframe,3484876
+initial phase,,start tag,hr,3385498
+initial phase,,start tag,pre,2903545
+initial phase,,start tag,noscript,2672245
+initial phase,,start tag,form,2618873
+initial phase,,start tag,p,2095307
+initial phase,,start tag,b,2093680
+initial phase,,end of file,,1910317
+initial phase,,start tag,font,1263967
+initial phase,,start tag,h2,876831
+initial phase,,start tag,frameset,837715
+initial phase,,start tag,img,621960
+initial phase,,start tag,h1,548667
+initial phase,,end tag,div,469919
+initial phase,,start tag,tr,440506
+initial phase,,start tag,object,363634
+initial phase,,end tag,html,306011
+initial phase,,end tag,head,285505
+initial phase,,start tag,li,284970
+initial phase,,end tag,td,272639
+initial phase,,end tag,other,256014
+initial phase,,end tag,center,247885
+initial phase,,end tag,body,247494
+initial phase,,start tag,h3,241686
+initial phase,,end tag,table,235751
+initial phase,,end tag,script,220301
+initial phase,,start tag,input,189672
+initial phase,,start tag,strong,153096
+initial phase,,start tag,td,140282
+initial phase,,end tag,font,114845
+initial phase,,start tag,ul,112238
+initial phase,,end tag,p,105909
+initial phase,,end tag,pre,100391
+initial phase,,start tag,basefont,87446
+initial phase,,start tag,h4,73278
+initial phase,,start tag,marquee,72907
+initial phase,,end tag,form,69371
+initial phase,,end tag,style,57040
+initial phase,,start tag,big,54424
+initial phase,,start tag,embed,53420
+initial phase,,start tag,em,50419
+initial phase,,start tag,blockquote,49722
+initial phase,,start tag,tt,44348
+initial phase,,start tag,bgsound,38277
+initial phase,,end tag,iframe,35322
+initial phase,,start tag,dl,30420
+initial phase,,end tag,tr,26473
+initial phase,,start tag,i,21834
+initial phase,,end tag,a,20051
+initial phase,,end tag,title,19504
+initial phase,,start tag,u,10773
+initial phase,,start tag,ol,10273
+initial phase,,end tag,noscript,9772
+initial phase,,start tag,h5,9066
+initial phase,,start tag,noframes,8432
+initial phase,,end tag,ul,8296
+initial phase,,start tag,noembed,7338
+initial phase,,end tag,b,7338
+initial phase,,start tag,small,7011
+initial phase,,start tag,frame,5877
+initial phase,,start tag,textarea,5055
+initial phase,,end tag,object,4635
+initial phase,,start tag,h6,4256
+initial phase,,start tag,nobr,3597
+initial phase,,start tag,plaintext,3044
+initial phase,,start tag,menu,2983
+initial phase,,start tag,select,2948
+initial phase,,end tag,tbody,2905
+initial phase,,start tag,address,2873
+initial phase,,end tag,li,2760
+initial phase,,end tag,marquee,2546
+initial phase,,start tag,listing,2474
+initial phase,,start tag,param,2190
+initial phase,,end tag,strong,2179
+initial phase,,end tag,br,2098
+initial phase,,start tag,fieldset,2095
+initial phase,,end tag,select,1854
+initial phase,,start tag,option,1554
+initial phase,,start tag,dt,1496
+initial phase,,end tag,h1,1235
+initial phase,,start tag,tbody,1143
+initial phase,,end tag,textarea,1070
+initial phase,,start tag,area,914
+initial phase,,end tag,i,888
+initial phase,,start tag,th,830
+initial phase,,start tag,dd,668
+initial phase,,end tag,address,549
+initial phase,,end tag,u,546
+initial phase,,start tag,dir,489
+initial phase,,end tag,h2,486
+initial phase,,end tag,blockquote,416
+initial phase,,end tag,frameset,373
+initial phase,,end tag,nobr,367
+initial phase,,end tag,h5,300
+initial phase,,end tag,dl,298
+initial phase,,end tag,embed,248
+initial phase,,start tag,caption,240
+initial phase,,start tag,image,225
+initial phase,,end tag,plaintext,222
+initial phase,,end tag,em,211
+initial phase,,start tag,s,211
+initial phase,,end tag,noembed,193
+initial phase,,end tag,h4,185
+initial phase,,end tag,h3,162
+initial phase,,start tag,strike,162
+initial phase,,end tag,ol,144
+initial phase,,start tag,tfoot,112
+initial phase,,end tag,dd,107
+initial phase,,start tag,spacer,104
+initial phase,,end tag,noframes,101
+initial phase,,end tag,dir,98
+initial phase,,start tag,wbr,98
+initial phase,,end tag,base,86
+initial phase,,start tag,isindex,86
+initial phase,,end tag,option,52
+initial phase,,end tag,menu,46
+initial phase,,end tag,small,37
+initial phase,,end tag,big,37
+initial phase,,start tag,colgroup,34
+initial phase,,start tag,button,31
+initial phase,,end tag,meta,31
+initial phase,,end tag,img,17
+initial phase,,start tag,thead,17
+initial phase,,end tag,th,14
+initial phase,,start tag,col,14
+initial phase,,end tag,param,14
+initial phase,,end tag,tt,11
+initial phase,,end tag,link,11
+initial phase,,end tag,bgsound,8
+initial phase,,end tag,h6,8
+initial phase,,end tag,fieldset,5
+initial phase,,end tag,s,5
+initial phase,,end tag,input,5
+initial phase,,end tag,basefont,5
+initial phase,,end tag,hr,2
+initial phase,,end tag,frame,2
+initial phase,,end tag,dt,2
+initial phase,,start tag,optgroup,2
+initial phase,,end tag,optgroup,2
+root element phase,,characters,,5850066111
+root element phase,,start tag,html,5832790281
+root element phase,,comment,,217786512
+root element phase,,start tag,head,23643615
+root element phase,,start tag,script,8072931
+root element phase,,DOCTYPE,,7814720
+root element phase,,start tag,meta,4634877
+root element phase,,start tag,link,1914206
+root element phase,,start tag,other,1541352
+root element phase,,start tag,title,1527971
+root element phase,,start tag,style,1266368
+root element phase,,start tag,table,1054179
+root element phase,,start tag,base,884014
+root element phase,,start tag,div,348661
+root element phase,,start tag,body,165670
+root element phase,,start tag,a,114790
+root element phase,,start tag,center,110438
+root element phase,,start tag,p,79529
+root element phase,,start tag,br,74768
+root element phase,,start tag,form,67340
+root element phase,,end of file,,61755
+root element phase,,start tag,iframe,53177
+root element phase,,start tag,font,49678
+root element phase,,end tag,script,30761
+root element phase,,start tag,noscript,29902
+root element phase,,start tag,img,15893
+root element phase,,start tag,frameset,15201
+root element phase,,end tag,other,13716
+root element phase,,start tag,object,13667
+root element phase,,end tag,head,9439
+root element phase,,end tag,html,8525
+root element phase,,end tag,body,7217
+root element phase,,end tag,div,5915
+root element phase,,end tag,td,5689
+root element phase,,start tag,pre,5339
+root element phase,,end tag,style,4554
+root element phase,,start tag,basefont,4418
+root element phase,,start tag,dl,4071
+root element phase,,start tag,bgsound,3492
+root element phase,,start tag,frame,3255
+root element phase,,start tag,embed,3024
+root element phase,,start tag,h1,2726
+root element phase,,start tag,input,2540
+root element phase,,start tag,td,2176
+root element phase,,start tag,tr,2002
+root element phase,,end tag,p,1756
+root element phase,,end tag,a,1568
+root element phase,,start tag,h2,1342
+root element phase,,start tag,li,1241
+root element phase,,start tag,h3,1085
+root element phase,,start tag,b,1076
+root element phase,,start tag,hr,1076
+root element phase,,end tag,table,1030
+root element phase,,start tag,strong,1015
+root element phase,,end tag,iframe,957
+root element phase,,start tag,noembed,899
+root element phase,,end tag,center,654
+root element phase,,start tag,blockquote,596
+root element phase,,start tag,ul,581
+root element phase,,end tag,tr,509
+root element phase,,end tag,noscript,497
+root element phase,,end tag,form,483
+root element phase,,end tag,h1,477
+root element phase,,start tag,marquee,431
+root element phase,,end tag,font,408
+root element phase,,start tag,param,379
+root element phase,,end tag,br,341
+root element phase,,start tag,noframes,341
+root element phase,,end tag,title,324
+root element phase,,start tag,nobr,245
+root element phase,,end tag,tbody,202
+root element phase,,end tag,ul,188
+root element phase,,end tag,b,162
+root element phase,,start tag,small,147
+root element phase,,start tag,tbody,121
+root element phase,,start tag,u,112
+root element phase,,start tag,h4,101
+root element phase,,start tag,area,92
+root element phase,,end tag,embed,89
+root element phase,,end tag,link,81
+root element phase,,start tag,i,75
+root element phase,,end tag,object,63
+root element phase,,start tag,em,60
+root element phase,,end tag,frameset,57
+root element phase,,end tag,th,57
+root element phase,,start tag,h5,54
+root element phase,,end tag,pre,37
+root element phase,,start tag,h6,37
+root element phase,,start tag,tt,37
+root element phase,,start tag,textarea,31
+root element phase,,end tag,meta,28
+root element phase,,end tag,marquee,26
+root element phase,,start tag,address,23
+root element phase,,end tag,strong,23
+root element phase,,start tag,dt,20
+root element phase,,end tag,option,20
+root element phase,,start tag,big,20
+root element phase,,start tag,fieldset,14
+root element phase,,end tag,select,14
+root element phase,,end tag,i,14
+root element phase,,end tag,dd,14
+root element phase,,start tag,ol,14
+root element phase,,end tag,li,14
+root element phase,,end tag,textarea,8
+root element phase,,start tag,th,8
+root element phase,,start tag,dd,8
+root element phase,,end tag,u,8
+root element phase,,start tag,wbr,5
+root element phase,,start tag,s,5
+root element phase,,start tag,image,5
+root element phase,,start tag,menu,5
+root element phase,,end tag,noframes,5
+root element phase,,end tag,h2,5
+root element phase,,start tag,option,5
+root element phase,,end tag,h5,5
+root element phase,,end tag,ol,2
+root element phase,,end tag,bgsound,2
+root element phase,,end tag,s,2
+root element phase,,start tag,caption,2
+root element phase,,start tag,colgroup,2
+root element phase,,start tag,plaintext,2
+root element phase,,end tag,noembed,2
+root element phase,,start tag,select,2
+root element phase,,start tag,strike,2
+root element phase,,start tag,isindex,2
+root element phase,,end tag,dl,2
+root element phase,,start tag,dir,2
+main phase,before head insertion mode,start tag,head,9360609227
+main phase,before head insertion mode,characters,,8860607162
+main phase,before head insertion mode,comment,,435821551
+main phase,before head insertion mode,start tag,meta,28764711
+main phase,before head insertion mode,start tag,title,28407556
+main phase,before head insertion mode,start tag,script,23938931
+main phase,before head insertion mode,start tag,html,19823276
+main phase,before head insertion mode,start tag,body,14332038
+main phase,before head insertion mode,DOCTYPE,,9583134
+main phase,before head insertion mode,start tag,link,9578290
+main phase,before head insertion mode,start tag,style,4345774
+main phase,before head insertion mode,start tag,other,4209766
+main phase,before head insertion mode,start tag,base,1279955
+main phase,before head insertion mode,end tag,title,1023952
+main phase,before head insertion mode,end tag,other,826521
+main phase,before head insertion mode,end tag,table,803857
+main phase,before head insertion mode,start tag,a,724892
+main phase,before head insertion mode,start tag,center,539627
+main phase,before head insertion mode,end tag,pre,507786
+main phase,before head insertion mode,start tag,frameset,476714
+main phase,before head insertion mode,start tag,table,466088
+main phase,before head insertion mode,start tag,div,454501
+main phase,before head insertion mode,end tag,tr,453013
+main phase,before head insertion mode,start tag,form,447865
+main phase,before head insertion mode,end tag,html,343805
+main phase,before head insertion mode,start tag,p,307634
+main phase,before head insertion mode,end tag,head,303042
+main phase,before head insertion mode,start tag,img,289134
+main phase,before head insertion mode,start tag,font,265019
+main phase,before head insertion mode,end tag,div,243779
+main phase,before head insertion mode,end tag,td,229437
+main phase,before head insertion mode,start tag,br,156323
+main phase,before head insertion mode,start tag,iframe,154775
+main phase,before head insertion mode,end tag,th,143156
+main phase,before head insertion mode,start tag,noscript,130556
+main phase,before head insertion mode,start tag,pre,121339
+main phase,before head insertion mode,start tag,object,110247
+main phase,before head insertion mode,end tag,script,88983
+main phase,before head insertion mode,end tag,font,87675
+main phase,before head insertion mode,end tag,center,63855
+main phase,before head insertion mode,start tag,input,60690
+main phase,before head insertion mode,end tag,body,60389
+main phase,before head insertion mode,end tag,h2,59454
+main phase,before head insertion mode,end tag,a,58479
+main phase,before head insertion mode,start tag,h1,54717
+main phase,before head insertion mode,end tag,dl,53412
+main phase,before head insertion mode,end tag,b,51565
+main phase,before head insertion mode,start tag,b,50196
+main phase,before head insertion mode,end tag,form,50173
+main phase,before head insertion mode,end of file,,49160
+main phase,before head insertion mode,end tag,h4,48993
+main phase,before head insertion mode,end tag,big,48451
+main phase,before head insertion mode,end tag,h3,48226
+main phase,before head insertion mode,end tag,h5,47968
+main phase,before head insertion mode,end tag,h6,47957
+main phase,before head insertion mode,end tag,h1,47861
+main phase,before head insertion mode,end tag,blockquote,47809
+main phase,before head insertion mode,end tag,frameset,47760
+main phase,before head insertion mode,end tag,em,47702
+main phase,before head insertion mode,end tag,frame,47679
+main phase,before head insertion mode,end tag,address,47661
+main phase,before head insertion mode,end tag,caption,47659
+main phase,before head insertion mode,end tag,dir,47656
+main phase,before head insertion mode,start tag,h2,36103
+main phase,before head insertion mode,start tag,td,35270
+main phase,before head insertion mode,start tag,bgsound,30012
+main phase,before head insertion mode,start tag,hr,29120
+main phase,before head insertion mode,start tag,tr,28600
+main phase,before head insertion mode,start tag,basefont,28218
+main phase,before head insertion mode,end tag,iframe,23639
+main phase,before head insertion mode,start tag,param,23150
+main phase,before head insertion mode,end tag,style,21431
+main phase,before head insertion mode,start tag,blockquote,19206
+main phase,before head insertion mode,start tag,h3,18132
+main phase,before head insertion mode,start tag,ul,16089
+main phase,before head insertion mode,end tag,noscript,14894
+main phase,before head insertion mode,start tag,i,12680
+main phase,before head insertion mode,start tag,noframes,10904
+main phase,before head insertion mode,end tag,ul,9141
+main phase,before head insertion mode,start tag,embed,8861
+main phase,before head insertion mode,end tag,p,7758
+main phase,before head insertion mode,start tag,strong,6661
+main phase,before head insertion mode,end tag,ol,6641
+main phase,before head insertion mode,start tag,textarea,5310
+main phase,before head insertion mode,start tag,u,4789
+main phase,before head insertion mode,start tag,marquee,4462
+main phase,before head insertion mode,start tag,noembed,4285
+main phase,before head insertion mode,start tag,h4,4187
+main phase,before head insertion mode,start tag,big,3793
+main phase,before head insertion mode,end tag,tbody,3770
+main phase,before head insertion mode,start tag,li,2948
+main phase,before head insertion mode,start tag,dd,1594
+main phase,before head insertion mode,start tag,frame,1412
+main phase,before head insertion mode,end tag,i,1180
+main phase,before head insertion mode,end tag,noframes,1163
+main phase,before head insertion mode,end tag,select,1148
+main phase,before head insertion mode,end tag,li,1140
+main phase,before head insertion mode,end tag,u,1067
+main phase,before head insertion mode,start tag,dl,975
+main phase,before head insertion mode,end tag,object,778
+main phase,before head insertion mode,end tag,strong,746
+main phase,before head insertion mode,start tag,nobr,680
+main phase,before head insertion mode,start tag,h6,607
+main phase,before head insertion mode,start tag,tt,596
+main phase,before head insertion mode,start tag,h5,486
+main phase,before head insertion mode,start tag,em,431
+main phase,before head insertion mode,start tag,address,416
+main phase,before head insertion mode,end tag,textarea,332
+main phase,before head insertion mode,start tag,area,292
+main phase,before head insertion mode,end tag,br,269
+main phase,before head insertion mode,end tag,link,260
+main phase,before head insertion mode,end tag,noembed,225
+main phase,before head insertion mode,start tag,ol,219
+main phase,before head insertion mode,end tag,embed,205
+main phase,before head insertion mode,start tag,s,153
+main phase,before head insertion mode,start tag,strike,136
+main phase,before head insertion mode,start tag,spacer,136
+main phase,before head insertion mode,start tag,image,130
+main phase,before head insertion mode,start tag,dt,112
+main phase,before head insertion mode,end tag,option,112
+main phase,before head insertion mode,start tag,tbody,109
+main phase,before head insertion mode,start tag,small,98
+main phase,before head insertion mode,start tag,dir,86
+main phase,before head insertion mode,end tag,bgsound,86
+main phase,before head insertion mode,start tag,thead,54
+main phase,before head insertion mode,end tag,tt,52
+main phase,before head insertion mode,end tag,marquee,49
+main phase,before head insertion mode,start tag,caption,46
+main phase,before head insertion mode,start tag,option,43
+main phase,before head insertion mode,start tag,menu,43
+main phase,before head insertion mode,start tag,fieldset,40
+main phase,before head insertion mode,start tag,th,37
+main phase,before head insertion mode,end tag,base,31
+main phase,before head insertion mode,end tag,plaintext,28
+main phase,before head insertion mode,end tag,param,26
+main phase,before head insertion mode,end tag,meta,26
+main phase,before head insertion mode,start tag,select,23
+main phase,before head insertion mode,start tag,plaintext,20
+main phase,before head insertion mode,end tag,input,14
+main phase,before head insertion mode,end tag,small,14
+main phase,before head insertion mode,end tag,img,11
+main phase,before head insertion mode,end tag,dd,11
+main phase,before head insertion mode,start tag,tfoot,8
+main phase,before head insertion mode,start tag,isindex,8
+main phase,before head insertion mode,end tag,fieldset,8
+main phase,before head insertion mode,end tag,hr,5
+main phase,before head insertion mode,start tag,listing,5
+main phase,before head insertion mode,start tag,wbr,2
+main phase,before head insertion mode,end tag,wbr,2
+main phase,before head insertion mode,end tag,listing,2
+main phase,before head insertion mode,end tag,thead,2
+main phase,before head insertion mode,end tag,menu,2
+main phase,before head insertion mode,end tag,s,2
+main phase,in head insertion mode,characters,,122698105262
+main phase,in head insertion mode,start tag,meta,36821788926
+main phase,in head insertion mode,start tag,link,21896408665
+main phase,in head insertion mode,end tag,script,18481349221
+main phase,in head insertion mode,start tag,script,18268643942
+main phase,in head insertion mode,end tag,title,9619130217
+main phase,in head insertion mode,start tag,title,9566298133
+main phase,in head insertion mode,end tag,head,9525632467
+main phase,in head insertion mode,comment,,6405147082
+main phase,in head insertion mode,end tag,style,4904300639
+main phase,in head insertion mode,start tag,style,4854512091
+main phase,in head insertion mode,start tag,base,662500800
+main phase,in head insertion mode,start tag,head,320896789
+main phase,in head insertion mode,start tag,html,251288231
+main phase,in head insertion mode,end tag,link,160580026
+main phase,in head insertion mode,end tag,meta,148044069
+main phase,in head insertion mode,start tag,body,114933530
+main phase,in head insertion mode,end tag,noscript,106131140
+main phase,in head insertion mode,start tag,noscript,102794036
+main phase,in head insertion mode,DOCTYPE,,83468425
+main phase,in head insertion mode,start tag,other,73333370
+main phase,in head insertion mode,start tag,div,29580535
+main phase,in head insertion mode,start tag,table,28784824
+main phase,in head insertion mode,end tag,base,16836193
+main phase,in head insertion mode,end of file,,12701167
+main phase,in head insertion mode,start tag,form,9578252
+main phase,in head insertion mode,start tag,img,7007697
+main phase,in head insertion mode,start tag,input,6522790
+main phase,in head insertion mode,start tag,a,6367612
+main phase,in head insertion mode,start tag,center,5737676
+main phase,in head insertion mode,start tag,frameset,5178017
+main phase,in head insertion mode,start tag,bgsound,4968143
+main phase,in head insertion mode,start tag,p,3107039
+main phase,in head insertion mode,start tag,br,3019656
+main phase,in head insertion mode,start tag,iframe,2864371
+main phase,in head insertion mode,start tag,h1,2534205
+main phase,in head insertion mode,end tag,html,2264268
+main phase,in head insertion mode,start tag,object,2252015
+main phase,in head insertion mode,end tag,other,2043782
+main phase,in head insertion mode,start tag,basefont,1799814
+main phase,in head insertion mode,start tag,font,1536403
+main phase,in head insertion mode,end tag,form,1048770
+main phase,in head insertion mode,start tag,h2,587868
+main phase,in head insertion mode,end tag,body,459270
+main phase,in head insertion mode,end tag,font,379998
+main phase,in head insertion mode,end tag,div,373195
+main phase,in head insertion mode,start tag,b,363428
+main phase,in head insertion mode,start tag,td,343730
+main phase,in head insertion mode,end tag,p,323979
+main phase,in head insertion mode,start tag,tr,269956
+main phase,in head insertion mode,end tag,td,256503
+main phase,in head insertion mode,start tag,embed,253589
+main phase,in head insertion mode,end tag,table,245228
+main phase,in head insertion mode,start tag,noframes,232663
+main phase,in head insertion mode,start tag,hr,188361
+main phase,in head insertion mode,start tag,pre,184521
+main phase,in head insertion mode,end tag,a,165410
+main phase,in head insertion mode,end tag,tr,163954
+main phase,in head insertion mode,start tag,h3,150952
+main phase,in head insertion mode,start tag,noembed,130660
+main phase,in head insertion mode,start tag,strong,97931
+main phase,in head insertion mode,start tag,param,89336
+main phase,in head insertion mode,start tag,frame,79005
+main phase,in head insertion mode,start tag,ul,72696
+main phase,in head insertion mode,end tag,center,71452
+main phase,in head insertion mode,start tag,h4,69148
+main phase,in head insertion mode,start tag,blockquote,65491
+main phase,in head insertion mode,start tag,u,50393
+main phase,in head insertion mode,end tag,b,49745
+main phase,in head insertion mode,end tag,strong,47494
+main phase,in head insertion mode,start tag,i,38867
+main phase,in head insertion mode,start tag,marquee,37382
+main phase,in head insertion mode,start tag,em,36095
+main phase,in head insertion mode,start tag,dl,35883
+main phase,in head insertion mode,end tag,iframe,26487
+main phase,in head insertion mode,start tag,small,24346
+main phase,in head insertion mode,end tag,th,22022
+main phase,in head insertion mode,start tag,tbody,19808
+main phase,in head insertion mode,start tag,textarea,19064
+main phase,in head insertion mode,end tag,tbody,18075
+main phase,in head insertion mode,start tag,li,17944
+main phase,in head insertion mode,end tag,h1,17010
+main phase,in head insertion mode,start tag,tt,13488
+main phase,in head insertion mode,end tag,h2,13447
+main phase,in head insertion mode,end tag,em,11341
+main phase,in head insertion mode,end tag,h3,11315
+main phase,in head insertion mode,end tag,br,11109
+main phase,in head insertion mode,start tag,ol,11103
+main phase,in head insertion mode,end tag,h5,10825
+main phase,in head insertion mode,end tag,h4,10770
+main phase,in head insertion mode,end tag,h6,10678
+main phase,in head insertion mode,start tag,h6,10501
+main phase,in head insertion mode,start tag,nobr,10197
+main phase,in head insertion mode,end tag,frameset,10047
+main phase,in head insertion mode,end tag,blockquote,8004
+main phase,in head insertion mode,start tag,h5,7995
+main phase,in head insertion mode,end tag,dl,7492
+main phase,in head insertion mode,end tag,frame,7361
+main phase,in head insertion mode,end tag,big,7338
+main phase,in head insertion mode,end tag,dir,7275
+main phase,in head insertion mode,end tag,caption,7202
+main phase,in head insertion mode,end tag,address,7199
+main phase,in head insertion mode,end tag,pre,7095
+main phase,in head insertion mode,end tag,object,6586
+main phase,in head insertion mode,end tag,i,5703
+main phase,in head insertion mode,start tag,isindex,5402
+main phase,in head insertion mode,end tag,ul,5289
+main phase,in head insertion mode,end tag,u,4873
+main phase,in head insertion mode,end tag,embed,4838
+main phase,in head insertion mode,start tag,fieldset,4789
+main phase,in head insertion mode,end tag,img,4682
+main phase,in head insertion mode,start tag,address,4592
+main phase,in head insertion mode,start tag,s,3981
+main phase,in head insertion mode,end tag,li,3637
+main phase,in head insertion mode,start tag,area,3374
+main phase,in head insertion mode,start tag,select,2688
+main phase,in head insertion mode,start tag,big,2442
+main phase,in head insertion mode,start tag,menu,2404
+main phase,in head insertion mode,end tag,noframes,1854
+main phase,in head insertion mode,start tag,option,1600
+main phase,in head insertion mode,end tag,bgsound,1516
+main phase,in head insertion mode,end tag,input,1464
+main phase,in head insertion mode,start tag,dir,1464
+main phase,in head insertion mode,end tag,select,1308
+main phase,in head insertion mode,end tag,textarea,1229
+main phase,in head insertion mode,start tag,dt,1076
+main phase,in head insertion mode,end tag,nobr,989
+main phase,in head insertion mode,end tag,basefont,963
+main phase,in head insertion mode,start tag,dd,685
+main phase,in head insertion mode,end tag,marquee,671
+main phase,in head insertion mode,start tag,th,590
+main phase,in head insertion mode,end tag,noembed,523
+main phase,in head insertion mode,start tag,image,457
+main phase,in head insertion mode,end tag,tt,442
+main phase,in head insertion mode,start tag,caption,393
+main phase,in head insertion mode,end tag,wbr,341
+main phase,in head insertion mode,start tag,spacer,315
+main phase,in head insertion mode,start tag,button,274
+main phase,in head insertion mode,end tag,ol,269
+main phase,in head insertion mode,end tag,small,199
+main phase,in head insertion mode,start tag,colgroup,196
+main phase,in head insertion mode,end tag,area,164
+main phase,in head insertion mode,end tag,param,156
+main phase,in head insertion mode,start tag,listing,156
+main phase,in head insertion mode,end tag,hr,130
+main phase,in head insertion mode,start tag,thead,107
+main phase,in head insertion mode,start tag,col,101
+main phase,in head insertion mode,start tag,wbr,83
+main phase,in head insertion mode,start tag,plaintext,69
+main phase,in head insertion mode,end tag,menu,66
+main phase,in head insertion mode,end tag,listing,52
+main phase,in head insertion mode,end tag,strike,49
+main phase,in head insertion mode,end tag,dt,43
+main phase,in head insertion mode,start tag,strike,31
+main phase,in head insertion mode,end tag,s,28
+main phase,in head insertion mode,end tag,plaintext,23
+main phase,in head insertion mode,end tag,thead,23
+main phase,in head insertion mode,end tag,image,20
+main phase,in head insertion mode,end tag,dd,11
+main phase,in head insertion mode,end tag,option,5
+main phase,in head insertion mode,end tag,button,5
+main phase,in head insertion mode,start tag,tfoot,5
+main phase,in head insertion mode,end tag,fieldset,5
+main phase,in head insertion mode,end tag,colgroup,5
+main phase,in head insertion mode,end tag,col,2
+main phase,after head insertion mode,characters,,10369963906
+main phase,after head insertion mode,start tag,body,9263089221
+main phase,after head insertion mode,end tag,script,438574726
+main phase,after head insertion mode,start tag,script,437148272
+main phase,after head insertion mode,comment,,336530699
+main phase,after head insertion mode,start tag,meta,217085572
+main phase,after head insertion mode,start tag,link,107373134
+main phase,after head insertion mode,start tag,frameset,99320772
+main phase,after head insertion mode,end tag,style,74549643
+main phase,after head insertion mode,start tag,style,74292078
+main phase,after head insertion mode,end tag,head,30244844
+main phase,after head insertion mode,start tag,div,23215185
+main phase,after head insertion mode,start tag,table,22991744
+main phase,after head insertion mode,start tag,head,16033708
+main phase,after head insertion mode,start tag,noscript,14036543
+main phase,after head insertion mode,start tag,html,13425617
+main phase,after head insertion mode,start tag,center,10174243
+main phase,after head insertion mode,start tag,form,10098858
+main phase,after head insertion mode,end tag,title,9875446
+main phase,after head insertion mode,start tag,title,9859107
+main phase,after head insertion mode,start tag,other,8201644
+main phase,after head insertion mode,start tag,a,6626978
+main phase,after head insertion mode,start tag,base,6080078
+main phase,after head insertion mode,DOCTYPE,,4269883
+main phase,after head insertion mode,start tag,iframe,3964884
+main phase,after head insertion mode,end tag,html,2833352
+main phase,after head insertion mode,start tag,p,1747861
+main phase,after head insertion mode,start tag,font,1304214
+main phase,after head insertion mode,start tag,br,1278008
+main phase,after head insertion mode,start tag,h1,921680
+main phase,after head insertion mode,start tag,noframes,799857
+main phase,after head insertion mode,start tag,basefont,715461
+main phase,after head insertion mode,end tag,body,650511
+main phase,after head insertion mode,start tag,noembed,647823
+main phase,after head insertion mode,start tag,img,547507
+main phase,after head insertion mode,end of file,,375825
+main phase,after head insertion mode,start tag,b,286645
+main phase,after head insertion mode,end tag,link,280562
+main phase,after head insertion mode,start tag,object,267233
+main phase,after head insertion mode,start tag,bgsound,255814
+main phase,after head insertion mode,start tag,h2,253398
+main phase,after head insertion mode,start tag,tr,170847
+main phase,after head insertion mode,start tag,caption,166706
+main phase,after head insertion mode,start tag,td,141171
+main phase,after head insertion mode,start tag,h3,138578
+main phase,after head insertion mode,start tag,input,137189
+main phase,after head insertion mode,end tag,div,132860
+main phase,after head insertion mode,start tag,frame,124054
+main phase,after head insertion mode,start tag,pre,114342
+main phase,after head insertion mode,end tag,td,112111
+main phase,after head insertion mode,start tag,strong,109966
+main phase,after head insertion mode,start tag,hr,82049
+main phase,after head insertion mode,start tag,blockquote,80429
+main phase,after head insertion mode,end tag,font,70291
+main phase,after head insertion mode,end tag,i,54977
+main phase,after head insertion mode,end tag,frameset,44747
+main phase,after head insertion mode,end tag,meta,42733
+main phase,after head insertion mode,end tag,p,41043
+main phase,after head insertion mode,start tag,embed,35672
+main phase,after head insertion mode,start tag,h4,34344
+main phase,after head insertion mode,end tag,other,33322
+main phase,after head insertion mode,end tag,table,31945
+main phase,after head insertion mode,end tag,base,31187
+main phase,after head insertion mode,start tag,marquee,30619
+main phase,after head insertion mode,start tag,u,25277
+main phase,after head insertion mode,start tag,ul,23066
+main phase,after head insertion mode,end tag,center,22913
+main phase,after head insertion mode,end tag,tr,22184
+main phase,after head insertion mode,start tag,tt,21339
+main phase,after head insertion mode,end tag,br,12860
+main phase,after head insertion mode,end tag,a,10591
+main phase,after head insertion mode,start tag,dd,10551
+main phase,after head insertion mode,start tag,i,10542
+main phase,after head insertion mode,start tag,dl,10533
+main phase,after head insertion mode,start tag,tbody,9905
+main phase,after head insertion mode,start tag,param,7246
+main phase,after head insertion mode,end tag,noframes,7208
+main phase,after head insertion mode,start tag,h6,7000
+main phase,after head insertion mode,start tag,h5,6606
+main phase,after head insertion mode,start tag,nobr,6221
+main phase,after head insertion mode,end tag,noscript,4471
+main phase,after head insertion mode,end tag,iframe,4253
+main phase,after head insertion mode,start tag,small,4155
+main phase,after head insertion mode,end tag,form,3108
+main phase,after head insertion mode,start tag,ol,2749
+main phase,after head insertion mode,start tag,textarea,2422
+main phase,after head insertion mode,start tag,dir,2210
+main phase,after head insertion mode,start tag,em,2158
+main phase,after head insertion mode,end tag,nobr,2158
+main phase,after head insertion mode,start tag,big,2124
+main phase,after head insertion mode,end tag,select,1996
+main phase,after head insertion mode,end tag,h2,1629
+main phase,after head insertion mode,end tag,b,1611
+main phase,after head insertion mode,start tag,li,1519
+main phase,after head insertion mode,start tag,menu,1238
+main phase,after head insertion mode,start tag,address,1226
+main phase,after head insertion mode,end tag,object,986
+main phase,after head insertion mode,start tag,area,966
+main phase,after head insertion mode,end tag,embed,923
+main phase,after head insertion mode,end tag,blockquote,827
+main phase,after head insertion mode,start tag,select,801
+main phase,after head insertion mode,start tag,fieldset,654
+main phase,after head insertion mode,start tag,dt,596
+main phase,after head insertion mode,end tag,strong,584
+main phase,after head insertion mode,end tag,h1,546
+main phase,after head insertion mode,end tag,pre,529
+main phase,after head insertion mode,start tag,spacer,529
+main phase,after head insertion mode,end tag,ul,520
+main phase,after head insertion mode,end tag,h3,370
+main phase,after head insertion mode,start tag,image,277
+main phase,after head insertion mode,start tag,th,277
+main phase,after head insertion mode,end tag,img,266
+main phase,after head insertion mode,end tag,thead,196
+main phase,after head insertion mode,end tag,small,182
+main phase,after head insertion mode,end tag,tbody,176
+main phase,after head insertion mode,end tag,ol,136
+main phase,after head insertion mode,start tag,s,124
+main phase,after head insertion mode,end tag,textarea,115
+main phase,after head insertion mode,end tag,u,115
+main phase,after head insertion mode,start tag,colgroup,109
+main phase,after head insertion mode,end tag,noembed,109
+main phase,after head insertion mode,end tag,frame,95
+main phase,after head insertion mode,start tag,option,81
+main phase,after head insertion mode,start tag,thead,66
+main phase,after head insertion mode,end tag,tt,63
+main phase,after head insertion mode,end tag,h5,60
+main phase,after head insertion mode,start tag,button,49
+main phase,after head insertion mode,end tag,li,49
+main phase,after head insertion mode,end tag,dl,46
+main phase,after head insertion mode,end tag,marquee,43
+main phase,after head insertion mode,end tag,dd,34
+main phase,after head insertion mode,start tag,col,31
+main phase,after head insertion mode,start tag,plaintext,28
+main phase,after head insertion mode,start tag,listing,28
+main phase,after head insertion mode,end tag,th,26
+main phase,after head insertion mode,start tag,wbr,26
+main phase,after head insertion mode,end tag,address,20
+main phase,after head insertion mode,end tag,bgsound,17
+main phase,after head insertion mode,end tag,h4,14
+main phase,after head insertion mode,end tag,big,14
+main phase,after head insertion mode,end tag,hr,8
+main phase,after head insertion mode,end tag,dir,8
+main phase,after head insertion mode,end tag,s,8
+main phase,after head insertion mode,end tag,em,8
+main phase,after head insertion mode,end tag,caption,8
+main phase,after head insertion mode,end tag,menu,5
+main phase,after head insertion mode,end tag,basefont,5
+main phase,after head insertion mode,end tag,image,5
+main phase,after head insertion mode,start tag,isindex,5
+main phase,after head insertion mode,end tag,fieldset,2
+main phase,after head insertion mode,end tag,param,2
+main phase,after head insertion mode,start tag,strike,2
+main phase,after head insertion mode,end tag,option,2
+main phase,after head insertion mode,end tag,dt,2
+main phase,in body insertion mode,characters,,1145365329839
+main phase,in body insertion mode,start tag,a,234705394227
+main phase,in body insertion mode,end tag,a,234417637856
+main phase,in body insertion mode,end tag,div,151625213394
+main phase,in body insertion mode,start tag,div,151520445665
+main phase,in body insertion mode,start tag,li,97306623291
+main phase,in body insertion mode,end tag,li,95028891237
+main phase,in body insertion mode,start tag,br,79986908589
+main phase,in body insertion mode,start tag,other,69682112975
+main phase,in body insertion mode,end tag,other,69249811096
+main phase,in body insertion mode,comment,,55324346169
+main phase,in body insertion mode,start tag,img,39522131585
+main phase,in body insertion mode,start tag,p,38153174114
+main phase,in body insertion mode,end tag,p,33485422339
+main phase,in body insertion mode,start tag,table,31261360643
+main phase,in body insertion mode,end tag,script,24691635975
+main phase,in body insertion mode,start tag,script,24362172466
+main phase,in body insertion mode,start tag,input,20007144831
+main phase,in body insertion mode,end tag,b,16818364386
+main phase,in body insertion mode,start tag,b,16680005842
+main phase,in body insertion mode,start tag,ul,14953360029
+main phase,in body insertion mode,end tag,ul,14946558815
+main phase,in body insertion mode,start tag,font,13943586831
+main phase,in body insertion mode,end tag,font,13802424999
+main phase,in body insertion mode,end tag,body,9544682987
+main phase,in body insertion mode,end tag,strong,8885072473
+main phase,in body insertion mode,start tag,strong,8870304135
+main phase,in body insertion mode,end tag,i,5943088749
+main phase,in body insertion mode,start tag,i,5862084228
+main phase,in body insertion mode,end tag,h2,5402675916
+main phase,in body insertion mode,start tag,h2,5398775177
+main phase,in body insertion mode,end tag,form,5303191915
+main phase,in body insertion mode,start tag,form,5275090656
+main phase,in body insertion mode,end tag,h3,4923812956
+main phase,in body insertion mode,start tag,h3,4912778187
+main phase,in body insertion mode,start tag,dd,4789856113
+main phase,in body insertion mode,start tag,hr,4329171518
+main phase,in body insertion mode,end tag,dd,3871208551
+main phase,in body insertion mode,start tag,area,3419482418
+main phase,in body insertion mode,start tag,center,3110402330
+main phase,in body insertion mode,end tag,h1,3107039835
+main phase,in body insertion mode,start tag,h1,3101787384
+main phase,in body insertion mode,start tag,dt,3028823317
+main phase,in body insertion mode,end tag,center,2952477898
+main phase,in body insertion mode,end tag,em,2725043429
+main phase,in body insertion mode,start tag,em,2713591064
+main phase,in body insertion mode,end tag,noscript,2435423322
+main phase,in body insertion mode,start tag,noscript,2399237779
+main phase,in body insertion mode,end tag,dt,2310131371
+main phase,in body insertion mode,start tag,h4,2042066377
+main phase,in body insertion mode,end tag,h4,2040807286
+main phase,in body insertion mode,start tag,h5,1807605360
+main phase,in body insertion mode,end tag,h5,1807007354
+main phase,in body insertion mode,end tag,style,1662079214
+main phase,in body insertion mode,start tag,style,1632485443
+main phase,in body insertion mode,start tag,dl,1420162909
+main phase,in body insertion mode,end tag,dl,1420060958
+main phase,in body insertion mode,end tag,small,1284549963
+main phase,in body insertion mode,start tag,small,1283030355
+main phase,in body insertion mode,start tag,meta,1228537144
+main phase,in body insertion mode,start tag,select,1186506990
+main phase,in body insertion mode,end tag,u,1151740190
+main phase,in body insertion mode,start tag,u,1136508946
+main phase,in body insertion mode,end tag,iframe,1123805331
+main phase,in body insertion mode,start tag,iframe,1083138450
+main phase,in body insertion mode,start tag,link,992823165
+main phase,in body insertion mode,end tag,td,874915588
+main phase,in body insertion mode,start tag,param,871288368
+main phase,in body insertion mode,start tag,body,716262035
+main phase,in body insertion mode,end tag,tr,713937956
+main phase,in body insertion mode,start tag,pre,602806380
+main phase,in body insertion mode,end tag,nobr,595491339
+main phase,in body insertion mode,end tag,pre,594432449
+main phase,in body insertion mode,start tag,nobr,594354806
+main phase,in body insertion mode,end tag,table,592242278
+main phase,in body insertion mode,end of file,,553490958
+main phase,in body insertion mode,end tag,head,538833475
+main phase,in body insertion mode,start tag,tt,499599606
+main phase,in body insertion mode,end tag,tt,499513421
+main phase,in body insertion mode,end tag,blockquote,461050067
+main phase,in body insertion mode,start tag,blockquote,460638429
+main phase,in body insertion mode,start tag,td,455526412
+main phase,in body insertion mode,end tag,h6,423679050
+main phase,in body insertion mode,start tag,h6,423364212
+main phase,in body insertion mode,start tag,fieldset,410926016
+main phase,in body insertion mode,end tag,fieldset,409016668
+main phase,in body insertion mode,end tag,title,355454907
+main phase,in body insertion mode,start tag,title,350494843
+main phase,in body insertion mode,end tag,ol,344930903
+main phase,in body insertion mode,start tag,ol,343849672
+main phase,in body insertion mode,end tag,textarea,309492509
+main phase,in body insertion mode,start tag,textarea,308831232
+main phase,in body insertion mode,start tag,tr,301362508
+main phase,in body insertion mode,start tag,head,299192226
+main phase,in body insertion mode,start tag,html,268501437
+main phase,in body insertion mode,end tag,html,236184900
+main phase,in body insertion mode,end tag,object,231500580
+main phase,in body insertion mode,start tag,embed,225752691
+main phase,in body insertion mode,start tag,object,224943943
+main phase,in body insertion mode,end tag,button,197123343
+main phase,in body insertion mode,start tag,button,197096838
+main phase,in body insertion mode,end tag,input,194696193
+main phase,in body insertion mode,end tag,embed,164283282
+main phase,in body insertion mode,start tag,address,161637163
+main phase,in body insertion mode,end tag,address,161530371
+main phase,in body insertion mode,end tag,br,143285485
+main phase,in body insertion mode,end tag,img,139406872
+main phase,in body insertion mode,end tag,big,134168178
+main phase,in body insertion mode,start tag,big,133112757
+main phase,in body insertion mode,start tag,wbr,127924391
+main phase,in body insertion mode,DOCTYPE,,106559576
+main phase,in body insertion mode,end tag,s,76510675
+main phase,in body insertion mode,start tag,s,75029356
+main phase,in body insertion mode,end tag,param,60429736
+main phase,in body insertion mode,end tag,dir,50862949
+main phase,in body insertion mode,start tag,dir,49874357
+main phase,in body insertion mode,end tag,strike,45231955
+main phase,in body insertion mode,start tag,strike,44338761
+main phase,in body insertion mode,start tag,base,38457691
+main phase,in body insertion mode,end tag,tbody,35005524
+main phase,in body insertion mode,end tag,area,33488604
+main phase,in body insertion mode,start tag,marquee,32086383
+main phase,in body insertion mode,end tag,marquee,30141498
+main phase,in body insertion mode,start tag,spacer,23999914
+main phase,in body insertion mode,start tag,basefont,23575390
+main phase,in body insertion mode,end tag,link,21340077
+main phase,in body insertion mode,end tag,hr,12272600
+main phase,in body insertion mode,end tag,wbr,10415860
+main phase,in body insertion mode,end tag,spacer,10091907
+main phase,in body insertion mode,end tag,noframes,6514007
+main phase,in body insertion mode,start tag,menu,5845507
+main phase,in body insertion mode,start tag,image,5802609
+main phase,in body insertion mode,start tag,frame,5712433
+main phase,in body insertion mode,end tag,menu,5616073
+main phase,in body insertion mode,end tag,noembed,4555877
+main phase,in body insertion mode,end tag,basefont,4070493
+main phase,in body insertion mode,end tag,option,4002172
+main phase,in body insertion mode,start tag,bgsound,3981559
+main phase,in body insertion mode,start tag,option,3909982
+main phase,in body insertion mode,end tag,base,3833242
+main phase,in body insertion mode,end tag,select,3746860
+main phase,in body insertion mode,start tag,noembed,3397004
+main phase,in body insertion mode,end tag,frameset,3008873
+main phase,in body insertion mode,start tag,noframes,2618572
+main phase,in body insertion mode,start tag,frameset,2593786
+main phase,in body insertion mode,end tag,meta,2433819
+main phase,in body insertion mode,start tag,tbody,2433646
+main phase,in body insertion mode,end tag,caption,2287896
+main phase,in body insertion mode,start tag,caption,2044158
+main phase,in body insertion mode,end tag,th,1995069
+main phase,in body insertion mode,start tag,th,1352629
+main phase,in body insertion mode,end tag,image,791624
+main phase,in body insertion mode,end tag,bgsound,699232
+main phase,in body insertion mode,end tag,listing,539355
+main phase,in body insertion mode,start tag,listing,376150
+main phase,in body insertion mode,end tag,plaintext,287919
+main phase,in body insertion mode,start tag,col,219467
+main phase,in body insertion mode,end tag,frame,181349
+main phase,in body insertion mode,end tag,thead,78417
+main phase,in body insertion mode,end tag,col,41894
+main phase,in body insertion mode,end tag,tfoot,35134
+main phase,in body insertion mode,start tag,tfoot,31467
+main phase,in body insertion mode,start tag,thead,26640
+main phase,in body insertion mode,start tag,isindex,23110
+main phase,in body insertion mode,end tag,colgroup,20034
+main phase,in body insertion mode,start tag,plaintext,15812
+main phase,in body insertion mode,start tag,colgroup,14272
+main phase,in body insertion mode,end tag,optgroup,9815
+main phase,in body insertion mode,start tag,optgroup,7596
+main phase,in body insertion mode,end tag,isindex,89
+main phase,in table insertion mode,start tag,tr,148746060459
+main phase,in table insertion mode,characters,,140075613291
+main phase,in table insertion mode,end tag,table,6719073180
+main phase,in table insertion mode,start tag,tbody,5968664366
+main phase,in table insertion mode,start tag,input,2566669764
+main phase,in table insertion mode,comment,,1893032600
+main phase,in table insertion mode,start tag,form,1497279855
+main phase,in table insertion mode,start tag,td,872176234
+main phase,in table insertion mode,start tag,thead,468454522
+main phase,in table insertion mode,start tag,a,450670640
+main phase,in table insertion mode,end tag,a,445394829
+main phase,in table insertion mode,start tag,br,382881384
+main phase,in table insertion mode,start tag,col,336969064
+main phase,in table insertion mode,end tag,script,224929286
+main phase,in table insertion mode,start tag,script,219789664
+main phase,in table insertion mode,start tag,table,195677986
+main phase,in table insertion mode,start tag,colgroup,188468641
+main phase,in table insertion mode,start tag,caption,165340153
+main phase,in table insertion mode,start tag,div,151759381
+main phase,in table insertion mode,start tag,img,143803489
+main phase,in table insertion mode,start tag,other,143609803
+main phase,in table insertion mode,start tag,font,131201595
+main phase,in table insertion mode,end tag,div,125478955
+main phase,in table insertion mode,end tag,font,111618298
+main phase,in table insertion mode,end tag,form,103399472
+main phase,in table insertion mode,end tag,other,100984399
+main phase,in table insertion mode,start tag,p,89870614
+main phase,in table insertion mode,end tag,b,83002070
+main phase,in table insertion mode,start tag,b,82635652
+main phase,in table insertion mode,end tag,tr,75999014
+main phase,in table insertion mode,end tag,style,75003410
+main phase,in table insertion mode,start tag,style,73132727
+main phase,in table insertion mode,end tag,p,67248980
+main phase,in table insertion mode,start tag,tfoot,61801980
+main phase,in table insertion mode,start tag,li,57429101
+main phase,in table insertion mode,end tag,li,51411825
+main phase,in table insertion mode,end tag,td,50324320
+main phase,in table insertion mode,start tag,center,27393770
+main phase,in table insertion mode,start tag,th,24685421
+main phase,in table insertion mode,end tag,center,20028310
+main phase,in table insertion mode,end tag,input,18966022
+main phase,in table insertion mode,start tag,strong,16789327
+main phase,in table insertion mode,end tag,strong,15936329
+main phase,in table insertion mode,start tag,area,13839225
+main phase,in table insertion mode,start tag,hr,13130093
+main phase,in table insertion mode,end tag,i,10239262
+main phase,in table insertion mode,start tag,param,9238411
+main phase,in table insertion mode,start tag,i,8934382
+main phase,in table insertion mode,start tag,ul,8933074
+main phase,in table insertion mode,end tag,ul,7757323
+main phase,in table insertion mode,start tag,link,7605398
+main phase,in table insertion mode,end tag,noscript,6913606
+main phase,in table insertion mode,end of file,,5592772
+main phase,in table insertion mode,end tag,body,5234587
+main phase,in table insertion mode,start tag,meta,5100167
+main phase,in table insertion mode,start tag,noscript,5077557
+main phase,in table insertion mode,end tag,html,5005503
+main phase,in table insertion mode,end tag,object,4164109
+main phase,in table insertion mode,start tag,h3,3916831
+main phase,in table insertion mode,start tag,body,3795011
+main phase,in table insertion mode,end tag,tbody,3742780
+main phase,in table insertion mode,end tag,h3,3655461
+main phase,in table insertion mode,start tag,u,3375760
+main phase,in table insertion mode,start tag,h2,3300361
+main phase,in table insertion mode,end tag,h2,3289425
+main phase,in table insertion mode,end tag,iframe,3264462
+main phase,in table insertion mode,start tag,dd,3253642
+main phase,in table insertion mode,end tag,u,3242124
+main phase,in table insertion mode,start tag,iframe,3106489
+main phase,in table insertion mode,start tag,embed,2907904
+main phase,in table insertion mode,end tag,small,2713138
+main phase,in table insertion mode,start tag,dt,2531160
+main phase,in table insertion mode,start tag,small,2514350
+main phase,in table insertion mode,start tag,object,2378752
+main phase,in table insertion mode,start tag,big,2081668
+main phase,in table insertion mode,end tag,big,2081584
+main phase,in table insertion mode,end tag,thead,2075759
+main phase,in table insertion mode,end tag,head,2042688
+main phase,in table insertion mode,end tag,dt,1970000
+main phase,in table insertion mode,end tag,title,1827517
+main phase,in table insertion mode,end tag,em,1816338
+main phase,in table insertion mode,start tag,title,1813222
+main phase,in table insertion mode,start tag,em,1798150
+main phase,in table insertion mode,start tag,select,1752511
+main phase,in table insertion mode,start tag,head,1725523
+main phase,in table insertion mode,start tag,h1,1706143
+main phase,in table insertion mode,start tag,html,1652010
+main phase,in table insertion mode,end tag,h1,1631918
+main phase,in table insertion mode,end tag,br,1556652
+main phase,in table insertion mode,end tag,dd,1508611
+main phase,in table insertion mode,start tag,pre,1383000
+main phase,in table insertion mode,end tag,caption,1364100
+main phase,in table insertion mode,start tag,h4,1151543
+main phase,in table insertion mode,end tag,embed,1129228
+main phase,in table insertion mode,end tag,h4,1117398
+main phase,in table insertion mode,end tag,blockquote,929641
+main phase,in table insertion mode,start tag,dl,908646
+main phase,in table insertion mode,start tag,nobr,902323
+main phase,in table insertion mode,end tag,meta,855093
+main phase,in table insertion mode,start tag,blockquote,810744
+main phase,in table insertion mode,end tag,pre,793008
+main phase,in table insertion mode,end tag,dl,768149
+main phase,in table insertion mode,end tag,nobr,763247
+main phase,in table insertion mode,start tag,base,583237
+main phase,in table insertion mode,end tag,col,537578
+main phase,in table insertion mode,start tag,h5,525479
+main phase,in table insertion mode,end tag,h5,516771
+main phase,in table insertion mode,DOCTYPE,,475059
+main phase,in table insertion mode,start tag,marquee,466881
+main phase,in table insertion mode,end tag,marquee,459065
+main phase,in table insertion mode,end tag,textarea,439916
+main phase,in table insertion mode,start tag,textarea,432525
+main phase,in table insertion mode,start tag,h6,354862
+main phase,in table insertion mode,end tag,h6,350539
+main phase,in table insertion mode,start tag,fieldset,295376
+main phase,in table insertion mode,end tag,colgroup,263992
+main phase,in table insertion mode,start tag,ol,255406
+main phase,in table insertion mode,end tag,img,248458
+main phase,in table insertion mode,start tag,dir,225892
+main phase,in table insertion mode,end tag,dir,223050
+main phase,in table insertion mode,end tag,ol,221800
+main phase,in table insertion mode,end tag,fieldset,180050
+main phase,in table insertion mode,end tag,th,152240
+main phase,in table insertion mode,start tag,tt,149847
+main phase,in table insertion mode,end tag,tt,146050
+main phase,in table insertion mode,start tag,address,134194
+main phase,in table insertion mode,end tag,address,133846
+main phase,in table insertion mode,start tag,wbr,125327
+main phase,in table insertion mode,end tag,s,89628
+main phase,in table insertion mode,start tag,s,83476
+main phase,in table insertion mode,end tag,select,67508
+main phase,in table insertion mode,start tag,image,59685
+main phase,in table insertion mode,start tag,strike,52387
+main phase,in table insertion mode,end tag,strike,52086
+main phase,in table insertion mode,start tag,basefont,51311
+main phase,in table insertion mode,end tag,param,48796
+main phase,in table insertion mode,end tag,hr,40250
+main phase,in table insertion mode,start tag,spacer,38172
+main phase,in table insertion mode,end tag,link,31985
+main phase,in table insertion mode,start tag,bgsound,29722
+main phase,in table insertion mode,end tag,noframes,25454
+main phase,in table insertion mode,end tag,area,22708
+main phase,in table insertion mode,start tag,option,21787
+main phase,in table insertion mode,end tag,option,17094
+main phase,in table insertion mode,end tag,button,14642
+main phase,in table insertion mode,start tag,button,14590
+main phase,in table insertion mode,start tag,noframes,13711
+main phase,in table insertion mode,end tag,noembed,11751
+main phase,in table insertion mode,start tag,noembed,11592
+main phase,in table insertion mode,end tag,spacer,10493
+main phase,in table insertion mode,start tag,menu,8343
+main phase,in table insertion mode,end tag,menu,7836
+main phase,in table insertion mode,end tag,bgsound,5339
+main phase,in table insertion mode,start tag,frame,1773
+main phase,in table insertion mode,end tag,tfoot,1718
+main phase,in table insertion mode,end tag,image,1397
+main phase,in table insertion mode,end tag,basefont,1125
+main phase,in table insertion mode,end tag,frameset,888
+main phase,in table insertion mode,start tag,frameset,769
+main phase,in table insertion mode,end tag,base,708
+main phase,in table insertion mode,end tag,listing,538
+main phase,in table insertion mode,start tag,listing,509
+main phase,in table insertion mode,end tag,wbr,500
+main phase,in table insertion mode,end tag,optgroup,309
+main phase,in table insertion mode,end tag,frame,86
+main phase,in table insertion mode,end tag,plaintext,69
+main phase,in table insertion mode,start tag,plaintext,69
+main phase,in table insertion mode,start tag,optgroup,31
+main phase,in table insertion mode,start tag,isindex,5
+main phase,in caption insertion mode,characters,,342278255
+main phase,in caption insertion mode,end tag,caption,168815413
+main phase,in caption insertion mode,start tag,a,94689735
+main phase,in caption insertion mode,end tag,a,88351998
+main phase,in caption insertion mode,end tag,other,24902851
+main phase,in caption insertion mode,start tag,other,24686326
+main phase,in caption insertion mode,start tag,br,15858033
+main phase,in caption insertion mode,start tag,b,13330244
+main phase,in caption insertion mode,end tag,b,13056716
+main phase,in caption insertion mode,start tag,font,12073983
+main phase,in caption insertion mode,end tag,font,11687065
+main phase,in caption insertion mode,start tag,img,5880517
+main phase,in caption insertion mode,start tag,strong,4677851
+main phase,in caption insertion mode,end tag,strong,4660716
+main phase,in caption insertion mode,start tag,p,3421584
+main phase,in caption insertion mode,start tag,table,2912519
+main phase,in caption insertion mode,end tag,p,2827570
+main phase,in caption insertion mode,start tag,i,2254351
+main phase,in caption insertion mode,end tag,i,2249553
+main phase,in caption insertion mode,start tag,div,2173230
+main phase,in caption insertion mode,end tag,div,2102851
+main phase,in caption insertion mode,start tag,center,1672163
+main phase,in caption insertion mode,comment,,1572681
+main phase,in caption insertion mode,end tag,center,1308798
+main phase,in caption insertion mode,start tag,tbody,1139122
+main phase,in caption insertion mode,end tag,table,879091
+main phase,in caption insertion mode,start tag,tr,869559
+main phase,in caption insertion mode,start tag,em,731062
+main phase,in caption insertion mode,end tag,em,730518
+main phase,in caption insertion mode,start tag,h2,699817
+main phase,in caption insertion mode,end tag,h2,679363
+main phase,in caption insertion mode,start tag,big,629956
+main phase,in caption insertion mode,start tag,input,629739
+main phase,in caption insertion mode,end tag,big,624744
+main phase,in caption insertion mode,start tag,u,624281
+main phase,in caption insertion mode,end tag,u,619298
+main phase,in caption insertion mode,start tag,h4,480876
+main phase,in caption insertion mode,end tag,h4,468151
+main phase,in caption insertion mode,start tag,h3,460416
+main phase,in caption insertion mode,end tag,h3,438631
+main phase,in caption insertion mode,end tag,script,432438
+main phase,in caption insertion mode,start tag,script,431992
+main phase,in caption insertion mode,start tag,nobr,427808
+main phase,in caption insertion mode,end tag,nobr,427105
+main phase,in caption insertion mode,end tag,small,381347
+main phase,in caption insertion mode,start tag,small,369942
+main phase,in caption insertion mode,start tag,h1,353227
+main phase,in caption insertion mode,end tag,h1,350241
+main phase,in caption insertion mode,start tag,hr,317312
+main phase,in caption insertion mode,start tag,caption,262811
+main phase,in caption insertion mode,start tag,param,262728
+main phase,in caption insertion mode,start tag,h5,240919
+main phase,in caption insertion mode,end tag,h5,239608
+main phase,in caption insertion mode,end tag,br,232686
+main phase,in caption insertion mode,start tag,form,188676
+main phase,in caption insertion mode,end tag,tr,180001
+main phase,in caption insertion mode,end tag,form,179138
+main phase,in caption insertion mode,start tag,thead,156659
+main phase,in caption insertion mode,start tag,li,132674
+main phase,in caption insertion mode,start tag,h6,119829
+main phase,in caption insertion mode,end tag,h6,119449
+main phase,in caption insertion mode,end tag,li,115734
+main phase,in caption insertion mode,start tag,area,110580
+main phase,in caption insertion mode,end tag,td,80657
+main phase,in caption insertion mode,start tag,select,64944
+main phase,in caption insertion mode,start tag,tt,61323
+main phase,in caption insertion mode,end tag,tt,60869
+main phase,in caption insertion mode,start tag,ul,57932
+main phase,in caption insertion mode,end tag,ul,56745
+main phase,in caption insertion mode,start tag,embed,50590
+main phase,in caption insertion mode,end tag,embed,45051
+main phase,in caption insertion mode,end tag,object,44157
+main phase,in caption insertion mode,start tag,object,43986
+main phase,in caption insertion mode,start tag,blockquote,31777
+main phase,in caption insertion mode,start tag,marquee,30877
+main phase,in caption insertion mode,end tag,blockquote,30810
+main phase,in caption insertion mode,end tag,marquee,30628
+main phase,in caption insertion mode,start tag,dt,30292
+main phase,in caption insertion mode,end tag,noscript,26554
+main phase,in caption insertion mode,start tag,noscript,26270
+main phase,in caption insertion mode,start tag,basefont,23694
+main phase,in caption insertion mode,start tag,col,21877
+main phase,in caption insertion mode,start tag,colgroup,19568
+main phase,in caption insertion mode,start tag,td,17163
+main phase,in caption insertion mode,end tag,tbody,13705
+main phase,in caption insertion mode,start tag,body,13531
+main phase,in caption insertion mode,start tag,dl,12738
+main phase,in caption insertion mode,end tag,dl,12698
+main phase,in caption insertion mode,start tag,th,12565
+main phase,in caption insertion mode,end tag,body,12489
+main phase,in caption insertion mode,end tag,html,12232
+main phase,in caption insertion mode,end tag,dt,11925
+main phase,in caption insertion mode,start tag,meta,10973
+main phase,in caption insertion mode,start tag,html,10027
+main phase,in caption insertion mode,end tag,iframe,9659
+main phase,in caption insertion mode,start tag,iframe,9503
+main phase,in caption insertion mode,start tag,pre,8409
+main phase,in caption insertion mode,end tag,pre,8282
+main phase,in caption insertion mode,end tag,head,7897
+main phase,in caption insertion mode,start tag,head,7761
+main phase,in caption insertion mode,end tag,title,7631
+main phase,in caption insertion mode,start tag,title,7567
+main phase,in caption insertion mode,end tag,ol,5220
+main phase,in caption insertion mode,start tag,ol,5208
+main phase,in caption insertion mode,start tag,address,4844
+main phase,in caption insertion mode,end tag,address,4824
+main phase,in caption insertion mode,end of file,,4363
+main phase,in caption insertion mode,start tag,dd,4184
+main phase,in caption insertion mode,end tag,style,3643
+main phase,in caption insertion mode,start tag,style,3322
+main phase,in caption insertion mode,end tag,dd,2746
+main phase,in caption insertion mode,end tag,strike,2575
+main phase,in caption insertion mode,start tag,strike,2575
+main phase,in caption insertion mode,end tag,img,2471
+main phase,in caption insertion mode,start tag,link,2072
+main phase,in caption insertion mode,start tag,spacer,1996
+main phase,in caption insertion mode,end tag,textarea,1993
+main phase,in caption insertion mode,start tag,textarea,1967
+main phase,in caption insertion mode,start tag,wbr,1953
+main phase,in caption insertion mode,end tag,input,1510
+main phase,in caption insertion mode,start tag,button,1140
+main phase,in caption insertion mode,end tag,button,1140
+main phase,in caption insertion mode,start tag,dir,1114
+main phase,in caption insertion mode,end tag,dir,1105
+main phase,in caption insertion mode,end tag,th,876
+main phase,in caption insertion mode,start tag,image,871
+main phase,in caption insertion mode,end tag,hr,798
+main phase,in caption insertion mode,end tag,param,766
+main phase,in caption insertion mode,start tag,s,671
+main phase,in caption insertion mode,end tag,basefont,607
+main phase,in caption insertion mode,end tag,s,483
+main phase,in caption insertion mode,DOCTYPE,,422
+main phase,in caption insertion mode,start tag,fieldset,309
+main phase,in caption insertion mode,end tag,fieldset,309
+main phase,in caption insertion mode,start tag,tfoot,167
+main phase,in caption insertion mode,start tag,bgsound,153
+main phase,in caption insertion mode,start tag,noembed,124
+main phase,in caption insertion mode,end tag,noembed,124
+main phase,in caption insertion mode,start tag,base,92
+main phase,in caption insertion mode,end tag,thead,78
+main phase,in caption insertion mode,end tag,area,75
+main phase,in caption insertion mode,end tag,bgsound,49
+main phase,in caption insertion mode,end tag,menu,49
+main phase,in caption insertion mode,start tag,menu,49
+main phase,in caption insertion mode,end tag,link,40
+main phase,in caption insertion mode,start tag,frame,37
+main phase,in caption insertion mode,end tag,option,34
+main phase,in caption insertion mode,start tag,frameset,28
+main phase,in caption insertion mode,end tag,select,23
+main phase,in caption insertion mode,end tag,colgroup,23
+main phase,in caption insertion mode,end tag,tfoot,20
+main phase,in caption insertion mode,start tag,option,17
+main phase,in caption insertion mode,end tag,frameset,17
+main phase,in caption insertion mode,end tag,noframes,17
+main phase,in caption insertion mode,end tag,base,2
+main phase,in caption insertion mode,end tag,spacer,2
+main phase,in caption insertion mode,start tag,listing,2
+main phase,in column group insertion mode,start tag,col,1225731474
+main phase,in column group insertion mode,characters,,964700593
+main phase,in column group insertion mode,end tag,col,461536644
+main phase,in column group insertion mode,start tag,tr,303859590
+main phase,in column group insertion mode,end tag,colgroup,173378161
+main phase,in column group insertion mode,comment,,35852502
+main phase,in column group insertion mode,start tag,thead,25035242
+main phase,in column group insertion mode,start tag,tbody,15016613
+main phase,in column group insertion mode,start tag,colgroup,10180439
+main phase,in column group insertion mode,start tag,script,3052588
+main phase,in column group insertion mode,start tag,form,2495699
+main phase,in column group insertion mode,start tag,td,1970677
+main phase,in column group insertion mode,end tag,table,1404287
+main phase,in column group insertion mode,start tag,font,667588
+main phase,in column group insertion mode,end tag,other,328893
+main phase,in column group insertion mode,start tag,div,287473
+main phase,in column group insertion mode,end tag,font,242022
+main phase,in column group insertion mode,start tag,caption,135033
+main phase,in column group insertion mode,start tag,br,132333
+main phase,in column group insertion mode,start tag,other,115601
+main phase,in column group insertion mode,end tag,tr,109830
+main phase,in column group insertion mode,start tag,img,91527
+main phase,in column group insertion mode,start tag,table,89278
+main phase,in column group insertion mode,start tag,strong,82648
+main phase,in column group insertion mode,start tag,input,65925
+main phase,in column group insertion mode,start tag,th,59364
+main phase,in column group insertion mode,end tag,td,52905
+main phase,in column group insertion mode,end tag,strong,45326
+main phase,in column group insertion mode,end tag,thead,39298
+main phase,in column group insertion mode,start tag,a,29416
+main phase,in column group insertion mode,end tag,center,26088
+main phase,in column group insertion mode,start tag,small,24829
+main phase,in column group insertion mode,start tag,p,24074
+main phase,in column group insertion mode,start tag,tfoot,21403
+main phase,in column group insertion mode,end tag,caption,14217
+main phase,in column group insertion mode,start tag,u,14153
+main phase,in column group insertion mode,end tag,p,13135
+main phase,in column group insertion mode,start tag,nobr,8999
+main phase,in column group insertion mode,end tag,div,8068
+main phase,in column group insertion mode,start tag,em,7393
+main phase,in column group insertion mode,start tag,style,7182
+main phase,in column group insertion mode,start tag,h1,6838
+main phase,in column group insertion mode,end tag,b,5970
+main phase,in column group insertion mode,start tag,b,5611
+main phase,in column group insertion mode,start tag,link,3154
+main phase,in column group insertion mode,end tag,u,2752
+main phase,in column group insertion mode,start tag,dd,2720
+main phase,in column group insertion mode,start tag,center,2537
+main phase,in column group insertion mode,start tag,head,2326
+main phase,in column group insertion mode,end tag,a,1834
+main phase,in column group insertion mode,end tag,em,1666
+main phase,in column group insertion mode,start tag,html,807
+main phase,in column group insertion mode,end tag,pre,790
+main phase,in column group insertion mode,start tag,h5,755
+main phase,in column group insertion mode,end tag,form,656
+main phase,in column group insertion mode,start tag,pre,607
+main phase,in column group insertion mode,end tag,body,506
+main phase,in column group insertion mode,end of file,,463
+main phase,in column group insertion mode,start tag,body,448
+main phase,in column group insertion mode,start tag,hr,410
+main phase,in column group insertion mode,end tag,i,376
+main phase,in column group insertion mode,end tag,h1,376
+main phase,in column group insertion mode,end tag,tbody,344
+main phase,in column group insertion mode,end tag,th,292
+main phase,in column group insertion mode,start tag,h2,263
+main phase,in column group insertion mode,end tag,ol,217
+main phase,in column group insertion mode,start tag,i,190
+main phase,in column group insertion mode,end tag,small,188
+main phase,in column group insertion mode,start tag,h3,179
+main phase,in column group insertion mode,start tag,big,162
+main phase,in column group insertion mode,DOCTYPE,,141
+main phase,in column group insertion mode,start tag,wbr,112
+main phase,in column group insertion mode,start tag,h4,104
+main phase,in column group insertion mode,start tag,basefont,95
+main phase,in column group insertion mode,end tag,blockquote,89
+main phase,in column group insertion mode,end tag,big,86
+main phase,in column group insertion mode,start tag,iframe,83
+main phase,in column group insertion mode,start tag,li,78
+main phase,in column group insertion mode,end tag,tfoot,78
+main phase,in column group insertion mode,start tag,ul,75
+main phase,in column group insertion mode,start tag,meta,57
+main phase,in column group insertion mode,start tag,marquee,49
+main phase,in column group insertion mode,start tag,blockquote,46
+main phase,in column group insertion mode,start tag,strike,37
+main phase,in column group insertion mode,start tag,object,31
+main phase,in column group insertion mode,end tag,link,31
+main phase,in column group insertion mode,start tag,h6,28
+main phase,in column group insertion mode,start tag,dl,26
+main phase,in column group insertion mode,start tag,ol,23
+main phase,in column group insertion mode,start tag,base,20
+main phase,in column group insertion mode,end tag,strike,17
+main phase,in column group insertion mode,end tag,h4,17
+main phase,in column group insertion mode,end tag,li,17
+main phase,in column group insertion mode,end tag,style,14
+main phase,in column group insertion mode,end tag,h6,14
+main phase,in column group insertion mode,start tag,tt,14
+main phase,in column group insertion mode,end tag,head,11
+main phase,in column group insertion mode,start tag,embed,11
+main phase,in column group insertion mode,start tag,title,8
+main phase,in column group insertion mode,start tag,noscript,8
+main phase,in column group insertion mode,end tag,h2,8
+main phase,in column group insertion mode,end tag,h3,5
+main phase,in column group insertion mode,start tag,param,5
+main phase,in column group insertion mode,end tag,br,2
+main phase,in column group insertion mode,end tag,script,2
+main phase,in column group insertion mode,start tag,address,2
+main phase,in column group insertion mode,start tag,dt,2
+main phase,in column group insertion mode,end tag,select,2
+main phase,in column group insertion mode,end tag,dt,2
+main phase,in table body insertion mode,characters,,328104713965
+main phase,in table body insertion mode,start tag,tr,241623528248
+main phase,in table body insertion mode,end tag,table,147203710141
+main phase,in table body insertion mode,comment,,7783241847
+main phase,in table body insertion mode,end tag,tbody,5908052316
+main phase,in table body insertion mode,end tag,form,2042528266
+main phase,in table body insertion mode,start tag,input,1887193482
+main phase,in table body insertion mode,end tag,tr,1060898954
+main phase,in table body insertion mode,end tag,td,850355977
+main phase,in table body insertion mode,start tag,td,706595268
+main phase,in table body insertion mode,end tag,script,573396562
+main phase,in table body insertion mode,start tag,script,571981423
+main phase,in table body insertion mode,start tag,form,526844898
+main phase,in table body insertion mode,end tag,thead,479477987
+main phase,in table body insertion mode,end tag,div,325292373
+main phase,in table body insertion mode,end tag,a,292555024
+main phase,in table body insertion mode,start tag,a,278632368
+main phase,in table body insertion mode,start tag,div,260247156
+main phase,in table body insertion mode,end tag,other,232566578
+main phase,in table body insertion mode,start tag,other,220287779
+main phase,in table body insertion mode,start tag,table,214869194
+main phase,in table body insertion mode,start tag,br,194225408
+main phase,in table body insertion mode,start tag,area,161591168
+main phase,in table body insertion mode,start tag,tbody,144102049
+main phase,in table body insertion mode,end tag,font,129185635
+main phase,in table body insertion mode,start tag,font,90598981
+main phase,in table body insertion mode,end tag,b,66214253
+main phase,in table body insertion mode,end tag,tfoot,63516791
+main phase,in table body insertion mode,start tag,p,61940443
+main phase,in table body insertion mode,end tag,center,55986962
+main phase,in table body insertion mode,start tag,b,55933857
+main phase,in table body insertion mode,start tag,img,52567591
+main phase,in table body insertion mode,end tag,p,44447420
+main phase,in table body insertion mode,start tag,center,44059058
+main phase,in table body insertion mode,end tag,style,17596568
+main phase,in table body insertion mode,end tag,ul,17471069
+main phase,in table body insertion mode,start tag,style,17421868
+main phase,in table body insertion mode,start tag,th,16809286
+main phase,in table body insertion mode,end tag,input,16245680
+main phase,in table body insertion mode,end tag,li,14397885
+main phase,in table body insertion mode,end of file,,14016321
+main phase,in table body insertion mode,end tag,body,13818123
+main phase,in table body insertion mode,end tag,noscript,13637575
+main phase,in table body insertion mode,start tag,noscript,13574454
+main phase,in table body insertion mode,end tag,html,13333016
+main phase,in table body insertion mode,start tag,li,12776871
+main phase,in table body insertion mode,end tag,strong,12071315
+main phase,in table body insertion mode,start tag,param,9424947
+main phase,in table body insertion mode,end tag,iframe,8845804
+main phase,in table body insertion mode,start tag,iframe,8796133
+main phase,in table body insertion mode,start tag,strong,8672791
+main phase,in table body insertion mode,start tag,meta,8334030
+main phase,in table body insertion mode,start tag,link,5988001
+main phase,in table body insertion mode,end tag,pre,4963258
+main phase,in table body insertion mode,start tag,ul,4865718
+main phase,in table body insertion mode,end tag,i,4843348
+main phase,in table body insertion mode,start tag,caption,4541153
+main phase,in table body insertion mode,start tag,hr,4262237
+main phase,in table body insertion mode,start tag,body,4053309
+main phase,in table body insertion mode,end tag,small,3602596
+main phase,in table body insertion mode,start tag,big,3590670
+main phase,in table body insertion mode,end tag,big,3545051
+main phase,in table body insertion mode,end tag,textarea,3142026
+main phase,in table body insertion mode,start tag,textarea,3128977
+main phase,in table body insertion mode,end tag,title,3125632
+main phase,in table body insertion mode,start tag,title,3100733
+main phase,in table body insertion mode,end tag,nobr,2810447
+main phase,in table body insertion mode,end tag,head,2609176
+main phase,in table body insertion mode,start tag,tfoot,2417952
+main phase,in table body insertion mode,start tag,nobr,2395490
+main phase,in table body insertion mode,start tag,html,2249341
+main phase,in table body insertion mode,start tag,head,2139021
+main phase,in table body insertion mode,end tag,object,2102923
+main phase,in table body insertion mode,start tag,object,2045069
+main phase,in table body insertion mode,start tag,embed,1960924
+main phase,in table body insertion mode,start tag,i,1912357
+main phase,in table body insertion mode,end tag,blockquote,1801394
+main phase,in table body insertion mode,start tag,small,1717516
+main phase,in table body insertion mode,end tag,ol,1508651
+main phase,in table body insertion mode,start tag,colgroup,1497935
+main phase,in table body insertion mode,end tag,h2,1437046
+main phase,in table body insertion mode,start tag,blockquote,1393400
+main phase,in table body insertion mode,start tag,thead,1307658
+main phase,in table body insertion mode,start tag,h2,1304776
+main phase,in table body insertion mode,end tag,th,1059295
+main phase,in table body insertion mode,start tag,dd,1004335
+main phase,in table body insertion mode,end tag,h3,1003186
+main phase,in table body insertion mode,end tag,h1,989923
+main phase,in table body insertion mode,start tag,col,939999
+main phase,in table body insertion mode,start tag,h1,810785
+main phase,in table body insertion mode,start tag,base,792579
+main phase,in table body insertion mode,DOCTYPE,,785081
+main phase,in table body insertion mode,end tag,u,748263
+main phase,in table body insertion mode,start tag,u,728718
+main phase,in table body insertion mode,end tag,dl,722409
+main phase,in table body insertion mode,start tag,h3,645331
+main phase,in table body insertion mode,start tag,dt,632748
+main phase,in table body insertion mode,end tag,select,619359
+main phase,in table body insertion mode,end tag,dd,596144
+main phase,in table body insertion mode,end tag,dt,571260
+main phase,in table body insertion mode,end tag,br,513741
+main phase,in table body insertion mode,start tag,select,510798
+main phase,in table body insertion mode,end tag,fieldset,432623
+main phase,in table body insertion mode,end tag,em,426830
+main phase,in table body insertion mode,end tag,embed,413538
+main phase,in table body insertion mode,start tag,em,383500
+main phase,in table body insertion mode,end tag,marquee,377814
+main phase,in table body insertion mode,start tag,dl,272940
+main phase,in table body insertion mode,start tag,pre,254280
+main phase,in table body insertion mode,start tag,marquee,248782
+main phase,in table body insertion mode,start tag,h5,206847
+main phase,in table body insertion mode,start tag,fieldset,202631
+main phase,in table body insertion mode,end tag,h5,201826
+main phase,in table body insertion mode,end tag,h4,188231
+main phase,in table body insertion mode,start tag,h4,186156
+main phase,in table body insertion mode,start tag,ol,184498
+main phase,in table body insertion mode,end tag,tt,173701
+main phase,in table body insertion mode,start tag,tt,135241
+main phase,in table body insertion mode,start tag,option,135218
+main phase,in table body insertion mode,end tag,caption,122899
+main phase,in table body insertion mode,end tag,area,119218
+main phase,in table body insertion mode,end tag,hr,113283
+main phase,in table body insertion mode,end tag,col,88751
+main phase,in table body insertion mode,start tag,bgsound,68981
+main phase,in table body insertion mode,start tag,spacer,64973
+main phase,in table body insertion mode,end tag,colgroup,64831
+main phase,in table body insertion mode,end tag,img,62498
+main phase,in table body insertion mode,start tag,wbr,60033
+main phase,in table body insertion mode,end tag,option,53432
+main phase,in table body insertion mode,end tag,h6,52286
+main phase,in table body insertion mode,end tag,dir,51050
+main phase,in table body insertion mode,start tag,h6,36526
+main phase,in table body insertion mode,end tag,param,29051
+main phase,in table body insertion mode,end tag,address,27859
+main phase,in table body insertion mode,end tag,meta,26753
+main phase,in table body insertion mode,start tag,dir,24331
+main phase,in table body insertion mode,start tag,address,20772
+main phase,in table body insertion mode,end tag,strike,20691
+main phase,in table body insertion mode,start tag,menu,19701
+main phase,in table body insertion mode,end tag,noframes,19090
+main phase,in table body insertion mode,end tag,noembed,17918
+main phase,in table body insertion mode,start tag,noembed,17522
+main phase,in table body insertion mode,end tag,link,17018
+main phase,in table body insertion mode,end tag,menu,15487
+main phase,in table body insertion mode,end tag,s,12871
+main phase,in table body insertion mode,start tag,basefont,12501
+main phase,in table body insertion mode,end tag,spacer,12449
+main phase,in table body insertion mode,start tag,strike,10270
+main phase,in table body insertion mode,start tag,image,9862
+main phase,in table body insertion mode,end tag,button,7483
+main phase,in table body insertion mode,start tag,s,7347
+main phase,in table body insertion mode,end tag,bgsound,7249
+main phase,in table body insertion mode,start tag,button,7144
+main phase,in table body insertion mode,start tag,noframes,5764
+main phase,in table body insertion mode,end tag,base,4242
+main phase,in table body insertion mode,end tag,basefont,3689
+main phase,in table body insertion mode,end tag,wbr,2998
+main phase,in table body insertion mode,end tag,frameset,2763
+main phase,in table body insertion mode,start tag,frame,2422
+main phase,in table body insertion mode,start tag,frameset,1417
+main phase,in table body insertion mode,end tag,image,257
+main phase,in table body insertion mode,end tag,frame,153
+main phase,in table body insertion mode,end tag,optgroup,109
+main phase,in table body insertion mode,start tag,optgroup,98
+main phase,in table body insertion mode,end tag,plaintext,89
+main phase,in table body insertion mode,start tag,plaintext,31
+main phase,in table body insertion mode,start tag,listing,5
+main phase,in table body insertion mode,end tag,listing,5
+main phase,in table body insertion mode,start tag,isindex,5
+main phase,in row insertion mode,start tag,td,811088042789
+main phase,in row insertion mode,characters,,803460372491
+main phase,in row insertion mode,end tag,tr,387522754013
+main phase,in row insertion mode,start tag,th,13405819371
+main phase,in row insertion mode,comment,,7451906642
+main phase,in row insertion mode,start tag,tr,2488057076
+main phase,in row insertion mode,end tag,table,1284837468
+main phase,in row insertion mode,start tag,input,1186346083
+main phase,in row insertion mode,end tag,td,1130772708
+main phase,in row insertion mode,end tag,form,1058186316
+main phase,in row insertion mode,start tag,form,1013453723
+main phase,in row insertion mode,end tag,a,486818742
+main phase,in row insertion mode,start tag,a,424787385
+main phase,in row insertion mode,end tag,script,412561586
+main phase,in row insertion mode,start tag,script,411568019
+main phase,in row insertion mode,start tag,br,340217309
+main phase,in row insertion mode,end tag,other,289379892
+main phase,in row insertion mode,end tag,font,208760761
+main phase,in row insertion mode,start tag,other,181977252
+main phase,in row insertion mode,start tag,font,151409007
+main phase,in row insertion mode,end tag,div,147727920
+main phase,in row insertion mode,start tag,div,98949611
+main phase,in row insertion mode,start tag,img,95002865
+main phase,in row insertion mode,start tag,area,90777408
+main phase,in row insertion mode,start tag,p,82677862
+main phase,in row insertion mode,start tag,table,82020990
+main phase,in row insertion mode,end tag,b,81806199
+main phase,in row insertion mode,start tag,tbody,74149115
+main phase,in row insertion mode,end tag,p,68268120
+main phase,in row insertion mode,start tag,b,66206958
+main phase,in row insertion mode,start tag,strong,48163597
+main phase,in row insertion mode,end tag,strong,48061693
+main phase,in row insertion mode,start tag,center,43773937
+main phase,in row insertion mode,end tag,center,43642518
+main phase,in row insertion mode,end tag,noscript,21114718
+main phase,in row insertion mode,start tag,noscript,20999030
+main phase,in row insertion mode,end tag,tbody,18510852
+main phase,in row insertion mode,end tag,style,14494549
+main phase,in row insertion mode,start tag,style,14399677
+main phase,in row insertion mode,start tag,li,12791375
+main phase,in row insertion mode,end tag,thead,12467100
+main phase,in row insertion mode,end tag,li,11277268
+main phase,in row insertion mode,end tag,u,10575758
+main phase,in row insertion mode,end tag,h1,10483675
+main phase,in row insertion mode,end tag,body,9763314
+main phase,in row insertion mode,end tag,input,9739536
+main phase,in row insertion mode,start tag,meta,8032185
+main phase,in row insertion mode,end tag,html,7487019
+main phase,in row insertion mode,end tag,small,7125176
+main phase,in row insertion mode,end tag,th,7101325
+main phase,in row insertion mode,start tag,hr,6979117
+main phase,in row insertion mode,end tag,nobr,6895913
+main phase,in row insertion mode,start tag,small,6233022
+main phase,in row insertion mode,end of file,,6147352
+main phase,in row insertion mode,start tag,link,5910078
+main phase,in row insertion mode,start tag,param,5438080
+main phase,in row insertion mode,start tag,nobr,5135136
+main phase,in row insertion mode,start tag,body,5034777
+main phase,in row insertion mode,end tag,ul,5011270
+main phase,in row insertion mode,end tag,i,4904573
+main phase,in row insertion mode,end tag,iframe,4512079
+main phase,in row insertion mode,start tag,iframe,4488060
+main phase,in row insertion mode,start tag,i,4207228
+main phase,in row insertion mode,start tag,h1,4135043
+main phase,in row insertion mode,end tag,h2,3349767
+main phase,in row insertion mode,start tag,u,3112048
+main phase,in row insertion mode,start tag,ul,2971346
+main phase,in row insertion mode,start tag,h2,2903924
+main phase,in row insertion mode,start tag,html,2874615
+main phase,in row insertion mode,end tag,pre,2336432
+main phase,in row insertion mode,end tag,title,2253474
+main phase,in row insertion mode,start tag,title,2245284
+main phase,in row insertion mode,end tag,head,2224133
+main phase,in row insertion mode,start tag,head,2199170
+main phase,in row insertion mode,start tag,dd,2148736
+main phase,in row insertion mode,start tag,select,1532902
+main phase,in row insertion mode,end tag,fieldset,1521355
+main phase,in row insertion mode,end tag,h3,1407178
+main phase,in row insertion mode,end tag,h4,1405462
+main phase,in row insertion mode,start tag,embed,1391108
+main phase,in row insertion mode,end tag,object,1349356
+main phase,in row insertion mode,end tag,em,1282994
+main phase,in row insertion mode,start tag,h3,1242896
+main phase,in row insertion mode,start tag,object,1233726
+main phase,in row insertion mode,start tag,em,1194100
+main phase,in row insertion mode,start tag,h4,1103620
+main phase,in row insertion mode,end tag,marquee,1099340
+main phase,in row insertion mode,start tag,pre,1095816
+main phase,in row insertion mode,end tag,embed,1080935
+main phase,in row insertion mode,end tag,big,849409
+main phase,in row insertion mode,start tag,big,815861
+main phase,in row insertion mode,start tag,thead,803553
+main phase,in row insertion mode,end tag,blockquote,786948
+main phase,in row insertion mode,end tag,br,736357
+main phase,in row insertion mode,start tag,marquee,732726
+main phase,in row insertion mode,DOCTYPE,,695201
+main phase,in row insertion mode,start tag,caption,648271
+main phase,in row insertion mode,end tag,dd,625959
+main phase,in row insertion mode,start tag,blockquote,605491
+main phase,in row insertion mode,start tag,dt,601816
+main phase,in row insertion mode,end tag,select,546737
+main phase,in row insertion mode,end tag,tfoot,541360
+main phase,in row insertion mode,start tag,col,536695
+main phase,in row insertion mode,end tag,dl,500241
+main phase,in row insertion mode,end tag,h6,458144
+main phase,in row insertion mode,start tag,base,419523
+main phase,in row insertion mode,end tag,strike,417335
+main phase,in row insertion mode,start tag,dl,413828
+main phase,in row insertion mode,start tag,h6,400426
+main phase,in row insertion mode,start tag,fieldset,394691
+main phase,in row insertion mode,start tag,colgroup,381958
+main phase,in row insertion mode,end tag,dt,362780
+main phase,in row insertion mode,end tag,h5,357724
+main phase,in row insertion mode,start tag,ol,348678
+main phase,in row insertion mode,end tag,textarea,321435
+main phase,in row insertion mode,start tag,textarea,309689
+main phase,in row insertion mode,end tag,tt,301482
+main phase,in row insertion mode,end tag,img,286064
+main phase,in row insertion mode,start tag,spacer,273441
+main phase,in row insertion mode,end tag,ol,243420
+main phase,in row insertion mode,start tag,h5,211654
+main phase,in row insertion mode,start tag,tt,179164
+main phase,in row insertion mode,start tag,wbr,162400
+main phase,in row insertion mode,end tag,area,111810
+main phase,in row insertion mode,end tag,option,107790
+main phase,in row insertion mode,start tag,option,96605
+main phase,in row insertion mode,end tag,hr,69004
+main phase,in row insertion mode,end tag,s,59107
+main phase,in row insertion mode,start tag,image,58971
+main phase,in row insertion mode,end tag,link,58325
+main phase,in row insertion mode,end tag,spacer,51004
+main phase,in row insertion mode,start tag,bgsound,45045
+main phase,in row insertion mode,end tag,basefont,40985
+main phase,in row insertion mode,end tag,param,37825
+main phase,in row insertion mode,end tag,image,37330
+main phase,in row insertion mode,start tag,address,36815
+main phase,in row insertion mode,end tag,address,36297
+main phase,in row insertion mode,end tag,colgroup,32958
+main phase,in row insertion mode,start tag,strike,30240
+main phase,in row insertion mode,end tag,dir,28426
+main phase,in row insertion mode,start tag,s,28273
+main phase,in row insertion mode,end tag,button,24820
+main phase,in row insertion mode,start tag,button,23865
+main phase,in row insertion mode,end tag,noembed,22219
+main phase,in row insertion mode,end tag,caption,20827
+main phase,in row insertion mode,start tag,noembed,20711
+main phase,in row insertion mode,start tag,tfoot,20656
+main phase,in row insertion mode,start tag,basefont,17889
+main phase,in row insertion mode,start tag,dir,15936
+main phase,in row insertion mode,end tag,menu,13430
+main phase,in row insertion mode,end tag,noframes,12796
+main phase,in row insertion mode,end tag,bgsound,8507
+main phase,in row insertion mode,start tag,menu,7214
+main phase,in row insertion mode,start tag,noframes,5593
+main phase,in row insertion mode,start tag,frame,3189
+main phase,in row insertion mode,end tag,optgroup,3160
+main phase,in row insertion mode,end tag,col,2653
+main phase,in row insertion mode,end tag,frameset,2300
+main phase,in row insertion mode,start tag,optgroup,2248
+main phase,in row insertion mode,end tag,wbr,1834
+main phase,in row insertion mode,start tag,frameset,1701
+main phase,in row insertion mode,end tag,base,1363
+main phase,in row insertion mode,end tag,meta,1004
+main phase,in row insertion mode,start tag,listing,978
+main phase,in row insertion mode,end tag,frame,627
+main phase,in row insertion mode,end tag,listing,167
+main phase,in row insertion mode,end tag,plaintext,17
+main phase,in row insertion mode,start tag,plaintext,8
+main phase,in row insertion mode,start tag,isindex,2
+main phase,in cell insertion mode,characters,,2055167363863
+main phase,in cell insertion mode,end tag,td,807691820452
+main phase,in cell insertion mode,start tag,a,469653585786
+main phase,in cell insertion mode,end tag,a,468700738024
+main phase,in cell insertion mode,start tag,img,289652240718
+main phase,in cell insertion mode,start tag,br,248649611464
+main phase,in cell insertion mode,start tag,font,142888581851
+main phase,in cell insertion mode,end tag,div,137247231372
+main phase,in cell insertion mode,end tag,font,137145839557
+main phase,in cell insertion mode,start tag,div,136427532993
+main phase,in cell insertion mode,start tag,other,129432478644
+main phase,in cell insertion mode,end tag,other,127851016358
+main phase,in cell insertion mode,start tag,table,125056169466
+main phase,in cell insertion mode,start tag,b,83609277221
+main phase,in cell insertion mode,end tag,b,83077257169
+main phase,in cell insertion mode,comment,,61174471747
+main phase,in cell insertion mode,start tag,p,60643289402
+main phase,in cell insertion mode,start tag,input,45974497786
+main phase,in cell insertion mode,end tag,p,44523802154
+main phase,in cell insertion mode,start tag,li,34576071964
+main phase,in cell insertion mode,end tag,li,30328860567
+main phase,in cell insertion mode,end tag,script,25391702246
+main phase,in cell insertion mode,start tag,script,25357336899
+main phase,in cell insertion mode,end tag,strong,22289812071
+main phase,in cell insertion mode,start tag,strong,22275307292
+main phase,in cell insertion mode,end tag,th,13161185412
+main phase,in cell insertion mode,start tag,td,7803924063
+main phase,in cell insertion mode,start tag,hr,7394970269
+main phase,in cell insertion mode,end tag,i,7382982621
+main phase,in cell insertion mode,start tag,i,7382961939
+main phase,in cell insertion mode,end tag,ul,7150924662
+main phase,in cell insertion mode,start tag,ul,7124398402
+main phase,in cell insertion mode,start tag,center,6510210780
+main phase,in cell insertion mode,start tag,form,6268125731
+main phase,in cell insertion mode,start tag,small,6250204477
+main phase,in cell insertion mode,start tag,nobr,6145661176
+main phase,in cell insertion mode,end tag,form,6134955029
+main phase,in cell insertion mode,end tag,small,6079170784
+main phase,in cell insertion mode,end tag,center,6030928329
+main phase,in cell insertion mode,end tag,nobr,5890912125
+main phase,in cell insertion mode,start tag,select,4626138595
+main phase,in cell insertion mode,end tag,u,4006883208
+main phase,in cell insertion mode,start tag,u,3995108644
+main phase,in cell insertion mode,start tag,param,3817793848
+main phase,in cell insertion mode,start tag,area,3494663627
+main phase,in cell insertion mode,start tag,h3,3306316175
+main phase,in cell insertion mode,end tag,h3,3279338583
+main phase,in cell insertion mode,start tag,h2,3066465002
+main phase,in cell insertion mode,end tag,h2,3061378442
+main phase,in cell insertion mode,start tag,em,2521199161
+main phase,in cell insertion mode,end tag,em,2519535412
+main phase,in cell insertion mode,end tag,noscript,2473320012
+main phase,in cell insertion mode,start tag,noscript,2469460997
+main phase,in cell insertion mode,start tag,h1,2173317501
+main phase,in cell insertion mode,end tag,h1,2150496775
+main phase,in cell insertion mode,end tag,tr,2093631621
+main phase,in cell insertion mode,start tag,tr,2090290210
+main phase,in cell insertion mode,end tag,img,1691896945
+main phase,in cell insertion mode,start tag,spacer,1500537627
+main phase,in cell insertion mode,end tag,iframe,1484434133
+main phase,in cell insertion mode,start tag,iframe,1482110144
+main phase,in cell insertion mode,end tag,input,1444948666
+main phase,in cell insertion mode,start tag,h4,1331533114
+main phase,in cell insertion mode,end tag,style,1327507276
+main phase,in cell insertion mode,end tag,h4,1315539905
+main phase,in cell insertion mode,start tag,style,1301999702
+main phase,in cell insertion mode,start tag,dd,1070881965
+main phase,in cell insertion mode,start tag,embed,937422004
+main phase,in cell insertion mode,end tag,object,931034123
+main phase,in cell insertion mode,start tag,object,925488706
+main phase,in cell insertion mode,start tag,wbr,915308180
+main phase,in cell insertion mode,start tag,big,890079627
+main phase,in cell insertion mode,end tag,big,887540242
+main phase,in cell insertion mode,end tag,table,869694761
+main phase,in cell insertion mode,end tag,dd,809108715
+main phase,in cell insertion mode,start tag,dt,770396971
+main phase,in cell insertion mode,start tag,link,757922162
+main phase,in cell insertion mode,end tag,embed,755074329
+main phase,in cell insertion mode,end tag,textarea,748262525
+main phase,in cell insertion mode,start tag,textarea,746696838
+main phase,in cell insertion mode,start tag,h5,710230272
+main phase,in cell insertion mode,end tag,h5,692872749
+main phase,in cell insertion mode,end tag,dt,569612874
+main phase,in cell insertion mode,end tag,body,548821886
+main phase,in cell insertion mode,end tag,spacer,546045280
+main phase,in cell insertion mode,start tag,blockquote,534851881
+main phase,in cell insertion mode,end tag,html,534210225
+main phase,in cell insertion mode,end tag,blockquote,530356384
+main phase,in cell insertion mode,start tag,meta,527945605
+main phase,in cell insertion mode,start tag,tt,515253634
+main phase,in cell insertion mode,start tag,body,485469568
+main phase,in cell insertion mode,start tag,pre,470416199
+main phase,in cell insertion mode,start tag,th,462523274
+main phase,in cell insertion mode,end tag,br,459102914
+main phase,in cell insertion mode,end tag,tt,450127525
+main phase,in cell insertion mode,end tag,pre,449680215
+main phase,in cell insertion mode,start tag,dl,426608250
+main phase,in cell insertion mode,start tag,fieldset,407885306
+main phase,in cell insertion mode,end tag,fieldset,386672266
+main phase,in cell insertion mode,end tag,dl,386219791
+main phase,in cell insertion mode,start tag,html,374623940
+main phase,in cell insertion mode,end tag,head,304110155
+main phase,in cell insertion mode,start tag,head,294791051
+main phase,in cell insertion mode,start tag,marquee,280888656
+main phase,in cell insertion mode,end tag,marquee,273581706
+main phase,in cell insertion mode,end tag,button,271203955
+main phase,in cell insertion mode,start tag,button,270973679
+main phase,in cell insertion mode,start tag,ol,266436848
+main phase,in cell insertion mode,end tag,ol,265411868
+main phase,in cell insertion mode,end tag,title,255124906
+main phase,in cell insertion mode,start tag,title,254119679
+main phase,in cell insertion mode,end of file,,207142195
+main phase,in cell insertion mode,start tag,h6,168429722
+main phase,in cell insertion mode,end tag,h6,165103313
+main phase,in cell insertion mode,end tag,s,144695597
+main phase,in cell insertion mode,start tag,s,138948689
+main phase,in cell insertion mode,end tag,strike,127415271
+main phase,in cell insertion mode,start tag,strike,124708198
+main phase,in cell insertion mode,start tag,address,88829367
+main phase,in cell insertion mode,DOCTYPE,,83563129
+main phase,in cell insertion mode,start tag,image,74476562
+main phase,in cell insertion mode,end tag,address,70083139
+main phase,in cell insertion mode,start tag,base,61922842
+main phase,in cell insertion mode,end tag,wbr,54860575
+main phase,in cell insertion mode,end tag,area,53591963
+main phase,in cell insertion mode,start tag,dir,33673438
+main phase,in cell insertion mode,end tag,dir,30440941
+main phase,in cell insertion mode,end tag,param,29555511
+main phase,in cell insertion mode,start tag,option,28396062
+main phase,in cell insertion mode,end tag,option,21342882
+main phase,in cell insertion mode,start tag,basefont,20512039
+main phase,in cell insertion mode,end tag,tbody,14132124
+main phase,in cell insertion mode,end tag,hr,12034343
+main phase,in cell insertion mode,end tag,noembed,9795083
+main phase,in cell insertion mode,start tag,noembed,9736211
+main phase,in cell insertion mode,end tag,select,8281891
+main phase,in cell insertion mode,end tag,link,6152720
+main phase,in cell insertion mode,end tag,base,5462337
+main phase,in cell insertion mode,start tag,tbody,4080676
+main phase,in cell insertion mode,start tag,menu,3176052
+main phase,in cell insertion mode,end tag,menu,3166155
+main phase,in cell insertion mode,start tag,bgsound,2015054
+main phase,in cell insertion mode,end tag,image,1705964
+main phase,in cell insertion mode,end tag,basefont,1368947
+main phase,in cell insertion mode,start tag,caption,1275099
+main phase,in cell insertion mode,end tag,noframes,1214464
+main phase,in cell insertion mode,start tag,noframes,1132186
+main phase,in cell insertion mode,end tag,meta,660573
+main phase,in cell insertion mode,end tag,thead,304822
+main phase,in cell insertion mode,end tag,frameset,257614
+main phase,in cell insertion mode,start tag,col,228991
+main phase,in cell insertion mode,start tag,frame,217589
+main phase,in cell insertion mode,end tag,caption,195492
+main phase,in cell insertion mode,end tag,bgsound,168266
+main phase,in cell insertion mode,end tag,listing,152182
+main phase,in cell insertion mode,start tag,listing,135508
+main phase,in cell insertion mode,end tag,optgroup,124563
+main phase,in cell insertion mode,start tag,frameset,91582
+main phase,in cell insertion mode,end tag,col,41755
+main phase,in cell insertion mode,end tag,tfoot,37026
+main phase,in cell insertion mode,start tag,plaintext,32272
+main phase,in cell insertion mode,start tag,thead,31343
+main phase,in cell insertion mode,start tag,tfoot,30617
+main phase,in cell insertion mode,end tag,frame,24904
+main phase,in cell insertion mode,end tag,colgroup,20694
+main phase,in cell insertion mode,start tag,colgroup,15650
+main phase,in cell insertion mode,start tag,optgroup,5214
+main phase,in cell insertion mode,end tag,plaintext,4867
+main phase,in cell insertion mode,start tag,isindex,2216
+main phase,in cell insertion mode,end tag,isindex,28
+main phase,in select insertion mode,characters,,209935034153
+main phase,in select insertion mode,start tag,option,126571012798
+main phase,in select insertion mode,end tag,option,114682647596
+main phase,in select insertion mode,end tag,select,5807878294
+main phase,in select insertion mode,comment,,1358875445
+main phase,in select insertion mode,start tag,optgroup,557722014
+main phase,in select insertion mode,end tag,optgroup,547689613
+main phase,in select insertion mode,start tag,br,197224564
+main phase,in select insertion mode,end tag,a,164119200
+main phase,in select insertion mode,start tag,font,133099695
+main phase,in select insertion mode,end tag,font,126309239
+main phase,in select insertion mode,end tag,other,95766278
+main phase,in select insertion mode,end tag,b,82258434
+main phase,in select insertion mode,start tag,b,82166013
+main phase,in select insertion mode,start tag,other,79902031
+main phase,in select insertion mode,start tag,a,51795338
+main phase,in select insertion mode,end tag,script,51217925
+main phase,in select insertion mode,start tag,script,51208274
+main phase,in select insertion mode,start tag,img,15871854
+main phase,in select insertion mode,end tag,div,11178356
+main phase,in select insertion mode,end tag,td,10430665
+main phase,in select insertion mode,end tag,li,9968863
+main phase,in select insertion mode,start tag,div,9210222
+main phase,in select insertion mode,start tag,strong,7374691
+main phase,in select insertion mode,end tag,strong,7101331
+main phase,in select insertion mode,start tag,input,6256225
+main phase,in select insertion mode,start tag,li,6077317
+main phase,in select insertion mode,end tag,i,4959346
+main phase,in select insertion mode,start tag,i,4797263
+main phase,in select insertion mode,end tag,style,4317414
+main phase,in select insertion mode,start tag,td,3773953
+main phase,in select insertion mode,end tag,p,3289401
+main phase,in select insertion mode,start tag,p,3140289
+main phase,in select insertion mode,start tag,center,3078196
+main phase,in select insertion mode,end tag,center,2607318
+main phase,in select insertion mode,start tag,h3,2268771
+main phase,in select insertion mode,end tag,h3,2264792
+main phase,in select insertion mode,start tag,em,1917852
+main phase,in select insertion mode,end tag,em,1908985
+main phase,in select insertion mode,end tag,tr,1667145
+main phase,in select insertion mode,end tag,small,1625885
+main phase,in select insertion mode,start tag,tr,1619411
+main phase,in select insertion mode,start tag,small,1616491
+main phase,in select insertion mode,start tag,u,1353720
+main phase,in select insertion mode,end tag,img,1349680
+main phase,in select insertion mode,end tag,u,1302785
+main phase,in select insertion mode,end tag,form,1071250
+main phase,in select insertion mode,end tag,ul,982897
+main phase,in select insertion mode,start tag,h1,932434
+main phase,in select insertion mode,end tag,h1,926091
+main phase,in select insertion mode,end of file,,749504
+main phase,in select insertion mode,end tag,br,645843
+main phase,in select insertion mode,start tag,ul,635518
+main phase,in select insertion mode,start tag,nobr,553332
+main phase,in select insertion mode,start tag,noscript,463663
+main phase,in select insertion mode,end tag,noscript,460859
+main phase,in select insertion mode,start tag,select,460225
+main phase,in select insertion mode,start tag,hr,438533
+main phase,in select insertion mode,end tag,nobr,420918
+main phase,in select insertion mode,start tag,table,412954
+main phase,in select insertion mode,start tag,big,377058
+main phase,in select insertion mode,end tag,table,372680
+main phase,in select insertion mode,start tag,form,322639
+main phase,in select insertion mode,end tag,big,291901
+main phase,in select insertion mode,end tag,h2,253042
+main phase,in select insertion mode,start tag,h2,248096
+main phase,in select insertion mode,end tag,tt,238312
+main phase,in select insertion mode,start tag,tt,235013
+main phase,in select insertion mode,start tag,pre,222138
+main phase,in select insertion mode,end tag,pre,216353
+main phase,in select insertion mode,start tag,marquee,198429
+main phase,in select insertion mode,start tag,h6,159587
+main phase,in select insertion mode,end tag,body,152222
+main phase,in select insertion mode,end tag,html,150877
+main phase,in select insertion mode,end tag,marquee,148188
+main phase,in select insertion mode,end tag,th,127674
+main phase,in select insertion mode,start tag,th,123894
+main phase,in select insertion mode,start tag,meta,103834
+main phase,in select insertion mode,end tag,title,103629
+main phase,in select insertion mode,start tag,title,100469
+main phase,in select insertion mode,start tag,iframe,95914
+main phase,in select insertion mode,end tag,textarea,93983
+main phase,in select insertion mode,start tag,textarea,93367
+main phase,in select insertion mode,end tag,h5,89857
+main phase,in select insertion mode,start tag,h5,88939
+main phase,in select insertion mode,end tag,iframe,86480
+main phase,in select insertion mode,start tag,link,80533
+main phase,in select insertion mode,end tag,input,61416
+main phase,in select insertion mode,start tag,area,53226
+main phase,in select insertion mode,start tag,style,53183
+main phase,in select insertion mode,start tag,param,53085
+main phase,in select insertion mode,start tag,h4,49022
+main phase,in select insertion mode,start tag,wbr,47311
+main phase,in select insertion mode,start tag,s,47143
+main phase,in select insertion mode,end tag,s,46287
+main phase,in select insertion mode,start tag,dd,42892
+main phase,in select insertion mode,start tag,body,42374
+main phase,in select insertion mode,start tag,html,36341
+main phase,in select insertion mode,end tag,blockquote,31644
+main phase,in select insertion mode,end tag,h4,31117
+main phase,in select insertion mode,start tag,dt,30258
+main phase,in select insertion mode,start tag,blockquote,29786
+main phase,in select insertion mode,end tag,dd,28895
+main phase,in select insertion mode,start tag,embed,20858
+main phase,in select insertion mode,start tag,base,20063
+main phase,in select insertion mode,start tag,tbody,18943
+main phase,in select insertion mode,end tag,area,18894
+main phase,in select insertion mode,end tag,object,17287
+main phase,in select insertion mode,end tag,dt,17175
+main phase,in select insertion mode,end tag,tbody,17172
+main phase,in select insertion mode,start tag,object,16020
+main phase,in select insertion mode,start tag,head,15516
+main phase,in select insertion mode,end tag,head,15007
+main phase,in select insertion mode,start tag,image,14113
+main phase,in select insertion mode,end tag,dl,13991
+main phase,in select insertion mode,start tag,dl,13737
+main phase,in select insertion mode,end tag,embed,13436
+main phase,in select insertion mode,start tag,strike,12492
+main phase,in select insertion mode,end tag,strike,12492
+main phase,in select insertion mode,end tag,fieldset,10307
+main phase,in select insertion mode,DOCTYPE,,7657
+main phase,in select insertion mode,end tag,h6,6693
+main phase,in select insertion mode,start tag,basefont,6036
+main phase,in select insertion mode,start tag,spacer,5507
+main phase,in select insertion mode,end tag,ol,4826
+main phase,in select insertion mode,start tag,ol,4557
+main phase,in select insertion mode,end tag,button,4401
+main phase,in select insertion mode,start tag,button,4343
+main phase,in select insertion mode,start tag,fieldset,4303
+main phase,in select insertion mode,end tag,caption,3385
+main phase,in select insertion mode,start tag,thead,2702
+main phase,in select insertion mode,start tag,caption,2685
+main phase,in select insertion mode,end tag,thead,2682
+main phase,in select insertion mode,start tag,tfoot,2491
+main phase,in select insertion mode,end tag,tfoot,2482
+main phase,in select insertion mode,end tag,param,1490
+main phase,in select insertion mode,end tag,basefont,1053
+main phase,in select insertion mode,end tag,link,923
+main phase,in select insertion mode,start tag,colgroup,836
+main phase,in select insertion mode,end tag,colgroup,810
+main phase,in select insertion mode,start tag,address,798
+main phase,in select insertion mode,start tag,bgsound,772
+main phase,in select insertion mode,end tag,address,677
+main phase,in select insertion mode,start tag,col,387
+main phase,in select insertion mode,end tag,noframes,269
+main phase,in select insertion mode,end tag,hr,217
+main phase,in select insertion mode,end tag,noembed,156
+main phase,in select insertion mode,start tag,noembed,147
+main phase,in select insertion mode,start tag,frame,127
+main phase,in select insertion mode,start tag,noframes,92
+main phase,in select insertion mode,start tag,menu,57
+main phase,in select insertion mode,start tag,frameset,54
+main phase,in select insertion mode,end tag,frameset,52
+main phase,in select insertion mode,start tag,dir,43
+main phase,in select insertion mode,end tag,dir,34
+main phase,in select insertion mode,end tag,spacer,31
+main phase,in select insertion mode,end tag,menu,31
+main phase,in select insertion mode,start tag,plaintext,26
+main phase,in select insertion mode,end tag,plaintext,17
+main phase,in select insertion mode,start tag,isindex,14
+main phase,in select insertion mode,end tag,wbr,11
+main phase,in select insertion mode,end tag,col,11
+main phase,in select insertion mode,end tag,meta,11
+main phase,in select insertion mode,end tag,frame,5
+main phase,in select insertion mode,end tag,base,5
+main phase,in select insertion mode,end tag,listing,2
+main phase,in select insertion mode,start tag,listing,2
+main phase,after body insertion mode,end tag,html,9330370972
+main phase,after body insertion mode,characters,,8431720206
+main phase,after body insertion mode,comment,,325085036
+main phase,after body insertion mode,end of file,,92355429
+main phase,after body insertion mode,start tag,script,84503684
+main phase,after body insertion mode,start tag,head,43572831
+main phase,after body insertion mode,start tag,iframe,18783865
+main phase,after body insertion mode,start tag,body,10597271
+main phase,after body insertion mode,end tag,body,10390391
+main phase,after body insertion mode,start tag,div,10164297
+main phase,after body insertion mode,start tag,br,7633278
+main phase,after body insertion mode,end tag,form,7400990
+main phase,after body insertion mode,start tag,html,6739621
+main phase,after body insertion mode,start tag,table,6131641
+main phase,after body insertion mode,end tag,div,5651775
+main phase,after body insertion mode,end tag,center,4324950
+main phase,after body insertion mode,start tag,other,3960815
+main phase,after body insertion mode,start tag,p,3394842
+main phase,after body insertion mode,end tag,other,3159053
+main phase,after body insertion mode,start tag,style,2139557
+main phase,after body insertion mode,start tag,meta,2128175
+main phase,after body insertion mode,start tag,input,1963610
+main phase,after body insertion mode,end tag,head,1629421
+main phase,after body insertion mode,start tag,center,1550355
+main phase,after body insertion mode,start tag,a,1246612
+main phase,after body insertion mode,start tag,img,1245501
+main phase,after body insertion mode,end tag,font,896831
+main phase,after body insertion mode,start tag,title,833938
+main phase,after body insertion mode,end tag,p,819504
+main phase,after body insertion mode,start tag,noscript,746252
+main phase,after body insertion mode,end tag,td,735420
+main phase,after body insertion mode,start tag,link,704913
+main phase,after body insertion mode,start tag,hr,618814
+main phase,after body insertion mode,DOCTYPE,,570007
+main phase,after body insertion mode,start tag,form,499367
+main phase,after body insertion mode,start tag,font,390576
+main phase,after body insertion mode,start tag,b,357478
+main phase,after body insertion mode,end tag,noframes,320891
+main phase,after body insertion mode,end tag,table,319112
+main phase,after body insertion mode,start tag,h1,252978
+main phase,after body insertion mode,end tag,script,224135
+main phase,after body insertion mode,end tag,pre,184706
+main phase,after body insertion mode,start tag,pre,148032
+main phase,after body insertion mode,start tag,td,144551
+main phase,after body insertion mode,end tag,noscript,130883
+main phase,after body insertion mode,end tag,object,108216
+main phase,after body insertion mode,start tag,address,97876
+main phase,after body insertion mode,end tag,a,91286
+main phase,after body insertion mode,end tag,tr,81771
+main phase,after body insertion mode,end tag,blockquote,78620
+main phase,after body insertion mode,start tag,h2,68677
+main phase,after body insertion mode,end tag,style,66020
+main phase,after body insertion mode,start tag,tr,64512
+main phase,after body insertion mode,end tag,b,55672
+main phase,after body insertion mode,start tag,object,52112
+main phase,after body insertion mode,start tag,noframes,47167
+main phase,after body insertion mode,end tag,ul,44915
+main phase,after body insertion mode,end tag,li,42409
+main phase,after body insertion mode,start tag,embed,42383
+main phase,after body insertion mode,start tag,fieldset,29164
+main phase,after body insertion mode,start tag,ul,28626
+main phase,after body insertion mode,start tag,bgsound,28316
+main phase,after body insertion mode,end tag,textarea,27260
+main phase,after body insertion mode,start tag,strong,22352
+main phase,after body insertion mode,end tag,basefont,22216
+main phase,after body insertion mode,start tag,frame,20812
+main phase,after body insertion mode,start tag,h3,19148
+main phase,after body insertion mode,end tag,small,19061
+main phase,after body insertion mode,end tag,br,17172
+main phase,after body insertion mode,start tag,li,14472
+main phase,after body insertion mode,start tag,noembed,13508
+main phase,after body insertion mode,end tag,h2,13204
+main phase,after body insertion mode,start tag,marquee,12542
+main phase,after body insertion mode,start tag,small,12353
+main phase,after body insertion mode,end tag,iframe,11372
+main phase,after body insertion mode,start tag,blockquote,11338
+main phase,after body insertion mode,start tag,base,9633
+main phase,after body insertion mode,end tag,h1,8421
+main phase,after body insertion mode,end tag,frameset,8070
+main phase,after body insertion mode,start tag,u,7845
+main phase,after body insertion mode,end tag,tbody,7526
+main phase,after body insertion mode,start tag,frameset,7055
+main phase,after body insertion mode,end tag,option,6927
+main phase,after body insertion mode,end tag,strong,6511
+main phase,after body insertion mode,start tag,h4,6117
+main phase,after body insertion mode,end tag,fieldset,5891
+main phase,after body insertion mode,start tag,h6,5440
+main phase,after body insertion mode,start tag,h5,5263
+main phase,after body insertion mode,start tag,i,5261
+main phase,after body insertion mode,end tag,marquee,5035
+main phase,after body insertion mode,end tag,i,5032
+main phase,after body insertion mode,end tag,title,4855
+main phase,after body insertion mode,end tag,dd,4748
+main phase,after body insertion mode,end tag,base,4204
+main phase,after body insertion mode,start tag,basefont,3909
+main phase,after body insertion mode,end tag,link,3759
+main phase,after body insertion mode,end tag,h3,3365
+main phase,after body insertion mode,start tag,tt,3296
+main phase,after body insertion mode,start tag,dl,2723
+main phase,after body insertion mode,end tag,nobr,2543
+main phase,after body insertion mode,end tag,meta,2459
+main phase,after body insertion mode,end tag,address,2199
+main phase,after body insertion mode,start tag,tbody,2089
+main phase,after body insertion mode,end tag,h4,2025
+main phase,after body insertion mode,end tag,u,1840
+main phase,after body insertion mode,start tag,area,1762
+main phase,after body insertion mode,start tag,big,1614
+main phase,after body insertion mode,end tag,h5,1472
+main phase,after body insertion mode,end tag,ol,1409
+main phase,after body insertion mode,end tag,dl,1394
+main phase,after body insertion mode,end tag,th,1389
+main phase,after body insertion mode,end tag,embed,1328
+main phase,after body insertion mode,start tag,dd,1151
+main phase,after body insertion mode,start tag,param,1012
+main phase,after body insertion mode,start tag,em,1009
+main phase,after body insertion mode,start tag,nobr,998
+main phase,after body insertion mode,start tag,textarea,983
+main phase,after body insertion mode,start tag,dt,943
+main phase,after body insertion mode,end tag,img,920
+main phase,after body insertion mode,end tag,frame,888
+main phase,after body insertion mode,end tag,hr,787
+main phase,after body insertion mode,start tag,select,758
+main phase,after body insertion mode,start tag,spacer,740
+main phase,after body insertion mode,start tag,image,694
+main phase,after body insertion mode,end tag,em,642
+main phase,after body insertion mode,end tag,dir,633
+main phase,after body insertion mode,end tag,tt,613
+main phase,after body insertion mode,start tag,ol,604
+main phase,after body insertion mode,end tag,h6,572
+main phase,after body insertion mode,end tag,dt,520
+main phase,after body insertion mode,end tag,big,471
+main phase,after body insertion mode,start tag,s,298
+main phase,after body insertion mode,end tag,param,298
+main phase,after body insertion mode,start tag,button,269
+main phase,after body insertion mode,end tag,input,260
+main phase,after body insertion mode,start tag,plaintext,257
+main phase,after body insertion mode,end tag,noembed,231
+main phase,after body insertion mode,end tag,bgsound,199
+main phase,after body insertion mode,start tag,dir,196
+main phase,after body insertion mode,start tag,tfoot,196
+main phase,after body insertion mode,end tag,button,188
+main phase,after body insertion mode,end tag,select,179
+main phase,after body insertion mode,start tag,caption,127
+main phase,after body insertion mode,end tag,menu,109
+main phase,after body insertion mode,start tag,th,92
+main phase,after body insertion mode,start tag,listing,75
+main phase,after body insertion mode,end tag,s,63
+main phase,after body insertion mode,start tag,isindex,57
+main phase,after body insertion mode,start tag,menu,52
+main phase,after body insertion mode,end tag,plaintext,46
+main phase,after body insertion mode,end tag,caption,28
+main phase,after body insertion mode,end tag,tfoot,23
+main phase,after body insertion mode,start tag,col,14
+main phase,after body insertion mode,start tag,option,11
+main phase,after body insertion mode,end tag,image,11
+main phase,after body insertion mode,end tag,area,5
+main phase,after body insertion mode,end tag,col,5
+main phase,after body insertion mode,start tag,thead,5
+main phase,after body insertion mode,start tag,optgroup,2
+main phase,after body insertion mode,end tag,optgroup,2
+main phase,after body insertion mode,end tag,thead,2
+main phase,after body insertion mode,end tag,colgroup,2
+main phase,after body insertion mode,start tag,colgroup,2
+main phase,after body insertion mode,start tag,wbr,2
+main phase,after body insertion mode,start tag,strike,2
+main phase,after body insertion mode,end tag,spacer,2
+main phase,after body insertion mode,end tag,listing,2
+main phase,in frameset insertion mode,characters,,634904772
+main phase,in frameset insertion mode,start tag,frame,260779832
+main phase,in frameset insertion mode,end tag,frameset,149548279
+main phase,in frameset insertion mode,start tag,frameset,45722074
+main phase,in frameset insertion mode,end tag,noframes,41579903
+main phase,in frameset insertion mode,start tag,noframes,41558297
+main phase,in frameset insertion mode,start tag,br,5240328
+main phase,in frameset insertion mode,start tag,a,4555255
+main phase,in frameset insertion mode,end tag,a,4525234
+main phase,in frameset insertion mode,comment,,4138009
+main phase,in frameset insertion mode,end tag,frame,2812698
+main phase,in frameset insertion mode,start tag,td,1636644
+main phase,in frameset insertion mode,end tag,td,1532233
+main phase,in frameset insertion mode,end of file,,1488739
+main phase,in frameset insertion mode,end tag,html,1226092
+main phase,in frameset insertion mode,start tag,b,1215986
+main phase,in frameset insertion mode,end tag,b,1215737
+main phase,in frameset insertion mode,start tag,tr,943135
+main phase,in frameset insertion mode,start tag,img,896495
+main phase,in frameset insertion mode,end tag,tr,845410
+main phase,in frameset insertion mode,end tag,div,522524
+main phase,in frameset insertion mode,start tag,div,507146
+main phase,in frameset insertion mode,end tag,h1,497741
+main phase,in frameset insertion mode,start tag,h1,494179
+main phase,in frameset insertion mode,end tag,other,484232
+main phase,in frameset insertion mode,start tag,font,448687
+main phase,in frameset insertion mode,start tag,h2,445278
+main phase,in frameset insertion mode,end tag,h2,441154
+main phase,in frameset insertion mode,end tag,font,437899
+main phase,in frameset insertion mode,start tag,other,433761
+main phase,in frameset insertion mode,end tag,table,425638
+main phase,in frameset insertion mode,start tag,table,420787
+main phase,in frameset insertion mode,start tag,p,401127
+main phase,in frameset insertion mode,start tag,body,344988
+main phase,in frameset insertion mode,end tag,body,340300
+main phase,in frameset insertion mode,end tag,p,284970
+main phase,in frameset insertion mode,start tag,strong,231752
+main phase,in frameset insertion mode,end tag,strong,231659
+main phase,in frameset insertion mode,end tag,script,205012
+main phase,in frameset insertion mode,start tag,script,195214
+main phase,in frameset insertion mode,start tag,option,157064
+main phase,in frameset insertion mode,end tag,option,150087
+main phase,in frameset insertion mode,start tag,i,121056
+main phase,in frameset insertion mode,end tag,i,120986
+main phase,in frameset insertion mode,start tag,meta,106013
+main phase,in frameset insertion mode,start tag,center,102844
+main phase,in frameset insertion mode,start tag,input,101924
+main phase,in frameset insertion mode,end tag,center,75092
+main phase,in frameset insertion mode,end tag,noscript,72887
+main phase,in frameset insertion mode,end tag,head,72525
+main phase,in frameset insertion mode,start tag,li,70260
+main phase,in frameset insertion mode,start tag,noscript,67635
+main phase,in frameset insertion mode,start tag,dt,65459
+main phase,in frameset insertion mode,start tag,dd,64929
+main phase,in frameset insertion mode,end tag,dd,61804
+main phase,in frameset insertion mode,start tag,dl,61760
+main phase,in frameset insertion mode,end tag,dl,61752
+main phase,in frameset insertion mode,end tag,dt,61517
+main phase,in frameset insertion mode,start tag,h3,55527
+main phase,in frameset insertion mode,end tag,h3,55426
+main phase,in frameset insertion mode,end tag,li,45309
+main phase,in frameset insertion mode,start tag,hr,43703
+main phase,in frameset insertion mode,end tag,form,30284
+main phase,in frameset insertion mode,start tag,form,29604
+main phase,in frameset insertion mode,end tag,small,24337
+main phase,in frameset insertion mode,start tag,small,24293
+main phase,in frameset insertion mode,start tag,th,22635
+main phase,in frameset insertion mode,end tag,th,22557
+main phase,in frameset insertion mode,end tag,style,18642
+main phase,in frameset insertion mode,start tag,link,17175
+main phase,in frameset insertion mode,start tag,param,14868
+main phase,in frameset insertion mode,end tag,u,13913
+main phase,in frameset insertion mode,start tag,base,13850
+main phase,in frameset insertion mode,start tag,u,13809
+main phase,in frameset insertion mode,end tag,title,13751
+main phase,in frameset insertion mode,start tag,ul,13250
+main phase,in frameset insertion mode,end tag,ul,13112
+main phase,in frameset insertion mode,start tag,style,12892
+main phase,in frameset insertion mode,end tag,iframe,11239
+main phase,in frameset insertion mode,start tag,title,11225
+main phase,in frameset insertion mode,start tag,select,10710
+main phase,in frameset insertion mode,end tag,select,10663
+main phase,in frameset insertion mode,start tag,html,9133
+main phase,in frameset insertion mode,end tag,pre,7978
+main phase,in frameset insertion mode,start tag,head,7940
+main phase,in frameset insertion mode,start tag,pre,7853
+main phase,in frameset insertion mode,end tag,br,7483
+main phase,in frameset insertion mode,start tag,tbody,7170
+main phase,in frameset insertion mode,end tag,tbody,7049
+main phase,in frameset insertion mode,start tag,iframe,5871
+main phase,in frameset insertion mode,end tag,em,5822
+main phase,in frameset insertion mode,start tag,em,5793
+main phase,in frameset insertion mode,start tag,area,5695
+main phase,in frameset insertion mode,start tag,big,5232
+main phase,in frameset insertion mode,end tag,big,5220
+main phase,in frameset insertion mode,end tag,object,4170
+main phase,in frameset insertion mode,start tag,nobr,3996
+main phase,in frameset insertion mode,end tag,nobr,3863
+main phase,in frameset insertion mode,start tag,h4,3012
+main phase,in frameset insertion mode,end tag,h4,2888
+main phase,in frameset insertion mode,end tag,blockquote,2439
+main phase,in frameset insertion mode,start tag,embed,2378
+main phase,in frameset insertion mode,start tag,blockquote,2179
+main phase,in frameset insertion mode,end tag,textarea,2048
+main phase,in frameset insertion mode,DOCTYPE,,1568
+main phase,in frameset insertion mode,end tag,embed,1530
+main phase,in frameset insertion mode,start tag,tt,1328
+main phase,in frameset insertion mode,start tag,marquee,1310
+main phase,in frameset insertion mode,end tag,tt,1305
+main phase,in frameset insertion mode,end tag,marquee,1111
+main phase,in frameset insertion mode,end tag,input,1088
+main phase,in frameset insertion mode,start tag,ol,1076
+main phase,in frameset insertion mode,start tag,h5,1064
+main phase,in frameset insertion mode,end tag,h5,1033
+main phase,in frameset insertion mode,end tag,ol,1018
+main phase,in frameset insertion mode,start tag,basefont,891
+main phase,in frameset insertion mode,end tag,img,853
+main phase,in frameset insertion mode,end tag,address,784
+main phase,in frameset insertion mode,start tag,object,766
+main phase,in frameset insertion mode,start tag,address,763
+main phase,in frameset insertion mode,start tag,spacer,749
+main phase,in frameset insertion mode,end tag,area,685
+main phase,in frameset insertion mode,end tag,noembed,581
+main phase,in frameset insertion mode,start tag,bgsound,555
+main phase,in frameset insertion mode,start tag,wbr,555
+main phase,in frameset insertion mode,start tag,textarea,509
+main phase,in frameset insertion mode,start tag,noembed,379
+main phase,in frameset insertion mode,start tag,h6,335
+main phase,in frameset insertion mode,end tag,h6,324
+main phase,in frameset insertion mode,end tag,caption,234
+main phase,in frameset insertion mode,start tag,caption,222
+main phase,in frameset insertion mode,end tag,strike,205
+main phase,in frameset insertion mode,start tag,strike,202
+main phase,in frameset insertion mode,start tag,col,130
+main phase,in frameset insertion mode,start tag,plaintext,104
+main phase,in frameset insertion mode,end tag,link,95
+main phase,in frameset insertion mode,end tag,fieldset,92
+main phase,in frameset insertion mode,end tag,dir,89
+main phase,in frameset insertion mode,start tag,fieldset,89
+main phase,in frameset insertion mode,start tag,dir,81
+main phase,in frameset insertion mode,end tag,param,66
+main phase,in frameset insertion mode,end tag,meta,60
+main phase,in frameset insertion mode,end tag,base,49
+main phase,in frameset insertion mode,start tag,optgroup,46
+main phase,in frameset insertion mode,end tag,optgroup,46
+main phase,in frameset insertion mode,start tag,image,34
+main phase,in frameset insertion mode,end tag,menu,34
+main phase,in frameset insertion mode,start tag,menu,28
+main phase,in frameset insertion mode,end tag,spacer,26
+main phase,in frameset insertion mode,start tag,colgroup,23
+main phase,in frameset insertion mode,end tag,basefont,23
+main phase,in frameset insertion mode,end tag,hr,23
+main phase,in frameset insertion mode,end tag,colgroup,20
+main phase,in frameset insertion mode,end tag,plaintext,20
+main phase,in frameset insertion mode,end tag,button,14
+main phase,in frameset insertion mode,start tag,s,14
+main phase,in frameset insertion mode,end tag,bgsound,14
+main phase,in frameset insertion mode,end tag,s,14
+main phase,in frameset insertion mode,start tag,button,11
+main phase,in frameset insertion mode,end tag,thead,8
+main phase,in frameset insertion mode,start tag,thead,8
+main phase,in frameset insertion mode,end tag,col,8
+main phase,in frameset insertion mode,end tag,image,5
+main phase,in frameset insertion mode,end tag,tfoot,5
+main phase,in frameset insertion mode,start tag,tfoot,5
+main phase,in frameset insertion mode,end tag,wbr,2
+main phase,in frameset insertion mode,start tag,isindex,2
+main phase,after frameset insertion mode,characters,,657397120
+main phase,after frameset insertion mode,end tag,html,101309461
+main phase,after frameset insertion mode,end tag,noframes,38298311
+main phase,after frameset insertion mode,start tag,noframes,38289311
+main phase,after frameset insertion mode,start tag,a,12953385
+main phase,after frameset insertion mode,end tag,a,12917799
+main phase,after frameset insertion mode,start tag,br,12280825
+main phase,after frameset insertion mode,start tag,font,8186014
+main phase,after frameset insertion mode,end tag,font,7950208
+main phase,after frameset insertion mode,comment,,7831536
+main phase,after frameset insertion mode,start tag,td,7310317
+main phase,after frameset insertion mode,end tag,td,7204787
+main phase,after frameset insertion mode,end tag,body,4705050
+main phase,after frameset insertion mode,end of file,,4641128
+main phase,after frameset insertion mode,end tag,script,4302089
+main phase,after frameset insertion mode,start tag,tr,4268112
+main phase,after frameset insertion mode,end tag,tr,4221529
+main phase,after frameset insertion mode,start tag,body,3794253
+main phase,after frameset insertion mode,end tag,head,3633282
+main phase,after frameset insertion mode,start tag,script,3535224
+main phase,after frameset insertion mode,start tag,img,3497696
+main phase,after frameset insertion mode,start tag,p,2914073
+main phase,after frameset insertion mode,start tag,b,2878982
+main phase,after frameset insertion mode,end tag,b,2838283
+main phase,after frameset insertion mode,end tag,other,2340866
+main phase,after frameset insertion mode,end tag,frameset,1919319
+main phase,after frameset insertion mode,start tag,other,1748804
+main phase,after frameset insertion mode,end tag,table,1713317
+main phase,after frameset insertion mode,end tag,div,1623703
+main phase,after frameset insertion mode,start tag,input,1494199
+main phase,after frameset insertion mode,start tag,table,1485561
+main phase,after frameset insertion mode,end tag,p,1395249
+main phase,after frameset insertion mode,start tag,div,1390232
+main phase,after frameset insertion mode,start tag,option,1265217
+main phase,after frameset insertion mode,end tag,u,1095697
+main phase,after frameset insertion mode,start tag,u,1094594
+main phase,after frameset insertion mode,end tag,noscript,1044149
+main phase,after frameset insertion mode,start tag,li,853770
+main phase,after frameset insertion mode,end tag,option,825934
+main phase,after frameset insertion mode,start tag,frameset,823225
+main phase,after frameset insertion mode,start tag,noscript,817255
+main phase,after frameset insertion mode,start tag,h1,736783
+main phase,after frameset insertion mode,end tag,h1,732526
+main phase,after frameset insertion mode,start tag,meta,717067
+main phase,after frameset insertion mode,end tag,li,602855
+main phase,after frameset insertion mode,end tag,form,585946
+main phase,after frameset insertion mode,start tag,form,548068
+main phase,after frameset insertion mode,start tag,center,534282
+main phase,after frameset insertion mode,end tag,strong,530630
+main phase,after frameset insertion mode,start tag,strong,530213
+main phase,after frameset insertion mode,end tag,center,528344
+main phase,after frameset insertion mode,end tag,title,387511
+main phase,after frameset insertion mode,start tag,title,348681
+main phase,after frameset insertion mode,start tag,hr,317650
+main phase,after frameset insertion mode,end tag,style,305010
+main phase,after frameset insertion mode,start tag,h2,304862
+main phase,after frameset insertion mode,end tag,h2,303592
+main phase,after frameset insertion mode,start tag,frame,287126
+main phase,after frameset insertion mode,start tag,i,281057
+main phase,after frameset insertion mode,end tag,i,274980
+main phase,after frameset insertion mode,start tag,ul,226858
+main phase,after frameset insertion mode,end tag,ul,226505
+main phase,after frameset insertion mode,start tag,head,217713
+main phase,after frameset insertion mode,start tag,h3,190633
+main phase,after frameset insertion mode,end tag,h3,189730
+main phase,after frameset insertion mode,start tag,link,176852
+main phase,after frameset insertion mode,start tag,select,164137
+main phase,after frameset insertion mode,start tag,html,162539
+main phase,after frameset insertion mode,end tag,select,153727
+main phase,after frameset insertion mode,end tag,iframe,149505
+main phase,after frameset insertion mode,start tag,th,143249
+main phase,after frameset insertion mode,end tag,th,139814
+main phase,after frameset insertion mode,start tag,style,116559
+main phase,after frameset insertion mode,start tag,h4,106497
+main phase,after frameset insertion mode,end tag,h4,105521
+main phase,after frameset insertion mode,start tag,iframe,94652
+main phase,after frameset insertion mode,end tag,nobr,81656
+main phase,after frameset insertion mode,start tag,nobr,81262
+main phase,after frameset insertion mode,start tag,area,70569
+main phase,after frameset insertion mode,start tag,tbody,67525
+main phase,after frameset insertion mode,end tag,tbody,63598
+main phase,after frameset insertion mode,start tag,param,60901
+main phase,after frameset insertion mode,start tag,em,45668
+main phase,after frameset insertion mode,end tag,em,45589
+main phase,after frameset insertion mode,end tag,input,31820
+main phase,after frameset insertion mode,start tag,small,28582
+main phase,after frameset insertion mode,end tag,small,28446
+main phase,after frameset insertion mode,start tag,base,27364
+main phase,after frameset insertion mode,end tag,object,24858
+main phase,after frameset insertion mode,end tag,big,23072
+main phase,after frameset insertion mode,start tag,big,22968
+main phase,after frameset insertion mode,start tag,blockquote,20841
+main phase,after frameset insertion mode,start tag,dd,20369
+main phase,after frameset insertion mode,start tag,wbr,19906
+main phase,after frameset insertion mode,start tag,h5,18514
+main phase,after frameset insertion mode,end tag,pre,18448
+main phase,after frameset insertion mode,start tag,dt,18098
+main phase,after frameset insertion mode,end tag,frame,18049
+main phase,after frameset insertion mode,end tag,h5,17638
+main phase,after frameset insertion mode,start tag,embed,15956
+main phase,after frameset insertion mode,start tag,object,14368
+main phase,after frameset insertion mode,start tag,basefont,14185
+main phase,after frameset insertion mode,end tag,blockquote,13589
+main phase,after frameset insertion mode,end tag,embed,13410
+main phase,after frameset insertion mode,end tag,br,12675
+main phase,after frameset insertion mode,DOCTYPE,,9882
+main phase,after frameset insertion mode,end tag,tt,8956
+main phase,after frameset insertion mode,start tag,tt,8884
+main phase,after frameset insertion mode,start tag,pre,8832
+main phase,after frameset insertion mode,start tag,address,8724
+main phase,after frameset insertion mode,end tag,address,8655
+main phase,after frameset insertion mode,end tag,dt,8620
+main phase,after frameset insertion mode,end tag,dd,8597
+main phase,after frameset insertion mode,end tag,img,8403
+main phase,after frameset insertion mode,end tag,h6,8105
+main phase,after frameset insertion mode,start tag,h6,7894
+main phase,after frameset insertion mode,start tag,plaintext,7497
+main phase,after frameset insertion mode,end tag,marquee,6896
+main phase,after frameset insertion mode,start tag,spacer,6881
+main phase,after frameset insertion mode,end tag,dl,6878
+main phase,after frameset insertion mode,start tag,marquee,6774
+main phase,after frameset insertion mode,start tag,dl,6551
+main phase,after frameset insertion mode,end tag,textarea,5608
+main phase,after frameset insertion mode,end tag,ol,5261
+main phase,after frameset insertion mode,start tag,ol,4818
+main phase,after frameset insertion mode,start tag,textarea,2702
+main phase,after frameset insertion mode,start tag,image,2598
+main phase,after frameset insertion mode,start tag,col,2558
+main phase,after frameset insertion mode,end tag,noembed,2456
+main phase,after frameset insertion mode,start tag,noembed,1744
+main phase,after frameset insertion mode,start tag,bgsound,1637
+main phase,after frameset insertion mode,start tag,colgroup,1226
+main phase,after frameset insertion mode,end tag,caption,830
+main phase,after frameset insertion mode,end tag,colgroup,804
+main phase,after frameset insertion mode,start tag,caption,784
+main phase,after frameset insertion mode,end tag,hr,781
+main phase,after frameset insertion mode,end tag,dir,668
+main phase,after frameset insertion mode,start tag,dir,607
+main phase,after frameset insertion mode,end tag,image,578
+main phase,after frameset insertion mode,end tag,meta,518
+main phase,after frameset insertion mode,end tag,basefont,506
+main phase,after frameset insertion mode,end tag,s,500
+main phase,after frameset insertion mode,start tag,s,408
+main phase,after frameset insertion mode,end tag,strike,399
+main phase,after frameset insertion mode,end tag,plaintext,387
+main phase,after frameset insertion mode,start tag,fieldset,373
+main phase,after frameset insertion mode,end tag,fieldset,370
+main phase,after frameset insertion mode,end tag,link,364
+main phase,after frameset insertion mode,end tag,wbr,350
+main phase,after frameset insertion mode,end tag,menu,327
+main phase,after frameset insertion mode,end tag,area,327
+main phase,after frameset insertion mode,start tag,optgroup,324
+main phase,after frameset insertion mode,end tag,optgroup,324
+main phase,after frameset insertion mode,start tag,strike,318
+main phase,after frameset insertion mode,end tag,param,295
+main phase,after frameset insertion mode,start tag,thead,280
+main phase,after frameset insertion mode,end tag,thead,277
+main phase,after frameset insertion mode,start tag,menu,234
+main phase,after frameset insertion mode,end tag,base,164
+main phase,after frameset insertion mode,end tag,button,144
+main phase,after frameset insertion mode,start tag,button,127
+main phase,after frameset insertion mode,end tag,listing,78
+main phase,after frameset insertion mode,start tag,tfoot,69
+main phase,after frameset insertion mode,end tag,tfoot,66
+main phase,after frameset insertion mode,end tag,bgsound,43
+main phase,after frameset insertion mode,end tag,col,31
+main phase,after frameset insertion mode,end tag,spacer,11
+main phase,after frameset insertion mode,start tag,isindex,8
+trailing end phase,,end of file,,9099272545
+trailing end phase,,characters,,7368465265
+trailing end phase,,comment,,844836840
+trailing end phase,,start tag,script,197403020
+trailing end phase,,end tag,body,73573266
+trailing end phase,,start tag,div,35874481
+trailing end phase,,start tag,html,35620186
+trailing end phase,,start tag,table,27375706
+trailing end phase,,end tag,div,25604928
+trailing end phase,,start tag,br,17909443
+trailing end phase,,end tag,object,11800189
+trailing end phase,,start tag,p,11756633
+trailing end phase,,start tag,other,11551409
+trailing end phase,,start tag,center,11357379
+trailing end phase,,end tag,html,10128138
+trailing end phase,,start tag,iframe,9214334
+trailing end phase,,DOCTYPE,,7554163
+trailing end phase,,start tag,a,6637905
+trailing end phase,,end tag,form,6191014
+trailing end phase,,end tag,td,5791053
+trailing end phase,,end tag,center,4857001
+trailing end phase,,start tag,font,4625321
+trailing end phase,,start tag,img,4208741
+trailing end phase,,start tag,head,4194327
+trailing end phase,,start tag,tr,4090952
+trailing end phase,,start tag,hr,4065243
+trailing end phase,,start tag,style,3665769
+trailing end phase,,end tag,other,3483525
+trailing end phase,,start tag,noscript,3406551
+trailing end phase,,start tag,body,3145467
+trailing end phase,,start tag,meta,3105618
+trailing end phase,,end tag,p,3080609
+trailing end phase,,start tag,form,2968897
+trailing end phase,,end tag,style,2869470
+trailing end phase,,start tag,input,2487408
+trailing end phase,,end tag,head,2418271
+trailing end phase,,start tag,link,2312674
+trailing end phase,,end tag,table,2190584
+trailing end phase,,end tag,pre,2160691
+trailing end phase,,end tag,textarea,2134710
+trailing end phase,,start tag,pre,1185928
+trailing end phase,,end tag,font,1051311
+trailing end phase,,start tag,b,807020
+trailing end phase,,start tag,basefont,650288
+trailing end phase,,start tag,title,567356
+trailing end phase,,end tag,tr,488915
+trailing end phase,,end tag,script,466629
+trailing end phase,,end tag,noscript,293055
+trailing end phase,,start tag,td,227353
+trailing end phase,,end tag,a,178889
+trailing end phase,,start tag,h2,174462
+trailing end phase,,start tag,ul,171125
+trailing end phase,,end tag,ul,166154
+trailing end phase,,start tag,h1,149760
+trailing end phase,,end tag,iframe,147095
+trailing end phase,,start tag,h4,146276
+trailing end phase,,start tag,base,132460
+trailing end phase,,start tag,object,122766
+trailing end phase,,start tag,small,121776
+trailing end phase,,end tag,tbody,98718
+trailing end phase,,end tag,li,95098
+trailing end phase,,start tag,u,89376
+trailing end phase,,start tag,li,73709
+trailing end phase,,start tag,embed,72647
+trailing end phase,,end tag,blockquote,71061
+trailing end phase,,start tag,blockquote,70393
+trailing end phase,,start tag,h3,69218
+trailing end phase,,end tag,b,63612
+trailing end phase,,start tag,frameset,61607
+trailing end phase,,start tag,h6,60933
+trailing end phase,,end tag,title,58201
+trailing end phase,,start tag,strong,53296
+trailing end phase,,start tag,noframes,51976
+trailing end phase,,start tag,noembed,39978
+trailing end phase,,end tag,br,39472
+trailing end phase,,start tag,i,37698
+trailing end phase,,start tag,marquee,33328
+trailing end phase,,start tag,bgsound,32854
+trailing end phase,,start tag,area,23674
+trailing end phase,,end tag,strong,23246
+trailing end phase,,end tag,h1,22919
+trailing end phase,,end tag,h3,22783
+trailing end phase,,end tag,h2,21183
+trailing end phase,,end tag,frameset,19212
+trailing end phase,,start tag,textarea,16894
+trailing end phase,,end tag,noframes,15149
+trailing end phase,,end tag,h4,14333
+trailing end phase,,start tag,dl,13025
+trailing end phase,,start tag,em,12588
+trailing end phase,,start tag,h5,11555
+trailing end phase,,start tag,frame,11427
+trailing end phase,,end tag,small,11286
+trailing end phase,,end tag,i,9422
+trailing end phase,,start tag,fieldset,9393
+trailing end phase,,end tag,base,9257
+trailing end phase,,end tag,fieldset,9144
+trailing end phase,,end tag,marquee,9008
+trailing end phase,,end tag,tt,7628
+trailing end phase,,end tag,th,5738
+trailing end phase,,end tag,noembed,5527
+trailing end phase,,start tag,address,5093
+trailing end phase,,end tag,dd,4989
+trailing end phase,,start tag,tbody,4864
+trailing end phase,,end tag,h5,4708
+trailing end phase,,end tag,u,4647
+trailing end phase,,end tag,em,4586
+trailing end phase,,end tag,ol,4036
+trailing end phase,,start tag,plaintext,3744
+trailing end phase,,end tag,option,3617
+trailing end phase,,end tag,address,3579
+trailing end phase,,start tag,nobr,3504
+trailing end phase,,end tag,embed,3293
+trailing end phase,,start tag,dt,2691
+trailing end phase,,end tag,dl,2491
+trailing end phase,,start tag,param,2399
+trailing end phase,,start tag,tt,2216
+trailing end phase,,end tag,h6,2202
+trailing end phase,,start tag,dd,1808
+trailing end phase,,end tag,select,1611
+trailing end phase,,end tag,nobr,1510
+trailing end phase,,end tag,meta,1426
+trailing end phase,,end tag,dt,1409
+trailing end phase,,start tag,ol,1067
+trailing end phase,,start tag,select,1059
+trailing end phase,,start tag,th,1015
+trailing end phase,,start tag,big,700
+trailing end phase,,end tag,big,590
+trailing end phase,,end tag,area,581
+trailing end phase,,start tag,spacer,512
+trailing end phase,,end tag,basefont,454
+trailing end phase,,end tag,dir,442
+trailing end phase,,end tag,frame,436
+trailing end phase,,end tag,img,434
+trailing end phase,,start tag,dir,355
+trailing end phase,,start tag,option,341
+trailing end phase,,end tag,link,231
+trailing end phase,,start tag,wbr,217
+trailing end phase,,start tag,s,199
+trailing end phase,,end tag,plaintext,196
+trailing end phase,,end tag,hr,144
+trailing end phase,,end tag,input,144
+trailing end phase,,start tag,button,107
+trailing end phase,,end tag,menu,86
+trailing end phase,,start tag,menu,72
+trailing end phase,,end tag,caption,66
+trailing end phase,,start tag,image,66
+trailing end phase,,end tag,thead,57
+trailing end phase,,start tag,tfoot,52
+trailing end phase,,start tag,caption,46
+trailing end phase,,start tag,col,34
+trailing end phase,,end tag,param,28
+trailing end phase,,end tag,listing,28
+trailing end phase,,end tag,spacer,20
+trailing end phase,,start tag,colgroup,20
+trailing end phase,,start tag,strike,20
+trailing end phase,,end tag,bgsound,17
+trailing end phase,,end tag,s,14
+trailing end phase,,start tag,thead,14
+trailing end phase,,end tag,tfoot,8
+trailing end phase,,end tag,strike,8
+trailing end phase,,end tag,col,5
+trailing end phase,,end tag,button,2
+trailing end phase,,start tag,listing,2
+trailing end phase,,end tag,wbr,2
+trailing end phase,,end tag,colgroup,2

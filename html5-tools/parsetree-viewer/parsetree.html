@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html5lib Based HTML5 Parse Trees</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="parsetree_helper.js"></script>
+    </head>
+    <body>
+        <h1>html5lib Based HTML5 Parser</h1>
+
+        <form id="form_uri" action="/cgi-bin/parsetree/parsetree.py" method="get">
+            <fieldset>
+            <legend>Parse a URI</legend>
+            <p>
+                <label>URI:
+                    <input id="input_uri"  type="url" title="URI to process" name="uri">
+                </label>
+                <input type="submit" value="Parse">
+            </fieldset>
+        </form>
+        
+        <form id="form_source" action="/cgi-bin/parsetree/parsetree.py" method="post">
+        <fieldset>
+        <legend>Parse Text</legend>
+        <p><label for="input_source" id="label_source">HTML Source:</label>
+            <textarea title="HTML Source" name="source" rows="20" cols="80" accept="text/html" id="input_source" onchange="sourceFormMethod();"></textarea>
+            <input type="submit" value="Parse">
+        </p>
+        </fieldset>
+        </form>
+        
+        <footer>
+            <p>html5lib based HTML viewer by <a href="http://www-xray.ast.cam.ac.uk/~jgraham">James Graham</a>. Bugs should be reported to the <a href="http://code.google.com/p/html5/issues/list">issue tracker</a>
+            </p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+INTRODUCTION
+
+This file contains various miscellaneous pieces of information gleaned
+by Google in July 2007, from a study using a parser based on r967 of
+the HTML5 specification.
+
+
+NUMBER OF ATTRIBUTES ON ELEMENTS
+
+The following table shows the percentage of elements with a number of
+attributes or less:
+
+  elements with <= 0 attributes:  33.5%
+  elements with <= 1 attributes:  66.1%
+  elements with <= 2 attributes:  81.6%
+  elements with <= 3 attributes:  90.2%
+  elements with <= 4 attributes:  95.3%
+  elements with <= 5 attributes:  98.3%
+  elements with <= 6 attributes:  99.4%
+  elements with <= 7 attributes:  99.8%
+  elements with <= 8 attributes:  99.9%
+  elements with <= 9 attributes: 100.0%
+
+The following table shows the percentage of pages whose element with
+the most attributes had a given number of attributes or less:
+
+  max is <=   0 attributes:  0.3%
+  max is <=   1 attributes:  0.8%
+  max is <=   2 attributes:  3.1%
+  max is <=   3 attributes:  6.8%
+  max is <=   4 attributes: 12.8%
+  max is <=   5 attributes: 27.9%
+  max is <=   6 attributes: 52.1%
+  max is <=   7 attributes: 70.5%
+  max is <=   8 attributes: 83.8%
+  max is <=   9 attributes: 90.5%
+  max is <=  10 attributes: 95.9%
+  max is <=  11 attributes: 97.8%
+  max is <=  12 attributes: 99.0%
+  max is <=  13 attributes: 99.5%
+  max is <=  14 attributes: 99.6%
+  max is <=  16 attributes: 99.7%
+  max is <=  20 attributes: 99.8%
+  max is <=  26 attributes: 99.9%
+  ...
+  max is <=  95 attributes: 99.99%
+  ...
+  max is <= 340 attributes: 99.998%
+  ...
+  max is <= 627 attributes: 99.9990%
+
+Note that many pages have an element with an extremely large number of
+attributes. In particular, many pages include a <meta name="keywords">
+element where they have misquoted the "content" attribute, and so each
+keyword ends up generating its own attribute. Such pages often have
+hundreds or thousands of keywords.
+
+
+METHODOLOGY
+
+The sample data consisted of several billion documents from Google's
+index. An attempt was made to eliminate duplicates from the
+sample. Documents that did not appear, a priori, to be HTML documents
+(e.g. PDF documents, Flash animations, Word documents) were not
+included in the sample. Documents which, when parsed, resulted in DOMs
+with more than 65535 elements were only parsed up to the creation of
+the 65535th element.
+
+It is hoped that this data will help implementors of HTML5 parsers to
+optimise their branches to better serve actual Web content.
+
+For more information, please contact Ian Hickson <ian@hixie.ch>.
+
+
+LICENSE
+
+Copyright 2007 Google, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you
+may not use this file except in compliance with the License. You may
+obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied. See the License for the specific language governing
+permissions and limitations under the License.

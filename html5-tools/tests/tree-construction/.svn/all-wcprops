@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/151/trunk/tests/tree-construction
+END
+after-head-insertion-mode.dat
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/150/trunk/tests/tree-construction/after-head-insertion-mode.dat
+END
+before-head-insertion-mode.dat
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/150/trunk/tests/tree-construction/before-head-insertion-mode.dat
+END
+in-body-insertion-mode.dat
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/150/trunk/tests/tree-construction/in-body-insertion-mode.dat
+END
+compatibility-mode.dat
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/151/trunk/tests/tree-construction/compatibility-mode.dat
+END
+before-html-insertion-mode.dat
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/145/trunk/tests/tree-construction/before-html-insertion-mode.dat
+END
+in-head-insertion-mode.dat
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/150/trunk/tests/tree-construction/in-head-insertion-mode.dat
+END
+initial-insertion-mode.dat
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/150/trunk/tests/tree-construction/initial-insertion-mode.dat
+END

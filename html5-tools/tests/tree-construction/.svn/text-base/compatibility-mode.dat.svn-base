@@ -1,0 +1,153 @@
+#data
+<!DOCTYPE html>
+#compatibility-mode
+no quirks
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE hTmL>
+#compatibility-mode
+no quirks
+#errors
+#document
+| <!DOCTYPE hTmL>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "foo">
+#compatibility-mode
+no quirks
+#errors
+Line 1 Col 28 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html PUBLIC "foo">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "foo" "bar">
+#compatibility-mode
+no quirks
+#errors
+Line 1 Col 34 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html PUBLIC "foo" "bar">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html SYSTEM "foo">
+#compatibility-mode
+no quirks
+#errors
+Line 1 Col 28 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html SYSTEM "foo">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html
+#compatibility-mode
+quirks
+#errors
+Line 1 Col 14 Unexpected end of file in DOCTYPE name. Force quirks.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE htm>
+#compatibility-mode
+quirks
+#errors
+Line 1 Col 14 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE htm>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "+//Silmaril//dtd html Pro v0r11 19970101//EN">
+#compatibility-mode
+quirks
+#errors
+Line 1 Col 69 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html PUBLIC "+//Silmaril//dtd html Pro v0r11 19970101//EN">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "+//silmaril//dtd html pro v0r11 19970101//en">
+#compatibility-mode
+quirks
+#errors
+Line 1 Col 69 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html PUBLIC "+//silmaril//dtd html pro v0r11 19970101//en">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "+//Silmaril//dtd html Pro v0r11 19970101//EN" "foo">
+#compatibility-mode
+quirks
+#errors
+Line 1 Col 69 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html PUBLIC "+//Silmaril//dtd html Pro v0r11 19970101//EN" "foo">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "-//AdvaSoft Ltd//DTD HTML 3.0 asWedit + extensions//EN">
+#compatibility-mode
+quirks
+#errors
+Line 1 Col 69 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html PUBLIC "-//AdvaSoft Ltd//DTD HTML 3.0 asWedit + extensions//EN">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "-//advasoft ltd//dtd html 3.0 aswedit + extensions//en">
+#compatibility-mode
+quirks
+#errors
+Line 1 Col 69 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html PUBLIC "-//advasoft ltd//dtd html 3.0 aswedit + extensions//en">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "-//AdvaSoft Ltd//DTD HTML 3.0 asWedit + extensions//EN" "foo">
+#compatibility-mode
+quirks
+#errors
+Line 1 Col 69 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html PUBLIC "-//AdvaSoft Ltd//DTD HTML 3.0 asWedit + extensions//EN" "foo">
+| <html>
+|   <head>
+|   <body>

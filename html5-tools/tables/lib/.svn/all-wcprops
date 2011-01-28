@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/144/trunk/tables/lib
+END
+test_tables.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/130/trunk/tables/lib/test_tables.py
+END
+test_headers.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/142/trunk/tables/lib/test_headers.py
+END
+tableparser.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/131/trunk/tables/lib/tableparser.py
+END

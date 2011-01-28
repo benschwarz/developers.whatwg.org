@@ -1,0 +1,13 @@
+html {font-family:"Bitstream Vera Sans" Veranda Helvetica Sans; margin:0 0 0 0; padding:0 0 0 0;}
+body {margin:0 0 0 0; padding:0 0 0 0;}
+h1 {text-align:right; width:100%; background-color:#ccf; padding:0.25em 0.5em 0.25em 0; margin:0 -10px 0 -10px; border-width:0;}
+h1 a {text-decoration:none; color:inherit;}
+body > div {padding:0 10px 0 10px;}
+div.input_value {margin-left:2em;}
+.__tableparser_heading_list {list-style:none; padding-left:0;}
+.__tableparser_active_cell {background-color:#ccf;}
+.__tableparser_active_cell .__tableparser_heading_container {display:block!important; background-color:#cfc;}
+.__tableparser_active_heading {background-color: #fcc;}
+.__tableparser_heading_title {font-weight:bold;}
+th, td {color:black; background-color:white; border: thin solid black; color:#000;}
+.__tableparser_heading_container {background-color:#cfc;}

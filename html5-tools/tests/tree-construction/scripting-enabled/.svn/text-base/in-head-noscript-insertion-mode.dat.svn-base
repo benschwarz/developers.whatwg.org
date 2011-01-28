@@ -1,0 +1,20 @@
+#data
+<!DOCTYPE html><noscript></noscript>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+
+#data
+<!DOCTYPE html><noscript><!DOCTYPE html>foo&amp;bar</noscript>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|       "<!DOCTYPE html>foo&amp;bar"
+|   <body>

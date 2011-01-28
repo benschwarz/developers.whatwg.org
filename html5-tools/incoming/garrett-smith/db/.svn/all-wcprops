@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/db
+END
+txn-current-lock
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/db/txn-current-lock
+END
+write-lock
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/db/write-lock
+END
+current
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/db/current
+END
+uuid
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/db/uuid
+END
+fs-type
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/db/fs-type
+END
+format
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/db/format
+END
+txn-current
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/db/txn-current
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/80/trunk/parser-tests
+END
+testrunner.htm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/78/trunk/parser-tests/testrunner.htm
+END
+dom2string.js
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/80/trunk/parser-tests/dom2string.js
+END

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Parser tests runner</title>
+  <script src=dom2string.js></script>
+  <style>
+    pre { font-size:1em }
+    pre.overview:hover { background:#ccc }
+  </style>
+ </head>
+ <body>
+  <p><iframe></iframe></p>
+  <form>
+   <p><label><input name="quirks" type="checkbox"> Filter out some IE quirks</label></p>
+   <p><input type="submit" value="Start!"></p>
+  </form>
+  <script>
+   var iframe = document.getElementsByTagName("iframe")[0], ieQuirks,
+       arrTests, arrData, arrExpected, log, failList, resource, expected, result
+
+   document.forms[0].onsubmit = function() {
+     document.body.appendChild(document.createElement("hr"))
+     run(["data/tests6.dat", "data/tests5.dat", "data/tests3.dat", "data/tests2.dat", "data/tests1.dat"])
+     return false
+   }
+
+   document.forms[0].quirks.onclick = function() {
+     ieQuirks = this.checked
+   }
+
+   function run(resources) {
+     var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP")
+     arrTests = []; arrData = []; arrExpected = []; log = ""; failList = []
+     resource = resources.pop()
+     if(resource) {
+       xhr.open("GET", resource)
+       xhr.onreadystatechange = function() {
+         if (xhr.readyState == 4) {
+           arrTests = xhr.responseText.split(/\n*^#data\n/m);
+           if (arrTests[0] == "")
+             arrTests.splice(0, 1);
+           for (var i = 0, len = arrTests.length; i < len; ++i) {
+             arrData.push(arrTests[i].split("\n#errors")[0]);
+             arrExpected.push(arrTests[i].split("#document")[1]);
+           }
+           process()
+           run(resources)
+         }
+       }
+       xhr.send(null)
+     }
+   }
+
+   function filter(str) {
+     var pieces = str.split("\n"), result = []
+     for(piece in pieces) {
+       if(pieces[piece] != "|     <title>" && !/\| <!-- ctype ht -->/i.test(pieces[piece]) && !/\| <!doctype html>/i.test(pieces[piece]))
+         result.push(pieces[piece])
+     }
+     return result.join("\n")
+   }
+   
+   function process() {
+     var result;
+     for (var i = 0, len = arrData.length; i < len; ++i) {
+       iframe.contentWindow.document.open();
+       iframe.contentWindow.document.write(arrData[i]);
+       iframe.contentWindow.document.close();
+       result = dom2string(iframe.contentWindow.document);
+       expected = arrExpected[i];
+       if(ieQuirks) {
+         result = filter(result)
+         expected = filter(expected)
+       }
+       if ((i + 1) == arrData.length)
+         result += "\n"
+       if (result != expected) {
+         failList.push((i + 1))
+         log += "\n\nTest " + (i + 1) + " of " + arrData.length + " in " + resource + " failed. Input:\n" + arrData[i] + "\nGot:" + result + "\nExpected:" + expected;
+       }
+     }
+     results();
+   }
+
+   function results(){
+     var div = document.createElement("div")
+     if (failList.length) {
+       var overview = document.createElement("pre")
+       overview.innerHTML = resource + ": " + failList
+       overview.className = "overview"
+       overview.title = "Click for more details"
+       overview.onclick = function() { this.nextSibling.style.display = this.nextSibling.style.display == "none" ? "block" : "none" }
+       var detailed = document.createElement("pre")
+       detailed.innerHTML = "x"
+       detailed.firstChild.data = log.replace(/\n/g,"\r\n");
+       detailed.style.display = "none"
+       div.appendChild(overview)
+       div.appendChild(detailed)
+     } else {
+       div.innerHTML = "<pre>" + resource + ": PASS<\/pre>";
+     }
+     document.body.appendChild(div)
+   }
+  </script>
+ </body>
+</html>

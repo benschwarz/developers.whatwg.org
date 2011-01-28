@@ -1,0 +1,106 @@
+#data
+<!DOCTYPE html>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE hTmL>
+#errors
+#document
+| <!DOCTYPE hTmL>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE htm>
+#errors
+Line 1 Col 14 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE htm>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "foo">
+#errors
+Line 1 Col 28 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html PUBLIC "foo">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html PUBLIC "foo" "bar">
+#errors
+Line 1 Col 34 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html PUBLIC "foo" "bar">
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html SYSTEM "foo">
+#errors
+Line 1 Col 28 Erroneous DOCTYPE.
+#document
+| <!DOCTYPE html SYSTEM "foo">
+| <html>
+|   <head>
+|   <body>
+
+#data
+ 
+<!DOCTYPE html>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!-- comment --><!DOCTYPE html>
+#errors
+#document
+| <!-- comment -->
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+
+#errors
+Line 1 Col 0 Unexpected End of File. Expected DOCTYPE.
+#document
+| <html>
+|   <head>
+|   <body>
+
+#data
+X
+#errors
+Line 1 Col 0 Unexpected non-space characters. Expected DOCTYPE.
+#document
+| <html>
+|   <head>
+|   <body>
+|     "X"
+
+#data
+ X
+#errors
+Line 1 Col 0 Unexpected non-space characters. Expected DOCTYPE.
+#document
+| <html>
+|   <head>
+|   <body>
+|     "X"

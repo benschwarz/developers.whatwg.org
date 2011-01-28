@@ -1,0 +1,1884 @@
+/* written against r789... */
+
+/**
+ * For now you can apply the style sheet by using this bookmarklet:
+ * 
+ *   javascript:(function(){document.getElementsByTagName("head")[0].innerHTML+="<link rel=stylesheet href=http://simon.html5.org/temp/author-view-of-html5.css>"})()
+ *
+ */
+
+/** 
+ * If you want to contribute to this work, see:
+ * 
+ *    http://ln.hixie.ch/?start=1140242962&count=1
+ * 
+ * ...for guidence on how to differentiate between conformance requirements
+ * for different classes of products. Then contact me at zcorpan@gmail.com.
+ */
+
+
+body:before {position:fixed; bottom: 0; right: 0; border: #dcb solid thin;
+color: black; background-color: #fed; content: "author view"} /* thanks Sander Tekelenburg */
+
+
+/* Abstract */
+
+
+/* Status of this document */
+#status+p+p,
+
+/* Stability */
+
+
+/* Table of contents */
+
+
+/* 1. Introduction  */
+
+
+/* 1.1. Scope  */
+
+
+/* 1.2. Structure of this specification  */
+#howto,
+
+/* 1.2.1. How to read this specification  */
+
+
+/* 1.3. Conformance requirements  */
+#conformance+p+p+p+p+p,
+#conformance+p+p+p+p+p+dl,
+#conformance+p+p+p+p+p+dl+p,
+#conformance+p+p+p+p+p+dl+p+p,
+#conformance+p+p+p+p+p+dl+p+p+p,
+#hardwareLimitations,
+#entity-references,
+
+/* 1.3.1. Dependencies  */
+#dependencies,
+#dependencies+p,
+#dependencies+p+dl,
+#dependencies+p+dl+p,
+
+/* 1.3.2. Features defined in other specifications  */
+#features,
+#features+p,
+#features+p+p,
+#features+p+p+p,
+
+/* 1.3.3. Relationship to HTML 4.01, XHTML 1.1, DOM2 HTML  */
+
+
+/* 1.3.4. Relationship to XHTML2  */
+
+
+/* 1.3.5. Relationship to XUL, WPF/XAML, and other proprietary UI languages  */
+
+
+/* 1.4. Terminology  */
+#html-namespace+p+p+p+p+p+p, /* #root-element */
+#html-namespace+p+p+p+p+p+p+p, /* #inserted */
+#html-namespace+p+p+p+p+p+p+p+p, /* #tree-order */
+#html-namespace+p+p+p+p+p+p+p+p+p, /* #ignored */
+#html-namespace+p+p+p+p+p+p+p+p+p+p+dl+p+p+p+p+p+p, /* #live */
+#html-namespace+p+p+p+p+p+p+p+p+p+p+dl+p+p+p+p+p+p+p+p, /* #text-node */
+#html-namespace+p+p+p+p+p+p+p+p+p+p+dl+p+p+p+p+p+p+p+p+p, /* #pause */
+
+/* 1.4.1. HTML vs XHTML  */
+
+
+/* 2. The Document Object Model  */
+
+
+/* 2.1. Documents  */
+#documents+p+p+p+p,
+#documents+p+p+p+p+p,
+
+/* 2.1.1. Security  */
+#sequrity,
+#sequrity+p,
+#sequrity+p+ul,
+#sequrity+p+ul+p,
+
+/* 2.1.2. Resource metadata management  */
+#resource+p, /* #url */
+#resource+p+p, /* #domain */
+#resource+p+p+p+p+p+p, /* #referrer */
+#resource+p+p+p+p+p+p+p+p, /* #cookie */
+#resource+p+p+p+p+p+p+p+p+p,
+
+/* 2.2. Elements  */
+
+
+/* 2.2.1. Reflecting content attributes in DOM attributes  */
+#reflecting+p+p,
+#reflecting+p+p+p,
+#reflecting+p+p+p+p,
+#reflecting+p+p+p+p+p,
+#reflecting+p+p+p+p+p+p,
+#reflecting+p+p+p+p+p+p+p,
+#reflecting+p+p+p+p+p+p+p+p,
+#reflecting+p+p+p+p+p+p+p+p+p,
+#reflecting+p+p+p+p+p+p+p+p+p+p,
+#reflecting+p+p+p+p+p+p+p+p+p+p+ol,
+#reflecting+p+p+p+p+p+p+p+p+p+p+ol+p,
+
+/* 2.3. Common DOM interfaces  */
+
+
+/* 2.3.1. Collections  */
+#collections+p+p,
+#collections+p+p+p,
+#collections+p+p+p+p,
+#collections+p+p+p+p+p,
+#collections+p+p+p+p+p+p,
+
+/* 2.3.1.1. HTMLCollection  */
+#htmlcollection+p+pre+p, /* #length */
+#htmlcollection+p+pre+p+p, /* #itemindex */
+#htmlcollection+p+pre+p+p+p, /* #nameditem */
+#htmlcollection+p+pre+p+p+p+ul,
+#htmlcollection+p+pre+p+p+p+ul+p,
+#htmlcollection+p+pre+p+p+p+ul+p+p,
+
+/* 2.3.1.2. HTMLFormControlsCollection  */
+#htmlformcontrolscollection+p+pre+p, /* #length0 */
+#htmlformcontrolscollection+p+pre+p+p, /* #itemindex0 */
+#htmlformcontrolscollection+p+pre+p+p+p, /* #nameditem0 */
+#htmlformcontrolscollection+p+pre+p+p+p+ol,
+#htmlformcontrolscollection+p+pre+p+p+p+ol+p,
+
+/* 2.3.1.3. HTMLOptionsCollection  */
+#htmloptionscollection+p+pre+p, /* #length1 */
+#htmloptionscollection+p+pre+p+p,
+#htmloptionscollection+p+pre+p+p+p+p, /* #itemindex1 */
+#htmloptionscollection+p+pre+p+p+p+p+p, /* #nameditem1 */
+#htmloptionscollection+p+pre+p+p+p+p+p+ol,
+#htmloptionscollection+p+pre+p+p+p+p+p+ol+p,
+
+/* 2.3.2. DOMTokenList  */
+#domtokenlist+p+p+pre+p, /* #hastoken */
+#domtokenlist+p+p+pre+p+ol,
+#domtokenlist+p+p+pre+p+ol+p, /* #addtoken */
+#domtokenlist+p+p+pre+p+ol+p+ol,
+#domtokenlist+p+p+pre+p+ol+p+ol+p, /* #removetoken */
+#domtokenlist+p+p+pre+p+ol+p+ol+p+ol,
+#domtokenlist+p+p+pre+p+ol+p+ol+p+ol+p,
+
+/* 2.3.3. DOM feature strings  */
+#dom-feature+p+p+p,
+
+/* 2.4. DOM tree accessors  */
+#dom-tree+p, /* #the-html0 */
+#dom-tree+p+p, /* #the-head0 */
+#dom-tree+p+p+p, /* #the-title1 */
+#dom-tree+p+p+p+p, /* #document.title */
+#dom-tree+p+p+p+p+p,
+#dom-tree+p+p+p+p+p+ol,
+#dom-tree+p+p+p+p+p+ol+p, /* #the-body0 */
+#dom-tree+p+p+p+p+p+ol+p+p, /* #body */
+#dom-tree+p+p+p+p+p+ol+p+p+ol,
+#dom-tree+p+p+p+p+p+ol+p+p+ol+p, /* #images */
+#dom-tree+p+p+p+p+p+ol+p+p+ol+p+p, /* #links */
+#dom-tree+p+p+p+p+p+ol+p+p+ol+p+p+p, /* #forms */
+#dom-tree+p+p+p+p+p+ol+p+p+ol+p+p+p+p, /* #anchors */
+#dom-tree+p+p+p+p+p+ol+p+p+ol+p+p+p+p+p, /* #getelementsbyname */
+#dom-tree+p+p+p+p+p+ol+p+p+ol+p+p+p+p+p+p, /* #getelementsbyclassname */
+#dom-tree+p+p+p+p+p+ol+p+p+ol+p+p+p+p+p+p+p,
+#dom-tree+p+p+p+p+p+ol+p+p+ol+p+p+p+p+p+p+p+div+p, /* #getelementsbyclassname0 */
+
+/* 2.5. Dynamic markup insertion  */
+#dynamic+p+p+p+table+p, /* #document.writeln */
+
+/* 2.5.1. Controlling the input stream  */
+#controlling+p+p,
+#controlling+p+p+ol,
+#controlling+p+p+ol+p,
+#controlling+p+p+ol+p+p,
+#controlling+p+p+ol+p+p+p, /* #close */
+
+/* 2.5.2. Dynamic markup insertion in HTML  */
+#dynamic0+p, /* #document.write0 */
+#dynamic0+p+ol,
+#dynamic0+p+ol+p, /* #innerhtml0 */
+#dynamic0+p+ol+p+p,
+#dynamic0+p+ol+p+p+ol,
+#dynamic0+p+ol+p+p+ol+p, /* #escapingString */
+#dynamic0+p+ol+p+p+ol+p+p,
+#dynamic0+p+ol+p+p+ol+p+p+p+p,
+#dynamic0+p+ol+p+p+ol+p+p+p+p+ol,
+#dynamic0+p+ol+p+p+ol+p+p+p+p+ol+p,
+#dynamic0+p+ol+p+p+ol+p+p+p+p+ol+p+ol,
+
+/* 2.5.3. Dynamic markup insertion in XML  */
+#dynamic1+p, /* #document.write1 */
+#dynamic1+p+p+p, /* #innerhtml2 */
+#dynamic1+p+p+p+p,
+#dynamic1+p+p+p+p+ol,
+
+/* 2.6. APIs in HTML documents  */
+
+
+/* 3. Semantics and structure of HTML elements  */
+
+
+/* 3.1. Introduction  */
+
+
+/* 3.2. Common microsyntaxes  */
+
+
+/* 3.2.1. Common parser idioms  */
+#common1+p+p,
+#common1+p+p+p, /* #collect */
+#common1+p+p+p+ol,
+#common1+p+p+p+ol+p, /* #skip-whitespace */
+
+/* 3.2.2. Boolean attributes  */
+
+
+/* 3.2.3. Numbers  */
+
+
+/* 3.2.3.1. Unsigned integers  */
+#unsigned+p+p, /* #rules */
+#unsigned+p+p+ol,
+
+/* 3.2.3.2. Signed integers  */
+#signed+p+p, /* #rules0 */
+#signed+p+p+ol,
+
+
+/* 3.2.3.3. Real numbers  */
+#real-numbers+p+p, /* #rules1 */
+#real-numbers+p+p+ol,
+
+/* 3.2.3.4. Ratios  */
+#ratios+p,
+#ratios+p+p+table+p, /* #steps */
+#ratios+p+p+table+p+ol,
+#ratios+p+p+table+p+ol+p, /* #find-a */
+#ratios+p+p+table+p+ol+p+ol,
+
+/* 3.2.3.5. Percentages and dimensions  */
+/* XXX TBW */
+
+/* 3.2.3.6. Lists of integers  */
+#lists+p+p, /* #rules3 */
+#lists+p+p+ol,
+
+/* 3.2.4. Dates and times  */
+#dates+p, /* #number */
+
+/* 3.2.4.1. Specific moments in time  */
+#specific+p+p+div+p,
+#specific+p+p+div+p+p, /* #datetime-parser */
+#specific+p+p+div+p+p+ol,
+
+/* 3.2.4.2. Vaguer moments in time  */
+/* XXX "A date or time string is a valid date or time string if the following algorithm, when run on the string, doesn't say the string is invalid." */
+
+/* 3.2.5. Time offsets  */
+/* XXX TBW */
+
+/* 3.2.6. Tokens  */
+#tokens+p+p+p+p+p, /* #split */
+#tokens+p+p+p+p+p+ol,
+#tokens+p+p+p+p+p+ol+p,
+#tokens+p+p+p+p+p+ol+p+ol,
+#tokens+p+p+p+p+p+ol+p+ol+p,
+
+/* 3.2.7. Keywords and enumerated attributes  */
+#keywords+p+p+p,
+#keywords+p+p+p+p,
+#keywords+p+p+p+p+p,
+
+/* 3.2.8. References  */
+#syntax-references+p+p, /* #valid7 */
+#syntax-references+p+p+ol,
+
+/* 3.3. Documents and document fragments  */
+
+
+/* 3.3.1. Semantics  */
+
+
+/* 3.3.2. Structure  */
+
+
+/* 3.3.3. Kinds of elements  */
+
+
+/* 3.3.3.1. Block-level elements  */
+
+
+/* 3.3.3.2. Inline-level content  */
+
+
+/* 3.3.3.3. Transparent content models  */
+
+
+/* 3.3.3.4. Determining if a particular element contains block-level elements or inline-level content  */
+
+
+/* 3.3.3.5. Interactive elements  */
+#interactive0+p+p+p,
+#interactive0+p+p+p+p,
+#interactive0+p+p+p+p+p,
+#interactive0+p+p+p+p+p+p,
+
+/* 3.3.3.6. Paragraphs  */
+
+
+/* 3.4. Global attributes  */
+
+
+/* 3.4.1. The id attribute  */
+#the-id+p+p,
+#the-id+p+p+p,
+#the-id+p+p+p+p+p, /* #id0 */
+
+/* 3.4.2. The title attribute  */
+#the-title+p+p+p+p+p, /* #title0 */
+
+/* 3.4.3. The lang (HTML only) and xml:lang (XML only) attributes  */
+#the-lang+p+p+p+p+p+p,
+#the-lang+p+p+p+p+p+p+p,
+#the-lang+p+p+p+p+p+p+p+p,
+#the-lang+p+p+p+p+p+p+p+p+p,
+#the-lang+p+p+p+p+p+p+p+p+p+p,
+
+/* 3.4.4. The dir attribute  */
+#the-dir+p+p+p,
+#the-dir+p+p+p+p,
+
+/* 3.4.5. Classes  */
+#classes+p+p+p+p+p+p+p+p,
+
+/* 3.4.5.1. Predefined class names  */
+
+
+/* 3.4.5.1.1. Class name "copyright"  */
+
+
+/* 3.4.5.1.2. Class name "error"  */
+
+
+/* 3.4.5.1.3. Class name "example"  */
+
+
+/* 3.4.5.1.4. Class name "issue"  */
+
+
+/* 3.4.5.1.5. Class name "note"  */
+
+
+/* 3.4.5.1.6. Class name "search"  */
+
+
+/* 3.4.5.1.7. Class name "warning"  */
+
+
+/* 3.4.5.2. Other classes  */
+#other+p+p+dl+p,
+
+/* 3.4.6. The irrelevant attribute  */
+#the-irrelevant+p+div+p+p+p,
+
+/* 3.5. Interaction  */
+
+
+/* 3.5.1. Activation  */
+#activation,
+#activation+p,
+
+/* 3.5.2. Focus  */
+#focus+p,
+#focus+p+p,
+
+/* 3.5.2.1. Focus management  */
+#focus-management,
+#focus-management+p,
+#focus-management+p+p,
+#focus-management+p+p+p,
+#focus-management+p+p+p+p,
+#focus-management+p+p+p+p+p,
+
+/* 3.5.2.2. Sequential focus navigation  */
+#sequential+p+p+p,
+#negative-tabindex+p,
+#negative-tabindex+p+p,
+#negative-tabindex+p+p+p+p,
+
+/* 3.6. The root element  */
+
+
+/* 3.6.1. The html element  */
+
+
+/* 3.7. Document metadata  */
+
+
+/* 3.7.1. The head element  */
+
+
+/* 3.7.2. The title element  */
+#the-title0+p+dl+p+div+p+p,
+
+/* 3.7.3. The base element  */
+#the-base+p+dl+p+p+p+p+p,
+#the-base+p+dl+p+p+p+p+p+p,
+#the-base+p+dl+p+p+p+p+p+p+p+p,
+
+/* 3.7.4. The link element  */
+#the-link+p+dl+p+p+p+p+p,
+#the-link+p+dl+p+p+p+p+p+p,
+#the-link+p+dl+p+p+p+p+p+p+ul,
+#the-link+p+dl+p+p+p+p+p+p+ul+p,
+#default-media+p+p+p,
+#default-media+p+p+p+p,
+#default-media+p+p+p+p+p,
+#default-media+p+p+p+p+p+div,
+#default-media+p+p+p+p+p+div+p+p+p,
+#default-media+p+p+p+p+p+div+p+p+p+p,
+#default-media+p+p+p+p+p+div+p+p+p+p+p,
+#default-media+p+p+p+p+p+div+p+p+p+p+p+p,
+
+/* 3.7.5. The meta element  */
+#meta+p+dl+p+p+p+p+p+p+p+p,
+
+/* 3.7.5.1. Standard metadata names  */
+
+
+/* 3.7.5.2. Other metadata names  */
+#other0+p+p+dl+p,
+
+/* 3.7.5.3. Pragma directives  */
+#pragma+p+p+table+p,
+#pragma+p+p+table+p+dl,
+
+/* 3.7.5.4. Specifying and establishing the document's character encoding  */
+
+
+/* 3.7.6. The style element  */
+#the-style+p+dl+p+p+p,
+#title-on-style+p+p,
+#title-on-style+p+p+p+p,
+
+/* 3.7.7. Styling  */
+/*XXX*/
+
+/* 3.8. Sections  */
+
+
+/* 3.8.1. The body element  */
+
+
+/* 3.8.2. The section element  */
+
+
+/* 3.8.3. The nav element  */
+
+
+/* 3.8.4. The article element  */
+
+
+/* 3.8.5. The blockquote element  */
+
+
+/* 3.8.6. The aside element  */
+
+
+/* 3.8.7. The h1, h2, h3, h4, h5, and h6 elements  */
+
+
+/* 3.8.8. The header element  */
+
+
+/* 3.8.9. The footer element  */
+
+
+/* 3.8.10. The address element  */
+
+
+/* 3.8.11. Headings and sections  */
+
+
+/* 3.8.11.1. Creating an outline  */
+
+
+/* 3.8.11.2. Determining which heading and section applies to a particular node  */
+
+
+/* 3.9. Prose  */
+
+
+/* 3.9.1. The p element  */
+
+
+/* 3.9.2. The hr element  */
+
+
+/* 3.9.3. The br element  */
+
+
+/* 3.9.4. The dialog element  */
+
+
+/* 3.10. Preformatted text  */
+
+
+/* 3.10.1. The pre element  */
+
+
+/* 3.11. Lists  */
+
+
+/* 3.11.1. The ol element  */
+
+
+/* 3.11.2. The ul element  */
+
+
+/* 3.11.3. The li element  */
+
+
+/* 3.11.4. The dl element  */
+
+
+/* 3.11.5. The dt element  */
+
+
+/* 3.11.6. The dd element  */
+
+
+/* 3.12. Phrase elements  */
+
+
+/* 3.12.1. The a element  */
+
+
+/* 3.12.2. The q element  */
+
+
+/* 3.12.3. The cite element  */
+
+
+/* 3.12.4. The em element  */
+
+
+/* 3.12.5. The strong element  */
+
+
+/* 3.12.6. The small element  */
+
+
+/* 3.12.7. The m element  */
+
+
+/* 3.12.8. The dfn element  */
+
+
+/* 3.12.9. The abbr element  */
+
+
+/* 3.12.10. The time element  */
+
+
+/* 3.12.11. The meter element  */
+
+
+/* 3.12.12. The progress element  */
+
+
+/* 3.12.13. The code element  */
+
+
+/* 3.12.14. The var element  */
+
+
+/* 3.12.15. The samp element  */
+
+
+/* 3.12.16. The kbd element  */
+
+
+/* 3.12.17. The sup and sub elements  */
+
+
+/* 3.12.18. The span element  */
+
+
+/* 3.12.19. The i element  */
+
+
+/* 3.12.20. The b element  */
+
+
+/* 3.12.21. The bdo element  */
+
+
+/* 3.13. Edits  */
+
+
+/* 3.13.1. The ins element  */
+
+
+/* 3.13.2. The del element  */
+
+
+/* 3.13.3. Attributes common to ins and del elements  */
+
+
+/* 3.14. Embedded content  */
+
+
+/* 3.14.1. The figure element  */
+
+
+/* 3.14.2. The img element  */
+
+
+/* 3.14.3. The iframe element  */
+
+
+/* 3.14.4. The embed element  */
+
+
+/* 3.14.5. The object element  */
+
+
+/* 3.14.6. The param element  */
+
+
+/* 3.14.7. The video element  */
+
+
+/* 3.14.7.1. Video and audio codecs for video elements  */
+
+
+/* 3.14.8. The audio element  */
+
+
+/* 3.14.8.1. Audio codecs for audio elements  */
+
+
+/* 3.14.9. Media elements  */
+
+
+/* 3.14.9.1. Error codes  */
+
+
+/* 3.14.9.2. Location of the media resource  */
+
+
+/* 3.14.9.3. Network states  */
+
+
+/* 3.14.9.4. Loading the media resource  */
+
+
+/* 3.14.9.5. Offsets into the media resource  */
+
+
+/* 3.14.9.6. The ready states  */
+
+
+/* 3.14.9.7. Playing the media resource  */
+
+
+/* 3.14.9.8. Seeking  */
+
+
+/* 3.14.9.9. Cue points  */
+
+
+/* 3.14.9.10. User interface  */
+
+
+/* 3.14.9.11. Time range  */
+
+
+/* 3.14.9.12. Event summary  */
+
+
+/* 3.14.9.13. Security and privacy considerations  */
+
+
+/* 3.14.10. The source element  */
+
+
+/* 3.14.11. The canvas element  */
+
+
+/* 3.14.11.1. The 2D context  */
+
+
+/* 3.14.11.1.1. The canvas state  */
+
+
+/* 3.14.11.1.2. Transformations  */
+
+
+/* 3.14.11.1.3. Compositing  */
+
+
+/* 3.14.11.1.4. Colors and styles  */
+
+
+/* 3.14.11.1.5. Line styles  */
+
+
+/* 3.14.11.1.6. Shadows  */
+
+
+/* 3.14.11.1.7. Simple shapes (rectangles)  */
+
+
+/* 3.14.11.1.8. Complex shapes (paths)  */
+
+
+/* 3.14.11.1.9. Images  */
+
+
+/* 3.14.11.1.10. Pixel manipulation  */
+
+
+/* 3.14.11.1.11. Drawing model  */
+
+
+/* 3.14.12. The map element  */
+
+
+/* 3.14.13. The area element  */
+
+
+/* 3.14.14. Image maps  */
+
+
+/* 3.15. Tabular data  */
+
+
+/* 3.15.1. The table element  */
+
+
+/* 3.15.2. The caption element  */
+
+
+/* 3.15.3. The colgroup element  */
+
+
+/* 3.15.4. The col element  */
+
+
+/* 3.15.5. The tbody element  */
+
+
+/* 3.15.6. The thead element  */
+
+
+/* 3.15.7. The tfoot element  */
+
+
+/* 3.15.8. The tr element  */
+
+
+/* 3.15.9. The td element  */
+
+
+/* 3.15.10. The th element  */
+
+
+/* 3.15.11. Processing model  */
+
+
+/* 3.15.11.1. Forming a table  */
+
+
+/* 3.15.11.2. Forming relationships between data cells and header cells  */
+
+
+/* 3.16. Forms  */
+
+
+/* 3.16.1. The form element  */
+
+
+/* 3.16.2. The fieldset element  */
+
+
+/* 3.16.3. The input element  */
+
+
+/* 3.16.4. The button element  */
+
+
+/* 3.16.5. The label element  */
+
+
+/* 3.16.6. The select element  */
+
+
+/* 3.16.7. The datalist element  */
+
+
+/* 3.16.8. The optgroup element  */
+
+
+/* 3.16.9. The option element  */
+
+
+/* 3.16.10. The textarea element  */
+
+
+/* 3.16.11. The output element  */
+
+
+/* 3.16.12. Processing model  */
+
+
+/* 3.16.12.1. Form submission  */
+
+
+/* 3.17. Scripting  */
+
+
+/* 3.17.1. The script element  */
+
+
+/* 3.17.1.1. Script languages  */
+
+
+/* 3.17.2. The noscript element  */
+
+
+/* 3.17.3. The event-source element  */
+
+
+/* 3.18. Interactive elements  */
+
+
+/* 3.18.1. The details element  */
+
+
+/* 3.18.2. The datagrid element  */
+
+
+/* 3.18.2.1. The datagrid data model  */
+
+
+/* 3.18.2.2. How rows are identified  */
+
+
+/* 3.18.2.3. The data provider interface  */
+
+
+/* 3.18.2.4. The default data provider  */
+
+
+/* 3.18.2.4.1. Common default data provider method definitions for cells  */
+
+
+/* 3.18.2.5. Populating the datagrid element  */
+
+
+/* 3.18.2.6. Updating the datagrid  */
+
+
+/* 3.18.2.7. Requirements for interactive user agents  */
+
+
+/* 3.18.2.8. The selection  */
+
+
+/* 3.18.2.9. Columns and captions  */
+
+
+/* 3.18.3. The command element  */
+
+
+/* 3.18.4. The menu element  */
+
+
+/* 3.18.4.1. Introduction  */
+
+
+/* 3.18.4.2. Building menus  */
+
+
+/* 3.18.4.3. Context menus  */
+
+
+/* 3.18.4.4. Toolbars  */
+
+
+/* 3.18.5. Commands  */
+
+
+/* 3.18.5.1. Using the a element to define a command  */
+
+
+/* 3.18.5.2. Using the button element to define a command  */
+
+
+/* 3.18.5.3. Using the input element to define a command  */
+
+
+/* 3.18.5.4. Using the option element to define a command  */
+
+
+/* 3.18.5.5. Using the command element to define a command  */
+
+
+/* 3.19. Miscellaneous elements  */
+
+
+/* 3.19.1. The legend element  */
+
+
+/* 3.19.2. The div element  */
+
+
+/* written against r794 - 3 May 2007 */
+
+/* 4. Web browsers  */
+#web-browsers+p,
+
+/* 4.1. Browsing contexts  */
+#windows+p+p+p+p+p+p+p+p+p+p,
+
+/* 4.1.1. Nested browsing contexts  */
+
+
+/* 4.1.2. Auxiliary browsing contexts  */
+
+
+/* 4.1.3. Secondary browsing contexts  */
+#secondary,
+#secondary+p,
+
+/* 4.1.4. Threads  */
+#threads,
+#threads+p,
+#threads+p+ul,
+#threads+p+ul+p,
+#threads+p+ul+p+p,
+
+/* 4.1.5. Browsing context names  */
+#browsing+p+p+p,
+#browsing+p+p+p+ol,
+
+/* 4.2. The default view  */
+#the-default0+p+pre+p,
+#the-default0+p+pre+p+p+p,
+
+/* 4.2.1. Security  */
+#security1,
+#security1+p,
+#security1+p+ul,
+#security1+p+ul+p,
+
+/* 4.2.2. Constructors  */
+#constructors+p+dl dt+dt+dd p,
+#constructors+p+dl dt+dt+dd+dt+dt+dt+dd p,
+#constructors+p+dl dt+dt+dd+dt+dt+dt+dd+dt+dt+dt+dd p,
+#constructors+p+dl+p,
+
+/* 4.2.3. APIs for creating and navigating browsing contexts by name  */
+#apis-for+p+p+p+p+p+p+p,
+#apis-for+p+p+p+p+p+p+p+p,
+#apis-for+p+p+p+p+p+p+p+p+p,
+
+/* 4.2.4. Accessing other browsing contexts  */
+
+
+/* 4.3. Session history and navigation  */
+
+
+/* 4.3.1. The session history of browsing contexts  */
+#the-session+p+p+p+p+p+p+p+p+p+p,
+#the-session+p+p+p+p+p+p+p+p+p+p+p,
+#the-session+p+p+p+p+p+p+p+p+p+p+p+p,
+
+/* 4.3.2. The History interface  */
+#the-history+pre+p+p+p+p,
+#the-history+pre+p+p+p+p+p,
+#the-history+pre+p+p+p+p+p+p,
+#the-history+pre+p+p+p+p+p+p+p,
+#the-history+pre+p+p+p+p+p+p+p+ol,
+#the-history+pre+p+p+p+p+p+p+p+ol+p,
+#the-history+pre+p+p+p+p+p+p+p+ol+p+p,
+#the-history+pre+p+p+p+p+p+p+p+ol+p+p+p+table+p+p,
+#the-history+pre+p+p+p+p+p+p+p+ol+p+p+p+table+p+p+p,
+#the-history+pre+p+p+p+p+p+p+p+ol+p+p+p+table+p+p+p+p,
+#the-history+pre+p+p+p+p+p+p+p+ol+p+p+p+table+p+p+p+p+p+p,
+#the-history+pre+p+p+p+p+p+p+p+ol+p+p+p+table+p+p+p+p+p+p+p+p,
+#the-history+pre+p+p+p+p+p+p+p+ol+p+p+p+table+p+p+p+p+p+p+p+p+p,
+
+/* 4.3.3. Activating state objects  */
+#activating+p,
+#activating+p+pre+p,
+#activating+p+pre+p+p,
+#activating+p+pre+p+p+p,
+
+/* 4.3.4. The Location interface  */
+#the-location+p+p,
+#the-location+p+p+p,
+#the-location+p+p+p+p+pre+p,
+#the-location+p+p+p+p+pre+p+p,
+#the-location+p+p+p+p+pre+p+p+p+p,
+#the-location+p+p+p+p+pre+p+p+p+p+p,
+#the-location+p+p+p+p+pre+p+p+p+p+p+p,
+#the-location+p+p+p+p+pre+p+p+p+p+p+p+p,
+#the-location+p+p+p+p+pre+p+p+p+p+p+p+p+p,
+
+/* 4.3.4.1. Security  */
+#security2,
+#security2+p,
+#security2+p+ul,
+#security2+p+ul+p,
+
+/* 4.3.5. Implementation notes for session history  */
+#history-notes,
+#history-notes+p,
+#history-notes+p+p,
+#history-notes+p+p+p,
+#history-notes+p+p+p+p,
+#history-notes+p+p+p+p+p,
+#history-notes+p+p+p+p+p+p,
+
+/* 4.4. Links  */
+
+
+/* 4.4.1. Hyperlink elements  */
+
+
+/* 4.4.2. Following hyperlinks  */
+#following+p,
+#following+p+p,
+#following+p+p+p,
+#following+p+p+p+p,
+#following+p+p+p+p+p,
+#following+p+p+p+p+p+p,
+#following+p+p+p+p+p+p+p,
+
+/* 4.4.2.1. Hyperlink auditing  */
+#hyperlink0+p,
+#hyperlink0+p+p,
+#hyperlink0+p+p+p,
+#hyperlink0+p+p+p+p,
+#hyperlink0+p+p+p+p+p,
+
+/* 4.4.3. Link types  */
+#linkTypes+p+p+p+table+p,
+
+/* 4.4.3.1. Link type "alternate"  */
+
+
+/* 4.4.3.2. Link type "archives"  */
+#link-type0+p+p+p+p,
+
+/* 4.4.3.3. Link type "author"  */
+#link-type1+p+p+p+p+p,
+
+/* 4.4.3.4. Link type "bookmark"  */
+#link-type2+p+p+div,
+
+/* 4.4.3.5. Link type "contact"  */
+#link-type3+p+p+p,
+
+/* 4.4.3.6. Link type "external"  */
+
+
+/* 4.4.3.7. Link type "feed"  */
+
+
+/* 4.4.3.8. Link type "help"  */
+
+
+/* 4.4.3.9. Link type "icon"  */
+
+
+/* 4.4.3.10. Link type "license"  */
+#link-type8+p+p+p,
+
+/* 4.4.3.11. Link type "nofollow"  */
+
+
+/* 4.4.3.12. Link type "pingback"  */
+
+
+/* 4.4.3.13. Link type "prefetch"  */
+
+
+/* 4.4.3.14. Link type "search"  */
+
+
+/* 4.4.3.15. Link type "stylesheet"  */
+
+
+/* 4.4.3.16. Link type "sidebar"  */
+
+
+/* 4.4.3.17. Link type "tag"  */
+
+
+/* 4.4.3.18. Hierarchical link types  */
+
+
+/* 4.4.3.18.1. Link type "first"  */
+#link-type16+p+p+p,
+
+/* 4.4.3.18.2. Link type "index"  */
+#link-type17+p+p+p,
+
+/* 4.4.3.18.3. Link type "last"  */
+#link-type18+p+p+p,
+
+/* 4.4.3.18.4. Link type "next"  */
+
+
+/* 4.4.3.18.5. Link type "prev"  */
+#link-type20+p+p+p,
+
+/* 4.4.3.18.6. Link type "up"  */
+
+
+/* 4.4.3.19. Other link types  */
+#other1+p+p+dl+p,
+
+/* 4.5. Interfaces for URI manipulation  */
+#interfaces+p+pre+p,
+#interfaces+p+pre+p+p,
+#interfaces+p+pre+p+p+p,
+#interfaces+p+pre+p+p+p+p,
+#interfaces+p+pre+p+p+p+p+p,
+#interfaces+p+pre+p+p+p+p+p+p,
+#interfaces+p+pre+p+p+p+p+p+p+table,
+
+/* 4.6. Navigating across documents  */
+#navigating+p+p,
+#navigating+p+p+ol,
+#navigating+p+p+ol+p,
+#navigating+p+p+ol+p+ol,
+
+/* 4.6.1. Page load processing model for HTML files  */
+#read-html,
+#read-html+p,
+#read-html+p+p,
+#read-html+p+p+p,
+#read-html+p+p+p+p,
+
+/* 4.6.2. Page load processing model for XML files  */
+#read-xml,
+#read-xml+p,
+#read-xml+p+p,
+#read-xml+p+p+p,
+#read-xml+p+p+p+p,
+#read-xml+p+p+p+p+p,
+
+/* 4.6.3. Page load processing model for text files  */
+#read-text,
+#read-text+p,
+#read-text+p+p,
+#read-text+p+p+p,
+#read-text+p+p+p+p,
+#read-text+p+p+p+p+p,
+
+/* 4.6.4. Page load processing model for images  */
+#read-image,
+#read-image+p,
+#read-image+p+p,
+#read-image+p+p+p,
+#read-image+p+p+p+p,
+
+/* 4.6.5. Page load processing model for content that uses plugins  */
+#read-plugin,
+#read-plugin+p,
+#read-plugin+p+p,
+#read-plugin+p+p+p,
+#read-plugin+p+p+p+p,
+
+/* 4.6.6. Page load processing model for inline content that doesn't have a DOM  */
+#non-DOM-inline-content,
+#non-DOM-inline-content+p,
+#non-DOM-inline-content+p+p,
+#non-DOM-inline-content+p+p+p,
+
+/* 4.6.7. Scrolling to a fragment identifier  */
+#scroll-to-fragid,
+#scroll-to-fragid+p,
+#scroll-to-fragid+p+p,
+#scroll-to-fragid+p+p+p,
+
+/* 4.7. Determining the type of a new resource in a browsing context  */
+#content-type-sniffing,
+#content-type-sniffing+p,
+#content-type-sniffing+p+p,
+#content-type-sniffing+p+p+ol,
+
+/* 4.7.1. Content-Type sniffing: text or binary  */
+#content-type0,
+#content-type0+ol,
+
+/* 4.7.2. Content-Type sniffing: unknown type  */
+#content-type1,
+#content-type1+ol,
+#content-type1+ol+table,
+#content-type1+ol+table+p,
+
+/* 4.7.3. Content-Type sniffing: image  */
+#content-type2,
+#content-type2+p,
+#content-type2+p+table,
+#content-type2+p+table+p,
+#content-type2+p+table+p+p,
+
+/* 4.7.4. Content-Type sniffing: feed or HTML  */
+#content-type3,
+#content-type3+ol,
+#content-type3+ol+p,
+
+/* 4.7.5. Content-Type metadata  */
+#content-type,
+#content-type+p,
+#content-type+p+p,
+#content-type+p+p+p,
+#content-type+p+p+p+p,
+#content-type+p+p+p+p+p,
+
+/* 4.8. User prompts  */
+#user-prompts,
+#user-prompts+p,
+#user-prompts+p+p,
+#user-prompts+p+p+p,
+
+/* 4.9. Scripting  */
+
+
+/* 4.9.1. Running executable code  */
+#running+p+ul+p,
+
+/* 4.9.2. Origin  */
+#origin+p+dl+p+p+p+p+p+p,
+#origin+p+dl+p+p+p+p+p+p+p,
+
+/* 4.9.3. Security exceptions  */
+#security3,
+#security3+p,
+
+/* 4.9.4. The javascript: protocol  */
+#javascript-protocol,
+#javascript-protocol+p,
+#javascript-protocol+p+p,
+#javascript-protocol+p+p+p,
+#javascript-protocol+p+p+p+p,
+#javascript-protocol+p+p+p+p+p,
+#javascript-protocol+p+p+p+p+p+p,
+#javascript-protocol+p+p+p+p+p+p+p,
+#javascript-protocol+p+p+p+p+p+p+p+p,
+#javascript-protocol+p+p+p+p+p+p+p+p+div,
+
+/* 4.9.5. Events  */
+
+
+/* 4.9.5.1. Event handler attributes  */
+#event-handler-attributes+p+p+p+p,
+#event-handler-attributes+p+p+p+p+p,
+#event-handler-attributes+p+p+p+p+p+p,
+#event-handler-attributes+p+p+p+p+p+p+p,
+#event-handler-attributes+p+p+p+p+p+p+p+p,
+#event-handler-attributes+p+p+p+p+p+p+p+p+p,
+#event-handler-attributes+p+p+p+p+p+p+p+p+p+p+dl+p,
+#event-handler-attributes+p+p+p+p+p+p+p+p+p+p+dl+p+p,
+
+/* 4.9.5.2. Event firing  */
+#event+p+p+p,
+#event+p+p+p+p,
+#event+p+p+p+p+p,
+#event+p+p+p+p+p+p,
+#event+p+p+p+p+p+p+p,
+#event+p+p+p+p+p+p+p+p,
+#event+p+p+p+p+p+p+p+p+p,
+#event+p+p+p+p+p+p+p+p+p+p,
+
+/* 4.9.5.3. Events and the Window object  */
+#events0,
+#events0+p,
+#events0+p+ol,
+
+/* 4.9.5.4. Runtime script errors  */
+#runtime-script-errors,
+#runtime-script-errors+p,
+#runtime-script-errors+p+p,
+#runtime-script-errors+p+p+dl,
+#runtime-script-errors+p+p+dl+p,
+
+/* 4.10. Browser state  */
+
+
+/* 4.10.1. Offline Web applications  */
+#offline,
+#offline+p,
+#offline+p+p,
+#offline+p+p+p,
+#offline+p+p+p+p,
+
+/* 4.10.2. Custom protocol and content handlers  */
+#custom-handlers+p+p,
+#custom-handlers+p+p+p,
+#custom-handlers+p+p+p+p,
+#custom-handlers+p+p+p+p+dl,
+#custom-handlers+p+p+p+p+dl+p,
+#custom-handlers+p+p+p+p+dl+p+p,
+#custom-handlers+p+p+p+p+dl+p+p+p,
+#custom-handlers+p+p+p+p+dl+p+p+p+p,
+#custom-handlers+p+p+p+p+dl+p+p+p+p+p,
+
+/* 4.10.2.1. Security and privacy  */
+#security4,
+#security4+p,
+#security4+p+p,
+#security4+p+p+p,
+#security4+p+p+p+p,
+#security4+p+p+p+p+p,
+#security4+p+p+p+p+p+p,
+#security4+p+p+p+p+p+p+p,
+#security4+p+p+p+p+p+p+p+ol,
+#security4+p+p+p+p+p+p+p+ol+p,
+#security4+p+p+p+p+p+p+p+ol+p+p,
+#security4+p+p+p+p+p+p+p+ol+p+p+p,
+
+/* 4.10.2.2. Sample user interface  */
+#sample-handler-impl,
+#sample-handler-impl+p,
+#sample-handler-impl+p+p,
+#sample-handler-impl+p+p+p,
+#sample-handler-impl+p+p+p+pre,
+#sample-handler-impl+p+p+p+pre+p,
+#sample-handler-impl+p+p+p+pre+p+p,
+#sample-handler-impl+p+p+p+pre+p+p+p,
+#sample-handler-impl+p+p+p+pre+p+p+p+pre,
+#sample-handler-impl+p+p+p+pre+p+p+p+pre+p,
+#sample-handler-impl+p+p+p+pre+p+p+p+pre+p+p,
+#sample-handler-impl+p+p+p+pre+p+p+p+pre+p+p+p,
+
+/* 4.11. Client-side session and persistent storage  */
+
+
+/* 4.11.1. Introduction  */
+
+
+/* 4.11.2. The Storage interface  */
+#the-storage+pre+p+p+p+p+p,
+#the-storage+pre+p+p+p+p+p+p,
+#the-storage+pre+p+p+p+p+p+p+p,
+#the-storage+pre+p+p+p+p+p+p+p+p,
+#the-storage+pre+p+p+p+p+p+p+p+p+p,
+#the-storage+pre+p+p+p+p+p+p+p+p+p+p,
+#the-storage+pre+p+p+p+p+p+p+p+p+p+p+p,
+#the-storage+pre+p+p+p+p+p+p+p+p+p+p+p+p,
+#the-storage+pre+p+p+p+p+p+p+p+p+p+p+p+p+p,
+#the-storage+pre+p+p+p+p+p+p+p+p+p+p+p+p+p+p,
+
+/* 4.11.3. The StorageItem interface  */
+#the-storageitem+p+pre+p+p,
+#the-storageitem+p+pre+p+p+p,
+#the-storageitem+p+pre+p+p+p+p,
+#the-storageitem+p+pre+p+p+p+p+p,
+#the-storageitem+p+pre+p+p+p+p+p+p,
+#the-storageitem+p+pre+p+p+p+p+p+p+p,
+
+/* 4.11.4. The sessionStorage attribute  */
+#the-sessionstorage+p+p+p,
+#the-sessionstorage+p+p+p+p,
+#the-sessionstorage+p+p+p+p+p,
+#the-sessionstorage+p+p+p+p+p+p,
+#the-sessionstorage+p+p+p+p+p+p+p,
+#the-sessionstorage+p+p+p+p+p+p+p+p,
+#the-sessionstorage+p+p+p+p+p+p+p+p+p,
+
+/* 4.11.5. The globalStorage attribute  */
+#the-globalstorage+pre+p+p+p,
+#the-globalstorage+pre+p+p+p+p,
+#the-globalstorage+pre+p+p+p+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div,
+#the-globalstorage+pre+p+p+p+p+p+div+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p+p+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p+p+p+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p+p+p+p+p+div,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p+p+p+p+p+div+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p+p+p+p+p+div+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p+p+p+p+p+div+p+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p+p+p+p+p+div+p+p+p+p,
+#the-globalstorage+pre+p+p+p+p+p+div+p+p+p+p+p+p+p+p+div+p+p+p+p+div,
+
+/* 4.11.6. The storage event  */
+#the-storage0+p+p,
+#the-storage0+p+p+p,
+#the-storage0+p+p+p+p,
+#the-storage0+p+p+p+p+p,
+#the-storage0+p+p+p+p+p+pre+p,
+#the-storage0+p+p+p+p+p+pre+p+p,
+
+/* 4.11.7. Miscellaneous implementation requirements for storage areas  */
+
+
+/* 4.11.7.1. Disk space  */
+#disk-space+p,
+#disk-space+p+p,
+#disk-space+p+p+p,
+#disk-space+p+p+p+p,
+#disk-space+p+p+p+p+p,
+#disk-space+p+p+p+p+p+p,
+
+/* 4.11.7.2. Threads  */
+#threads0+p+p+p,
+
+/* 4.11.8. Security and privacy  */
+
+
+/* 4.11.8.1. User tracking  */
+
+
+/* 4.11.8.2. Cookie resurrection  */
+
+
+/* 4.11.8.3. Integrity of "public" storage areas  */
+
+
+/* 4.11.8.4. Cross-protocol and cross-port attacks  */
+
+
+/* 4.11.8.5. DNS spoofing attacks  */
+
+
+/* 4.11.8.6. Cross-directory attacks  */
+
+
+/* 4.11.8.7. Public storage areas corresponding to hosts  */
+#public+p+p,
+
+/* 4.11.8.8. Storage areas in the face of untrusted higher-level domains that do not correspond to public storage areas  */
+
+
+/* 4.11.8.9. Storage areas in the face of untrusted subdomains  */
+
+
+/* 4.11.8.10. Implementation risks  */
+
+
+/* written against r794 - 27 May 2007 */
+
+/* 5. Editing  */
+
+
+/* 5.1. Introduction  */
+
+
+/* 5.2. The contenteditable attribute  */
+#contenteditable+p,
+#contenteditable+p+p+p,
+#contenteditable+p+p+p+p,
+#contenteditable+p+p+p+p+p,
+#contenteditable+p+p+p+p+p+p,
+#contenteditable+p+p+p+p+p+p+p,
+#contenteditable+p+p+p+p+p+p+p+p,
+
+/* 5.2.1. User editing actions  */
+#user-editing,
+#user-editing+p,
+#user-editing+p+dl,
+#user-editing+p+dl+p,
+
+/* 5.2.2. Making entire documents editable  */
+#making+p+p+p,
+#making+p+p+p+p,
+#making+p+p+p+p+p+p,
+
+/* 5.3. Drag and drop  */
+
+
+/* 5.3.1. The DragEvent and DataTransfer interfaces  */
+
+
+/* 5.3.2. Events fired during a drag-and-drop action  */
+
+
+/* 5.3.3. Drag-and-drop processing model  */
+#drag-and-drop,
+#drag-and-drop+p,
+#drag-and-drop+p+p,
+#drag-and-drop+p+p+p,
+#drag-and-drop+p+p+p+p,
+#drag-and-drop+p+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p+p+p+ol,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p+p+p+ol+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p+p+p+ol+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p+p+p+ol+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p+p+p+ol+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p+p+p+ol+p+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p+p+p+ol+p+p+p+p+p+p,
+#drag-and-drop+p+p+p+p+p+p+p+p+p+p+p+p+ol+p+p+p+p+p+p+ol,
+
+/* 5.3.3.1. When the drag-and-drop operation starts or ends in another document  */
+#when-the,
+#when-the+p,
+
+/* 5.3.3.2. When the drag-and-drop operation starts or ends in another application  */
+#when-the0,
+#when-the0+p,
+#when-the0+p+p,
+#when-the0+p+p+p,
+
+/* 5.3.4. The draggable attribute  */
+#the-draggable+p+p+p,
+#the-draggable+p+p+p+p,
+#the-draggable+p+p+p+p+p,
+#the-draggable+p+p+p+p+p+p,
+#the-draggable+p+p+p+p+p+p+p,
+
+/* 5.3.5. Copy and paste  */
+
+
+/* 5.3.5.1. Copy to clipboard  */
+#copy-to,
+#copy-to+p,
+
+/* 5.3.5.2. Cut to clipboard  */
+#cut-to,
+#cut-to+p,
+
+/* 5.3.5.3. Paste from clipboard  */
+#paste,
+#paste+p,
+#paste+p+p,
+
+/* 5.3.5.4. Paste from selection  */
+#paste0,
+#paste0+p,
+#paste0+p+p,
+
+/* 5.3.6. Security risks in the drag-and-drop model  */
+#security6,
+#security6+p,
+#security6+p+p,
+#security6+p+p+p,
+
+/* 5.4. Undo history  */
+#undo,
+#undo+p,
+#undo+p+p,
+#undo+p+p+p,
+#undo+p+p+p+p,
+#undo+p+p+p+p+ul,
+#undo+p+p+p+p+ul+p,
+#undo+p+p+p+p+ul+p+p,
+
+/* 5.4.1. The UndoManager interface  */
+#the-undomanager,
+#the-undomanager+div,
+#the-undomanager+div+p,
+#the-undomanager+div+p+pre,
+#the-undomanager+div+p+pre+p,
+#the-undomanager+div+p+pre+p+p,
+#the-undomanager+div+p+pre+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p+p+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p+p+p+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p+p+p+p+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p+p+p+p+p+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p+p+p+p+p+p+p+p+p+p,
+#the-undomanager+div+p+pre+p+p+p+p+p+p+p+p+p+p+p+p+p+p+p,
+
+/* 5.4.2. Undo: moving back in the undo transaction history  */
+#undo-moving,
+#undo-moving+p,
+#undo-moving+p+p,
+#undo-moving+p+p+p,
+#undo-moving+p+p+p+p,
+#undo-moving+p+p+p+p+p,
+#undo-moving+p+p+p+p+p+p,
+
+/* 5.4.3. Redo: moving forward in the undo transaction history  */
+#redo-moving,
+#redo-moving+p,
+#redo-moving+p+p,
+#redo-moving+p+p+p,
+#redo-moving+p+p+p+p,
+#redo-moving+p+p+p+p+p,
+#redo-moving+p+p+p+p+p+p,
+
+/* 5.4.4. The UndoManagerEvent interface and the undo and redo events  */
+#the-undomanagerevent,
+#the-undomanagerevent+pre,
+#the-undomanagerevent+pre+p,
+#the-undomanagerevent+pre+p+p,
+#the-undomanagerevent+pre+p+p+p,
+
+/* 5.4.5. Implementation notes  */
+#implementation0,
+#implementation0+p,
+
+/* 5.5. Command APIs  */
+#command+p+p+p+p,
+#command+p+p+p+p+p,
+#command+p+p+p+p+p+dl,
+
+/* 5.6. The text selection APIs  */
+
+
+/* 5.6.1. APIs for the browsing context selection  */
+
+
+/* 5.6.2. APIs for the text field selections  */
+
+
+/* 6. Communication  */
+
+
+/* 6.1. Event definitions  */
+
+
+/* 6.2. Server-sent DOM events  */
+
+
+/* 6.2.1. The RemoteEventTarget interface  */
+
+
+/* 6.2.2. Connecting to an event stream  */
+
+
+/* 6.2.3. Parsing an event stream  */
+
+
+/* 6.2.4. Interpreting an event stream  */
+
+
+/* 6.2.5. Notes  */
+
+
+/* 6.3. Network connections  */
+
+
+/* 6.3.1. Introduction  */
+
+
+/* 6.3.2. The Connection interface  */
+
+
+/* 6.3.3. Connection Events  */
+
+
+/* 6.3.4. TCP connections  */
+
+
+/* 6.3.5. Broadcast connections  */
+
+
+/* 6.3.5.1. Broadcasting over TCP/IP  */
+
+
+/* 6.3.5.2. Broadcasting over Bluetooth  */
+
+
+/* 6.3.5.3. Broadcasting over IrDA  */
+
+
+/* 6.3.6. Peer-to-peer connections  */
+
+
+/* 6.3.6.1. Peer-to-peer connections over TCP/IP  */
+
+
+/* 6.3.6.2. Peer-to-peer connections over Bluetooth  */
+
+
+/* 6.3.6.3. Peer-to-peer connections over IrDA  */
+
+
+/* 6.3.7. The common protocol for TCP-based connections  */
+
+
+/* 6.3.7.1. Clients connecting over TCP  */
+
+
+/* 6.3.7.2. Servers accepting connections over TCP  */
+
+
+/* 6.3.7.3. Sending and receiving data over TCP  */
+
+
+/* 6.3.8. Security  */
+
+
+/* 6.3.9. Relationship to other standards  */
+
+
+/* 6.4. Cross-document messaging  */
+
+
+/* 6.4.1. Processing model  */
+
+
+/* 7. Repetition templates  */
+
+
+/* 8. The HTML syntax  */
+
+
+/* 8.1. Writing HTML documents  */
+
+
+/* 8.1.1. The DOCTYPE  */
+
+
+/* 8.1.2. Elements  */
+
+
+/* 8.1.2.1. Start tags  */
+
+
+/* 8.1.2.2. End tags  */
+
+
+/* 8.1.2.3. Attributes  */
+
+
+/* 8.1.2.4. Optional tags  */
+
+
+/* 8.1.2.5. Restrictions on content models  */
+
+
+/* 8.1.3. Text  */
+
+
+/* 8.1.3.1. Newlines  */
+
+
+/* 8.1.4. Character entity references  */
+
+
+/* 8.1.5. Comments  */
+
+
+/* 8.2. Parsing HTML documents  */
+
+
+/* 8.2.1. Overview of the parsing model  */
+
+
+/* 8.2.2. The input stream  */
+
+
+/* 8.2.3. Tokenisation  */
+
+
+/* 8.2.3.1. Tokenising entities  */
+
+
+/* 8.2.4. Tree construction  */
+
+
+/* 8.2.4.1. The initial phase  */
+
+
+/* 8.2.4.2. The root element phase  */
+
+
+/* 8.2.4.3. The main phase  */
+
+
+/* 8.2.4.3.1. The stack of open elements  */
+
+
+/* 8.2.4.3.2. The list of active formatting elements  */
+
+
+/* 8.2.4.3.3. Creating and inserting HTML elements  */
+
+
+/* 8.2.4.3.4. Closing elements that have implied end tags  */
+
+
+/* 8.2.4.3.5. The element pointers  */
+
+
+/* 8.2.4.3.6. The insertion mode  */
+
+
+/* 8.2.4.3.7. How to handle tokens in the main phase  */
+
+
+/* 8.2.4.4. The trailing end phase  */
+
+
+/* 8.2.5. The End  */
+
+
+/* 8.3. Namespaces  */
+
+
+/* 8.4. Entities  */
+
+
+/* 9. WYSIWYG editors  */
+
+
+/* 9.1. Presentational markup  */
+
+
+/* 9.1.1. WYSIWYG signature  */
+
+
+/* 9.1.2. The font element  */
+
+
+/* 10. Rendering  */
+
+
+/* 10.1. Rendering and the DOM  */
+
+
+/* 11. Things that you can't do with this specification because they are better handled using other technologies that are further described herein  */
+
+
+/* 11.1. Localisation  */
+
+
+/* 11.2. Declarative 2D vector graphics and animation  */
+
+
+/* 11.3. Declarative 3D scenes  */
+
+
+/* 11.4. Timers  */
+
+
+/* References  */
+
+
+/* Acknowledgements */
+
+
+
+/* ...and finally */
+#non-existent-id { background-color:#eee; color:gray; }

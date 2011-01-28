@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      lang="en">
+    <head>
+        <title>html5lib Parse Tree</title>
+        <script src="/parsetree_helper.js"></script>
+        <link rel="stylesheet" href="/styles.css"/>
+    </head>
+    <body>
+        <h1>html5lib Parse Tree</h1>
+        <nav>
+	  <ul>
+            <li><a href="#input">Input</a></li>
+            <li><a href="#parseTree">Parse Tree</a></li>
+            <li><a href="#innerHTML">innerHTML</a></li>
+            <li><a href="#parseErrors">Errors</a></li>
+	  </ul>
+        </nav>
+        <section id="input">
+            <h2>Input Document</h2>
+            <form action="" method="post">
+                <textarea py:content="inputDocument" rows="20" cols="80" accept="text/html" id="input_source" onchange="sourceFormMethod();"></textarea>
+                <input type="submit" value="Parse"/>
+            </form>
+        </section>
+        <section id="parseTree">
+            <h2>Parse Tree</h2>
+            <div py:choose="" py:strip="True" py:with="warning='Warning! This has significant known issues with sites that use scripting.'">
+                <form py:when="not viewURL" action="/cgi-bin/parsetree/parsetree.py" method="post">
+                    <p>
+                        <input type="hidden" name="loaddom" value="1"/>
+                        <input type="hidden" name="source" value="${sourceString}"/>
+                        <input type="submit" value="View in Browser" id="view_submit"/>
+                        ${warning}
+                    </p>
+                </form>
+                <p py:otherwise=""><a href="${viewURL}">View In Browser</a> ${warning}</p>
+            </div>
+            <pre py:content="parseTree"></pre>
+        </section>
+        <section id="innerHTML">
+            <h2>Output innerHTML</h2>
+            <pre py:content="innerHTML"></pre>
+        </section>
+        <section id="parseErrors">
+            <h2>Parse Errors</h2>
+            <div py:choose="" py:strip="True">
+                <ol py:when="parseErrors">
+                    <li py:for="(line, col), error in parseErrors">line ${line} col ${col}: ${error}</li>
+                </ol>
+                <span py:otherwise="" py:strip="True">No parse errors</span>
+            </div>
+        </section>
+    </body>
+</html>

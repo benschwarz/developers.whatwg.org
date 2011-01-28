@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/locks
+END
+db.lock
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/locks/db.lock
+END
+db-logs.lock
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/locks/db-logs.lock
+END

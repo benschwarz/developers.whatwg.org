@@ -1,0 +1,10 @@
+A utility for determining and visulising html table cell-headers
+relationships, designed to make it possible to prototype different
+headers algorithms easilly.
+
+Requirements:
+html5lib - Latest SVN 
+lxml - 1.3.x should work; 2.0 series may have problems with html5lib
+Genshi - 0.4+
+
+Tests of the table parser require nose

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Assign to Undeclared Variable</title>
+<link rel="help"
+href="http://www.ecma-international.org/publications/standards/Ecma-262.htm"/>
+<link rel="author" title="Garrett Smith" href="mailto:dhtmlkitchen@gmail.com"/>
+<style type="text/css">
+    #pass {
+        display: none;
+        background: #0F0;
+    }
+    #fail {
+        display: none;
+        background: #F00;
+    }
+</style>
+
+</head>
+
+<body id="Menu">
+
+<div id="pass">PASS</div>
+<div id="fail">FAIL</div>
+
+<script type="text/javascript">
+try{
+  Menu = { };
+  document.getElementById('pass').style.display = "inline-block";
+}catch(ex){
+    document.getElementById('fail').style.display = "inline-block";
+}
+</script>
+</body>
+</html>

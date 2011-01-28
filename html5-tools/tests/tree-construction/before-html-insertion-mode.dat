@@ -1,0 +1,96 @@
+#data
+<!DOCTYPE html><!DOCTYPE html>
+#errors
+Line 1 Col 30 Unexpected DOCTYPE. Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><!DOCTYPE htm>
+#errors
+Line 1 Col 30 Unexpected DOCTYPE. Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><!DOCTYPE html PUBLIC "duplicate DOCTYPE is not checked for quirks">
+#errors
+Line 1 Col 30 Unexpected DOCTYPE. Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><!-- comment -->
+#errors
+#document
+| <!DOCTYPE html>
+| <!-- comment -->
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html>
+ 
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html></html>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><body>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html>X
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     "X"
+
+#data
+<!DOCTYPE html> X
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     "X"

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<title>Submit</title>
+	<style type="text/css">
+	h2 {
+		display: none;
+		
+	}
+	#pass {
+		background: #0f0;
+	}
+	#fail {
+		background: Red;
+	}
+	</style>
+</head>
+<body>
+<form action="">
+<select><option disabled>invalid</option></select>
+<select><option disabled></option></select>
+<select name="wrong"><option disabled selected>disabled</option><option>enabled</option></select>
+
+<input type='hidden' id="done" name="done" value="true"/>
+<input type="hidden" id="id" name="id" value="123"/>
+</form>
+<h2 id="pass">PASS</h2>
+<h2 id="fail">FAIL</h2>
+<script type="text/javascript">
+window.onload = function onload() {
+	var q = location.search,
+		f = document.forms[0],
+		m,
+		id = document.getElementById('id');
+	
+	// Options with "disabled" or "invalid" value
+	// are are failures here.
+	if(q && /invalid|disabled/.test(q)) {
+	  document.getElementById("fail").style.display = "inline-block";
+	} else {
+		if(q) {
+			m = q.match(/id=(\d+)/);
+			if(m && m[1]) {
+				id.value = m[1];
+			} else {
+				id.disabled = true;
+			}
+		} else id.disabled = true;
+		
+		if(!/done=true/.test(q)) {
+			f.submit();
+			return;
+		} 
+		document.getElementById("pass").style.display = "inline-block";
+	}
+};
+</script>
+<p>
+<a href="javascript:history.back();">reload</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<Files web-apps-tracker>
+ SetHandler cgi-script
+</Files>
+<Files web-workers-tracker>
+ SetHandler cgi-script
+</Files>
+Redirect 410 /tools/web-forms-tracker
+Redirect 410 /tools/parser-tracker
+Redirect 301 /tools/specification-diff http://html5.org/tools/web-apps-tracker

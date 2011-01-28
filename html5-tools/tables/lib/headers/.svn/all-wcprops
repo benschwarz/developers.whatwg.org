@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/144/trunk/tables/lib/headers
+END
+html4.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/138/trunk/tables/lib/headers/html4.py
+END
+_base.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/140/trunk/tables/lib/headers/_base.py
+END
+html5.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/131/trunk/tables/lib/headers/html5.py
+END
+experimental.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/131/trunk/tables/lib/headers/experimental.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/140/trunk/tables/lib/headers/__init__.py
+END
+smartheaders.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/144/trunk/tables/lib/headers/smartheaders.py
+END
+smartcolspan.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/131/trunk/tables/lib/headers/smartcolspan.py
+END

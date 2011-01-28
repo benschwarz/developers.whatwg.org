@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Table Inspector</title>
+        <style>
+            input[type="url"] {width:30em;}
+            div.subset {margin-left:2em;}
+        </style>
+        <link rel="stylesheet" href="table.css" type="text/css">
+        <script>
+        algorithm_options = {
+            "html4":["scope", "headers"],
+            "html5":[],
+            "experimental":["scope", "headers", "b_headings", "strong_headings"],
+            "smartcolspan":["no_headings_if_spans_data_col"],
+            "smartheaders":[]
+        };
+        
+        function loadPage() {
+            var input_elements = document.getElementsByTagName("input");
+            var algorithm_elements = [];
+            for (var i=0; i<input_elements.length; i++) {
+                var element = input_elements[i];
+                if (element.hasAttribute("name") & element.getAttribute("name") == "algorithm") {
+                    algorithm_elements.push(element);
+                };
+            };
+            for (var i=0; i<algorithm_elements.length; i++) {
+                var element = algorithm_elements[i];
+                if (element.hasAttribute("checked")) {
+                    setAlgorithmOptions(element);
+                };
+                element.addEventListener("change", algorithmChange, false);
+            };
+        };
+        
+        function algorithmChange(event) {
+            var element = event.currentTarget;
+            setAlgorithmOptions(element);
+        };
+        
+        function setAlgorithmOptions(element) {
+            var name = element.getAttribute("value");
+            var enabled_options = algorithm_options[name];
+            var input_elements = document.getElementsByTagName("input");
+            var option_elements = [];
+
+            for (var i=0; i<input_elements.length; i++) {
+                var element = input_elements[i];
+                if (element.hasAttribute("type") & element.getAttribute("type") == "checkbox") {
+                    option_elements.push(element);
+                };
+            };
+            
+            for (var i=0; i<option_elements.length; i++) {
+                var option = option_elements[i];
+                var option_name = option.getAttribute("name");
+                option_enabled=false;
+                for (var j=0; j<enabled_options.length; j++) {
+                    if (enabled_options[j] == option_name) {
+                        option_enabled = true;
+                        break;
+                    };
+                };
+                if ((option_enabled) & option.hasAttribute("disabled")) {
+                    option.removeAttribute("disabled");
+                } else if (option_enabled == false) {
+                    option.setAttribute("disabled", "disabled");
+                };
+            };
+        };
+        
+        
+        </script>
+    </head>
+    <body onload="loadPage();">
+        <h1>Table Inspector</h1>
+        <div>
+        <form action="/cgi-bin/tables/table_inspector.py">
+            <fieldset>
+                <legend>Input content</legend>
+            <p>
+                <label>
+                    <input type="radio" name="input_type" checked value="type_uri" id="input_type_uri">Inspect a URI
+                </label>
+            </p>
+            <div class="input_value">
+                <p>
+                    <label>
+                        Document URI to inspect:
+                        <input type="url" name="uri" onfocus="document.getElementById('input_type_uri').checked = true">
+                    </label>
+                </p>
+            </div>
+            <p>
+                or
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="input_type" value="type_source" id="input_type_source">Inspect source
+                </label>
+            </p>
+            <div class="input_value">
+                <p>
+                    <label for="input_source">
+                        Source code to inspect:
+                    </label>
+                </p>
+                <p>
+                    <textarea id="input_source" name="source" rows="10" cols="80" onfocus="document.getElementById('input_type_source').checked = true"></textarea>
+                </p>
+            </div>
+            </fieldset>
+            <div>
+                <fieldset>
+                    <legend>Association algorithm</legend>
+                <p>
+                    <label>
+                        <input type="radio" id="al_html4", name="algorithm" value="html4" checked> HTML 4 
+                    </label>
+                    <a href="#note_1">[1]</a>
+                <p>
+                    <label>
+                        <input type="radio" id="al_html5", name="algorithm" value="html5"> HTML 5 (Sept. 2007) 
+                    </label>
+                    <a href="#note_2">[2]</a>
+                <p>
+                    <label>
+                        <input type="radio" id="al_experimental", name="algorithm" value="experimental"> Experimental 
+                    </label>
+                    <a href="#note_3">[3]</a>
+                <p>
+                    <label>
+                        <input type="radio" id="al_smartcolspan", name="algorithm" value="smartcolspan"> Smart Colspan 
+                    </label>
+                    <a href="#note_4">[4]</a>
+                <p>
+                    <label>
+                        <input type="radio" id="al_smartheaders", name="algorithm" value="smartheaders"> Smart Headers 
+                    </label>
+                    <a href="#note_4">[4]</a>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Algorithm options</legend>
+                <p>
+                    <label>
+                        Use scope attribute:
+                        <input type="checkbox" name="scope" checked value="1">
+                    </label>
+                <p>
+                    <label>
+                        Use headers attribute:
+                        <input type="checkbox" name="headers" checked value="1">
+                    </label>
+                <p>
+                    <label>
+                        Interpret &lt;td>&lt;b> as heading:
+                        <input type="checkbox" name="b_headings" checked value="1">
+                    </label>
+                <p>
+                    <label>
+                        Interpret &lt;td>&lt;strong> as heading:
+                        <input type="checkbox" name="strong_headings" checked value="1">
+                    </label>
+                <p>
+                    <label>
+                        Cells that span a column with no heading have no headings:
+                        <input type="checkbox" name="no_headings_if_spans_data_col" checked value="1">
+                    </label>   
+                </fieldset>
+            </div>
+            <input type="submit" value="Inspect">
+            <div class="notes">
+                <p id="note_1">[1] The HTML 4 algorithm is not well defined and is interpreted in many different ways. Suggestions for alternative readings of the spec are better phrased as suggestions for new algorithms.
+                <p id="note_2">[2] The HTML 5 algorithm is clearly marked as unfinished in the spec.
+                <p id="note_3">[3] Based on my interpretation of the HTML 4 algorithm plus additional logic to ensure that rows/columns containing only headers do not propogate those headers to other cells in the row/column and to ensure that cells with @scope set are not matched against cells not in their scope by the implicit stage of the algorithm.
+                <p id="note_4">[4] See <a href="http://lists.w3.org/Archives/Public/public-html/2007Sep/0134.html">this public-html post</a> for details
+            </div>
+        </form>
+        </div>
+    </body>
+</html>

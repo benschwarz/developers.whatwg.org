@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>HTML5 Rendering Comparison</title>
+    <script type="text/javascript">
+
+    function updateBrowserURI(uri) {
+        document.getElementById("frame_browser").src = uri;
+    };
+    
+    function updateHTML5URI(uri) {
+        html5libURI = "/cgi-bin/parsetree/parsetree.py?uri="+encodeURIComponent(uri)+"&loaddom=1";
+        html5libURI += "&ua=" + encodeURIComponent(window.navigator.userAgent);
+        document.getElementById("frame_html5").src = html5libURI;
+    };
+    
+    function updateURIInput(uri) {
+        document.getElementById("uri").value = uri;
+    };
+    
+    function uriSubmit(self) {
+        uri = document.getElementById("uri").value;
+        updateBrowserURI(uri);
+        updateHTML5URI(uri);
+    };
+    
+    </script>
+    <style>
+    iframe {width:100%; height:18em;}
+    form {text-align:center;}
+    input[type=text] {width:20em;}
+    </style>
+</head>
+<body>
+    <section id="sec_browser">
+        <h2>Browser DOM tree</h2>
+        <p>
+            <iframe src="" id="frame_browser"></iframe>
+        </p>
+    </section>
+    <section id="sec_html5">
+        <h2>html5lib DOM tree</h2>
+        <p>
+            <iframe src="" id="frame_html5"></iframe>
+        </p>
+    </section>
+    <form onsubmit="uriSubmit(); return false;">
+        <p>
+            <label>
+                URI:
+                <input type="url" name="uri" id="uri">
+            </label>
+            <input type="submit" value="Update">
+        </p>
+    </form>
+</body>
+</html>

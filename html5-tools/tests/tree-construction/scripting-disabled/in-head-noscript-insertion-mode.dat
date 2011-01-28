@@ -1,0 +1,182 @@
+#data
+<!DOCTYPE html><noscript></noscript>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+
+#data
+<!DOCTYPE html><noscript><!DOCTYPE html></noscript>
+#errors
+Line 1 Col 40 Unexpected DOCTYPE. Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+
+#data
+<!DOCTYPE html><noscript><html></noscript>
+#errors
+Line 1 Col 31 html needs to be the first start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+
+#data
+<!DOCTYPE html><noscript><meta name="foo"></noscript><meta name="bar">
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|       <meta>
+|         name="foo"
+|     <meta>
+|       name="bar"
+|   <body>
+
+#data
+<!DOCTYPE html><noscript> </noscript>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|       " "
+|   <body>
+
+#data
+<!DOCTYPE html><noscript><!-- comment --></noscript>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|       <!-- comment -->
+|   <body>
+
+#data
+<!DOCTYPE html><noscript><link></noscript>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|       <link>
+|   <body>
+
+#data
+<!DOCTYPE html><noscript><meta></noscript>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|       <meta>
+|   <body>
+
+#data
+<!DOCTYPE html><noscript><style></style></noscript>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|       <style>
+|   <body>
+
+#data
+<!DOCTYPE html><noscript></p>
+#errors
+Line 1 Col 35 Unexpected end tag (p). Implying start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+|     <p>
+
+#data
+<!DOCTYPE html><noscript></br>
+#errors
+Line 1 Col 36 Unexpected end tag (br). Treated as a br start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+|     <br>
+
+#data
+<!DOCTYPE html><noscript><head></noscript>
+#errors
+Line 1 Col 37 Unexpected start tag (head). Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+
+#data
+<!DOCTYPE html><noscript><noscript></noscript>
+#errors
+Line 1 Col 41 Unexpected start tag (noscript). Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+
+#data
+<!DOCTYPE html><noscript></head></noscript>
+#errors
+Line 1 Col 37 Unexpected end tag (head). Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+
+#data
+<!DOCTYPE html><noscript>X
+#errors
+Line 1 Col 31 Unexpected non-space character in noscript in head.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+|     "X"
+
+#data
+<!DOCTYPE html><noscript> X
+#errors
+Line 1 Col 32 Unexpected non-space character in noscript in head.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|       " "
+|   <body>
+|     "X"

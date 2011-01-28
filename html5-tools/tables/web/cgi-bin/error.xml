@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      lang="en">
+    <head>
+        <title>Table Inspector</title>
+        <link rel="stylesheet" href="/tables/table.css"/>
+    </head>
+    <body>
+        <h1>Table Inspector</h1>
+        <section class="error">
+            <h2>Error</h2>
+            <div py:choose="errorType" py:strip="True">
+                <p py:when="'CANT_LOAD'">
+                    The URI <a href="${uri}"><code>${uri}</code></a> could not be loaded. Ensure that the URI is correctly entered and the server is responding.
+                </p>
+                <p py:when="'INVALID_SCHEME'">
+                    <code>"${uri}"</code> is not a recognised URI scheme (only <code>http</code> and <code>https</code> URI schemes are supported).
+		</p>
+		<p py:when="'MISSING_URI'">
+		    You didn't supply a URI to parse
+                </p>
+		<p py:when="'MISSING_SOURCE'">
+		    You didn't supply any source to parse
+		</p>
+		<p py:when="'NO_TABLES'">
+		  The supplied document didn't contain any tables
+		</p>
+                <p py:otherwise="">An unexpected internal error occured. This is probably a bug in the script. If you can reproduce the problem, please <a href="mailto:jg307@cam.ac.uk">email me</a> stating the input that caused the problem.
+                </p>
+	    </div>
+        </section>
+    </body>
+</html>

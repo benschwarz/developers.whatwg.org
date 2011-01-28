@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+import trackerlib
+
+if __name__ == "__main__":
+    trackerlib.startFormatting("HTML5", "", "/tools/web-apps-tracker", "http://svn.whatwg.org/webapps/source")

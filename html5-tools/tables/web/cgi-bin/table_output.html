@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:py="http://genshi.edgewall.org/">
+<head><title>Table Inspector</title>
+<link rel="stylesheet" href="/tables/table.css" type="text/css"/>
+<link rel="stylesheet" href="/tables/table_output_hide_headings.css" type="text/css" title="Headings Hidden"/>
+<link rel="stylesheet alternate" href="/tables/table_output_show_headings.css" type="text/css" title="Headings Visible"/>
+<script src="/tables/table_inspector.js"/>
+</head>
+<body onload="load_page();">
+<h1><a href="/tables/table_inspector.html">Table Inspector</a></h1>
+<py:for each="i,table in enumerate(data)">
+<div class="section">
+<h2>Table ${i+1}</h2>
+<py:if test="table[0].element.attrib['summary']">
+<h3>Summary</h3>
+<p>${table[0].element.attrib["summary"]}</p>
+</py:if>
+<h3>Data</h3>
+${table[1]}
+</div>
+</py:for>
+</body>
+</html>

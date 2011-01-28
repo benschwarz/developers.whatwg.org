@@ -1,0 +1,169 @@
+#data
+<!DOCTYPE html><head> 
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     " "
+|   <body>
+
+#data
+<!DOCTYPE html><head><!-- comment -->
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <!-- comment -->
+|   <body>
+
+#data
+<!DOCTYPE html><head><base>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <base>
+|   <body>
+
+#data
+<!DOCTYPE html><head><link>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <link>
+|   <body>
+
+#data
+<!DOCTYPE html><head><meta>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <meta>
+|   <body>
+
+#data
+<!DOCTYPE html><head><title></title>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <title>
+|   <body>
+
+#data
+<!DOCTYPE html><head><style></style>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <style>
+|   <body>
+
+#data
+<!DOCTYPE html><head><noscript></noscript>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <noscript>
+|   <body>
+
+#data
+<!DOCTYPE html><head><script></script>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <script>
+|   <body>
+
+#data
+<!DOCTYPE html><head><head>
+#errors
+Line 1 Col 33 Unexpected start tag head in existing head. Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><head></head>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><head></body>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><head></html>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><head></p>
+#errors
+Line 1 Col 31 Unexpected end tag (p). Implying start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+
+#data
+<!DOCTYPE html><head></br>
+#errors
+Line 1 Col 32 Unexpected end tag (br). Treated as a br start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <br>
+
+#data
+<!DOCTYPE html><head>X
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     "X"
+
+#data
+<!DOCTYPE html><head> X
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     " "
+|   <body>
+|     "X"

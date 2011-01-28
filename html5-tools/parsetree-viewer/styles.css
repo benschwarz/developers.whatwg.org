@@ -1,0 +1,37 @@
+
+html {color:black;
+      font-family:sans-serif;
+      margin:0;}
+
+body {margin:0.5em;
+      padding:0;}
+
+h1 {color:black;
+    background-color:#ddf;
+    text-align:right;
+    margin:-0.5em -0.5em 0 -0.5em;
+    padding:0.3em;
+    padding-right:0.6em;}
+    
+/*Only needed on the front page*/
+legend {font-weight:bold;}
+textarea {display:block;}
+input#input_uri {width:40em;}
+label#label_source {display:block;}
+form {margin:1em;}
+
+/*Only needed on the error page*/
+.error h2 {
+    text-align:center;
+    background-color:red;
+    color:white;
+    width:100%;
+}
+
+/*Only needed on the output page*/
+code.element-name {color: purple; font-weight: bold;}
+code.attribute-name { color: black; font-weight: bold; }
+code.attribute-value { color: blue; font-weight: normal; }
+code.doctype { color: teal; }
+code.text_marker { color: gray; }
+code.comment_marker { color:green; }

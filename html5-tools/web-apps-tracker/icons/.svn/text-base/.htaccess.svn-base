@@ -1,0 +1,3 @@
+<FilesMatch "[a-z-]">
+ ForceType image/png
+</FilesMatch>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/conf
+END
+svnserve.conf
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/conf/svnserve.conf
+END
+passwd
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/conf/passwd
+END
+authz
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/159/trunk/incoming/garrett-smith/conf/authz
+END

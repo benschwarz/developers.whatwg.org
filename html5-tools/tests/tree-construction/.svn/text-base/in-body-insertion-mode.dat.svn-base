@@ -1,0 +1,1157 @@
+#data
+<!DOCTYPE html><body>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><body>X
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     "X"
+
+#data
+<!DOCTYPE html><body><!-- comment -->
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <!-- comment -->
+
+#data
+<!DOCTYPE html><body><!DOCTYPE html>
+#errors
+Line 1 Col 36 Unexpected DOCTYPE. Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><body><html>
+#errors
+Line 1 Col 27 html needs to be the first start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><body><html foo>
+#errors
+Line 1 Col 27 html needs to be the first start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   foo=""
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html foo><body><html bar>
+#errors
+Line 1 Col 27 html needs to be the first start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   foo=""
+|   bar=""
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html foo="a"><body><html foo="b">
+#errors
+Line 1 Col 27 html needs to be the first start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   foo="a"
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><body><base>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <base>
+
+#data
+<!DOCTYPE html><body><base>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <base>
+
+#data
+<!DOCTYPE html><body><link>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <link>
+
+#data
+<!DOCTYPE html><body><meta>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <meta>
+
+#data
+<!DOCTYPE html><body><script></script>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <script>
+
+#data
+<!DOCTYPE html><body><style></style>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <style>
+
+#data
+<!DOCTYPE html><body><title></title>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <title>
+
+#data
+<!DOCTYPE html><body><body>
+#errors
+Line 1 Col 27 Unexpected start tag (body).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><body><body foo>
+#errors
+Line 1 Col 27 Unexpected start tag (body).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     foo=""
+
+#data
+<!DOCTYPE html><body foo><body bar>
+#errors
+Line 1 Col 27 Unexpected start tag (body).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     foo=""
+|     bar=""
+
+#data
+<!DOCTYPE html><body foo="a"><body foo="b">
+#errors
+Line 1 Col 27 Unexpected start tag (body).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     foo="a"
+
+#data
+<!DOCTYPE html><body></body>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><body></html>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><body><p>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+
+#data
+<!DOCTYPE html><body><p><address></address>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <address>
+
+#data
+<!DOCTYPE html><body><p><blockquote></blockquote>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <blockquote>
+
+#data
+<!DOCTYPE html><body><p><center></center>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <center>
+
+#data
+<!DOCTYPE html><body><p><dir></dir>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <dir>
+
+#data
+<!DOCTYPE html><body><p><div></div>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <div>
+
+#data
+<!DOCTYPE html><body><p><dl></dl>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <dl>
+
+#data
+<!DOCTYPE html><body><p><fieldset></fieldset>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <fieldset>
+
+#data
+<!DOCTYPE html><body><p><h1></h1>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <h1>
+
+#data
+<!DOCTYPE html><body><p><h2></h2>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <h2>
+
+#data
+<!DOCTYPE html><body><p><h3></h3>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <h3>
+
+#data
+<!DOCTYPE html><body><p><h4></h4>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <h4>
+
+#data
+<!DOCTYPE html><body><p><h5></h5>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <h5>
+
+#data
+<!DOCTYPE html><body><p><h6></h6>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <h6>
+
+#data
+<!DOCTYPE html><body><p><menu></menu>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <menu>
+
+#data
+<!DOCTYPE html><body><p><ol></ol>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <ol>
+
+#data
+<!DOCTYPE html><body><p><p>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <p>
+
+#data
+<!DOCTYPE html><body><p><ul></ul>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <ul>
+
+#data
+<!DOCTYPE html><body><pre>
+foo</pre>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <pre>
+|       "foo"
+
+#data
+<!DOCTYPE html><body><pre>foo</pre>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <pre>
+|       "foo"
+
+#data
+<!DOCTYPE html><body><listing>
+foo</listing>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <listing>
+|       "foo"
+
+#data
+<!DOCTYPE html><body><listing>foo</listing>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <listing>
+|       "foo"
+
+#data
+<!DOCTYPE html><body><form></form>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <form>
+
+#data
+<!DOCTYPE html><body><form><form></form>
+#errors
+Line 1 Col 33 Unexpected start tag (form). Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <form>
+
+#data
+<!DOCTYPE html><body><p><form></form>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <form>
+
+#data
+<!DOCTYPE html><body><li>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+
+#data
+<!DOCTYPE html><body><p><li>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <li>
+
+#data
+<!DOCTYPE html><body><li><li>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+|     <li>
+
+#data
+<!DOCTYPE html><body><li><p><li>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+|       <p>
+|     <li>
+
+#data
+<!DOCTYPE html><body><li><foo><li>
+#errors
+Line 1 Col 34 Missing end tag (foo).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+|       <foo>
+|     <li>
+
+#data
+<!DOCTYPE html><body><li><foo><foo><li>
+#errors
+Line 1 Col 39 Missing end tags (foo, foo).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+|       <foo>
+|         <foo>
+|     <li>
+
+#data
+<!DOCTYPE html><body><li><div><li>
+#errors
+Line 1 Col 34 Missing end tag (div).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+|       <div>
+|     <li>
+
+#data
+<!DOCTYPE html><body><li><div><div><li>
+#errors
+Line 1 Col 39 Missing end tags (div, div).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+|       <div>
+|         <div>
+|     <li>
+
+#data
+<!DOCTYPE html><body><li><address><li>
+#errors
+Line 1 Col 38 Missing end tag (address).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+|       <address>
+|     <li>
+
+#data
+<!DOCTYPE html><body><li><address><address><li>
+#errors
+Line 1 Col 47 Missing end tags (address, address).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+|       <address>
+|         <address>
+|     <li>
+
+#data
+<!DOCTYPE html><body><li><center><li></center>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <li>
+|       <center>
+|         <li>
+
+#data
+<!DOCTYPE html><body><dd>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dt>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><p><dd>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><p><dt>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dd><dd>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dd><dt>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dt><dd>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dt><dt>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dd><p><dd>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <p>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dd><p><dt>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <p>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dt><p><dd>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <p>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dt><p><dt>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <p>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dd><foo><dd>
+#errors
+ddne 1 Col 34 Missing end tag (foo).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <foo>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dt><foo><dd>
+#errors
+ddne 1 Col 34 Missing end tag (foo).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <foo>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dd><foo><dt>
+#errors
+ddne 1 Col 34 Missing end tag (foo).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <foo>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dt><foo><dt>
+#errors
+ddne 1 Col 34 Missing end tag (foo).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <foo>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dd><foo><foo><dd>
+#errors
+ddne 1 Col 39 Missing end tags (foo, foo).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <foo>
+|         <foo>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dd><foo><foo><dt>
+#errors
+ddne 1 Col 39 Missing end tags (foo, foo).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <foo>
+|         <foo>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dt><foo><foo><dd>
+#errors
+ddne 1 Col 39 Missing end tags (foo, foo).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <foo>
+|         <foo>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dt><foo><foo><dt>
+#errors
+ddne 1 Col 39 Missing end tags (foo, foo).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <foo>
+|         <foo>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dd><div><dd>
+#errors
+ddne 1 Col 34 Missing end tag (div).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <div>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dd><div><dt>
+#errors
+ddne 1 Col 34 Missing end tag (div).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <div>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dt><div><dd>
+#errors
+ddne 1 Col 34 Missing end tag (div).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <div>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dt><div><dt>
+#errors
+ddne 1 Col 34 Missing end tag (div).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <div>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dd><div><div><dd>
+#errors
+ddne 1 Col 39 Missing end tags (div, div).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <div>
+|         <div>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dt><div><div><dd>
+#errors
+ddne 1 Col 39 Missing end tags (div, div).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <div>
+|         <div>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dd><div><div><dt>
+#errors
+ddne 1 Col 39 Missing end tags (div, div).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <div>
+|         <div>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dt><div><div><dt>
+#errors
+ddne 1 Col 39 Missing end tags (div, div).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <div>
+|         <div>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dd><address><dd>
+#errors
+ddne 1 Col 38 Missing end tag (address).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <address>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dt><address><dd>
+#errors
+ddne 1 Col 38 Missing end tag (address).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <address>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dd><address><dt>
+#errors
+ddne 1 Col 38 Missing end tag (address).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <address>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dt><address><dt>
+#errors
+ddne 1 Col 38 Missing end tag (address).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <address>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dd><address><address><dd>
+#errors
+ddne 1 Col 47 Missing end tags (address, address).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <address>
+|         <address>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dt><address><address><dd>
+#errors
+ddne 1 Col 47 Missing end tags (address, address).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <address>
+|         <address>
+|     <dd>
+
+#data
+<!DOCTYPE html><body><dd><address><address><dt>
+#errors
+ddne 1 Col 47 Missing end tags (address, address).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <address>
+|         <address>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dt><address><address><dt>
+#errors
+ddne 1 Col 47 Missing end tags (address, address).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <address>
+|         <address>
+|     <dt>
+
+#data
+<!DOCTYPE html><body><dd><center><dd></center>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <center>
+|         <dd>
+
+#data
+<!DOCTYPE html><body><dt><center><dd></center>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <center>
+|         <dd>
+
+#data
+<!DOCTYPE html><body><dd><center><dt></center>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dd>
+|       <center>
+|         <dt>
+
+#data
+<!DOCTYPE html><body><dt><center><dt></center>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <dt>
+|       <center>
+|         <dt>
+
+#data
+<!DOCTYPE html><body><plaintext>foo<p>&amp;</plaintext><!-- comment -->
+#errors
+Line 1 Col 71 Unexpected EOF. Expected end tag (plaintext).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <plaintext>
+|       "foo<p>&amp;</plaintext><!-- comment -->"
+
+#data
+<!DOCTYPE html><body><p><plaintext>foo<p>&amp;</plaintext><!-- comment -->
+#errors
+Line 1 Col 74 Unexpected EOF. Expected end tag (plaintext).
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+|     <plaintext>
+|       "foo<p>&amp;</plaintext><!-- comment -->"

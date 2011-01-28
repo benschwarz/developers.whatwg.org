@@ -1,0 +1,137 @@
+#data
+<!DOCTYPE html><html>
+ 
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html><!-- comment -->
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <!-- comment -->
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html><!DOCTYPE html>
+#errors
+Line 1 Col 36 Unexpected DOCTYPE. Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html><html>
+#errors
+Line 1 Col 27 html needs to be the first start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html><head>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html></head>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html></body>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html></html>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html></p>
+#errors
+Line 1 Col 25 Unexpected end tag (p). Implying start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <p>
+
+#data
+<!DOCTYPE html><html></br>
+#errors
+Line 1 Col 26 Unexpected end tag (br). Treated as a br start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <br>
+
+#data
+<!DOCTYPE html><html></foo>
+#errors
+Line 1 Col 27 Unexpected end tag (foo). Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html><html><img>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <img>
+
+#data
+<!DOCTYPE html><html>X
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     "X"
+
+#data
+<!DOCTYPE html><html> X
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     "X"

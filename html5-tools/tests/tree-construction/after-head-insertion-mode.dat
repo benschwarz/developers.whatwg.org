@@ -1,0 +1,172 @@
+#data
+<!DOCTYPE html></head> 
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   " "
+|   <body>
+
+#data
+<!DOCTYPE html></head><!-- comment -->
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <!-- comment -->
+|   <body>
+
+#data
+<!DOCTYPE html></head><!DOCTYPE html>
+#errors
+Line 1 Col 37 Unexpected DOCTYPE. Ignored.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html></head><html>
+#errors
+Line 1 Col 28 html needs to be the first start tag.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html></head><body>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html></head><frameset></frameset>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <frameset>
+
+#data
+<!DOCTYPE html></head><base>
+#errors
+Line 1 Col 28 Unexpected start tag (base). Moved to head.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <base>
+|   <body>
+
+#data
+<!DOCTYPE html></head><link>
+#errors
+Line 1 Col 28 Unexpected start tag (link). Moved to head.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <link>
+|   <body>
+
+#data
+<!DOCTYPE html></head><meta>
+#errors
+Line 1 Col 28 Unexpected start tag (meta). Moved to head.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <meta>
+|   <body>
+
+#data
+<!DOCTYPE html></head><script></script>
+#errors
+Line 1 Col 28 Unexpected start tag (script). Moved to head.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <script>
+|   <body>
+
+#data
+<!DOCTYPE html></head><style></style>
+#errors
+Line 1 Col 28 Unexpected start tag (style). Moved to head.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <style>
+|   <body>
+
+#data
+<!DOCTYPE html></head><title></title>
+#errors
+Line 1 Col 28 Unexpected start tag (title). Moved to head.
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|     <title>
+|   <body>
+
+#data
+<!DOCTYPE html></head><img>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     <img>
+
+#data
+<!DOCTYPE html></head></body>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+
+#data
+<!DOCTYPE html></head>X
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>
+|     "X"
+
+#data
+<!DOCTYPE html></head> X
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   " "
+|   <body>
+|     "X"
+
+#data
+<!DOCTYPE html></head>
+#errors
+#document
+| <!DOCTYPE html>
+| <html>
+|   <head>
+|   <body>

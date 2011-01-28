@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Additional Properties on NamedNodeMap, HTMLCollection, NodeList</title>
+<link rel="author" title="Garrett Smith" href="mailto:dhtmlkitchen@gmail.com"/>
+</head>
+
+<body id="body">
+<select id='s'>
+<option></option>
+</select>
+<pre>
+<script type="text/javascript">
+var s = document.getElementById('s');
+document.write([
+  "NamedNodeMap: '0'in document.body.attributes : " 
+  + ('0'in document.body.attributes),
+  "HTMLCollection '0'in document.body.childNodes : " 
+  + ('0'in document.body.childNodes),
+  "HTMLOptionsCollection '0'in s.options : " 
+  + ('0'in s.options),
+  "NodeList: '0'in document.getElementsByTagName('*') : " 
+  + ('0'in document.getElementsByTagName('*')),
+  "'id'in document.body.attributes : " 
+  + ('id'in document.body.attributes)
+].join('\n')); 
+</script>
+</pre>
+
+<p>
+    This test is informative. It is not pass/fail. There is no public standard.
+</p>
+</body>
+
+
+</html>

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/159/trunk/incoming/db
+END
+txn-current-lock
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/159/trunk/incoming/db/txn-current-lock
+END
+write-lock
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/159/trunk/incoming/db/write-lock
+END
+current
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/159/trunk/incoming/db/current
+END
+uuid
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/159/trunk/incoming/db/uuid
+END
+fs-type
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/159/trunk/incoming/db/fs-type
+END
+format
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/159/trunk/incoming/db/format
+END
+txn-current
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/159/trunk/incoming/db/txn-current
+END

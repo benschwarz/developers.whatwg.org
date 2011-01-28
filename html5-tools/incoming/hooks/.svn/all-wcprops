@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/159/trunk/incoming/hooks
+END
+pre-revprop-change.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/159/trunk/incoming/hooks/pre-revprop-change.tmpl
+END
+post-lock.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/159/trunk/incoming/hooks/post-lock.tmpl
+END
+post-commit.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/159/trunk/incoming/hooks/post-commit.tmpl
+END
+pre-commit.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/159/trunk/incoming/hooks/pre-commit.tmpl
+END
+pre-lock.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/159/trunk/incoming/hooks/pre-lock.tmpl
+END
+post-unlock.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/159/trunk/incoming/hooks/post-unlock.tmpl
+END
+pre-unlock.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/159/trunk/incoming/hooks/pre-unlock.tmpl
+END
+start-commit.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/159/trunk/incoming/hooks/start-commit.tmpl
+END
+post-revprop-change.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/159/trunk/incoming/hooks/post-revprop-change.tmpl
+END

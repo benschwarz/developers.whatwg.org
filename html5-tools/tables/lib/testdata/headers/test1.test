@@ -1,0 +1,93 @@
+{"tests":[
+{"input":"<table><th>1<td>2",
+"cases":[["html4", {}, {"2":["1"]}],
+         ["html5", {}, {"2":[]}],
+         ["experimental", {}, {"2":["1"]}],
+         ["smartcolspan", {}, {"2":[]}],
+         ["smartheaders", {}, {"2":["1"]}]
+         ]
+},
+
+{"input":"<table><tr><th>1<th>2<tr><th>3<td>4",
+
+"cases":[["html4", {}, {"4":["2", "3"]}],
+         ["html5", {}, {"4":["2", "3"]}],
+         ["experimental", {}, {"4":["2", "3"]}],
+         ["smartcolspan", {}, {"4":["2"]}],
+         ["smartheaders", {}, {"4":["2", "3"]}]
+         ]
+},
+
+{"input":"<table><tr><th>1<th>2<tr><th>3<th>4<tr><td>5<td>6",
+"cases":[["html4", {}, {"5":["1", "3"]}],
+         ["html5", {}, {"5":["1"]}],
+         ["smartheaders", {}, {"5":["1", "3"]}]
+         ]
+},
+
+{"input":"<table><tr><th colspan=2>1<tr><td>2<td>3",
+"cases":[["html4", {}, {"2":["1"], "3":["1"]}],
+         ["html5", {}, {"2":["1"], "3":[]}],
+         ["smartcolspan", {}, {"2":["1"], "3":["1"]}],
+         ["smartheaders", {}, {"2":["1"], "3":["1"]}]
+         ]
+},
+
+{"input":"<table><tr><th rowspan=2>1<td>2<tr><td>3",
+"cases":[["html4", {}, {"2":["1"], "3":["1"]}],
+         ["html5", {}, {"2":[], "3":[]}],
+         ["smartcolspan", {}, {"2":[], "3":[]}],
+         ["smartheaders", {}, {"2":["1"], "3":["1"]}]
+         ]
+},
+
+{"input":"<table><tr><td>1<td>2<tr><th rowspan=2>3<td>4<tr><td>5",
+"cases":[["html4", {}, {"4":["3"], "5":["3"]}],
+         ["html5", {}, {"4":["3"], "5":[]}],
+         ["smartheaders", {}, {"4":["3"], "5":["3"]}]
+         ]
+},
+
+{"input":"<table><tr><th id='foo'>1<td>2<tr><td>3<td headers='foo bar'>4",
+"cases":[["html4", {}, {"4":["1"]}],
+         ["html4", {"useHeadersAttr":false}, {"4":[]}],
+         ["experimental", {}, {"4":["1"]}],
+         ["experimental", {"useHeadersAttr":false}, {"4":[]}],
+         ["smartheaders", {}, {"4":["1"]}]
+         ]
+},
+
+{"input":"<table><tr><th colspan=2>1<tr><td>2<td>3<tr><th colspan=2>4<tr><td>5<td>6",
+"cases":[["smartcolspan", {}, {"2":["1"], "3":["1"], "5":["4"], "6":["4"]}],
+        ["smartheaders", {}, {"2":["1"], "3":["1"], "5":["4"], "6":["4"]}]
+         ]
+},
+
+{"input":"<table><tr><th rowspan=2>1<td>2<th rowspan=2>3<td>4<tr><td>5<td>6",
+"cases":[["smartheaders", {}, {"2":["1"], "5":["1"], "4":["3"], "6":["3"]}]
+         ]
+},
+
+{"input":"<table><thead><th scope=rowgroup>1<td>2</thead><tr><td>3<td>4",
+"cases":[["html4", {}, {"3":[], "2":["1"]}],
+         ["html4", {"useScopeAttr":false}, {"3":["1"]}],
+         ["smartheaders", {}, {"3":[], "2":["1"]}]
+         ]
+},
+
+{"input":"<table><colgroup span=2><th scope=colgroup>1<td>2<tr><td>3<td>4",
+"cases":[["html4", {}, {"3":["1"], "2":["1"], "4":["1"]}],
+         ["html4", {"useScopeAttr":false}, {"3":["1"], "2":["1"], "4":[]}],
+         ["html5", {}, {"3":["1"], "2":["1"], "4":["1"]}],
+         ["smartheaders", {}, {"3":["1"], "2":["1"], "4":["1"]}]
+         ]
+},
+
+{"input":"<table><tr><td><b>1<td>2<tr><td><strong>3<td>4",
+"cases":[["experimental", {"useTdBHeadings":true, "useTdStrongHeadings":true}, {"2":["1"], "4":["3"]}],
+         ["experimental", {"useTdBHeadings":false, "useTdStrongHeadings":false}, {"2":[], "4":[]}]
+         ]
+}
+
+]
+}
