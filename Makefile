@@ -8,11 +8,7 @@ SPLITTER=html5-tools/spec-splitter/spec-splitter.py
 SPLITTERFLAGS=--html5lib-serialiser
 
 postprocess: LOG
-	rake postprocess:credits
-	rake postprocess:references
-	rake postprocess:footer
-	rake postprocess:analytics
-	rake postprocess:search_index
+	rake postprocess:execute
 
 LOG: index.html $(SPLITTER)
 	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./public > LOG

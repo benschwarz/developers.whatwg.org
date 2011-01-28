@@ -6,17 +6,8 @@ require "peach"
 require "json"
 
 namespace :postprocess do
-  desc "Add credits information"
-  task :credits do
-    Dir.chdir("public") do
-      doc = Nokogiri::HTML(File.open("index.html", "r"))
-      doc.css("body")[0].children[0].before(File.open("../html/credits.html", "r").read)
-      
-      File.open("index.html", "w") {|file| file << doc.to_html }
-      puts "Wrote credits into index.html"
-    end
-  end
-  
+  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search]
+
   def each_page(&block)
     Dir.chdir("public") do
       
@@ -27,7 +18,18 @@ namespace :postprocess do
       end
     end
   end
-  
+
+  desc "Add credits information"
+  task :credits do
+    Dir.chdir("public") do
+      doc = Nokogiri::HTML(File.open("index.html", "r"))
+      doc.css("body")[0].children[0].before(File.open("../html/credits.html", "r").read)
+      
+      File.open("index.html", "w") {|file| file << doc.to_html }
+      puts "Wrote credits into index.html"
+    end
+  end
+
   desc "Add document footer"
   task :footer do
     footer = File.open("html/footer.html", "r").read
@@ -79,5 +81,13 @@ namespace :postprocess do
     end
 
     File.open("public/search_index.json", "w") {|buffer| buffer << JSON.generate(index)}
+  end
+
+  desc "Add search to each html file"
+  task :insert_search do
+    search = File.open("html/search.html", "r").read
+    each_page do |doc, filename|
+			doc.at("header.head").add_child(search)
+    end
   end
 end
