@@ -18,7 +18,7 @@ To build your own copy, checkout this repostory, you'll need:
 * SVN
 * LibXML2
 
-A specific version of some gems are required. To grab: `sudo gem install  --version "3.1.0.alpha.214" sass`
+To acquire the Ruby gems just run `bundler`
 
 I didn't say it was pretty! – But it does indeed work.
 
