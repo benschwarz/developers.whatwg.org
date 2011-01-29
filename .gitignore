@@ -6,3 +6,5 @@ index.html
 public/*.html
 public/css/master.css
 public/javascripts/*
+public/search_index.json
+sass/.sass-cache/
