@@ -6,7 +6,7 @@ require "peach"
 require "json"
 
 namespace :postprocess do
-  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts]
+  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest]
 
   def each_page(&block)
     Dir.chdir("public") do
@@ -108,5 +108,27 @@ namespace :postprocess do
         doc.at("head").add_child('<link rel="stylesheet" href="/' + css_path + '">')
       end
     end
+  end
+
+  desc "Add manifest reference"
+  task :insert_manifest => "generate:manifest" do
+    each_page {|doc, filename| doc.at("html")['manifest'] = "/offline.manifest"}
+  end
+end
+
+namespace :generate do
+
+  desc "Generate a HTML5 manifest for offline specifications"
+  task :manifest do
+    files = Dir["public/**/*.*"].map{|fp| fp.gsub("public/", "") }.join("\n")
+
+    MANIFEST = %Q{
+CACHE MANIFEST
+# #{Time.now.to_s}
+
+#{ files }
+    }
+
+    File.open("public/offline.manifest", "w") { |buffer| buffer << MANIFEST }
   end
 end

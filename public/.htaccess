@@ -39,6 +39,7 @@
 </IfModule>
 
 # Mime-types
+AddType text/cache-manifest .manifest
 AddType application/vnd.ms-fontobject .eot
 AddType font/ttf .ttf
 AddType font/otf .otf
