@@ -8,12 +8,17 @@ To build your own copy, checkout this repostory, you'll need:
   * rvm
   * bundler
   * nokogiri
+  * json
+  * peach
+  * sass
 * Python (2.4+)
   * lxml (`easy_install lxml`)
   * html5lib (`easy_install html5lib`)
 * Mercurial
 * SVN
 * LibXML2
+
+A specific version of some gems are required. To grab: `sudo gem install  --version "3.1.0.alpha.214" sass`
 
 I didn't say it was pretty! – But it does indeed work.
 
