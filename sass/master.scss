@@ -77,9 +77,9 @@ body > header {
 
 div#search {
   position: absolute; top: 0; right: 0; text-align: right;
-
+  ol:empty { border: 0; }
   ol { 
-    max-width: 25em; background-color: #eeeeee; @include border-radius(0.2em); @include box-shadow(0, 0, 1em, rgba(0, 0, 0, 0.75));
+    z-index: 1; max-width: 25em; border: 1px solid #ddd; background-color: #eeeeee; @include border-radius(0.2em); @include box-shadow(0, 0, 1em, rgba(0, 0, 0, 0.75));
     li { text-align: left; } 
     li a { display: block; color: #666; padding: 0.2em 0.4em; }
     li a span { color: lighten(#666, 20%); display: block; font-style: italic; font-size: 0.7em; }
@@ -171,7 +171,7 @@ strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercas
 	(http://developers.whatwg.org/introduction.html#typographic-conventions)
 */
 .note { position: relative; margin-left: -2em; padding: 0.5em; width: 120%; background-color: #eee; }
-.example { color: #999; font-style: italic; }
+.example { color: #666; font-style: italic; }
 .XXX {} /* An open issue */
 .warning { background-color: lighten($color_base, 50%); padding: 0.5em; }
 .css { 
