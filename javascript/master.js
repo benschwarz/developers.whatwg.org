@@ -40,7 +40,7 @@ addEvent(
 			resultList = [],
 			startI = -1,
 			allI = -1,
-			maxResults = 5 * queryLowerCase.length,
+			maxResults = 10,
 			jsonResponse;
 		while ((jsonResponse = jsonResponses[++startI])) {
 			var resultText = jsonResponse.text,
