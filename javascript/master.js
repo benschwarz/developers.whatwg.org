@@ -1,17 +1,15 @@
+// set up code blocks to get hit by prettyprint:
+for (var pre = document.getElementsByTagName('pre'), len = pre.len, i = -1; ++i < len; ){
+  pre[i].classList.add('prettyprint');
+}
+
 // when prettify is loaded, run it!
 (function loopsiloop(){
-  if (window.prettyPrint){ 
-   prettyPrint();
-  } else {
-    setTimeout(loopsiloop,100);
-  }
+  if (window.prettyPrint) prettyPrint();
+  else setTimeout(loopsiloop,100);
 })();
 
 
-// set up code blocks to get hit by prettyprint:
-Array.prototype.slice.call(document.getElementsByTagName('pre')).forEach(function(v,k,arra){
-  v.className += ' prettyprint';
-});
 
 (function(){
 
@@ -22,6 +20,16 @@ Array.prototype.slice.call(document.getElementsByTagName('pre')).forEach(functio
 var qc = document.getElementById('q-container'),
 	q = document.getElementById('q'),
 	r = document.getElementById('r');
+	
+
+// basic feature tests for the livesearch:
+if (![].forEach || !document.getElementsByClassName){
+  var search = qc.parentNode;
+  search.parentNode.removeChild(search);
+  return;
+}
+	
+	
 // request json
 window.ajax = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 window.jsonResponses = [];
@@ -33,11 +41,6 @@ ajax.onreadystatechange = function (responseText) {
 ajax.open('GET', 'search_index.json', true);
 ajax.send(null);
 
-// basic feature tests for the livesearch:
-if (![].forEach && !document.getElementsByClassName){
-  q.parentNode.removeChild(q);
-  return;
-}
 
 // search on keyup
 addEvent('keyup',q, function(e) {
