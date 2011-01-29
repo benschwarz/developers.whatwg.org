@@ -6,7 +6,7 @@ require "peach"
 require "json"
 
 namespace :postprocess do
-  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search]
+  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts]
 
   def each_page(&block)
     Dir.chdir("public") do
@@ -60,7 +60,6 @@ namespace :postprocess do
         # Create aside element above the parent of the link
         unless doc.css("aside#" + reference_string).any?
           reference_link.parent.add_child('<aside id="'+ reference_string +'" class="reference">'+ aside_content +'</aside>')
-          puts "Added reference for #{reference_string} to #{filename}"
         end
       end
     end
@@ -88,6 +87,26 @@ namespace :postprocess do
     search = File.open("html/search.html", "r").read
     each_page do |doc, filename|
 			doc.at("header.head").add_child(search)
+    end
+  end
+
+  desc "Insert javascripts"
+  task :insert_javascripts do
+    Dir["public/**/*.js"].each do |js_path|
+      js_path = js_path.gsub("public/", "")
+      each_page do |doc, filename|
+        doc.at("body").add_child('<script src="/' + js_path + '" defer>')
+      end
+    end
+  end
+
+  desc "Insert stylesheets"
+  task :insert_stylesheets do
+    Dir["public/**/*.css"].each do |css_path|
+      css_path = css_path.gsub("public/", "")
+      each_page do |doc, filename|
+        doc.at("head").add_child('<link rel="stylesheet" href="/' + css_path + '">')
+      end
     end
   end
 end

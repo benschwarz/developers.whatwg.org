@@ -32,20 +32,6 @@ Dir.chdir("javascript") do
   end
 end
 
-Dir.chdir("public") do
-  # Include styles
-  Dir["**/*.css"].each do |stylesheet_filepath|
-    doc.css("head")[0].add_child('<link rel="stylesheet" href="/' + stylesheet_filepath + '">')
-    puts "Included stylesheet #{stylesheet_filepath}"
-  end
-
-  # Include scripts
-  Dir["**/*.js"].each do |javascript_filepath|
-    doc.css("head")[0].add_child('<script src="/' + javascript_filepath + '" defer>')
-    puts "Included javascript #{javascript_filepath}"
-  end
-end
-
 # Write everything back into the file it came from
 File.open(ARGV[0], "w") do |file|
   file << doc.to_html
