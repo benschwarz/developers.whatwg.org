@@ -22,7 +22,7 @@ namespace :postprocess do
   task :credits do
     Dir.chdir("public") do
       doc = Nokogiri::HTML(File.open("index.html", "r"))
-      doc.css("body")[0].children[0].before(File.open("../html/credits.html", "r").read)
+      doc.at("header.head").after(File.open("../html/credits.html", "r").read)
       
       File.open("index.html", "w") {|file| file << doc.to_html }
     end
