@@ -200,7 +200,7 @@ for heading in child_iter:
     page = deepcopy(doc)
     add_class(page.getroot(), 'split chapter')
     page_body = page.find('body')
-
+    print page_body
     page.find('//title').text = title + u' \u2014 ' + doctitle
 
     # Add the header
@@ -309,7 +309,7 @@ for name, doc, title in pages:
         f.write('<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">\n')
     if use_html5lib_serialiser:
         tokens = html5lib.treewalkers.getTreeWalker('lxml')(doc)
-        serializer = html5lib.serializer.HTMLSerializer(quote_attr_values=True, inject_meta_charset=False)
+        serializer = html5lib.serializer.HTMLSerializer(quote_attr_values=True, inject_meta_charset=False, omit_optional_tags=False)
         for text in serializer.serialize(tokens, encoding='us-ascii'):
             f.write(text)
     else:

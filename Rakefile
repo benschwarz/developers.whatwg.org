@@ -6,11 +6,10 @@ require "peach"
 require "json"
 
 namespace :postprocess do
-  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest]
+  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest, :insert_syncing]
 
   def each_page(&block)
     Dir.chdir("public") do
-      
       Dir["*.html"].peach do |html|
         doc = Nokogiri::HTML(File.open(html, "r"))
         yield doc, html
@@ -26,7 +25,6 @@ namespace :postprocess do
       doc.css("body")[0].children[0].before(File.open("../html/credits.html", "r").read)
       
       File.open("index.html", "w") {|file| file << doc.to_html }
-      puts "Wrote credits into index.html"
     end
   end
 
@@ -114,6 +112,15 @@ namespace :postprocess do
   task :insert_manifest => "generate:manifest" do
     each_page {|doc, filename| doc.at("html")['manifest'] = "/offline.manifest"}
   end
+  
+  desc "Insert syncing notification"
+  task :insert_syncing do
+    syncing = File.open("html/syncing.html", "r").read
+    
+    each_page do |doc, filename|
+      doc.at("body").add_child(syncing)
+    end
+  end
 end
 
 namespace :generate do
@@ -122,8 +129,7 @@ namespace :generate do
   task :manifest do
     files = Dir["public/**/*.*"].map{|fp| fp.gsub("public/", "") }.join("\n")
 
-    MANIFEST = %Q{
-CACHE MANIFEST
+    MANIFEST = %Q{CACHE MANIFEST
 # #{Time.now.to_s}
 
 #{ files }

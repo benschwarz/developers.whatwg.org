@@ -130,5 +130,28 @@ addEvent('mousemove', r, function(e) {
 	}
 );
 
+// Update offline version if there is one
+if(!!window.applicationCache) {
+	var body = document.querySelector("body"),
+			appCache = window.applicationCache;
+	
+	appCache.update();
+	
+	appCache.addEventListener('downloading', function () {
+		body.className += "syncing";
+	}, false);
+
+	appCache.addEventListener('progress', function (progressEvent) {
+		if (progressEvent.loaded) {
+			document.querySelector("#sync span").innerHTML = "("+progressEvent.loaded+"/"+progressEvent.total+")"
+		}
+	}, false);
+	
+	appCache.addEventListener('updateready', function () {
+		body.className = body.className.replace("syncing", "");
+		appCache.swapCache();
+	}, false)
+}
+
 })();
 

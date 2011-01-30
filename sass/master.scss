@@ -102,7 +102,7 @@ h4, h5, h6 { font-size: 1.2em; margin-bottom: 0.3em; color: $color_base; padding
 h2, h3, h4, h5, h6 { 
 	position: relative;
 	
-	span.secno  { @include border-radius(0.25em); background-color: lighten($color_base, 10%); color: #fff; position: absolute; top: 0.7em; left: -6em; font-weight: bold; font-size: 12px; padding: 0.25em 0.5em; font-family: Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em; }
+	span.secno  { @include border-radius(0.25em); background-color: lighten($color_base, 10%); color: #fff; position: absolute; top: 0.7em; left: -3em; font-weight: bold; font-size: 12px; padding: 0.25em 0.5em; font-family: Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em; }
 }
 
 a.secno, h3 .secno, h4 .secno, h5 .secno, h6 .secno { display: none; } /* Only top level section numbering */
@@ -186,6 +186,14 @@ body > footer {
 	margin: 4em 0 2em 0; padding: 1em 0 0 0; border-top: 1px solid #ccc;
 	
 	p { color: #666; font-size: 0.7em; margin: 0; }
+}
+
+/* Offline */
+body #sync { display: none; }
+body.syncing #sync { display: block; }
+body #sync {
+	z-index: 1; background-color: rgba(0, 0, 0, 0.4); color: white; font-size: 0.8em; font-style: italic; position: absolute; top: 2em; right: 0; margin: 0 auto; padding: 1em;
+	span { display: block; color: rgba(255, 255, 255, 0.6); }
 }
 
 /* Small (iPhone) */
