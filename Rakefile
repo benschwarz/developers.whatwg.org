@@ -6,7 +6,7 @@ require "peach"
 require "json"
 
 namespace :postprocess do
-  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest, :insert_syncing]
+  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest, :insert_syncing, :insert_charset]
 
   def each_page(&block)
     Dir.chdir("public") do
@@ -120,6 +120,11 @@ namespace :postprocess do
     each_page do |doc, filename|
       doc.at("body").add_child(syncing)
     end
+  end
+
+  desc "Set character encoding"
+  task :insert_charset do
+    each_page {|doc, filename| doc.at("head").children.first.before('<meta charset="utf-8">') }
   end
 end
 
