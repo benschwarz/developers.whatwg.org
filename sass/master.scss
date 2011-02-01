@@ -1,6 +1,10 @@
 @import "reset";
 @import "prettify-js";
+@import "utils";
+@import "html5";
 @import "css3";
+@import "typography";
+@import "columns";
 
 $color_base: #CC211B;
 
@@ -46,30 +50,26 @@ pre .dfnPanel {
 	http://www.germanforblack.com/articles/moving-towards-readable-w3c-specs
 */
 
-@font-face {
-	font-family: 'ChunkFiveRegular';
-	src: url('/fonts/Chunkfive.eot');
-	src: local('☺'), url('/fonts/Chunkfive.woff') format('woff'), url('/fonts/Chunkfive.ttf') format('truetype'), url('/fonts/Chunkfive.svg#ChunkFive') format('svg');
-}
 
 a:link, a:visited { color: lighten($color_base, 10%); text-decoration: none; }
 a:hover { color: darken($color_base, 20%); }
 
-body { margin: 4em auto; padding: 0 5em; width: 33em; font-size: 1.05em; line-height: 1.45; }
+body { margin: 4em auto; padding: 0 5em; width: 33em; font-size: 1.05em; line-height: 1.45; font-family: "Droid Serif"; }
 
-body > header {
+header.head {
+  @include column-width(9);
 	position: relative;
 	
 	&:before {
-		@include border-radius(0.25em);
-		content: 'WHATWG'; background-color: $color_base; color: #fff; position: absolute; top: 0.5em; left: -8em; font-weight: bold; font-size: 0.6em; padding: 2em 0.7em 0.25em; font-family: Helvetica, sans-serif; text-align: right; letter-spacing: 0.1em;
+		@include border-radius(0.3em);
+		content: 'WHATWG'; background-color: $color_base; color: #fff; position: absolute; top: 0.5em; left: -8.3em; font-size: 0.6em; padding: 2.5em 0.7em 0.25em; font-family: Arial, Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em;
 	}
 	
-	.logo { display: none; }
-
-	h1, h2 { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: "ChunkFiveRegular", Helvetica; }
-	h1 { line-height: 1em; font-size: 3em; }
-	h2 { font-size: 1.5em; margin-bottom: 0.5em; }
+	a { display: block; }
+	hgroup { width: 50%; }
+	
+	h1 { line-height: 1em; font-size: 3em; font-family: "M+2pheavy"; font-weight: bold; color: black; }
+	h2 { font-size: 0.7em; margin-bottom: 0.5em; font-family: "Droid Serif"; font-style: italic; color: #666; }
 
 	p.pubdate { display: none; }
 /*	p.pubdate { color: #999; font-size: 0.8em; font-style: italic; width: 80%; line-height: 1.4em; }*/
@@ -89,25 +89,25 @@ div#search {
     }
     li:first-child a.selected { @include border-radius(0.2em 0.2em 0 0); }
     li:last-of-type a.selected { @include border-radius(0 0 0.2em 0.2em); }
-    
   }
 }
 
-body > h2 { display: inline-block; font-size: 1.6em; margin: 2em 0 0.5em 0; border-bottom: 2px solid #ccc; padding-bottom: 0.1em; }
-h3 { font-size: 1.2em; margin: 3em 0 2em -3.5em; text-transform: uppercase; letter-spacing: 0.1em; }
+body > h2 {
+	position: relative; text-transform: uppercase; letter-spacing: 0.1em; font-family: "M+2pheavy"; font-size: 1.1em; margin: 3ex 0;
 
-h4, h5, h6 { font-size: 1.2em; margin-bottom: 0.3em; color: $color_base; padding-top: 0.4em; }
-
-/* Section numbering */
-h2, h3, h4, h5, h6 { 
-	position: relative;
-	
-	span.secno  { @include border-radius(0.25em); background-color: lighten($color_base, 10%); color: #fff; position: absolute; top: 0.7em; left: -3em; font-weight: bold; font-size: 12px; padding: 0.25em 0.5em; font-family: Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em; }
+	.secno { position: absolute; display: block; left: -1.5em; color: #999; text-align: right;  }	
 }
 
 a.secno, h3 .secno, h4 .secno, h5 .secno, h6 .secno { display: none; } /* Only top level section numbering */
 
-p { margin-bottom: 1em; }
+
+h3 { margin: 1ex 0; font-size: 1.4em; }
+h4, h5, h6 { font-size: 1.2em; margin-bottom: 0.3em; color: $color_base; }
+
+section#credits { clear: left; }
+
+
+p { @include column-width(9); margin-bottom: 1em; font-size: 0.9em; }
 
 aside.reference { float: right; width: 10em; font-size: 0.7em; font-style: italic; margin-left: 1em; }
 
@@ -158,15 +158,21 @@ table td { vertical-align: top; padding: 0.25em 1.25em 0.25em 0em; }
 table tr, table tbody { border: 0px; }
 hr { border: 0; height: 2px; background: #eee; margin: 2em 0em; }
 
-/* Navigation on the index page is only shown using major headings, once you drill down to that major heading, the full extent of its contents are shown */
-ol.toc, ul.toc { 
+
+/* The TOC is only shown on the index page (Temp) */
+body > nav { display: none;	}
+
+/* Only found on the index page */
+body > ol.toc {
+	display: block;
 	list-style: none;
 	a { color: black; } 
 	a:visited { color: #666; }
 	a:hover { color: $color_base; }
+	li { position: relative; }
+	li span { margin-left: -1.5em; position: absolute; }
+	li ol { display: none; }
 }
-body > ol.toc li ol { display: none; } /* Only found on the index page */
-
 strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercase; }
 
 /* 
@@ -181,9 +187,24 @@ strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercas
 	&:before { content: "CSS:"; color: #999; font-size: 1em; display: block; background: transparent; }
 }
 
+/* Up next */
+div#up-next {
+  @include box-shadow(2px, 2px, 3px, rgba(0, 0, 0, 0.4)); 
+  margin: 5ex 0; padding: 0.7em 1em; background-color: #eee; float: right;
+  p { font-style: italic; font-size: 0.7em; margin: 0; color: #666; }
+  h6 { font-weight: bold; margin: 0; color: #666; }
+  h6:after{ content: "—"; }
+
+  &:hover { 
+    background: #cecece;
+
+    h6 { color: $color_base; }
+  }
+}
+
 /* Footer (all pages) */
 body > footer {
-	margin: 4em 0 2em 0; padding: 1em 0 0 0; border-top: 1px solid #ccc;
+  clear: right; margin: 4em 0 2em 0; padding: 1em 0 0 0; border-top: 1px solid #ccc;
 	
 	p { color: #666; font-size: 0.7em; margin: 0; }
 }

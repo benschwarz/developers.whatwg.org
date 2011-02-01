@@ -33,6 +33,9 @@ Dir.chdir("javascript") do
   end
 end
 
+# Wrap the header group in an a referencing "/"
+doc.css("header.head hgroup").wrap('<a href="/" rel="home"></a>')
+
 # Write everything back into the file it came from
 File.open(ARGV[0], "w") do |file|
   file << doc.to_html

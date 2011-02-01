@@ -6,17 +6,24 @@ require "peach"
 require "json"
 
 namespace :postprocess do
-  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest, :insert_syncing, :insert_charset]
+  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest, :insert_syncing, :insert_charset, :insert_ios, :insert_droid_serif, :add_next_up_links]
 
   def each_page(&block)
     Dir.chdir("public") do
-      Dir["*.html"].peach do |html|
-        doc = Nokogiri::HTML(File.open(html, "r"))
-        yield doc, html
-        File.open(html, "w") {|file| file << doc.to_html }
+      Dir["*.html"].each do |html|
+				Thread.new do
+					doc = Nokogiri::HTML(File.open(html, "r"))
+					yield doc, html
+					File.open(html, "w") {|file| file << doc.to_html }
+				end
       end
     end
   end
+
+	def insert(markup_path, selector, method = :add_child)
+		markup = File.open(markup_path, "r").read
+		each_page {|doc, filename| doc.at(selector).send(method, markup) }
+	end
 
   desc "Add credits information"
   task :credits do
@@ -30,20 +37,12 @@ namespace :postprocess do
 
   desc "Add document footer"
   task :footer do
-    footer = File.open("html/footer.html", "r").read
-    
-    each_page do |doc, filename|
-      doc.css("body")[0].add_child(footer)
-    end
+		insert("html/footer.html", "body")
   end
   
   desc "Add analytics"
   task :analytics do
-    analytics = File.open("html/analytics.html", "r").read
-    
-    each_page do |doc, filename|
-      doc.css("body")[0].add_child(analytics)
-    end
+		insert("html/analytics.html", "body")
   end
   
   desc "Pull references inline"
@@ -82,17 +81,15 @@ namespace :postprocess do
 
   desc "Add search to each html file"
   task :insert_search do
-    search = File.open("html/search.html", "r").read
-    each_page do |doc, filename|
-			doc.at("header.head").add_child(search)
-    end
+    insert("html/search.html", "header.head")
   end
 
   desc "Insert javascripts"
   task :insert_javascripts do
     Dir["public/**/*.js"].each do |js_path|
       js_path = js_path.gsub("public/", "")
-      each_page do |doc, filename|
+
+			each_page do |doc, filename|
         doc.at("body").add_child('<script src="/' + js_path + '" defer>')
       end
     end
@@ -115,16 +112,34 @@ namespace :postprocess do
   
   desc "Insert syncing notification"
   task :insert_syncing do
-    syncing = File.open("html/syncing.html", "r").read
-    
-    each_page do |doc, filename|
-      doc.at("body").add_child(syncing)
-    end
+    insert("html/syncing.html", "body")
   end
+
+	desc "Insert iOS tags"
+	task :insert_ios do
+		insert("html/ios.html", "head")
+	end
 
   desc "Set character encoding"
   task :insert_charset do
     each_page {|doc, filename| doc.at("head").children.first.before('<meta charset="utf-8">') }
+  end
+
+	desc "Insert google hosted fonts"
+	task :insert_droid_serif do
+		insert("html/droid-serif.html", "head")
+	end
+
+  desc "Add 'next up' page links"
+  task :add_next_up_links do
+    each_page do |doc, filename|
+      next_section = doc.at("link[rel='next']")
+      if next_section
+        title = next_section.attributes["title"]
+        href = next_section.attributes["href"]
+        doc.at("footer").before('<div id="up-next"><a href="'+href+'"><p>Up next</p><h6>'+title+'</h6></a></div>')
+      end
+    end
   end
 end
 
@@ -136,7 +151,7 @@ namespace :generate do
 
     MANIFEST = %Q{CACHE MANIFEST
 # #{Time.now.to_s}
-
+http://fonts.googleapis.com/css*
 #{ files }
     }
 

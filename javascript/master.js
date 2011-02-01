@@ -143,7 +143,7 @@ if(!!window.applicationCache) {
 
 	appCache.addEventListener('progress', function (progressEvent) {
 		if (progressEvent.loaded) {
-			document.querySelector("#sync span").innerHTML = "("+progressEvent.loaded+"/"+progressEvent.total+")"
+			document.querySelector("#sync span").innerHTML = "("+Math.round((progressEvent.loaded/progressEvent.total)*100) + "%)";
 		}
 	}, false);
 	
