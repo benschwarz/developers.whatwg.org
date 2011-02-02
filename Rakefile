@@ -6,7 +6,7 @@ require "peach"
 require "json"
 
 namespace :postprocess do
-  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest, :insert_syncing, :insert_charset, :insert_ios, :insert_droid_serif, :add_next_up_links]
+  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest, :insert_syncing, :insert_charset, :insert_ios, :insert_droid_serif, :add_next_up_links, :insert_whatwg_logo]
 
   def each_page(&block)
     Dir.chdir("public") do
@@ -141,6 +141,13 @@ namespace :postprocess do
       end
     end
   end
+
+  desc "Insert WHATWG logo"
+  task :insert_whatwg_logo do
+    each_page do |doc, filename|
+      doc.at("header.head hgroup").before('<div class="logo">WHATWG</div>')
+    end
+  end
 end
 
 namespace :generate do
@@ -151,7 +158,6 @@ namespace :generate do
 
     MANIFEST = %Q{CACHE MANIFEST
 # #{Time.now.to_s}
-http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold
 #{ files }
     }
 

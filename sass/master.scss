@@ -58,11 +58,11 @@ body { margin: 4em auto; padding: 0 5em; width: 33em; font-size: 1.05em; line-he
 
 header.head {
   @include column-width(9);
-	position: relative;
+  position: relative;
 	
-	&:before {
+  div.logo {
 		@include border-radius(0.3em);
-		content: 'WHATWG'; background-color: $color_base; color: #fff; position: absolute; top: 0.5em; left: -8.3em; font-size: 0.6em; padding: 2.5em 0.7em 0.25em; font-family: Arial, Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em;
+		float: left; background-color: $color_base; color: #fff; position: relative; margin-top: 0.5em; margin-left: -8.3em; font-size: 0.6em; padding: 2.5em 0.7em 0.25em; font-family: Arial, Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em;
 	}
 	
 	a { display: block; }
@@ -70,13 +70,12 @@ header.head {
 	
 	h1 { line-height: 1em; font-size: 3em; font-family: "M+2pheavy"; font-weight: bold; color: black; }
 	h2 { font-size: 0.7em; margin-bottom: 0.5em; font-family: "Droid Serif"; font-style: italic; color: #666; }
-
-	p.pubdate { display: none; }
-/*	p.pubdate { color: #999; font-size: 0.8em; font-style: italic; width: 80%; line-height: 1.4em; }*/
 }
 
+p.pubdate { display: none; }
+
 div#search {
-  position: absolute; top: 0; right: 0; text-align: right;
+  position: absolute; top: 0; right: 0;
   ol:empty { border: 0; }
   ol { 
     max-width: 25em; background-color: #eeeeee; position: relative; z-index: 1; @include border-radius(0.2em); @include box-shadow(0, 0, 1em, rgba(0, 0, 0, 0.75));
@@ -93,8 +92,7 @@ div#search {
 }
 
 body > h2 {
-	position: relative; text-transform: uppercase; letter-spacing: 0.1em; font-family: "M+2pheavy"; font-size: 1.1em; margin: 3ex 0;
-
+	position: relative; text-transform: uppercase; letter-spacing: 0.1em; font-family: "M+2pheavy"; font-size: 1.2em; line-height: 5ex;
 	.secno { position: absolute; display: block; left: -1.5em; color: #999; text-align: right;  }	
 }
 
