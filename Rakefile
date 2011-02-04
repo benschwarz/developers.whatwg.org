@@ -162,6 +162,11 @@ namespace :generate do
     MANIFEST = %Q{CACHE MANIFEST
 # #{Time.now.to_s}
 #{ files }
+
+NETWORK:
+http://www.google-analytics.com/ga.js
+http://images.whatwg.org
+
     }
 
     File.open("public/offline.manifest", "w") { |buffer| buffer << MANIFEST }
