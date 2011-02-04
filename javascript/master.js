@@ -135,9 +135,8 @@ if(!!window.applicationCache) {
 	var body = document.querySelector("body"),
 			appCache = window.applicationCache;
 	
-	appCache.update();
-	
 	appCache.addEventListener('downloading', function () {
+    appCache.update();
 		body.className += "syncing";
 	}, false);
 
