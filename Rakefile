@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require "rubygems"
 require "bundler/setup"
 
@@ -11,11 +12,9 @@ namespace :postprocess do
   def each_page(&block)
     Dir.chdir("public") do
       Dir["*.html"].each do |html|
-				Thread.new do
-					doc = Nokogiri::HTML(File.open(html, "r"))
-					yield doc, html
-					File.open(html, "w") {|file| file << doc.to_html }
-				end
+				doc = Nokogiri::HTML(File.open(html, "r"))
+				yield doc, html
+				File.open(html, "w") {|file| file << doc.to_html }
       end
     end
   end
@@ -133,13 +132,17 @@ namespace :postprocess do
   desc "Add 'next up' page links"
   task :add_next_up_links do
     each_page do |doc, filename|
-      next_section = doc.at("link[rel='next']")
-      if next_section
-        title = next_section.attributes["title"]
-        href = next_section.attributes["href"]
-        doc.at("footer").before('<div id="up-next"><a href="'+href+'"><p>Up next</p><h6>'+title+'</h6></a></div>')
-      end
-    end
+			next_page = doc.at("link[rel='next']") || doc.at("nav a:nth-child(3)")
+			
+			unless next_page
+				puts "No 'next' link found for #{filename}"
+				next
+			end
+
+			title = next_page.attributes["title"].to_s.gsub("→", "")
+			href = next_page.attributes["href"]
+			doc.at("footer").before('<div id="up-next"><a href="'+href+'"><p>Up next</p><h6>'+title+'</h6></a></div>')
+		end
   end
 
   desc "Insert WHATWG logo"
