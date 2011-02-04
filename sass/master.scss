@@ -113,7 +113,7 @@ div.reference-wrapper {
   @include clearfix;
 
   p { @include column(10); }
-  aside.reference { @include column(3); font-size: 0.7em; font-style: italic; margin-right: 0; }
+  aside.reference { @include column(3); font-size: 0.7em; font-style: italic; margin: 1em 0 0 0; }
   a[href*="#refs"] { display: none; } /* Hide reference style links */
 }
 
