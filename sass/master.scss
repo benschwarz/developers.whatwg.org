@@ -99,7 +99,7 @@ body > h2 {
 a.secno, h3 .secno, h4 .secno, h5 .secno, h6 .secno { display: none; } /* Only top level section numbering */
 
 
-h3 { margin: 1ex 0; font-size: 1.4em; }
+h3 { margin: 0.5em 0; font-size: 1.4em; }
 h4, h5, h6 { font-size: 1.2em; margin-bottom: 0.3em; color: $color_base; }
 
 section#credits { clear: left; }
