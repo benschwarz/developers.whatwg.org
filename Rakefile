@@ -55,7 +55,8 @@ namespace :postprocess do
 
         # Create aside element above the parent of the link
         unless doc.css("aside#" + reference_string).any?
-          reference_link.parent.add_child('<aside id="'+ reference_string +'" class="reference">'+ aside_content +'</aside>')
+					wrapper = reference_link.parent.replace("<div class='reference-wrapper'>#{reference_link.parent.to_s}</div>")[0]
+					wrapper.add_child('<aside id="'+ reference_string +'" class="reference">'+ aside_content +'</aside>')
         end
       end
     end

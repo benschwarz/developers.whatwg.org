@@ -100,15 +100,16 @@ a.secno, h3 .secno, h4 .secno, h5 .secno, h6 .secno { display: none; } /* Only t
 
 
 h3 { margin: 0.5em 0; font-size: 1.4em; }
-h4, h5, h6 { font-size: 1.2em; margin-bottom: 0.3em; color: $color_base; }
+h4, h5, h6 { margin: 0.5em 0; font-size: 1.2em; color: $color_base; }
 
 section#credits { clear: left; }
 
 
 p { @include column-width(9); margin-bottom: 1em; font-size: 0.9em; }
 
-aside.reference { float: right; width: 10em; font-size: 0.7em; font-style: italic; margin-left: 1em; }
-
+/* Handle references inline */
+div.reference-wrapper { position: relative; }
+aside.reference { @include column-width(3); position: absolute; right: -190px; top: 0; font-size: 0.7em; font-style: italic; }
 a[href*="#refs"] { display: none; } /* Hide reference style links */
 
 ul { margin-bottom: 1em; }
@@ -127,7 +128,8 @@ pre { font-size: 0.7em; }
 code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; display: inline-block; font-style: normal; }
 
 pre { 
-	margin: 0em 0em 1em -0.6em; display: block; padding: 0.25em 0.6em; border: 1px solid #eee; width: 110%;
+	@include column-width(10); position: relative;
+  margin: 0em 0em 1em -2em; display: block; padding: 0.25em 0.6em; border: 1px solid #eee;
 	
 	/* Pinched from boilerplate */
 	/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
@@ -177,7 +179,7 @@ strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercas
 	Typographic conventions
 	(http://developers.whatwg.org/introduction.html#typographic-conventions)
 */
-.note { position: relative; margin-left: -2em; padding: 0.5em; width: 120%; background-color: #eee; }
+.note { @include column-width(10); position: relative; margin-left: -2em; padding: 0.5em; background-color: #eee; }
 .example { color: #666; font-style: italic; }
 .XXX {} /* An open issue */
 .warning { background-color: lighten($color_base, 50%); padding: 0.5em; }
