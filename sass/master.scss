@@ -117,7 +117,7 @@ div.reference-wrapper {
   a[href*="#refs"] { display: none; } /* Hide reference style links */
 }
 
-ul { margin-bottom: 1em; }
+ul { @include column-width(10); margin-bottom: 1em; }
 ul li { list-style: none; position: relative; margin-bottom: 0.25em; }
 ul li:before { content: '\22c5'; font-size: 2em; color: #CCC; position: absolute; top: -0.35em; left: -0.65em; font-family: Arial; font-weight: bold; }
 ul li ul { margin: 0em; }
