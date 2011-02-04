@@ -66,7 +66,7 @@ header.head {
 	}
 	
 	a { display: block; }
-	hgroup { width: 50%; }
+	hgroup { @include column-width(10); }
 	
 	h1 { line-height: 1em; font-size: 3em; font-family: "M+2pheavy"; font-weight: bold; color: black; }
 	h2 { font-size: 0.7em; margin-bottom: 0.5em; font-family: "Droid Serif"; font-style: italic; font-weight: normal; color: #666; }
@@ -75,6 +75,7 @@ header.head {
 p.pubdate { display: none; }
 
 div#search {
+  @include column-width(3);
   position: absolute; top: 0; right: 0;
   ol:empty { border: 0; }
   ol { 
@@ -137,7 +138,7 @@ pre {
 	/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
 	white-space: pre; /* CSS2 */
 	white-space: pre-wrap; /* CSS 2.1 */
-	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	/*white-space: pre-line;*/ /* CSS 3 (and 2.1 as well, actually) */
 	word-wrap: break-word; /* IE */
 }
 
@@ -158,8 +159,7 @@ table caption, table th { text-align: left; color: #6cc; }
 table th { color: #099; }
 table td { vertical-align: top; padding: 0.25em 1.25em 0.25em 0em; }
 table tr, table tbody { border: 0px; }
-hr { border: 0; height: 2px; background: #eee; margin: 2em 0em; }
-
+hr { display: none; }
 
 /* The TOC is only shown on the index page (Temp) */
 body > nav { display: none;	}
@@ -192,7 +192,7 @@ strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercas
 /* Up next */
 div#up-next {
   @include box-shadow(2px, 2px, 3px, rgba(0, 0, 0, 0.4)); 
-  margin: 5ex 0; padding: 0.7em 1em; background-color: #eee; float: right;
+  margin: 5ex 0; padding: 0.7em 1em; background-color: #eee;
   p { font-style: italic; font-size: 0.7em; margin: 0; color: #666; }
   h6 { font-weight: bold; margin: 0; color: #666; }
   h6:after{ content: "—"; }
