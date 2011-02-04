@@ -54,10 +54,10 @@ pre .dfnPanel {
 a:link, a:visited { color: lighten($color_base, 10%); text-decoration: none; }
 a:hover { color: darken($color_base, 20%); }
 
-body { margin: 4em auto; padding: 0 5em; width: 33em; font-size: 1.05em; line-height: 1.45; font-family: "Droid Serif"; }
+body { @include column-width(13); margin: 4em auto; padding: 0 5em; font-size: 1.05em; line-height: 1.45; font-family: "Droid Serif"; }
 
 header.head {
-  @include column-width(9);
+  @include column-width(13);
   position: relative;
 	
   div.logo {
@@ -92,7 +92,7 @@ div#search {
 }
 
 body > h2 {
-	position: relative; text-transform: uppercase; letter-spacing: 0.1em; font-family: "M+2pheavy"; font-size: 1.2em; margin: 1em 0;
+	position: relative; text-transform: uppercase; letter-spacing: 0.1em; font-family: "M+2pheavy"; font-size: 1.2em; margin: 3em 0;
 	.secno { position: absolute; display: block; left: -1.5em; color: #999; text-align: right;  }	
 }
 
@@ -108,9 +108,11 @@ section#credits { clear: left; }
 p { @include column-width(9); margin-bottom: 1em; font-size: 0.9em; }
 
 /* Handle references inline */
-div.reference-wrapper { position: relative; }
-aside.reference { @include column-width(3); position: absolute; right: -190px; top: 0; font-size: 0.7em; font-style: italic; }
-a[href*="#refs"] { display: none; } /* Hide reference style links */
+div.reference-wrapper { 
+  p { @include column(10); }
+  aside.reference { @include column(3); font-size: 0.7em; font-style: italic; margin-right: 0; }
+  a[href*="#refs"] { display: none; } /* Hide reference style links */
+}
 
 ul { margin-bottom: 1em; }
 ul li { list-style: none; position: relative; margin-bottom: 0.25em; }
