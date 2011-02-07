@@ -7,7 +7,7 @@ require "peach"
 require "json"
 
 namespace :postprocess do
-  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest, :insert_syncing, :insert_charset, :insert_ios, :insert_droid_serif, :add_next_up_links, :insert_whatwg_logo]
+  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest, :insert_syncing, :insert_charset, :insert_ios, :insert_droid_serif, :add_next_up_links, :insert_whatwg_logo, :remove_index_hash_links]
 
   def each_page(&block)
     Dir.chdir("public") do
@@ -151,6 +151,17 @@ namespace :postprocess do
     each_page do |doc, filename|
       doc.at("header.head hgroup").before('<div class="logo">WHATWG</div>')
     end
+  end
+
+  desc "Remove hash links from index toc"
+  task :remove_index_hash_links do
+    index =  Nokogiri::HTML(File.open("public/index.html", "r"))
+    
+    index.css("ol.toc a").each do |link|
+      link.attributes["href"].value = link.attributes["href"].to_s.gsub(/#(.*)+$/, "")
+    end
+    
+    File.open("public/index.html", "w") {|buffer| buffer << index.to_html }
   end
 end
 
