@@ -69,6 +69,13 @@ namespace :postprocess do
       section = link.css("span")
       section_text = section.text.strip
       section.remove
+      
+      parent_section = link.parent.parent.parent
+      
+      if parent_section.node_name == "li"
+        section_text = "#{section_text} — #{parent_section.at("a").text}"
+      end
+      
       index << {
         :uri => link.attributes["href"],
         :text => link.text.strip,
