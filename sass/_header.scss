@@ -1,0 +1,35 @@
+header.head {
+  @include column(14); 
+  position: relative; margin-bottom: 4em;
+
+  div.logo {
+		@include column(2);
+		@include border-radius(0.3em);
+		font-size: 10px; width: 6em; background-color: $color_base; color: #fff; position: relative; margin-top: 0.75em; padding: 2.5em 0.7em 0.25em; font-family: Arial, Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em;
+	}
+	
+	hgroup { @include column(10); }
+	
+	h1 { line-height: 1em; font-family: "M+2pheavy"; font-weight: bold; color: black; }
+  h1 a { color: black; }
+	h2 { font-size: 12px; margin-bottom: 0.5em; font-family: "Droid Serif"; font-style: italic; font-weight: normal; color: #666; }
+
+
+	div#search {
+	  @include column-width(3);
+	  position: absolute; top: 0; right: 0;
+	  ol:empty { border: 0; }
+	  ol { 
+	    position: absolute; right: 0; width: 25em; background-color: #eeeeee; z-index: 1; @include border-radius(0.2em); @include box-shadow(0, 0, 1em, rgba(0, 0, 0, 0.75));
+	    li { text-align: left; } 
+	    li a { display: block; color: #666; padding: 0.2em 0.4em; }
+	    li a span { color: lighten(#666, 20%); display: block; font-style: italic; font-size: 0.7em; }
+	    li a:focus, li a.selected { 
+	      color: white; background-color: $color_base;
+	      span { color: rgba(255, 255, 255, 0.6); }
+	    }
+	    li:first-child a.selected { @include border-radius(0.2em 0.2em 0 0); }
+	    li:last-of-type a.selected { @include border-radius(0 0 0.2em 0.2em); }
+	  }
+	}
+}

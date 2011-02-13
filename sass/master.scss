@@ -1,3 +1,6 @@
+@charset "utf-8";
+
+/* Utilities, mixins, global */
 @import "reset";
 @import "prettify-js";
 @import "utils";
@@ -6,120 +9,60 @@
 @import "typography";
 @import "columns";
 
+/* Modular */
+@import "handheld";
+
 $color_base: #CC211B;
-
-dfn {
-  cursor: pointer;
-}
-dfn[title=""] {
-  cursor: inherit;
-}
-
-.dfnPanel p {
-  margin-bottom: 3px;
-}
-.dfnPanel .norefs {
-  font-weight: bold;
-}
-.dfnPanel dd {
-  /* style this just like an li */
-  display: list-item;
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-left: 0;
-}
-pre .dfnPanel {
-  white-space: normal;
-}
-.dfn-excerpt {
-  font-style: italic;
-  margin-left: 0;
-  font-size: 95%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow:hidden;
-  display:block;
-}
-.dfnPanel .dfn-excerpt {
-  white-space: normal;
-}
-
-/* 
-	Start W3C spec styles 
-	ported from: 
-	http://www.germanforblack.com/articles/moving-towards-readable-w3c-specs
-*/
-
 
 a:link, a:visited { color: lighten($color_base, 10%); text-decoration: none; }
 a:hover { color: darken($color_base, 20%); }
 
-body { @include column-width(13); margin: 4em auto; padding: 0 5em; font-size: 1.05em; line-height: 1.45; font-family: "Droid Serif"; }
+body .wrapper { @include column-width(14); margin: 4em auto; padding: 0 1em; }
 
-header.head {
-  @include column-width(13);
-  position: relative;
-	
-  div.logo {
-		@include border-radius(0.3em);
-		float: left; background-color: $color_base; color: #fff; position: relative; margin-top: 0.5em; margin-left: -8.3em; font-size: 0.6em; padding: 2.5em 0.7em 0.25em; font-family: Arial, Helvetica, sans-serif; text-align: center; letter-spacing: 0.1em;
-	}
-	
-	hgroup { @include column-width(10); }
-	
-	h1 { line-height: 1em; font-size: 3em; font-family: "M+2pheavy"; font-weight: bold; color: black; }
-  h1 a { color: black; }
-	h2 { font-size: 0.7em; margin-bottom: 0.5em; font-family: "Droid Serif"; font-style: italic; font-weight: normal; color: #666; }
-}
+@import "header";
 
 p.pubdate { display: none; }
 
-div#search {
-  @include column-width(3);
-  position: absolute; top: 0; right: 0;
-  ol:empty { border: 0; }
-  ol { 
-    position: absolute; right: 0; width: 25em; background-color: #eeeeee; z-index: 1; @include border-radius(0.2em); @include box-shadow(0, 0, 1em, rgba(0, 0, 0, 0.75));
-    li { text-align: left; } 
-    li a { display: block; color: #666; padding: 0.2em 0.4em; }
-    li a span { color: lighten(#666, 20%); display: block; font-style: italic; font-size: 0.7em; }
-    li a:focus, li a.selected { 
-      color: white; background-color: $color_base;
-      span { color: rgba(255, 255, 255, 0.6); }
-    }
-    li:first-child a.selected { @include border-radius(0.2em 0.2em 0 0); }
-    li:last-of-type a.selected { @include border-radius(0 0 0.2em 0.2em); }
-  }
+section[role="main"] {
+	@include skip-column(2);
+	clear: left;
 }
 
-body > h2 {
-	position: relative; text-transform: uppercase; letter-spacing: 0.1em; font-family: "M+2pheavy"; font-size: 1.2em; margin: 3em 0;
+section[role="main"] > h2 {
+	position: relative; text-transform: uppercase; letter-spacing: 0.2em; font-family: "M+2pheavy"; margin: 2em 0;
 	.secno { position: absolute; display: block; left: -1.5em; color: #999; text-align: right;  }	
 }
 
 a.secno, h3 .secno, h4 .secno, h5 .secno, h6 .secno { display: none; } /* Only top level section numbering */
 
+h3, h4, h5, h6 { margin: 3em 0 1em 0; }
+h4, h5, h6 { color: $color_base; }
 
-h3 { margin: 0.5em 0; font-size: 1.4em; }
-h4, h5, h6 { margin: 0.5em 0; font-size: 1.2em; color: $color_base; }
+section#credits { 
+	@include skip-column(2);
+	
+	h1 { margin-bottom: 1em; font-size: 34px; }
+}
 
-section#credits { clear: left; }
-
-
-p { @include column-width(9); margin-bottom: 1em; font-size: 0.9em; }
+p { @include column-width(9); margin-bottom: 1em; }
 
 /* Handle references inline */
 div.reference-wrapper {
   @include clearfix;
 
-  p { @include column(10); }
-  aside.reference { @include column(3); font-size: 0.7em; font-style: italic; margin: 0 0 1em 0; }
+  p { @include column(9); }
+  aside.reference { @include column(3); font-size: 11px; color: #777; font-style: italic; margin: 0 0 1em 0; }
   a[href*="#refs"] { display: none; } /* Hide reference style links */
 }
 
-ul { @include column-width(10); margin-bottom: 1em; }
+ul, ol { 
+	@include column-width(10);
+	margin-bottom: 1em;
+}
 ul li { list-style: none; position: relative; margin-bottom: 0.25em; }
+
 ul li:before { content: '\22c5'; font-size: 2em; color: #CCC; position: absolute; top: -0.35em; left: -0.65em; font-family: Arial; font-weight: bold; }
+
 ul li ul { margin: 0em; }
 li li { margin-left: 1.2em; }
 
@@ -128,8 +71,6 @@ ul.domTree {
 	li { margin: 0; }
 }
 
-code { font-size: 0.8em; }
-pre { font-size: 0.7em; }
 code, pre { font-family: "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Andale Mono", Inconsolata, "Lucida Console", Consolas, Monaco, "courier new", courier; display: inline-block; font-style: normal; }
 
 pre { 
@@ -150,7 +91,7 @@ pre::-webkit-scrollbar-thumb:horizontal:hover{ background: rgba(0, 0, 0, 0.2); c
 pre::-webkit-scrollbar-thumb:horizontal:active{ background: lighten($color_base, 20%); }
 pre.idl { display: none; } /* Browser implementors, only, I reckon */
 
-body > dl { margin: 2em 0; }
+section[role="main"] > dl { margin: 2em 0; }
 dt { font-weight: bold; }
 dd { margin-bottom: 0.5em; }
 
@@ -164,10 +105,10 @@ table tr, table tbody { border: 0px; }
 hr { display: none; }
 
 /* The TOC is only shown on the index page (Temp) */
-body > nav { display: none;	}
+section[role="main"] > nav { display: none;	}
 
 /* Only found on the index page */
-body > ol.toc {
+section[role="main"] > ol.toc {
 	display: block;
 	list-style: none;
 	a { color: black; } 
@@ -193,24 +134,30 @@ strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercas
 
 /* Up next */
 div#up-next {
+	@include skip-column(2);
+	@include column-width(9);
   @include box-shadow(2px, 2px, 3px, rgba(0, 0, 0, 0.4)); 
-  margin: 5ex 0; padding: 0.7em 1em; background-color: #eee;
+	
+	margin-top: 3em; padding: 0.7em 1em; background-color: #eee;
   p { font-style: italic; font-size: 0.7em; margin: 0; color: #666; }
-  h6 { font-weight: bold; margin: 0; color: #666; }
-  h6:after{ content: "—"; }
+  h1 { font-weight: bold; font-size: 16px; margin: 0; color: #666; }
+  h1:after{ content: "—"; }
 
   &:hover { 
-    background: #cecece;
+    background: $color_base;
 
-    h6 { color: $color_base; }
+    h1, p { color: white; }
   }
 }
 
 /* Footer (all pages) */
-body > footer {
-  clear: right; margin: 4em 0 2em 0; padding: 1em 0 0 0; border-top: 1px solid #ccc;
+body .wrapper > footer {
+	@include skip-column(2);
+	@include column-width(10);
 	
-	p { color: #666; font-size: 0.7em; margin: 0; }
+	margin-top: 3em; border-top: 1px solid #ccc; padding: 1em 0 0 0;  clear: right; 
+	
+	p { color: #666; font-size: 1em; margin: 0; }
 }
 
 /* Offline */
@@ -219,27 +166,4 @@ body.syncing #sync { display: block; }
 body #sync {
 	z-index: 1; background-color: rgba(0, 0, 0, 0.4); color: white; font-size: 0.8em; font-style: italic; position: absolute; top: 2em; right: 0; margin: 0 auto; padding: 1em;
 	span { display: block; color: rgba(255, 255, 255, 0.6); }
-}
-
-/* Small (iPhone) */
-@media only screen and (max-device-width: 480px) {
-  body { margin: 2em 3em; }
-	
-	body > header {
-		h1, h2 { font-family: Helvetica; font-weight: bold; } /* No @font-face */
-	}
-}
-	 	
-/* Medium (iPad) */
-@media only screen and (max-device-width: 1024px) {
-	body { margin: 2em 0.7em; }
-	body > header {
-		h1, h2 { font-family: Helvetica; font-weight: bold; } /* No @font-face */
-	}
-	
-}
-
-/* Large (iPhone 4) */
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-
 }

@@ -6,8 +6,10 @@ require "nokogiri"
 require "peach"
 require "json"
 
-namespace :postprocess do
-  task :execute => [:credits, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_manifest, :insert_syncing, :insert_charset, :insert_ios, :insert_droid_serif, :add_next_up_links, :insert_whatwg_logo, :remove_index_hash_links]
+namespace :postprocess do  
+  # insert_manifest
+  
+  task :execute => [:add_main_section, :add_wrapper, :insert_head, :transform_index, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_syncing, :add_next_up_links, :insert_whatwg_logo, :remove_comments]
 
   def each_page(&block)
     Dir.chdir("public") do
@@ -23,12 +25,36 @@ namespace :postprocess do
 		markup = File.open(markup_path, "r").read
 		each_page {|doc, filename| doc.at(selector).send(method, markup) }
 	end
+	
+	task :add_wrapper do
+	  each_page do |doc, filename|
+  	  doc.at("body").replace("<div class='wrapper'>#{doc.at("body").to_html}</div>")
+	  end
+  end
+	
+	# This will seem strange, we'll get the header, keep its contents, remove it from the DOM
+  # Then, we'll get everything within the body, wrap it within a <section role="main">
+  # Finally, we'll add back the header above the newly created <section>
+	task :add_main_section do
+	  each_page do |doc, filename| 	    
+	    header = doc.at("header")
+      header.remove
 
-  desc "Add credits information"
-  task :credits do
+	    doc.at("body").replace("<section role='main'>#{doc.at("body").to_html}</section>")
+	    doc.at("section[role='main']").before(header.to_html)
+	  end
+  end
+
+  desc "Does some special transformations on the index.html file"
+  task :transform_index do
     Dir.chdir("public") do
       doc = Nokogiri::HTML(File.open("index.html", "r"))
       doc.at("header.head").after(File.open("../html/credits.html", "r").read)
+      
+      # Remove hashes from links
+      doc.css("ol.toc a").each do |link|
+        link.attributes["href"].value = link.attributes["href"].to_s.gsub(/#(.*)+$/, "")
+      end
       
       File.open("index.html", "w") {|file| file << doc.to_html }
     end
@@ -36,7 +62,7 @@ namespace :postprocess do
 
   desc "Add document footer"
   task :footer do
-		insert("html/footer.html", "body")
+		insert("html/footer.html", "body .wrapper")
   end
   
   desc "Add analytics"
@@ -64,26 +90,28 @@ namespace :postprocess do
 
   desc "Add a search index json file"
   task :search_index do
-    toc = Nokogiri::HTML(File.open("public/index.html", "r"))
-    index = toc.css("ol.toc li a").inject([]) do |index, link| 
-      section = link.css("span")
-      section_text = section.text.strip
-      section.remove
+    fork do
+      toc = Nokogiri::HTML(File.open("public/index.html", "r"))
+      index = toc.css("ol.toc li a").inject([]) do |index, link| 
+        section = link.css("span")
+        section_text = section.text.strip
+        section.remove
       
-      parent_section = link.parent.parent.parent
+        parent_section = link.parent.parent.parent
       
-      if parent_section.node_name == "li"
-        section_text = "#{section_text} — #{parent_section.at("a").text}"
+        if parent_section.node_name == "li"
+          section_text = "#{section_text} — #{parent_section.at("a").text}"
+        end
+      
+        index << {
+          :uri => link.attributes["href"],
+          :text => link.text.strip,
+          :section => section_text
+        }
       end
-      
-      index << {
-        :uri => link.attributes["href"],
-        :text => link.text.strip,
-        :section => section_text
-      }
-    end
 
-    File.open("public/search_index.json", "w") {|buffer| buffer << JSON.generate(index)}
+      File.open("public/search_index.json", "w") {|buffer| buffer << JSON.generate(index)}
+    end
   end
 
   desc "Add search to each html file"
@@ -122,19 +150,9 @@ namespace :postprocess do
     insert("html/syncing.html", "body")
   end
 
-	desc "Insert iOS tags"
-	task :insert_ios do
-		insert("html/ios.html", "head")
-	end
-
-  desc "Set character encoding"
-  task :insert_charset do
-    each_page {|doc, filename| doc.at("head").children.first.before('<meta charset="utf-8">') }
-  end
-
-	desc "Insert google hosted fonts"
-	task :insert_droid_serif do
-		insert("html/droid-serif.html", "head")
+	task :insert_head do
+	  head = File.open("html/head.html", "r").read
+	  each_page {|doc, filename| doc.at("head").children.first.before(head) }
 	end
 
   desc "Add 'next up' page links"
@@ -149,7 +167,7 @@ namespace :postprocess do
 
 			title = next_page.attributes["title"].to_s.gsub("→", "")
 			href = next_page.attributes["href"]
-			doc.at("footer").before('<div id="up-next"><a href="'+href+'"><p>Up next</p><h6>'+title+'</h6></a></div>')
+			doc.at("footer").before('<div id="up-next"><a href="'+href+'"><p>Up next</p><h1>'+title+'</h1></a></div>')
 		end
   end
 
@@ -159,16 +177,14 @@ namespace :postprocess do
       doc.at("header.head hgroup").before('<div class="logo">WHATWG</div>')
     end
   end
-
-  desc "Remove hash links from index toc"
-  task :remove_index_hash_links do
-    index =  Nokogiri::HTML(File.open("public/index.html", "r"))
-    
-    index.css("ol.toc a").each do |link|
-      link.attributes["href"].value = link.attributes["href"].to_s.gsub(/#(.*)+$/, "")
+  
+  task :remove_comments do
+    Dir.chdir("public") do
+      Dir["*.html"].each do |page|
+        without_comments = File.open(page, "r").read.gsub(/<!--(.*)-->/, "")
+        File.open(page, "w") {|buffer| buffer << without_comments }
+      end
     end
-    
-    File.open("public/index.html", "w") {|buffer| buffer << index.to_html }
   end
 end
 
