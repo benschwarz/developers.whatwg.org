@@ -98,8 +98,8 @@ dd { margin-bottom: 0.5em; }
 table { border: 0; }
 table th, table td { border: 0; border-bottom: 1px solid #acc; padding: 4px; vertical-align: top; }
 table th li, table td li { margin: 0 0 0 1.5em; }
-table caption, table th { text-align: left; color: #6cc; }
-table th { color: #099; }
+table caption, table th { text-align: left; color: $color_base; }
+table th { font-weight: bold; }
 table td { vertical-align: top; padding: 0.25em 1.25em 0.25em 0em; }
 table tr, table tbody { border: 0px; }
 hr { display: none; }
