@@ -9,7 +9,7 @@ require "json"
 namespace :postprocess do  
   # insert_manifest
   
-  task :execute => [:add_main_section, :add_wrapper, :insert_head, :transform_index, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_syncing, :add_next_up_links, :insert_whatwg_logo, :remove_comments]
+  task :execute => [:add_main_section, :add_wrapper, :insert_head, :transform_index, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_syncing, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface]
 
   def each_page(&block)
     Dir.chdir("public") do
@@ -184,6 +184,14 @@ namespace :postprocess do
         without_comments = File.open(page, "r").read.gsub(/<!--(.*)-->/, "")
         File.open(page, "w") {|buffer| buffer << without_comments }
       end
+    end
+  end
+  
+  task :remove_dom_interface do
+    each_page do |doc, filename|
+      dt = doc.xpath('//dt[text()="DOM interface:"]')
+      dt.xpath('following-sibling::dd[1]').remove
+      dt.remove
     end
   end
 end
