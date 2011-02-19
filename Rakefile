@@ -1,29 +1,28 @@
 # encoding: UTF-8
 require "rubygems"
-require "bundler/setup"
+require "bundler"
 
-require "nokogiri"
-require "peach"
-require "json"
+Bundler.require
 
 namespace :postprocess do  
-  # insert_manifest
-  
-  task :execute => [:add_main_section, :add_wrapper, :insert_head, :transform_index, :references, :footer, :analytics, :search_index, :insert_search, :insert_stylesheets, :insert_javascripts, :insert_syncing, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface]
+  task :execute => [:add_main_section, :add_wrapper, :insert_head, :references, :footer, :analytics, :search_index, :insert_search, :insert_javascripts, :insert_syncing, :insert_manifest, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface, :toc, :transform_index]
 
   def each_page(&block)
     Dir.chdir("public") do
-      Dir["*.html"].each do |html|
-				doc = Nokogiri::HTML(File.open(html, "r"))
-				yield doc, html
-				File.open(html, "w") {|file| file << doc.to_html }
+      Dir["*.html"].peach do |path|
+        doc = Nokogiri::HTML(File.open(path, "r"))
+        yield doc, path
+        File.open(path, "w") {|file| file << doc.to_html }
       end
     end
   end
 
 	def insert(markup_path, selector, method = :add_child)
 		markup = File.open(markup_path, "r").read
-		each_page {|doc, filename| doc.at(selector).send(method, markup) }
+		
+		each_page do |doc, filename|
+		  doc.at(selector).send(method, markup)
+	  end
 	end
 	
 	task :add_wrapper do
@@ -49,7 +48,7 @@ namespace :postprocess do
   task :transform_index do
     Dir.chdir("public") do
       doc = Nokogiri::HTML(File.open("index.html", "r"))
-      doc.at("header.head").after(File.open("../html/credits.html", "r").read)
+      doc.at("section[role='main']").children.first.before(File.open("../html/credits.html", "r").read)
       
       # Remove hashes from links
       doc.css("ol.toc a").each do |link|
@@ -130,16 +129,6 @@ namespace :postprocess do
     end
   end
 
-  desc "Insert stylesheets"
-  task :insert_stylesheets do
-    Dir["public/**/*.css"].each do |css_path|
-      css_path = css_path.gsub("public/", "")
-      each_page do |doc, filename|
-        doc.at("head").add_child('<link rel="stylesheet" href="/' + css_path + '">')
-      end
-    end
-  end
-
   desc "Add manifest reference"
   task :insert_manifest => "generate:manifest" do
     each_page {|doc, filename| doc.at("html")['manifest'] = "/offline.manifest"}
@@ -192,6 +181,16 @@ namespace :postprocess do
       dt = doc.xpath('//dt[text()="DOM interface:"]')
       dt.xpath('following-sibling::dd[1]').remove
       dt.remove
+    end
+  end
+  
+  task :toc do
+    each_page do |doc, filename|
+      if nav = doc.at("section[role='main'] nav")
+        nav.children.first.before("<button id='toc-toggle'>In this section</button>")
+        doc.css("section[role='main'] nav > a").remove
+        nav.replace(nav.to_s.gsub("&ndash;", ""))
+      end
     end
   end
 end
