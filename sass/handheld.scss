@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @import "all";
 
 $color_base: #CC211B;
@@ -9,8 +8,24 @@ body .wrapper { @include column-max-width(10); margin: 1em auto; }
 /* Header */
 header.head {
 	width: auto; text-align: center;
-	.logo { display: none; }
+	.logo { margin: 0 auto; width: 60px; }
 }
+
+/* Navigation */
+nav button { display: none; }
+nav, nav ol li { text-align: center; }
+nav ol { list-style: none; }
+nav > ol:before { content: "— On this page —"; font-size: 14px; display: block; font-style: italic; color: $color_base; }
+nav ol li a { color: black; font-size: 12px; line-height: 1.3em; }
+nav ol li li { margin: 0; }
+
+/* Search */
+div#search { 
+/*	background-color: #eee;*/
+	
+	input { width: 95%; }
+}
+
 
 /* Reference links aren't shown on handheld */
 div.reference-wrapper {
@@ -18,7 +33,11 @@ div.reference-wrapper {
 }
 
 /* Main */
-section[role="main"] { padding: 0 2em; font-size: 110%; line-height: 1.6em; }
+section[role="main"] { 
+	padding: 0 2em; font-size: 110%; line-height: 1.6em;
+	
+	img { width: 100%; }
+}
 
 /* Credits */
 section#credits {

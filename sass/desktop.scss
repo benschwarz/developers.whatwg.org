@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @import "all";
 
 body .wrapper { @include column-width(14); margin: 4em auto; padding: 0 1em; }
@@ -16,6 +15,12 @@ header.head {
 	div#search {
 	  @include column-width(3);
 	  position: absolute; top: 0; right: 0;
+	
+		ol {
+			@include border-radius(0.2em);
+			@include box-shadow(0, 0, 1em, rgba(0, 0, 0, 0.75));
+			position: absolute; right: 0; width: 25em; background-color: #eeeeee; z-index: 1;  
+		}
 	}
 }
 
@@ -25,6 +30,12 @@ section[role="main"] {
 	
 	p { @include column-width(9); }
 }
+
+/* TOC */
+nav button { @include button; }
+nav button + ol { display: none; }
+nav button.active + ol { display: block; }
+nav ol li { list-style: none; }
 
 /* Handle references inline */
 div.reference-wrapper {
