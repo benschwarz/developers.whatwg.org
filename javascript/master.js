@@ -152,5 +152,11 @@ if(!!window.applicationCache) {
 	}, false)
 }
 
+// TOC
+var toc_toggle = document.getElementById("toc-toggle");
+addEvent('click', toc_toggle, function(e) {
+	toc_toggle.className = (toc_toggle.className == "active") ? "" : "active";
+});
+
 })();
 
