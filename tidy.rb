@@ -6,6 +6,7 @@ require "nokogiri"
 require "sass"
 require "yui/compressor"
 require "fileutils"
+require "peach"
 
 doc = Nokogiri::HTML(File.open(ARGV[0], "r"))
 js_compressor = YUI::JavaScriptCompressor.new
@@ -17,18 +18,17 @@ doc.css("script").remove
 # Compile master.scss
 # Write output to public/css
 Dir.chdir("sass") do
-  css = Sass.compile_file("master.scss", :style => :compressed)
-  File.open("../public/css/master.css", "w"){|buffer| buffer << css }
+  %w(all desktop handheld).peach do |device|
+    css = Sass.compile_file("#{device}.scss", :style => :compressed)
+    File.open("../public/css/#{device}.css", "w"){|buffer| buffer << css }
+  end
 end
 
 # Compress * javascripts to application.js
 Dir.chdir("javascript") do
   application = "../public/javascript/application.js"
   
-  FileUtils.touch(application)
-  FileUtils.rm(application) 
-  
-  Dir["**/*.js"].each do |javascript_filepath|
+  Dir["**/*.js"].peach do |javascript_filepath|
     compressed = js_compressor.compress(File.open(javascript_filepath, "r")) + "\n"
     File.open(application, "a"){|buffer| buffer << compressed }
   end
