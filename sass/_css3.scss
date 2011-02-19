@@ -1,19 +1,40 @@
-@mixin border-radius($radius: 0px) { 
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
+@mixin border-radius($radius: 5px) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  -m-border-radius: $radius;
 }
-
-@mixin box-shadow($x, $y, $blur, $colour) {
-	-webkit-box-shadow: $x, $y, $blur, $colour;
-	-moz-box-shadow: $x, $y, $blur, $colour;
-	-ms-box-shadow: $x, $y, $blur, $colour;
-	-o-box-shadow: $x, $y, $blur, $colour;
-	box-shadow: $x, $y, $blur, $colour;
+@mixin inset-box-shadow($x, $y, $blur, $color) {
+  box-shadow: inset $x $y $blur $color;
+  -webkit-box-shadow: inset $x $y $blur $color;
+  -moz-box-shadow: inset $x $y $blur $color;
+  -o-box-shadow: inset $x $y $blur $color;
+  -ms-box-shadow: inset $x $y $blur $color;
 }
-
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  -o-box-shadow: $x $y $blur $color;
+  -ms-box-shadow: $x $y $blur $color;
+}
+@mixin gradient($start, $end) {
+  background: $end;
+  background-image: -moz-linear-gradient(270deg, $start, $end);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($start), to($end));
+}
+@mixin opacity($float) {
+  opacity: $float; filter: alpha(opacity=($float * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$float*100)";
+}
+@mixin user-select {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
 @mixin column-count($count) { 
 	-webkit-column-count: $count;
 	-moz-column-count: $count;

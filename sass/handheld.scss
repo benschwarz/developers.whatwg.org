@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+@import "all";
+
+$color_base: #CC211B;
+
+body .wrapper { @include column-max-width(10); margin: 1em auto; }
+
+/* Header */
+header.head {
+	width: auto; text-align: center;
+	.logo { display: none; }
+}
+
+/* Reference links aren't shown on handheld */
+div.reference-wrapper {
+  aside.reference, a[href*="#refs"] { display: none; }
+}
+
+/* Main */
+section[role="main"] { padding: 0 2em; font-size: 110%; line-height: 1.6em; }
+
+/* Credits */
+section#credits {
+	margin-top: 2em;
+	
+	h1 { font-size: 26px; }
+}
+
+/* Small (iPhone) */
+@media only screen and (max-device-width: 480px) {}
+
+/* Medium (iPad) */
+@media only screen and (max-device-width: 1024px) {}
+
+/* Large (iPhone 4) */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {}

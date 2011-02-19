@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@import "all";
+
+body .wrapper { @include column-width(14); margin: 4em auto; padding: 0 1em; }
+header.head div.logo { @include column(2); width: 6em; }
+
+header.head {
+  @include column-width(13);
+	@include clearfix; 
+	
+  position: relative;
+	
+	hgroup { @include column(10); }
+
+	div#search {
+	  @include column-width(3);
+	  position: absolute; top: 0; right: 0;
+	}
+}
+
+
+section[role="main"] { 
+	@include skip-column(2);
+	
+	p { @include column-width(9); }
+}
+
+/* Handle references inline */
+div.reference-wrapper {
+  @include clearfix;
+
+ 	p, dt { @include column(9); }
+  aside.reference { @include column(3); word-wrap: break-word; font-size: 11px; color: #777; font-style: italic; margin: 0 0 1em 0; }
+  a[href*="#refs"] { display: none; } /* Hide reference style links */
+}
+
+/* Code blocks */
+pre {
+	@include column-width(13); 
+	position: relative; margin: 1em 0em 1em -2.6em;
+}
+
+/* Up next */
+div#up-next {
+	@include skip-column(2);
+	@include column-width(9);
+}
+
+/* Footer */
+body .wrapper > footer {
+	@include skip-column(2);
+	@include column-width(10);
+}
+
+/* Global elements */
+ul, ol, dl { margin-bottom: 1em; }
+
+/* Global typographic regions */
+.note { @include column-width(10); }

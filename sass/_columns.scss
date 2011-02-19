@@ -5,6 +5,10 @@ $column_gutter: 20px;
 	width: ($column_width * $count) + ($column_gutter * $count) - $column_gutter;
 }
 
+@mixin column-max-width($count: 1) {
+	max-width: ($column_width * $count) + ($column_gutter * $count) - $column_gutter;
+}
+
 @mixin column($count: 1) {
 	@include column-width($count);
   margin-right: $column_gutter;
