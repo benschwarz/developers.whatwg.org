@@ -1,3 +1,3 @@
 #! /bin/sh
 echo "Deploying…"
-rsync -ave ssh ./public/ benschwarz@developers.whatwg.org:developers.whatwg.org
+rsync --delete -aze ssh ./public/ benschwarz@developers.whatwg.org:developers.whatwg.org
