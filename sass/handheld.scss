@@ -8,24 +8,28 @@ body .wrapper { @include column-max-width(10); margin: 1em auto; }
 /* Header */
 header.head {
 	width: auto; text-align: center;
-	.logo { margin: 0 auto; width: 60px; }
+	.logo { margin: 0 auto; width: 60px; margin-bottom: 1em; }
 }
 
 /* Navigation */
 nav button { display: none; }
 nav, nav ol li { text-align: center; }
 nav ol { list-style: none; }
-nav > ol:before { content: "— On this page —"; font-size: 14px; display: block; font-style: italic; color: $color_base; }
-nav ol li a { color: black; font-size: 12px; line-height: 1.3em; }
+
+nav > ol:before { 
+	content: "— On this page —"; font-family: "M+2pheavy"; font-size: 14px; display: block; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75em;
+}
+nav ol li span { display: none; }
+nav ol li a { font-size: 14px; line-height: 1.1em; }
 nav ol li li { margin: 0; }
 
 /* Search */
-div#search { 
-/*	background-color: #eee;*/
+div#search {
+	margin: 1em 0;
 	
-	input { width: 95%; }
+	input, ol { width: 90%; margin: 0 auto; }
+	ol { border: 1px solid #cecece; }
 }
-
 
 /* Reference links aren't shown on handheld */
 div.reference-wrapper {
