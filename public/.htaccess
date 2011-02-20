@@ -40,9 +40,7 @@
 
 # Mime-types
 AddType text/cache-manifest .manifest
-AddType application/vnd.ms-fontobject .eot
 AddType font/otf .otf
 AddType application/vnd.bw-fontobject .eot
 AddType application/x-font-ttf .ttf
 AddType application/x-woff .woff
-
