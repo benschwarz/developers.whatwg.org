@@ -8,4 +8,4 @@ public/css/master.css
 public/javascripts/*
 public/javascript/application.js
 public/search_index.json
-sass/.sass-cache/
+.sass-cache/
