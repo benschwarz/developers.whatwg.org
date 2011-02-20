@@ -82,7 +82,7 @@ addEvent('keyup',q, function(e) {
 
 // clear results if cancelled search
 addEvent('blur', q, function (e) {
-	if(!q.innerText) r.innerHTML = '';
+	if(!q.value) r.innerHTML = '';
 });
 
 // focus search on click on search area
