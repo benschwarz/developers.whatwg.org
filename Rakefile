@@ -4,75 +4,76 @@ require "bundler"
 
 Bundler.require
 
-namespace :postprocess do  
-  task :execute => [:add_main_section, :add_wrapper, :insert_head, :references, :footer, :analytics, :search_index, :insert_search, :insert_javascripts, :insert_syncing, :insert_manifest, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface, :toc, :transform_index]
+ROOT=File.expand_path(File.dirname(__FILE__))
+@@docs = Hash.new {|h,k| h[k] = Nokogiri::HTML(File.open(k), "r")}
+
+namespace :postprocess do
+  task :execute => [:add_main_section, :add_wrapper, :insert_head, :references, :footer, :analytics, :search_index, :insert_search, :insert_javascripts, :insert_syncing, :insert_manifest, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface, :toc, :transform_index, :write_docs]
+
+  task :write_docs do
+    @@docs.each do |path, doc|
+      File.open(path, "w") {|file| file << doc.to_html }
+    end
+  end
 
   def each_page(&block)
-    Dir.chdir("public") do
-      Dir["*.html"].peach do |path|
-        doc = Nokogiri::HTML(File.open(path, "r"))
-        yield doc, path
-        File.open(path, "w") {|file| file << doc.to_html }
-      end
+    Dir[File.join(ROOT, 'public', "*.html")].each do |path|
+      yield @@docs[path], path
     end
   end
 
 	def insert(markup_path, selector, method = :add_child)
 		markup = File.open(markup_path, "r").read
-		
+
 		each_page do |doc, filename|
-		  doc.at(selector).send(method, markup)
+		  doc.at(selector).send(method, Nokogiri::HTML::fragment(markup))
 	  end
 	end
-	
+
 	task :add_wrapper do
 	  each_page do |doc, filename|
-  	  doc.at("body").replace("<div class='wrapper'>#{doc.at("body").to_html}</div>")
+      doc.at("body").children = Nokogiri::HTML::fragment("<div class='wrapper'>#{doc.at("body").to_html}</div>")
 	  end
   end
-	
+
 	# This will seem strange, we'll get the header, keep its contents, remove it from the DOM
   # Then, we'll get everything within the body, wrap it within a <section role="main">
   # Finally, we'll add back the header above the newly created <section>
 	task :add_main_section do
-	  each_page do |doc, filename| 	    
+	  each_page do |doc, filename|
 	    header = doc.at("header")
       header.remove
 
-	    doc.at("body").replace("<section role='main'>#{doc.at("body").to_html}</section>")
-	    doc.at("section[role='main']").before(header.to_html)
+      doc.at("body").children = Nokogiri::HTML::fragment("<section role='main'>#{doc.at("body").to_html}</section>")
+      doc.at("section[role='main']").before(Nokogiri::HTML::fragment(header.to_html))
 	  end
   end
 
   desc "Does some special transformations on the index.html file"
   task :transform_index do
-    Dir.chdir("public") do
-      doc = Nokogiri::HTML(File.open("index.html", "r"))
-      doc.at("section[role='main']").children.first.before(File.open("../html/credits.html", "r").read)
-      
+      doc = @@docs[File.join(ROOT, 'public', 'index.html')]
+      doc.at("section[role='main']").children.first.before(File.open("html/credits.html", "r").read)
+
       # Remove hashes from links
       doc.css("ol.toc a").each do |link|
         link.attributes["href"].value = link.attributes["href"].to_s.gsub(/#(.*)+$/, "")
       end
-      
-      File.open("index.html", "w") {|file| file << doc.to_html }
-    end
   end
 
   desc "Add document footer"
   task :footer do
 		insert("html/footer.html", "body .wrapper")
   end
-  
+
   desc "Add analytics"
   task :analytics do
 		insert("html/analytics.html", "body")
   end
-  
+
   desc "Pull references inline"
   task :references do
     reference_doc = Nokogiri::HTML(File.open("public/references.html", "r"))
-    
+
     each_page do |doc, filename|
       doc.css("a[href*='#refs']").each do |reference_link|
         reference_string = reference_link.attributes["href"].value.gsub(/^(.*)\#/, "")
@@ -80,7 +81,7 @@ namespace :postprocess do
 
         # Create aside element above the parent of the link
         unless doc.css("aside#" + reference_string).any?
-					wrapper = reference_link.parent.replace("<div class='reference-wrapper'>#{reference_link.parent.to_s}</div>")[0]
+					wrapper = reference_link.parent.replace(Nokogiri::HTML::fragment("<div class='reference-wrapper'>#{reference_link.parent.to_s}</div>"))[0]
 					wrapper.add_child('<aside id="'+ reference_string +'" class="reference">'+ aside_content +'</aside>')
         end
       end
@@ -91,17 +92,17 @@ namespace :postprocess do
   task :search_index do
     fork do
       toc = Nokogiri::HTML(File.open("public/index.html", "r"))
-      index = toc.css("ol.toc li a").inject([]) do |index, link| 
+      index = toc.css("ol.toc li a").inject([]) do |index, link|
         section = link.css("span")
         section_text = section.text.strip
         section.remove
-      
+
         parent_section = link.parent.parent.parent
-      
+
         if parent_section.node_name == "li"
           section_text = "#{section_text} — #{parent_section.at("a").text}"
         end
-      
+
         index << {
           :uri => link.attributes["href"],
           :text => link.text.strip,
@@ -133,7 +134,7 @@ namespace :postprocess do
   task :insert_manifest => "generate:manifest" do
     each_page {|doc, filename| doc.at("html")['manifest'] = "/offline.manifest"}
   end
-  
+
   desc "Insert syncing notification"
   task :insert_syncing do
     insert("html/syncing.html", "body")
@@ -141,14 +142,14 @@ namespace :postprocess do
 
 	task :insert_head do
 	  head = File.open("html/head.html", "r").read
-	  each_page {|doc, filename| doc.at("head").children.first.before(head) }
+	  each_page {|doc, filename| doc.css("head").children.first.before(head) }
 	end
 
   desc "Add 'next up' page links"
   task :add_next_up_links do
     each_page do |doc, filename|
 			next_page = doc.at("link[rel='next']") || doc.at("nav a:nth-child(3)")
-			
+
 			unless next_page
 				puts "No 'next' link found for #{filename}"
 				next
@@ -166,7 +167,7 @@ namespace :postprocess do
       doc.at("header.head hgroup").before('<div class="logo">WHATWG</div>')
     end
   end
-  
+
   task :remove_comments do
     Dir.chdir("public") do
       Dir["*.html"].each do |page|
@@ -175,7 +176,7 @@ namespace :postprocess do
       end
     end
   end
-  
+
   task :remove_dom_interface do
     each_page do |doc, filename|
       dt = doc.xpath('//dt[text()="DOM interface:"]')
@@ -183,13 +184,13 @@ namespace :postprocess do
       dt.remove
     end
   end
-  
+
   task :toc do
     each_page do |doc, filename|
       if nav = doc.at("section[role='main'] nav")
         nav.children.first.before("<button id='toc-toggle'>In this section</button>")
         doc.css("section[role='main'] nav > a").remove
-        nav.replace(nav.to_s.gsub("&ndash;", ""))
+        nav.replace(Nokogiri::HTML::fragment(nav.to_s.gsub("&ndash;", "")))
       end
     end
   end
