@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import "all";
 
-$color_base: #CC211B;
+/*$color_base: #CC211B;*/
 
 body .wrapper { @include column-max-width(10); margin: 1em auto; }
 

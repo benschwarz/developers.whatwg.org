@@ -11,9 +11,12 @@
 @import "columns";
 
 $color_base: #CC211B;
+$link_base: #055799; /* triad blue */
 
-a:link, a:visited { color: lighten($color_base, 10%); text-decoration: none; }
-a:hover { color: darken($color_base, 20%); }
+a:link { color: lighten($link_base, 10%); text-decoration: none; border-bottom: 1px solid #b8b8b8; }
+a:visited { color: darken($link_base, 10%); border-bottom: 1px solid #e8e8e8; }
+a:hover { color: darken($link_base, 20%); border-bottom: 1px solid darken($link_base, 20%); }
+a:active { color: $color_base; border-bottom: none; }
 
 p.pubdate { display: none; }
 
@@ -25,6 +28,8 @@ header.head {
 	
 	h1 { line-height: 1em; font-family: "M+2pheavy"; font-weight: bold; color: black; }
   h1 a { color: black; }
+  h1 a:link, h1 a:visited {border-bottom: 0;}
+  h1 a:hover { text-shadow: 0 0 5px rgba(0,0,0,.6); }
 	h2 { font-size: 12px; margin-bottom: 0.5em; font-family: "Droid Serif"; font-style: italic; font-weight: normal; color: #666; }
 	
 	div#search {
@@ -49,13 +54,13 @@ section[role="main"] {
 
 section[role="main"] > h2 {
 	position: relative; text-transform: uppercase; letter-spacing: 0.2em; line-height: 1.5em; font-family: "M+2pheavy"; margin: 2em 0;
-	.secno { position: absolute; display: block; left: -1.5em; color: #999; text-align: right;  }	
+	.secno { position: absolute; display: block; left: -1.5em; text-align: right;  }	
 }
 
 a.secno, h3 .secno, h4 .secno, h5 .secno, h6 .secno { display: none; } /* Only top level section numbering */
 
 h3, h4, h5, h6 { margin: 3em 0 1em 0; }
-h4, h5, h6 { color: $color_base; }
+h4, h5, h6 {color: #4c0c0a;}
 
 section#credits {
 	margin-top: 3em;
@@ -102,19 +107,22 @@ dd { margin-bottom: 0.5em; }
 table { border: 0; }
 table th, table td { border: 0; border-bottom: 1px solid #acc; padding: 4px; vertical-align: top; }
 table th li, table td li { margin: 0 0 0 1.5em; }
-table caption, table th { text-align: left; color: $color_base; }
+table caption, table th { text-align: left; color: #4c0c0a; }
 table th { font-weight: bold; }
 table td { vertical-align: top; padding: 0.25em 1.25em 0.25em 0em; }
 table tr, table tbody { border: 0px; }
 hr { display: none; }
 
+.toc {
+	a:link { border-bottom: 1px solid #eee; }
+	a:visited { border-bottom: 1px solid #fff; }
+	.secno { color: #999; }
+}
+
 /* Only found on the index page */
 section[role="main"] > ol.toc {
 	display: block;
 	list-style: none;
-	a { color: black; } 
-	a:visited { color: #666; }
-	a:hover { color: $color_base; }
 	li { position: relative; }
 	li span { margin-left: -1.5em; position: absolute; }
 	li ol { display: none; }
@@ -127,8 +135,8 @@ strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercas
 */
 .note { padding: 10px; background-color: #eee; }
 .example { color: #666; font-style: italic; }
-.XXX {} /* An open issue */
-.warning { background-color: lighten($color_base, 50%); padding: 0.5em; }
+.XXX { background-color: lighten($color_base, 50%); padding: 0.5em; } /* An open issue */
+.warning { background-color: lighten($color_base, 40%); border: 1px solid $color_base; padding: 0.5em; }
 .css { 
 	&:before { content: "CSS:"; color: #999; font-size: 1em; display: block; background: transparent; }
 }
@@ -137,15 +145,16 @@ strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercas
 div#up-next {
   @include box-shadow(2px, 2px, 3px, rgba(0, 0, 0, 0.4)); 
 	
-	margin-top: 3em; padding: 0.7em 1em; background-color: #eee;
-  p { font-style: italic; font-size: 0.7em; margin: 0; color: #666; }
-  h1 { font-weight: bold; font-size: 16px; margin: 0; color: #666; }
+	margin-top: 3em; padding: 0.7em 1em; background-color: #4c0c0a;
+  p { font-style: italic; font-size: 0.7em; margin: 0; color: white; }
+  h1 { font-weight: bold; font-size: 16px; margin: 0; color: white; }
   h1:after{ content: "—"; }
 
   &:hover { 
     background: $color_base;
-
-    h1, p { color: white; }
+    @include box-shadow(3px, 3px, 6px, rgba(0, 0, 0, 0.7));
+    h1 { color: white; }
+    p { color: white; }
   }
 }
 
