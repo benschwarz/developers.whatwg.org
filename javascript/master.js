@@ -155,7 +155,7 @@ if(!!window.applicationCache) {
 	
 	appCache.addEventListener('downloading', function () {
     appCache.update();
-		body.className += "syncing";
+		if (body.className.indexOf("syncing")) body.className += "syncing";
 	}, false);
 
 	appCache.addEventListener('progress', function (progressEvent) {
