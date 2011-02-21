@@ -5,3 +5,5 @@ gem 'sass'
 gem 'yui-compressor'
 gem 'peach'
 gem 'json'
+
+gem 'rack'
