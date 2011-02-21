@@ -1,3 +1,16 @@
+window.addEvent = (window.addEventListener) ? function(type, node, fn) {
+	node.addEventListener(type, fn, false);
+} : function(type, node, fn) {
+	node.attachEvent(
+		'on'+type,
+		function(e) {
+			fn.apply(node, [e]);
+		}
+	);
+};
+
+
+
 // set up code blocks to get hit by prettyprint:
 for (var pre = document.getElementsByTagName('pre'), len = pre.len, i = -1; ++i < len; ){
   pre[i].classList.add('prettyprint');
