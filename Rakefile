@@ -204,6 +204,7 @@ namespace :generate do
 
     MANIFEST = %Q{CACHE MANIFEST
 # #{Time.now.to_s}
+http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold
 #{ files }
 
 NETWORK:
