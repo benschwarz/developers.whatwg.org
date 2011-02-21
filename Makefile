@@ -34,6 +34,7 @@ clean-output:
 	$(RM) LOG
 	$(RM) -r public/**/*.html
 	$(RM) -r public/css/*.css
+	$(RM) -r public/javascript/*.js
 	$(RM) -r public/*.manifest
 
 anolis/anolis:
