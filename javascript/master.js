@@ -75,7 +75,7 @@ addEvent('keyup',q, function(e) {
 				resultURL = jsonResponse.uri,
         resultSection = jsonResponse.section;
 			if (maxResults && queryStartRe.test(resultTextLowerCase)) {
-				resultList.push('<li><a href="http://developers.whatwg.org/'+resultURL+'">'+resultText+' <span>Section '+resultSection+'</span></a></li>');
+				resultList.push('<li><a href="/'+resultURL+'">'+resultText+' <span>Section '+resultSection+'</span></a></li>');
 				--maxResults;
 			}
 		}
@@ -85,7 +85,7 @@ addEvent('keyup',q, function(e) {
 				resultURL = jsonResponse.uri,
         resultSection = jsonResponse.section;
 			if (maxResults && resultTextLowerCase.indexOf(queryLowerCase) > -1) {
-				resultList.push('<li><a href="http://developers.whatwg.org/'+resultURL+'">'+resultText+' <span>Section '+resultSection+'</span></a></li>');
+				resultList.push('<li><a href="/'+resultURL+'">'+resultText+' <span>Section '+resultSection+'</span></a></li>');
 				--maxResults;
 			}
 		}
@@ -171,10 +171,11 @@ if(!!window.applicationCache) {
 }
 
 // TOC
-var toc_toggle = document.getElementById("toc-toggle");
-addEvent('click', toc_toggle, function(e) {
-	toc_toggle.className = (toc_toggle.className == "active") ? "" : "active";
-});
+var toc_toggle_button = document.getElementById("toc-toggle");
+tocToggle = function(e) {
+	toc_toggle_button.className = (toc_toggle_button.className == "active") ? "" : "active";
+}
+if(toc_toggle_button) addEvent('click', toc_toggle_button, tocToggle);
 
 })();
 
