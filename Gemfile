@@ -1,6 +1,7 @@
 source :rubygems
 
-gem 'nokogiri'
+# Fixed, can be tricky changes in here.
+gem 'nokogiri', '=1.4.4'
 gem 'sass'
 gem 'yui-compressor'
 gem 'peach'
