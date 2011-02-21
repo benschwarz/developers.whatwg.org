@@ -9,3 +9,5 @@ public/javascripts/*
 public/javascript/application.js
 public/search_index.json
 .sass-cache/
+public/offline.manifest
+public/css/*.css
