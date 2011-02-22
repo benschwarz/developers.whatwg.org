@@ -9,8 +9,6 @@ window.addEvent = (window.addEventListener) ? function(type, node, fn) {
 	);
 };
 
-
-
 // set up code blocks to get hit by prettyprint:
 for (var pre = document.getElementsByTagName('pre'), len = pre.len, i = -1; ++i < len; ){
   pre[i].classList.add('prettyprint');
@@ -155,7 +153,7 @@ if(!!window.applicationCache) {
 	
 	appCache.addEventListener('downloading', function () {
     appCache.update();
-		if (body.className.indexOf("syncing")) body.className += "syncing";
+		body.classList.add("syncing");
 	}, false);
 
 	appCache.addEventListener('progress', function (progressEvent) {
@@ -165,17 +163,16 @@ if(!!window.applicationCache) {
 	}, false);
 	
 	appCache.addEventListener('updateready', function () {
-		body.className = body.className.replace("syncing", "");
+		body.classList.remove("syncing");
 		appCache.swapCache();
 	}, false)
 }
 
 // TOC
 var toc_toggle_button = document.getElementById("toc-toggle");
-tocToggle = function(e) {
-	toc_toggle_button.className = (toc_toggle_button.className == "active") ? "" : "active";
-}
-if(toc_toggle_button) addEvent('click', toc_toggle_button, tocToggle);
+if(toc_toggle_button) addEvent('click', toc_toggle_button, function(){
+	toc_toggle_buttonclassList.toggle("visible");
+});
 
 })();
 
