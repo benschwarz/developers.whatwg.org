@@ -28,7 +28,7 @@ header.head {
 section[role="main"] { 
 	@include skip-column(2);
 	
-	p { @include column-width(9); }
+	p { @include column-width(9); line-height: 1.7em; }
 }
 
 /* TOC */
