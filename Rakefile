@@ -188,7 +188,7 @@ namespace :postprocess do
   task :toc do
     each_page do |doc, filename|
       if nav = doc.at("section[role='main'] nav")
-        nav.children.first.before("<button id='toc-toggle'>In this section&hellip;</button>")
+        nav.children.first.before("<button id='toc-toggle'>In this section&hellip;</button>") if nav.css("ol").any?
         doc.css("section[role='main'] nav > a").remove
         nav.replace(Nokogiri::HTML::fragment(nav.to_s.gsub("&ndash;", "")))
       end
