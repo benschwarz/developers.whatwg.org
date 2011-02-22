@@ -171,7 +171,7 @@ if(!!window.applicationCache) {
 // TOC
 var toc_toggle_button = document.getElementById("toc-toggle");
 if(toc_toggle_button) addEvent('click', toc_toggle_button, function(){
-	toc_toggle_buttonclassList.toggle("visible");
+	toc_toggle_button.classList.toggle("active");
 });
 
 })();
