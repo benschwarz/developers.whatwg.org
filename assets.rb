@@ -11,7 +11,7 @@ js_compressor = YUI::JavaScriptCompressor.new
 # Compile master.scss
 # Write output to public/css
 Dir.chdir("sass") do
-  %w(all desktop handheld).peach do |device|
+  %w(all desktop handheld oldie).peach do |device|
     css = Sass.compile_file("#{device}.scss", :style => :compressed)
     File.open("../public/css/#{device}.css", "w"){|buffer| buffer << css }
   end
