@@ -146,6 +146,11 @@ addEvent('mousemove', r, function(e) {
 	}
 );
 
+// Slash to search '/'
+addEvent('keyup', document, function(e) {
+	if (e.keyCode == 191) q.focus();
+});
+
 // Update offline version if there is one
 if(!!window.applicationCache) {
 	var body = document.querySelector("body"),
