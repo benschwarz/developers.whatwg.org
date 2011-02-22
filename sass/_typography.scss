@@ -19,4 +19,4 @@ h4, h5 { font-size: 120%; }
 h6 { font-size: 100%; }
 h5, h6 { font-family: $clean_font; }
 h4, h6 { font-weight: bold; }
-h4, h5, h6 { color: darken($color_base, 30%); }
+h4, h5, h6 { color: darken($base_color, 30%); }

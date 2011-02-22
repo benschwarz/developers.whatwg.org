@@ -25,7 +25,7 @@ header.head {
 		ol {
 			@include border-radius(0.2em);
 			@include box-shadow(0, 0, 1em, rgba(0, 0, 0, 0.75));
-			position: absolute; right: 0; width: 25em; background-color: #eeeeee; z-index: 1;  
+			position: absolute; right: 0; width: 25em; background-color: #eee; z-index: 1;  
 		}
 	}
 }
@@ -48,7 +48,7 @@ div.reference-wrapper {
   @include clearfix;
 
  	p, dt { @include column(9); }
-  aside.reference { @include column(3); word-wrap: break-word; font-size: 11px; color: #777; font-style: italic; margin: 0 0 1em 0; }
+  aside.reference { @include column(3); word-wrap: break-word; font-size: 11px; color: lighten($neutral_color, 10%); font-style: italic; margin: 0 0 1em 0; }
   a[href*="#refs"] { display: none; } /* Hide reference style links */
 }
 
