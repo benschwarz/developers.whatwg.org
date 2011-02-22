@@ -1,17 +1,28 @@
+/* font stacks */
+$body_font: "Droid Serif", Georgia, serif;
+$title_font: "M+2pheavy", "Helvetica Neue", Arial, Helvetica, sans-serif;
+$clean_font: "Helvetica Neue", Arial, Helvetica, sans-serif;
+$code_font: "DejaVu Sans Mono", Inconsolata, Consolas, "Lucida Console", monospace;
+
+$color_base: #CC211B;
+
 @font-face {
 	font-family: 'M+2pheavy';
-	src: url('/fonts/mplus-2p-heavy-webfont.eot#') format('eot'), 
-	     url('/fonts/mplus-2p-heavy-webfont.woff') format('woff'), 
+	src: url('/fonts/mplus-2p-heavy-webfont.eot');
+	src: url('/fonts/mplus-2p-heavy-webfont.eot?') format('☺'),
+	     url('/fonts/mplus-2p-heavy-webfont.woff') format('woff'),
 	     url('/fonts/mplus-2p-heavy-webfont.ttf') format('truetype'),
 	     url('/fonts/mplus-2p-heavy-webfont.svg#mplus2pheavy') format('svg');
   font-weight: bold;
   font-style: normal;
 }
 
-body { font-size: 14px; line-height: 1.45em; font-family: "Droid Serif"; }
-
+body { font-size: 14px; line-height: 1.45em; font-family: $body_font; }
 h1 { font-size: 300%; }
 h2 { font-size: 160%; }
 h3 { font-size: 140%; }
-h4 { font-size: 120%; }
-/* h5, h6 are 100% */
+h4, h5 { font-size: 120%; }
+h6 { font-size: 100%; }
+h5, h6 { font-family: $clean_font; }
+h4, h6 { font-weight: bold; }
+h4, h5, h6 { color: darken($color_base, 30%); }

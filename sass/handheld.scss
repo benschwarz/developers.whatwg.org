@@ -17,7 +17,7 @@ nav, nav ol li { text-align: center; }
 nav ol { list-style: none; }
 
 nav > ol:before { 
-	content: "— On this page —"; font-family: "M+2pheavy"; font-size: 14px; display: block; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75em;
+	content: "— On this page —"; font-family: $title_font; font-size: 14px; display: block; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75em;
 }
 nav ol li span { display: none; }
 nav ol li a { font-size: 14px; line-height: 1.1em; }
