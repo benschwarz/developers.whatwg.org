@@ -21,7 +21,7 @@ end
 Dir.chdir("javascript") do
   application = "../public/javascript/application.js"
 
-  Dir["**/*.js"].peach do |javascript_filepath|
+  Dir["**/*.js"].each do |javascript_filepath|
     compressed = js_compressor.compress(File.open(javascript_filepath, "r")) + "\n"
     File.open(application, "a"){|buffer| buffer << compressed }
   end
