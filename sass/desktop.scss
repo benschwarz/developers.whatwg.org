@@ -1,5 +1,11 @@
 @charset "utf-8";
-@import "all";
+
+/* Utils and mixins */
+@import "utils";
+@import "css3";
+@import "buttons";
+@import "columns";
+@import "global_variables";
 
 body .wrapper { @include column-width(14); margin: 4em auto; padding: 0 1em; }
 header.head div.logo { @include column(2); width: 6em; }

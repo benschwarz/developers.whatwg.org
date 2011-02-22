@@ -3,15 +3,9 @@
 @import "prettify-js";
 @import "html5";
 @import "typography";
-
-/* Utils and mixins */
-@import "utils";
 @import "css3";
-@import "buttons";
-@import "columns";
 
-$color_base: #CC211B;
-$link_base: #055799; /* triad blue */
+@import "global_variables";
 
 a:link { color: lighten($link_base, 10%); text-decoration: none; border-bottom: 1px solid #b8b8b8; }
 a:visited { color: darken($link_base, 10%); border-bottom: 1px solid #e8e8e8; }
