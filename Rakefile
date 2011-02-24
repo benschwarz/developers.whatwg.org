@@ -54,9 +54,23 @@ namespace :postprocess do
       doc = @@docs[File.join(ROOT, 'public', 'index.html')]
       doc.at("section[role='main']").children.first.before(File.open("html/credits.html", "r").read)
 
-      # Remove hashes from links
-      doc.css("ol.toc a").each do |link|
+      # Remove hashes from links 
+      # (This stops the index toc from skipping past the header for top level items)
+      doc.css("ol.toc li a").each do |link|
         link.attributes["href"].value = link.attributes["href"].to_s.gsub(/#(.*)+$/, "")
+      end
+      
+      # Remove links that are the same page as their parent, remove them.
+      doc.css("ol.toc li a").each do |item|
+        branch = item.parent.parent.parent
+        
+        if branch.node_name == "li"
+          a = branch.at("a")
+          
+          if a.attributes["href"].to_s == item.attributes["href"].to_s
+            item.remove
+          end
+        end
       end
   end
 

@@ -123,10 +123,11 @@ hr { display: none; }
 /* Only found on the index page */
 section[role="main"] > ol.toc {
 	display: block;
-	list-style: none;
-	li { position: relative; }
+	li { position: relative; list-style: none; }
 	li span { margin-left: -1.5em; position: absolute; }
-	li ol { display: none; }
+	li ol ol { display: none; }
+	li li { margin-left: 1.4em; }
+	li li a { margin-left: 1em; }
 }
 strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercase; }
 
