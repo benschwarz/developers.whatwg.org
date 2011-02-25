@@ -124,7 +124,8 @@ hr { display: none; }
 section[role="main"] > ol.toc {
 	display: block;
 	li { position: relative; list-style: none; }
-	li span { margin-left: -1.5em; position: absolute; }
+	li span { left: -1.5em; position: absolute; }
+	li li span { left: -1.4em; }
 	li ol ol { display: none; }
 	li li { margin-left: 1.4em; }
 	li li a { margin-left: 1em; }
