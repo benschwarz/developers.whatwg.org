@@ -1,4 +1,11 @@
-# allow access from all domains for webfonts
+# No ETag
+FileETag None
+
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+
+# Allow access from all domains for webfonts
 <FilesMatch "\.(ttf|otf|eot|woff|font.css)$">
   <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
@@ -33,14 +40,31 @@
   ExpiresActive On
   ExpiresDefault "access plus 10 days"
 
-	<FilesMatch "\.(eot|ttf|otf)$">
+	<FilesMatch "\.(eot|ttf|otf|woff)$">
 		ExpiresDefault "access plus 10 years"
 	</filesMatch>
 </IfModule>
 
+# Chrome frame
+<IfModule mod_setenvif.c>
+  <IfModule mod_headers.c>
+    BrowserMatch MSIE ie
+    Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+  </IfModule>
+</IfModule>
+
+# Clean(er) URLS
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}.html -f
+	RewriteRule ^(.+)$ $1.html [L,QSA]
+</IfModule>
+
 # Mime-types
 AddType text/cache-manifest .manifest
-AddType font/otf .otf
+AddType font/opentype .otf
 AddType application/vnd.bw-fontobject .eot
 AddType application/x-font-ttf .ttf
 AddType application/x-woff .woff
