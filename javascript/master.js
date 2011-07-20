@@ -157,20 +157,22 @@ if(!!window.applicationCache) {
 			appCache = window.applicationCache;
 	
 	appCache.addEventListener('downloading', function () {
-    appCache.update();
 		body.classList.add("syncing");
 	}, false);
 
 	appCache.addEventListener('progress', function (progressEvent) {
 		if (progressEvent.loaded) {
-			document.querySelector("#sync span").innerHTML = "("+Math.round((progressEvent.loaded/progressEvent.total)*100) + "%)";
+			document.querySelector("#sync progress").value = Math.round((progressEvent.loaded/progressEvent.total)*100);
 		}
 	}, false);
 	
 	appCache.addEventListener('updateready', function () {
 		body.classList.remove("syncing");
-		appCache.swapCache();
-	}, false)
+	}, false);
+	
+	appCache.addEventListener('cached', function () {
+		body.classList.remove("syncing");
+	}, false);
 }
 
 // TOC
