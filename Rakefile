@@ -52,7 +52,7 @@ namespace :postprocess do
   desc "Does some special transformations on the index.html file"
   task :transform_index do
       doc = @@docs[File.join(ROOT, 'public', 'index.html')]
-      doc.at("section[role='main']").children.first.before(File.open("html/credits.html", "r").read)
+      doc.at("section[role='main']").css("ol.toc").after(File.open("html/credits.html", "r").read)
 
       # Remove hashes from links 
       # (This stops the index toc from skipping past the header for top level items)
