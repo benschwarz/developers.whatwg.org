@@ -52,7 +52,7 @@ split_exceptions = [
     'elements', 'content-models', 'apis-in-html-documents', # <-- dom
 
     'scripting-1', 'sections', 'grouping-content', 'text-level-semantics', 'edits',
-    'embedded-content-1', 'the-iframe-element', 'video', 'the-canvas-element', 'the-map-element', 'tabular-data',
+    'embedded-content-1', 'the-iframe-element', 'the-video-element', 'the-canvas-element', 'the-map-element', 'tabular-data',
     'forms', 'the-input-element', 'states-of-the-type-attribute', 'number-state', 'common-input-element-attributes', 'the-button-element', 'association-of-controls-and-forms',
     'interactive-elements', 'commands', # <-- semantics
 
@@ -116,6 +116,13 @@ def extract_toc_items(items, ol, depth):
 toc_items = []
 extract_toc_items(toc_items, original_body.find('.//ol[@class="toc"]'), 0)
 
+# Prepare the link-fixup script
+if not w3c:
+    link_fixup_script = etree.XML('<script src="link-fixup.js"/>')
+    doc.find('head')[-1].tail = '\n  '
+    doc.find('head').append(link_fixup_script)
+    link_fixup_script.tail = '\n  '
+
 # Stuff for fixing up references:
 
 def get_page_filename(name):
@@ -176,7 +183,7 @@ pages.append( (index_page, page, 'Front cover') )
 def should_split(e):
     if e.tag == 'h2': return True
     if e.get('id') in split_exceptions: return True
-    if e.tag == 'div' and e.get('class') == 'impl':
+    if e.tag == 'div':
         c = e.getchildren()
         if len(c):
             if c[0].tag == 'h2': return True
@@ -184,7 +191,7 @@ def should_split(e):
     return False
 
 def get_heading_text_and_id(e):
-    if e.tag == 'div' and e.get('class') == 'impl':
+    if e.tag == 'div':
         node = e.getchildren()[0]
     else:
         node = e
@@ -200,7 +207,7 @@ for heading in child_iter:
     page = deepcopy(doc)
     add_class(page.getroot(), 'split chapter')
     page_body = page.find('body')
-    print page_body
+
     page.find('//title').text = title + u' \u2014 ' + doctitle
 
     # Add the header
@@ -307,10 +314,31 @@ for name, doc, title in pages:
     f = open('%s/%s' % (file_args[1], get_page_filename(name)), 'w')
     if w3c:
         f.write('<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">\n')
+    else:
+        f.write('<!DOCTYPE html>\n')
     if use_html5lib_serialiser:
         tokens = html5lib.treewalkers.getTreeWalker('lxml')(doc)
-        serializer = html5lib.serializer.HTMLSerializer(quote_attr_values=True, inject_meta_charset=False, omit_optional_tags=False)
+        serializer = html5lib.serializer.HTMLSerializer(quote_attr_values=True, inject_meta_charset=False)
         for text in serializer.serialize(tokens, encoding='us-ascii'):
-            f.write(text)
+            if text != '<!DOCTYPE html>': # some versions of lxml emit this; get rid of it if so
+                f.write(text)
     else:
         f.write(etree.tostring(doc, pretty_print=False, method="html"))
+
+# Generate the script to fix broken links
+f = open('%s/fragment-links.js' % (file_args[1]), 'w')
+links = ','.join("'%s':'%s'" % (k.replace("\\", "\\\\").replace("'", "\\'"), v) for (k,v) in id_pages.items())
+f.write('var fragment_links = { ' + re.sub(r"([^\x20-\x7f])", lambda m: "\\u%04x" % ord(m.group(1)), links) + ' };\n')
+f.write("""
+var fragid = window.location.hash.substr(1);
+if (!fragid) { /* handle section-foo.html links from the old multipage version, and broken foo.html from the new version */
+    var m = window.location.pathname.match(/\/(?:section-)?([\w\-]+)\.html/);
+    if (m) fragid = m[1];
+}
+var page = fragment_links[fragid];
+if (page) {
+    window.location.replace(page+'.html#'+fragid);
+}
+""")
+
+print "Done."

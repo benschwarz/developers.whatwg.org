@@ -107,16 +107,16 @@ def formatLog(logList):
     output = ""
     if logList:
         output += "<table id=\"log\">\n   <tr>" \
-            "<th><abbr title=\"Revision\">R</abbr></th>" \
+            "<th>SVN</th>" \
+            "<th>Bug</th>" \
             "<th>Comment</th>" \
-            "<th><abbr title=\"Associated W3C Bug\">B</abbr></th>" \
             "<th>Time (UTC)</th></tr>"
         for revision in logList:
             revData = getRevisionData(revision)
             output += "\n   <tr%(classAttr)s%(titleAttr)s>" \
                 "<td>%(number)s</td>" \
-                "<td><a href=\"%(link)s\">%(icons)s%(changes)s</a></td>" \
                 "<td>%(bug)s</td>" \
+                "<td><a href=\"%(link)s\">%(icons)s%(changes)s</a></td>" \
                 "<td>%(date)s</td></tr>" % revData
         output += "\n  </table>"
     return output
@@ -178,6 +178,8 @@ def getDiff(source, revFrom, revTo, identifier):
                 return diff
 
         # Store the diff
+        if not os.path.isdir("diffs"):
+            os.mkdir("diffs")
         file = open("diffs/" + filename, "w")
         file.write(diff)
         file.close()
@@ -335,12 +337,12 @@ def startFormatting(title, identifier, url, source):
             # Short URL
             shorturlmarkup = ""
             if title == "HTML5":
-                shorturlmarkup = "<p>Short URL: <code>http://html5.org/r/"
+                shorturl = "http://html5.org/r/"
                 if revTo - revFrom == 1:
-                    shorturlmarkup += str(revTo)
+                    shorturl += str(revTo)
                 else:
-                    shorturlmarkup += str(revFrom) + "-" + str(revTo)
-                shorturlmarkup += "</code>\n  "
+                    shorturl += str(revFrom) + "-" + str(revTo)
+                shorturlmarkup = """<p>Short URL: <code><a href="%s">%s</a></code>\n  """ % (shorturl, shorturl)
             shorturlmarkup += result
             print document % (title, identifier, identifier, markuptitle, revFrom, revTo, shorturlmarkup)
         except:

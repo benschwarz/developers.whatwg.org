@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 37
-/svn/!svn/ver/173/trunk/spec-splitter
+/svn/!svn/ver/192/trunk/spec-splitter
 END
 link-fixup.js
 K 25
@@ -13,5 +13,5 @@ spec-splitter.py
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svn/!svn/ver/173/trunk/spec-splitter/spec-splitter.py
+/svn/!svn/ver/192/trunk/spec-splitter/spec-splitter.py
 END
