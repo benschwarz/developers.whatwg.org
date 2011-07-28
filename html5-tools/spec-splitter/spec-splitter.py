@@ -318,7 +318,7 @@ for name, doc, title in pages:
         f.write('<!DOCTYPE html>\n')
     if use_html5lib_serialiser:
         tokens = html5lib.treewalkers.getTreeWalker('lxml')(doc)
-        serializer = html5lib.serializer.HTMLSerializer(quote_attr_values=True, inject_meta_charset=False)
+        serializer = html5lib.serializer.HTMLSerializer(quote_attr_values=True, inject_meta_charset=False, omit_optional_tags=False)
         for text in serializer.serialize(tokens, encoding='us-ascii'):
             if text != '<!DOCTYPE html>': # some versions of lxml emit this; get rid of it if so
                 f.write(text)
