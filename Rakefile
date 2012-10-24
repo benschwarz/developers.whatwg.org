@@ -8,7 +8,7 @@ ROOT=File.expand_path(File.dirname(__FILE__))
 @@docs = Hash.new {|h,k| h[k] = Nokogiri::HTML(File.open(k), "r")}
 
 namespace :postprocess do
-  task :execute => [:add_main_section, :add_wrapper, :insert_head, :references, :footer, :analytics, :search_index, :insert_search, :insert_javascripts, :insert_syncing, :insert_manifest, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface, :toc, :transform_index, :write_docs, :add_generation_time]
+  task :execute => [:retitleize, :add_main_section, :add_wrapper, :insert_head, :references, :footer, :analytics, :search_index, :insert_search, :insert_javascripts, :insert_syncing, :insert_manifest, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface, :toc, :transform_index, :write_docs, :add_generation_time]
 
   task :write_docs do
     @@docs.each do |path, doc|
@@ -47,6 +47,14 @@ namespace :postprocess do
       doc.at("body").children = Nokogiri::HTML::fragment("<section role='main'>#{doc.at("body").to_html}</section>")
       doc.at("section[role='main']").before(Nokogiri::HTML::fragment(header.to_html))
 	  end
+  end
+
+  desc "Rewrite the title"
+  task :retitleize do
+    each_page do |doc, filename|
+      title = doc.at("title")
+      title.inner_html = "HTML: The Living Standard - Edition for Web Developers"
+    end
   end
 
   desc "Does some special transformations on the index.html file"
