@@ -49,14 +49,6 @@ namespace :postprocess do
 	  end
   end
 
-  desc "Rewrite the title"
-  task :retitleize do
-    each_page do |doc, filename|
-      title = doc.at("title")
-      title.inner_html = "HTML: The Living Standard - Edition for Web Developers"
-    end
-  end
-
   desc "Does some special transformations on the index.html file"
   task :transform_index do
       doc = @@docs[File.join(ROOT, 'public', 'index.html')]
