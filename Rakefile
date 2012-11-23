@@ -8,7 +8,7 @@ ROOT=File.expand_path(File.dirname(__FILE__))
 @@docs = Hash.new {|h,k| h[k] = Nokogiri::HTML(File.open(k), "r")}
 
 namespace :postprocess do
-  task :execute => [:retitleize, :add_main_section, :add_wrapper, :insert_head, :references, :footer, :analytics, :search_index, :insert_search, :insert_javascripts, :insert_syncing, :insert_manifest, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface, :toc, :transform_index, :write_docs, :add_generation_time]
+  task :execute => [:add_main_section, :add_wrapper, :insert_head, :references, :footer, :analytics, :search_index, :insert_search, :insert_javascripts, :insert_syncing, :insert_manifest, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface, :toc, :transform_index, :write_docs, :add_generation_time]
 
   task :write_docs do
     @@docs.each do |path, doc|
