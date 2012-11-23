@@ -11,7 +11,7 @@ doc.css("link[rel='stylesheet'], style, link[href^='data:text/css']").remove
 doc.css("script").remove
 
 # Wrap the header group in an a referencing "/"
-doc.at("header.head hgroup h1").replace("<h1><a href='/' rel='home'>HTML5</a></h1>")
+doc.at("header.head hgroup h1").replace("<h1><a href='/' rel='home'>HTML: The Living Standard</a></h1>")
 
 # Write everything back into the file it came from
 File.open(ARGV[0], "w") do |file|
