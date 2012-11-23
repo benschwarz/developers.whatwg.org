@@ -8,7 +8,7 @@ SPLITTER=html5-tools/spec-splitter/spec-splitter.py
 SPLITTERFLAGS=--html5lib-serialiser
 
 postprocess: clean-output process_assets LOG
-	rake --trace postprocess:execute
+	bundle exec rake postprocess:execute
 
 LOG: index.html $(SPLITTER)
 	$(PYTHON) $(SPLITTER) $(SPLITTERFLAGS) $< ./public > LOG

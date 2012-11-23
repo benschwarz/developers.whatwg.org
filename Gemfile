@@ -1,6 +1,7 @@
 source :rubygems
 
 # Fixed, can be tricky changes in here.
+gem 'rake'
 gem 'nokogiri', '=1.5.5'
 gem 'sass'
 gem 'yui-compressor'
