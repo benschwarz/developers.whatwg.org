@@ -76,7 +76,7 @@ else:
 
 print "Splitting..."
 
-doctitle = doc.find('.//title').text
+doctitle = doc.getroot().find('.//title').text
 
 # Absolutise some references, so the spec can be hosted elsewhere
 if absolute_uris:
