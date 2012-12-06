@@ -44,7 +44,7 @@ div.reference-wrapper {
 section[role="main"] { 
 	padding: 0 2em; font-size: 110%; line-height: 1.6em;
 	
-	img { width: 100%; }
+	img { max-width: 100%; height: auto; }
 	& > h2 { font-size: 18px; }
 }
 
