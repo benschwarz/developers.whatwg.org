@@ -4,21 +4,21 @@ require "bundler"
 
 Bundler.require
 
-ROOT=File.expand_path(File.dirname(__FILE__))
-@@docs = Hash.new {|h,k| h[k] = Nokogiri::HTML(File.open(k), "r")}
+ROOT = File.expand_path(File.dirname(__FILE__))
+DOCS = Hash.new {|h,k| h[k] = Nokogiri::HTML(File.open(k), "r")}
 
 namespace :postprocess do
   task :execute => [:add_main_section, :add_wrapper, :insert_head, :references, :footer, :analytics, :search_index, :insert_search, :insert_javascripts, :insert_syncing, :insert_manifest, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface, :toc, :transform_index, :write_docs, :add_generation_time]
 
   task :write_docs do
-    @@docs.each do |path, doc|
+    DOCS.each do |path, doc|
       File.open(path, "w") {|file| file << doc.to_html }
     end
   end
 
   def each_page(&block)
     Dir[File.join(ROOT, 'public', "*.html")].each do |path|
-      yield @@docs[path], path
+      yield DOCS[path], path
     end
   end
 
@@ -51,7 +51,7 @@ namespace :postprocess do
 
   desc "Does some special transformations on the index.html file"
   task :transform_index do
-      doc = @@docs[File.join(ROOT, 'public', 'index.html')]
+      doc = DOCS[File.join(ROOT, 'public', 'index.html')]
       doc.at("section[role='main']").css("ol.toc").after(File.open("html/credits.html", "r").read)
 
       # Remove hashes from links 
