@@ -14,7 +14,8 @@ To build your own copy, checkout this repostory, you'll need:
 * Python (2.4+)
   * lxml (`easy_install lxml`)
   * html5lib (`easy_install html5lib`)
-* Mercurial
+  * cssselect (`easy_install cssselect`)
+* Mercurial  (`easy_install mercurial`)
 * SVN
 * LibXML2
 
