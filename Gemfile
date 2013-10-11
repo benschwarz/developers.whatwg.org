@@ -1,4 +1,4 @@
-source :rubygems
+source "https://rubygems.org"
 
 # Fixed, can be tricky changes in here.
 gem 'rake'
