@@ -54,20 +54,32 @@ namespace :postprocess do
       doc = DOCS[File.join(ROOT, 'public', 'index.html')]
       doc.at("section[role='main']").css("ol.toc").after(File.open("html/credits.html", "r").read)
 
-      # Remove hashes from links 
+      # Remove hashes from links to top-level pages
       # (This stops the index toc from skipping past the header for top level items)
-      doc.css("ol.toc li a").each do |link|
-        link.attributes["href"].value = link.attributes["href"].to_s.gsub(/#(.*)+$/, "")
+      toc_links = doc.css("ol.toc li a").to_a
+      toc_links.each.with_index do |link, index|
+        previous_link = toc_links[index - 1]
+        previous_href = previous_link && previous_link.attributes["href"].to_s.gsub(/#.*\Z/, "")
+
+        this_href = link.attributes["href"].to_s.gsub(/#.*\Z/, "")
+
+        if previous_link && previous_href == this_href
+          puts "Not removing anchor from #{this_href}, previous is #{previous_href}"
+        else
+          link.attributes["href"].value = this_href
+        end
       end
-      
+
       # Remove links that are the same page as their parent, remove them.
       doc.css("ol.toc li a").each do |item|
+        item_href = item.attributes["href"].to_s.gsub(/#.*\Z/, "")
         branch = item.parent.parent.parent
-        
+
         if branch.node_name == "li"
           a = branch.at("a")
-          
-          if a.attributes["href"].to_s == item.attributes["href"].to_s
+          a_href = a.attributes["href"].to_s.gsub(/#.*\Z/, "")
+
+          if a_href == item_href
             item.remove
           end
         end
@@ -208,7 +220,7 @@ namespace :postprocess do
       end
     end
   end
-  
+
   task :add_generation_time do
     Dir.chdir("public") do
       Dir["*.html"].each do |page|
