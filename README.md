@@ -4,10 +4,17 @@ This repository contains scripts that will generate a pristine copy of [develope
 
 To build your own copy, checkout this repostory, you'll need:
 
-* Ruby (any version) (bundle install)
-* Python (2.4+) (pip install -r requirements.txt)
+* Ruby (any version)
+* Python (2.4+)
 * Subversion
 * LibXML2
+
+To install dependencies: 
+
+```bash
+bundle install
+pip install -r requirements.txt
+```
 
 Run `make clean` then `make` to produce the required contents (final output is written to the `public` directory)
 The contents of `public` are exactly what I have deployed to developers.whatwg.org.
