@@ -27,20 +27,20 @@ header.head {
 		@include border-radius(0.3em);
 		font-size: 10px; background-color: $base_color; color: #fff; padding: 2.5em 0.7em 0.25em; font-family: $clean_font; text-align: center; letter-spacing: 0.1em;
 	}
-	
+
 	h1 { line-height: 1em; font-family: $title_font; font-weight: bold; color: black; }
   h1 a { color: black; }
   h1 a:link, h1 a:visited {border-bottom: 0;}
   h1 a:hover { text-shadow: 0 0 5px rgba(0,0,0,.6); }
 	h2 { font-size: 12px; margin-bottom: 0.5em; font-family: $body_font; font-style: italic; font-weight: normal; color: $neutral_color; }
-	
+
 	div#search {
 		ol:empty { border: 0; }
 	  ol {
-	    li { text-align: left; list-style: none; } 
+	    li { text-align: left; list-style: none; }
 	    li a { display: block; color: darken($neutral_color, 20%); padding: 0.2em 0.4em; }
 	    li a span { color: $neutral_color; display: block; font-style: italic; font-size: 0.7em; }
-	    li a:focus, li a.selected { 
+	    li a:focus, li a.selected {
 	      color: white; background-color: $base_color;
 	      span { color: rgba(255, 255, 255, 0.7); }
 	    }
@@ -56,7 +56,7 @@ section[role="main"] {
 
 section[role="main"] > h2 {
 	position: relative; text-transform: uppercase; letter-spacing: 0.2em; line-height: 1.5em; font-family: $title_font; margin: 2em 0;
-	.secno { position: absolute; display: block; left: -1.5em; text-align: right;  }	
+	.secno { position: absolute; display: block; left: -1.5em; text-align: right;  }
 }
 
 a.secno, h3 .secno, h4 .secno, h5 .secno, h6 .secno { display: none; } /* Only top level section numbering */
@@ -85,9 +85,9 @@ ul.domTree li:before { display: none; }
 
 code, pre { font-family: $code_font; display: inline-block; font-style: normal; }
 
-pre { 
+pre {
 	display: block; padding: 0.25em 0.3em; border: 1px solid #eee;
-	
+
 	/* Pinched from boilerplate */
 	/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
 	white-space: pre; /* CSS2 */
@@ -134,28 +134,29 @@ section[role="main"] > ol.toc {
 }
 strong.rfc2119 { font-size: 0.8em; letter-spacing: 0.1; text-transform: uppercase; }
 
-/* 
+/*
 	Typographic conventions
 	(http://developers.whatwg.org/introduction.html#typographic-conventions)
 */
 .note { padding: 3px; background-color: #eee; }
+.note pre { background-color: #fff; }
 .example { color: $neutral_color; font-style: italic; }
 .XXX { background-color: lighten($base_color, 50%); padding: 0.5em; } /* An open issue */
 .warning { background-color: lighten($base_color, 40%); border: 1px solid $base_color; padding: 0.5em; }
-.css { 
+.css {
 	&:before { content: "CSS:"; color: lighten($neutral_color, 20%); font-size: 1em; display: block; background: transparent; }
 }
 
 /* Up next */
 div#up-next {
-  @include box-shadow(2px, 2px, 3px, rgba(0, 0, 0, 0.4)); 
-	
+  @include box-shadow(2px, 2px, 3px, rgba(0, 0, 0, 0.4));
+
 	margin-top: 3em; padding: 0.7em 1em; background-color: darken($base_color, 30%);
   p { font-style: italic; font-size: 0.7em; margin: 0; color: white; }
   h1 { font-weight: bold; font-size: 16px; margin: 0; color: white; }
   h1:after{ content: "—"; }
 
-  &:hover { 
+  &:hover {
     background: $base_color;
     @include box-shadow(3px, 3px, 6px, rgba(0, 0, 0, 0.7));
     h1 { color: white; }
