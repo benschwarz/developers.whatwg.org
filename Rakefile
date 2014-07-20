@@ -22,78 +22,78 @@ namespace :postprocess do
     end
   end
 
-	def insert(markup_path, selector, method = :add_child)
-		markup = File.open(markup_path, "r").read
+  def insert(markup_path, selector, method = :add_child)
+    markup = File.open(markup_path, "r").read
 
-		each_page do |doc, filename|
-		  doc.at(selector).send(method, Nokogiri::HTML::fragment(markup))
-	  end
-	end
-
-	task :add_wrapper do
-	  each_page do |doc, filename|
-      doc.at("body").children = Nokogiri::HTML::fragment("<div class='wrapper'>#{doc.at("body").to_html}</div>")
-	  end
+    each_page do |doc, filename|
+      doc.at(selector).send(method, Nokogiri::HTML::fragment(markup))
+    end
   end
 
-	# This will seem strange, we'll get the header, keep its contents, remove it from the DOM
+  task :add_wrapper do
+    each_page do |doc, filename|
+      doc.at("body").children = Nokogiri::HTML::fragment("<div class='wrapper'>#{doc.at("body").to_html}</div>")
+    end
+  end
+
+  # This will seem strange, we'll get the header, keep its contents, remove it from the DOM
   # Then, we'll get everything within the body, wrap it within a <section role="main">
   # Finally, we'll add back the header above the newly created <section>
-	task :add_main_section do
-	  each_page do |doc, filename|
-	    header = doc.at("header")
+  task :add_main_section do
+    each_page do |doc, filename|
+      header = doc.at("header")
       header.remove
 
       doc.at("body").children = Nokogiri::HTML::fragment("<section role='main'>#{doc.at("body").to_html}</section>")
       doc.at("section[role='main']").before(Nokogiri::HTML::fragment(header.to_html))
-	  end
+    end
   end
 
   desc "Does some special transformations on the index.html file"
   task :transform_index do
-      doc = DOCS[File.join(ROOT, 'public', 'index.html')]
-      doc.at("section[role='main']").css("ol.toc").after(File.open("html/credits.html", "r").read)
+    doc = DOCS[File.join(ROOT, 'public', 'index.html')]
+    doc.at("section[role='main']").css("ol.toc").after(File.open("html/credits.html", "r").read)
 
-      # Remove hashes from links to top-level pages
-      # (This stops the index toc from skipping past the header for top level items)
-      toc_links = doc.css("ol.toc li a").to_a
-      toc_links.each.with_index do |link, index|
-        previous_link = toc_links[index - 1]
-        previous_href = previous_link && previous_link.attributes["href"].to_s.gsub(/#.*\Z/, "")
+    # Remove hashes from links to top-level pages
+    # (This stops the index toc from skipping past the header for top level items)
+    toc_links = doc.css("ol.toc li a").to_a
+    toc_links.each.with_index do |link, index|
+      previous_link = toc_links[index - 1]
+      previous_href = previous_link && previous_link.attributes["href"].to_s.gsub(/#.*\Z/, "")
 
-        this_href = link.attributes["href"].to_s.gsub(/#.*\Z/, "")
+      this_href = link.attributes["href"].to_s.gsub(/#.*\Z/, "")
 
-        if previous_link && previous_href == this_href
-          puts "Not removing anchor from #{this_href}, previous is #{previous_href}"
-        else
-          link.attributes["href"].value = this_href
+      if previous_link && previous_href == this_href
+        puts "Not removing anchor from #{this_href}, previous is #{previous_href}"
+      else
+        link.attributes["href"].value = this_href
+      end
+    end
+
+    # Remove links that are the same page as their parent, remove them.
+    doc.css("ol.toc li a").each do |item|
+      item_href = item.attributes["href"].to_s.gsub(/#.*\Z/, "")
+      branch = item.parent.parent.parent
+
+      if branch.node_name == "li"
+        a = branch.at("a")
+        a_href = a.attributes["href"].to_s.gsub(/#.*\Z/, "")
+
+        if a_href == item_href
+          item.remove
         end
       end
-
-      # Remove links that are the same page as their parent, remove them.
-      doc.css("ol.toc li a").each do |item|
-        item_href = item.attributes["href"].to_s.gsub(/#.*\Z/, "")
-        branch = item.parent.parent.parent
-
-        if branch.node_name == "li"
-          a = branch.at("a")
-          a_href = a.attributes["href"].to_s.gsub(/#.*\Z/, "")
-
-          if a_href == item_href
-            item.remove
-          end
-        end
-      end
+    end
   end
 
   desc "Add document footer"
   task :footer do
-		insert("html/footer.html", "body .wrapper")
+    insert("html/footer.html", "body .wrapper")
   end
 
   desc "Add analytics"
   task :analytics do
-		insert("html/analytics.html", "body")
+    insert("html/analytics.html", "body")
   end
 
   desc "Pull references inline"
@@ -107,8 +107,8 @@ namespace :postprocess do
 
         # Create aside element above the parent of the link
         unless doc.css("aside#" + reference_string).any?
-					wrapper = reference_link.parent.replace(Nokogiri::HTML::fragment("<div class='reference-wrapper'>#{reference_link.parent.to_s}</div>"))[0]
-					wrapper.add_child('<aside id="'+ reference_string +'" class="reference">'+ aside_content +'</aside>')
+          wrapper = reference_link.parent.replace(Nokogiri::HTML::fragment("<div class='reference-wrapper'>#{reference_link.parent.to_s}</div>"))[0]
+          wrapper.add_child('<aside id="'+ reference_string +'" class="reference">'+ aside_content +'</aside>')
         end
       end
     end
@@ -150,7 +150,7 @@ namespace :postprocess do
     Dir["public/**/*.js"].each do |js_path|
       js_path = js_path.gsub("public/", "")
 
-			each_page do |doc, filename|
+      each_page do |doc, filename|
         doc.at("body").add_child('<script src="/' + js_path + '" defer>')
       end
     end
@@ -166,25 +166,25 @@ namespace :postprocess do
     insert("html/syncing.html", "body")
   end
 
-	task :insert_head do
-	  head = File.open("html/head.html", "r").read
-	  each_page {|doc, filename| doc.css("head").children.first.before(head) }
-	end
+  task :insert_head do
+    head = File.open("html/head.html", "r").read
+    each_page {|doc, filename| doc.css("head").children.first.before(head) }
+  end
 
   desc "Add 'next up' page links"
   task :add_next_up_links do
     each_page do |doc, filename|
-			next_page = doc.at("link[rel='next']") || doc.at("nav a:nth-child(3)")
+      next_page = doc.at("link[rel='next']") || doc.at("nav a:nth-child(3)")
 
-			unless next_page
-				puts "No 'next' link found for #{filename}"
-				next
-			end
+      unless next_page
+        puts "No 'next' link found for #{filename}"
+        next
+      end
 
-			title = next_page.attributes["title"].to_s.gsub("→", "")
-			href = next_page.attributes["href"]
-			doc.at("footer").before('<div id="up-next"><a href="'+href+'"><p>Up next</p><h1>'+title+'</h1></a></div>')
-		end
+      title = next_page.attributes["title"].to_s.gsub("→", "")
+      href = next_page.attributes["href"]
+      doc.at("footer").before('<div id="up-next"><a href="'+href+'"><p>Up next</p><h1>'+title+'</h1></a></div>')
+    end
   end
 
   desc "Insert WHATWG logo"
@@ -237,12 +237,12 @@ namespace :generate do
     files = Dir["public/**/*.*"].map{|fp| fp.gsub("public/", "") }.join("\n")
 
     MANIFEST = %Q{CACHE MANIFEST
-# #{Time.now.to_s}
-#{ files }
+      # #{Time.now.to_s}
+      #{ files }
 
-NETWORK:
-http://www.google-analytics.com/ga.js
-http://images.whatwg.org
+      NETWORK:
+      http://www.google-analytics.com/ga.js
+      http://images.whatwg.org
 
     }
 
