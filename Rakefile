@@ -243,6 +243,7 @@ namespace :generate do
       NETWORK:
       http://www.google-analytics.com/ga.js
       http://images.whatwg.org
+      https://images.whatwg.org
 
     }
 
