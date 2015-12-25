@@ -16,12 +16,14 @@ multipage-dev: multipage-dev.zip
 
 tidy: multipage-dev
 	$(RUBY) tidy.rb multipage-dev/index.html
+	cp -r multipage-dev/*.html public
 
 process_assets:
 	$(RUBY) assets.rb
 
 clean: clean-output
-	$(RM) html5-full.html
+	$(RM) -r multipage-dev
+	$(RM) multipage-dev.zip
 
 clean-output:
 	$(RM) -r public/**/*.html

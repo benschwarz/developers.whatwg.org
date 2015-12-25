@@ -36,16 +36,10 @@ namespace :postprocess do
     end
   end
 
-  # This will seem strange, we'll get the header, keep its contents, remove it from the DOM
-  # Then, we'll get everything within the body, wrap it within a <section role="main">
-  # Finally, we'll add back the header above the newly created <section>
+  # we'll get everything within the body, wrap it within a <section role="main">
   task :add_main_section do
     each_page do |doc, filename|
-      header = doc.at("header")
-      header.remove
-
       doc.at("body").children = Nokogiri::HTML::fragment("<section role='main'>#{doc.at("body").to_html}</section>")
-      doc.at("section[role='main']").before(Nokogiri::HTML::fragment(header.to_html))
     end
   end
 
@@ -71,19 +65,19 @@ namespace :postprocess do
     end
 
     # Remove links that are the same page as their parent, remove them.
-    doc.css("ol.toc li a").each do |item|
-      item_href = item.attributes["href"].to_s.gsub(/#.*\Z/, "")
-      branch = item.parent.parent.parent
+    #doc.css("ol.toc li a").each do |item|
+    #  item_href = item.attributes["href"].to_s.gsub(/#.*\Z/, "")
+    #  branch = item.parent.parent.parent
 
-      if branch.node_name == "li"
-        a = branch.at("a")
-        a_href = a.attributes["href"].to_s.gsub(/#.*\Z/, "")
+    #  if branch.node_name == "li"
+    #    a = branch.at("a")
+    #    a_href = a.attributes["href"].to_s.gsub(/#.*\Z/, "")
 
-        if a_href == item_href
-          item.remove
-        end
-      end
-    end
+    #    if a_href == item_href
+    #      item.remove
+    #    end
+    #  end
+    #end
   end
 
   desc "Add document footer"
@@ -142,7 +136,7 @@ namespace :postprocess do
 
   desc "Add search to each html file"
   task :insert_search do
-    insert("html/search.html", "header.head")
+    #insert("html/search.html", "header.head")
   end
 
   desc "Insert javascripts"
@@ -190,7 +184,7 @@ namespace :postprocess do
   desc "Insert WHATWG logo"
   task :insert_whatwg_logo do
     each_page do |doc, filename|
-      doc.at("header.head hgroup").before('<div class="logo">WHATWG</div>')
+      #doc.at("header.head hgroup").before('<div class="logo">WHATWG</div>')
     end
   end
 
