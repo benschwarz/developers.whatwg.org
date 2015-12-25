@@ -1,7 +1,7 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
-    json (1.4.6)
+    json (1.8.3)
     nokogiri (1.5.5)
     peach (0.4)
     rack (1.2.1)
@@ -20,3 +20,6 @@ DEPENDENCIES
   rake
   sass
   yui-compressor
+
+BUNDLED WITH
+   1.10.6

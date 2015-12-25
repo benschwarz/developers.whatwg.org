@@ -18,10 +18,11 @@ index.html: html5-full.html anolis/anolis
 	  --parser=lxml.html \
 	  --filter=.impl \
 	  --output-encoding="ascii" \
+	  --allow-duplicate-dfns \
 	  $< $@
 
 html5-full.html:
-	$(CURL) --compressed http://www.whatwg.org/specs/web-apps/current-work/dev-index > $@
+	$(CURL) --compressed https://html.spec.whatwg.org > $@
 	$(RUBY) tidy.rb $@
 
 process_assets:
