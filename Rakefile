@@ -7,8 +7,11 @@ Bundler.require
 ROOT = File.expand_path(File.dirname(__FILE__))
 DOCS = Hash.new {|h,k| h[k] = Nokogiri::HTML(File.open(k), "r")}
 
-namespace :postprocess do
+namespace :process do
   task :execute => [
+    :remove_included_styles,
+    :remove_included_scripts,
+    :wrap_header_group,
     :add_main_section,
     :add_wrapper,
     :insert_head,
@@ -30,15 +33,15 @@ namespace :postprocess do
     :add_generation_time
   ]
 
-  task :write_docs do
-    DOCS.each do |path, doc|
-      File.open(path, "w") {|file| file << doc.to_html }
-    end
-  end
-
   def each_page(&block)
     Dir[File.join(ROOT, 'public', "*.html")].each do |path|
       yield DOCS[path], path
+    end
+  end
+
+  task :write_docs do
+    DOCS.each do |path, doc|
+      File.open(path, "w") {|file| file << doc.to_html }
     end
   end
 
@@ -51,6 +54,28 @@ namespace :postprocess do
         element.send(method, Nokogiri::HTML::fragment(markup))
       else
         puts "No element for selector #{selector} in #{filename}"
+      end
+    end
+  end
+
+  task :remove_included_styles do
+    each_page do |doc, filename|
+      doc.css("link[rel='stylesheet'], style, link[href^='data:text/css']").remove
+    end
+  end
+
+  task :remove_included_scripts do
+    each_page do |doc, filename|
+      doc.css("script").remove
+    end
+  end
+
+  task :wrap_header_group do
+    each_page do |doc, filename|
+      # Wrap the header group in an a referencing "/"
+      toc = doc.at("h2#table-of-contents")
+      if toc
+        toc.add_previous_sibling("<h1><a href='/' rel='home'>HTML: The Living Standard</a></h1>")
       end
     end
   end
@@ -294,7 +319,7 @@ namespace :generate do
 
     MANIFEST = %Q{CACHE MANIFEST
       # #{Time.now.to_s}
-      #{ files }
+    #{ files }
 
       NETWORK:
       http://www.google-analytics.com/ga.js
