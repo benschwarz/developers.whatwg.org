@@ -15,7 +15,7 @@ multipage-dev: multipage-dev.zip
 	unzip -o multipage-dev.zip
 
 tidy: multipage-dev
-	$(RUBY) tidy.rb multipage-dev/index.html
+	$(RUBY) tidy.rb multipage-dev
 	cp -r multipage-dev/*.html public
 
 process_assets:
