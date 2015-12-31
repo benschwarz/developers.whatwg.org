@@ -8,7 +8,27 @@ ROOT = File.expand_path(File.dirname(__FILE__))
 DOCS = Hash.new {|h,k| h[k] = Nokogiri::HTML(File.open(k), "r")}
 
 namespace :postprocess do
-  task :execute => [:add_main_section, :add_wrapper, :insert_head, :references, :footer, :analytics, :search_index, :insert_search, :insert_javascripts, :insert_syncing, :insert_manifest, :add_next_up_links, :insert_whatwg_logo, :remove_comments, :remove_dom_interface, :toc, :transform_index, :write_docs, :add_generation_time]
+  task :execute => [
+    :add_main_section,
+    :add_wrapper,
+    :insert_head,
+    :references,
+    :footer,
+    :analytics,
+    :search_index,
+    :insert_search,
+    :insert_javascripts,
+    :insert_syncing,
+    :insert_manifest,
+    :add_next_up_links,
+    :insert_whatwg_logo,
+    :remove_comments,
+    :remove_dom_interface,
+    :toc,
+    :transform_index,
+    :write_docs,
+    :add_generation_time
+  ]
 
   task :write_docs do
     DOCS.each do |path, doc|
@@ -26,27 +46,49 @@ namespace :postprocess do
     markup = File.open(markup_path, "r").read
 
     each_page do |doc, filename|
-      doc.at(selector).send(method, Nokogiri::HTML::fragment(markup))
+      element = doc.at(selector)
+      if element
+        element.send(method, Nokogiri::HTML::fragment(markup))
+      else
+        puts "No element for selector #{selector} in #{filename}"
+      end
     end
   end
 
   task :add_wrapper do
     each_page do |doc, filename|
-      doc.at("body").children = Nokogiri::HTML::fragment("<div class='wrapper'>#{doc.at("body").to_html}</div>")
+      body = doc.at("body")
+      if body
+        body.children = Nokogiri::HTML::fragment("<div class='wrapper'>#{body.to_html}</div>")
+      else
+        puts "No body!"
+        p doc.to_html
+      end
     end
   end
 
   # we'll get everything within the body, wrap it within a <section role="main">
   task :add_main_section do
     each_page do |doc, filename|
-      doc.at("body").children = Nokogiri::HTML::fragment("<section role='main'>#{doc.at("body").to_html}</section>")
+      body = doc.at("body")
+      if body
+        body.children = Nokogiri::HTML::fragment("<section role='main'>#{body.to_html}</section>")
+      else
+        puts "No body!"
+        p doc.to_html
+      end
     end
   end
 
   desc "Does some special transformations on the index.html file"
   task :transform_index do
     doc = DOCS[File.join(ROOT, 'public', 'index.html')]
-    doc.at("section[role='main']").css("ol.toc").after(File.open("html/credits.html", "r").read)
+    main_section = doc.at("section[role='main']")
+    if main_section
+      main_section.css("ol.toc").after(File.open("html/credits.html", "r").read)
+    else
+      puts "No main section in index.html"
+    end
 
     # Remove hashes from links to top-level pages
     # (This stops the index toc from skipping past the header for top level items)
@@ -145,14 +187,26 @@ namespace :postprocess do
       js_path = js_path.gsub("public/", "")
 
       each_page do |doc, filename|
-        doc.at("body").add_child('<script src="/' + js_path + '" defer>')
+        body = doc.at("body")
+        if body
+          body.add_child('<script src="/' + js_path + '" defer>')
+        else
+          puts "No body in #{filename}"
+        end
       end
     end
   end
 
   desc "Add manifest reference"
   task :insert_manifest => "generate:manifest" do
-    each_page {|doc, filename| doc.at("html")['manifest'] = "/offline.manifest"}
+    each_page do |doc, filename|
+      html = doc.at("html")
+      if html
+        html['manifest'] = "/offline.manifest"
+      else
+        puts "No <html> in #{filename}"
+      end
+    end
   end
 
   desc "Insert syncing notification"
@@ -162,7 +216,15 @@ namespace :postprocess do
 
   task :insert_head do
     head = File.open("html/head.html", "r").read
-    each_page {|doc, filename| doc.css("head").children.first.before(head) }
+    each_page do |doc, filename|
+      first_child = doc.css("head").children.first
+      if first_child
+        first_child.before(head)
+      else
+        puts "No first child"
+        p doc.css("head")
+      end
+    end
   end
 
   desc "Add 'next up' page links"
