@@ -2,7 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     json (1.8.3)
-    nokogiri (1.5.5)
+    mini_portile (0.6.2)
+    nokogiri (1.6.5)
+      mini_portile (~> 0.6.0)
     peach (0.4)
     rack (1.2.1)
     rake (10.0.0)
@@ -14,7 +16,7 @@ PLATFORMS
 
 DEPENDENCIES
   json
-  nokogiri (= 1.5.5)
+  nokogiri (~> 1.6)
   peach
   rack
   rake
