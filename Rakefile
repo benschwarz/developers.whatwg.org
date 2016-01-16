@@ -20,6 +20,7 @@ namespace :process do
     :insert_head,
     :remove_extra_charsets_in_head,
     :references,
+    :header,
     :footer,
     :analytics,
     :search_index,
@@ -175,6 +176,11 @@ namespace :process do
   desc "Add document footer"
   task :footer do
     insert("html/footer.html", "body .wrapper")
+  end
+
+  desc "Add document header"
+  task :header do
+    insert("html/header.html", "body .wrapper > *", :before)
   end
 
   desc "Add analytics"
