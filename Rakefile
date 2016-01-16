@@ -12,6 +12,7 @@ namespace :process do
     :remove_included_styles,
     :remove_included_scripts,
     :fix_title_in_head,
+    :add_link_fixup_script_into_head,
     :wrap_header_group,
     :add_main_section,
     :add_wrapper,
@@ -76,6 +77,14 @@ namespace :process do
     each_page do |doc, filename|
       title = doc.css("head title")
       title.first.content = "HTML: The Living Standard - Edition for Web Developers"
+    end
+  end
+
+  task :add_link_fixup_script_into_head do
+    link_fixup = '<script src="link-fixup.js"></script>'
+    each_page do |doc, filename|
+      last_child = doc.css("head").children.last
+      last_child.after(link_fixup)
     end
   end
 
