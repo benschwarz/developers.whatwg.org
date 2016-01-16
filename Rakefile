@@ -11,6 +11,7 @@ namespace :process do
   task :execute => [
     :remove_included_styles,
     :remove_included_scripts,
+    :fix_title_in_head,
     :wrap_header_group,
     :add_main_section,
     :add_wrapper,
@@ -68,6 +69,13 @@ namespace :process do
   task :remove_included_scripts do
     each_page do |doc, filename|
       doc.css("script").remove
+    end
+  end
+
+  task :fix_title_in_head do
+    each_page do |doc, filename|
+      title = doc.css("head title")
+      title.first.content = "HTML: The Living Standard - Edition for Web Developers"
     end
   end
 
