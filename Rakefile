@@ -15,6 +15,7 @@ namespace :process do
     :add_main_section,
     :add_wrapper,
     :insert_head,
+    :remove_extra_charsets_in_head,
     :references,
     :footer,
     :analytics,
@@ -243,12 +244,14 @@ namespace :process do
     head = File.open("html/head.html", "r").read
     each_page do |doc, filename|
       first_child = doc.css("head").children.first
-      if first_child
-        first_child.before(head)
-      else
-        puts "No first child"
-        p doc.css("head")
-      end
+      first_child.before(head)
+    end
+  end
+
+  task :remove_extra_charsets_in_head do
+    Dir[File.join(ROOT, 'public', "*.html")].each do |path|
+      charsets = DOCS[path].css("meta[charset]")
+      charsets[1].remove if charsets.length > 1
     end
   end
 
