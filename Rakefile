@@ -13,6 +13,7 @@ namespace :process do
     :remove_included_scripts,
     :fix_title_in_head,
     :add_link_fixup_script_into_head,
+    :remove_on_load_from_body,
     :wrap_header_group,
     :add_main_section,
     :add_wrapper,
@@ -85,6 +86,12 @@ namespace :process do
     each_page do |doc, filename|
       last_child = doc.css("head").children.last
       last_child.after(link_fixup)
+    end
+  end
+
+  task :remove_on_load_from_body do
+    each_page do |doc, filename|
+      doc.xpath('//@onload').remove
     end
   end
 
