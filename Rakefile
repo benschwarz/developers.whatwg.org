@@ -111,9 +111,6 @@ namespace :process do
       body = doc.at("body")
       if body
         body.children = Nokogiri::HTML::fragment("<div class='wrapper'>#{body.to_html}</div>")
-      else
-        puts "No body!"
-        p doc.to_html
       end
     end
   end
@@ -124,9 +121,6 @@ namespace :process do
       body = doc.at("body")
       if body
         body.children = Nokogiri::HTML::fragment("<section role='main'>#{body.to_html}</section>")
-      else
-        puts "No body!"
-        p doc.to_html
       end
     end
   end
@@ -140,8 +134,6 @@ namespace :process do
       main_section.css("> h1:first-child").remove
       main_section.css("ol.brief.toc").remove
       main_section.css("#contents").remove
-    else
-      puts "No main section in index.html"
     end
 
     # Remove hashes from links to top-level pages
