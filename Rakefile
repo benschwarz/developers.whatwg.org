@@ -34,6 +34,7 @@ namespace :process do
     :toc,
     :fancy_numbers_in_toc,
     :remove_back_and_forward_links,
+    :remove_bottom_nav_links,
     :transform_index,
     :write_docs,
     :add_generation_time
@@ -294,6 +295,12 @@ namespace :process do
       title = next_page.content.to_s.gsub("→", "")
       href = next_page.attributes["href"]
       doc.at("footer").before('<div id="up-next"><a href="'+href+'"><p>Up next</p><h1>'+title+'</h1></a></div>')
+    end
+  end
+
+  task :remove_bottom_nav_links do
+    each_page do |doc, filename|
+      doc.css("section[role='main'] nav:last-child").remove
     end
   end
 
