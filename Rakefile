@@ -33,6 +33,7 @@ namespace :process do
     :remove_dom_interface,
     :toc,
     :fancy_numbers_in_toc,
+    :remove_back_and_forward_links,
     :transform_index,
     :write_docs,
     :add_generation_time
@@ -331,6 +332,12 @@ namespace :process do
 
         toc_link.inner_html = Nokogiri::HTML::fragment(replaced_link_content)
       end
+    end
+  end
+
+  task :remove_back_and_forward_links do
+    each_page do |doc, filename|
+      doc.css("section[role='main'] > nav:first-child").remove
     end
   end
 
