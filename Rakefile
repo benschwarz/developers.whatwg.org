@@ -284,7 +284,7 @@ namespace :process do
   desc "Add 'next up' page links"
   task :add_next_up_links do
     each_page do |doc, filename|
-      next_page = doc.at("link[rel='next']") || doc.at("nav a:nth-child(3)")
+      next_page = doc.at("link[rel='next']") || doc.at("nav a:last-child")
 
       unless next_page
         puts "No 'next' link found for #{filename}"
