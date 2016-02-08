@@ -32,6 +32,7 @@ namespace :process do
     :remove_comments,
     :remove_dom_interface,
     :toc,
+    :fancy_numbers_in_toc,
     :transform_index,
     :write_docs,
     :add_generation_time
@@ -326,6 +327,17 @@ namespace :process do
         nav.children.first.before("<button id='toc-toggle'>In this section&hellip;</button>") if nav.css("ol").any?
         #doc.css("section[role='main'] nav > a").remove
         nav.replace(Nokogiri::HTML::fragment(nav.to_s.gsub("&ndash;", "")))
+      end
+    end
+  end
+
+  task :fancy_numbers_in_toc do
+    each_page do |doc, filename|
+      doc.css("ol.toc a").each do |toc_link|
+        link_content = toc_link.inner_html
+        replaced_link_content = link_content.gsub(/^\d+(.\d+)*/) {|number| "<span class=\"secno\">#{number}</span>"}
+
+        toc_link.inner_html = Nokogiri::HTML::fragment(replaced_link_content)
       end
     end
   end
