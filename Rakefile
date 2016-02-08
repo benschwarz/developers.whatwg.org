@@ -291,7 +291,7 @@ namespace :process do
         next
       end
 
-      title = next_page.attributes["title"].to_s.gsub("→", "")
+      title = next_page.content.to_s.gsub("→", "")
       href = next_page.attributes["href"]
       doc.at("footer").before('<div id="up-next"><a href="'+href+'"><p>Up next</p><h1>'+title+'</h1></a></div>')
     end
