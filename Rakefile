@@ -29,7 +29,6 @@ namespace :process do
     :insert_syncing,
     :insert_manifest,
     :add_next_up_links,
-    :insert_whatwg_logo,
     :remove_comments,
     :remove_dom_interface,
     :toc,
@@ -137,6 +136,9 @@ namespace :process do
     main_section = doc.at("section[role='main']")
     if main_section
       main_section.css("ol.toc").after(File.open("html/credits.html", "r").read)
+      main_section.css("> h1:first-child").remove
+      main_section.css("ol.brief.toc").remove
+      main_section.css("#contents").remove
     else
       puts "No main section in index.html"
     end
@@ -301,13 +303,6 @@ namespace :process do
     end
   end
 
-  desc "Insert WHATWG logo"
-  task :insert_whatwg_logo do
-    each_page do |doc, filename|
-      #doc.at("header.head hgroup").before('<div class="logo">WHATWG</div>')
-    end
-  end
-
   task :remove_comments do
     Dir.chdir("public") do
       Dir["*.html"].each do |page|
@@ -329,7 +324,7 @@ namespace :process do
     each_page do |doc, filename|
       if nav = doc.at("section[role='main'] nav")
         nav.children.first.before("<button id='toc-toggle'>In this section&hellip;</button>") if nav.css("ol").any?
-        doc.css("section[role='main'] nav > a").remove
+        #doc.css("section[role='main'] nav > a").remove
         nav.replace(Nokogiri::HTML::fragment(nav.to_s.gsub("&ndash;", "")))
       end
     end
