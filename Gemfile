@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 # Fixed, can be tricky changes in here.
 gem 'rake'
-gem 'nokogiri', '=1.5.5'
+gem 'nokogiri', '~>1.6'
 gem 'sass'
 gem 'yui-compressor'
 gem 'peach'
