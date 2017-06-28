@@ -1,5 +1,0 @@
-#!/usr/bin/env python
-import trackerlib
-
-if __name__ == "__main__":
-    trackerlib.startFormatting("Web Workers", "ww", "/tools/web-workers-tracker", "http://svn.whatwg.org/webworkers/index")
